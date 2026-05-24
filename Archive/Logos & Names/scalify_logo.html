@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scalify Co — Logo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0a0f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 60px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .label {
+    color: #ffffff33;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: -40px;
+  }
+
+  /* ── LOGO 1: Dark circle (like DSC) ── */
+  .logo-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #050510;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    box-shadow:
+      0 0 0 1.5px #1a3a8a44,
+      0 0 40px #1e3fb822,
+      0 0 80px #0d2a9011;
+  }
+
+  .logo-circle::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    background: conic-gradient(
+      from 200deg,
+      #0d1f6e00 0%,
+      #1e3fb8 20%,
+      #2952d9 35%,
+      #0d1f6e00 50%
+    );
+    opacity: 0.25;
+  }
+
+  .circle-wordmark {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    z-index: 1;
+  }
+
+  .circle-s {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 62px;
+    color: #ffffff;
+    letter-spacing: -2px;
+    line-height: 1;
+  }
+
+  .circle-calify {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 62px;
+    color: #ffffff;
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+
+  .circle-arrow {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 13px solid #2952d9;
+    margin-left: 3px;
+    margin-top: 6px;
+    filter: drop-shadow(0 0 6px #3a6bff);
+  }
+
+  .circle-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #2952d9;
+    text-transform: uppercase;
+    z-index: 1;
+    margin-top: 4px;
+  }
+
+  /* ── LOGO 2: Horizontal dark ── */
+  .logo-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 22px 36px;
+    background: #07070f;
+    border: 1px solid #1a3a8a33;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .logo-horizontal::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2952d9, #6b8fff, transparent);
+  }
+
+  .horiz-icon {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .horiz-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .horiz-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .horiz-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+
+  .horiz-name span {
+    color: #2952d9;
+  }
+
+  .horiz-co {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #4a6aaa;
+    text-transform: uppercase;
+  }
+
+  /* ── LOGO 3: White/light version ── */
+  .logo-light {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 40px;
+    background: #f0f2f8;
+  }
+
+  .light-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .light-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: #050510;
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+
+  .light-name span {
+    color: #1e3fb8;
+  }
+
+  .light-divider {
+    width: 1px;
+    height: 32px;
+    background: #1e3fb844;
+  }
+
+  .light-co {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #1e3fb8;
+    text-transform: uppercase;
+  }
+
+  /* ── LOGO 4: Icon only ── */
+  .logo-icon {
+    width: 80px;
+    height: 80px;
+    background: #050510;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px #2952d922, 0 0 0 1px #1a3a8a33;
+  }
+
+  /* color palette */
+  .palette {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .swatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .swatch-color {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+
+  .swatch-label {
+    font-size: 9px;
+    color: #ffffff55;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+
+  <p class="label">Scalify Co — Logo Concepts</p>
+
+  <!-- 1: Circle (like DSC ref) -->
+  <div>
+    <div class="logo-circle">
+      <div class="circle-wordmark">
+        <span class="circle-s">SCALIFY</span>
+        <div class="circle-arrow"></div>
+      </div>
+      <span class="circle-sub">Co</span>
+    </div>
+  </div>
+
+  <!-- 2: Horizontal with icon -->
+  <div class="logo-horizontal">
+    <div class="horiz-icon">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Upward arrow / scale icon -->
+        <polyline points="4,28 13,16 20,22 32,8" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <polyline points="24,8 32,8 32,16" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="horiz-text">
+      <div class="horiz-name">SCALIFY<span>.</span></div>
+      <div class="horiz-co">Agency &nbsp;·&nbsp; Dubai</div>
+    </div>
+  </div>
+
+  <!-- 3: Light version -->
+  <div class="logo-light">
+    <svg class="light-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="4,32 14,18 22,25 36,8" stroke="#1e3fb8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <polyline points="28,8 36,8 36,16" stroke="#1e3fb8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    <div class="light-name">SCALIFY<span>.</span></div>
+    <div class="light-divider"></div>
+    <div class="light-co">Co</div>
+  </div>
+
+  <!-- 4: Icon only (app icon style) -->
+  <div class="logo-icon">
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="6,38 17,22 26,30 42,10" stroke="#2952d9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <polyline points="34,10 42,10 42,18" stroke="#2952d9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- small dot accent -->
+      <circle cx="42" cy="38" r="3" fill="#2952d9" opacity="0.5"/>
+    </svg>
+  </div>
+
+  <!-- Color palette reference -->
+  <div class="palette">
+    <div class="swatch">
+      <div class="swatch-color" style="background:#050510; border: 1px solid #ffffff22;"></div>
+      <span class="swatch-label">#050510</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#0d1f6e;"></div>
+      <span class="swatch-label">#0D1F6E</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#1e3fb8;"></div>
+      <span class="swatch-label">#1E3FB8</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#2952d9;"></div>
+      <span class="swatch-label">#2952D9</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#6b8fff;"></div>
+      <span class="swatch-label">#6B8FFF</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#ffffff; border: 1px solid #ffffff22;"></div>
+      <span class="swatch-label">#FFFFFF</span>
+    </div>
+  </div>
+
+</body>
+</html>
