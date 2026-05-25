@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Agency — AI Marketing Dubai</title>
+  <meta name="description" content="AI-powered marketing agency in Dubai. Social media, chatbots, automation, ads and more. From AED 1,200/mo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --nova-black: #050510;
+      --deep-navy: #0D1F6E;
+      --brand-blue: #1E3FB8;
+      --bright-blue: #2952D9;
+      --light-blue: #6B8FFF;
+      --white: #FFFFFF;
+      --surface-1: rgba(255,255,255,0.04);
+      --surface-2: rgba(255,255,255,0.07);
+      --border: rgba(255,255,255,0.08);
+      --font-head: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --ease-out: cubic-bezier(0.16,1,0.3,1);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-pill: 999px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--nova-black);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      padding-top: 72px;
+    }
+
+    h1,h2,h3,h4 {
+      font-family: var(--font-head);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .full-section {
+      padding: clamp(64px,8vw,112px) 5%;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    /* ── Section pill label ── */
+    .section-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(41,82,217,0.1);
+      border: 1px solid rgba(41,82,217,0.28);
+      color: var(--light-blue);
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 14px;
+    }
+
+    .section-heading {
+      font-size: clamp(30px,5vw,52px);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .section-sub {
+      font-size: clamp(15px,2vw,18px);
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 52px;
+      line-height: 1.75;
+      max-width: 580px;
+    }
+
+    /* ── Buttons ── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bright-blue);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 13px 28px;
+      border-radius: var(--radius-pill);
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: box-shadow 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg,rgba(255,255,255,0.14) 0%,transparent 60%);
+      opacity: 0;
+      transition: opacity 0.2s;
+      border-radius: inherit;
+    }
+    .btn-primary:hover {
+      box-shadow: 0 0 28px rgba(41,82,217,0.55), 0 4px 18px rgba(41,82,217,0.25);
+      transform: translateY(-2px);
+    }
+    .btn-primary:hover::after { opacity: 1; }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 28px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255,255,255,0.18);
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s, transform 0.2s var(--ease-out);
+    }
+    .btn-ghost:hover {
+      border-color: rgba(255,255,255,0.45);
+      background: rgba(255,255,255,0.05);
+      transform: translateY(-2px);
+    }
+
+    /* ── Divider ── */
+    .gradient-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg,transparent,rgba(41,82,217,0.4),transparent);
+    }
+
+    /* ── Fade-in ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Skip link ── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 8px;
+      background: var(--bright-blue);
+      color: var(--white);
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 0 0 8px 8px;
+      text-decoration: none;
+      z-index: 200;
+      transition: top 0.1s;
+    }
+    .skip-link:focus { top: 8px; }
+
+    :focus-visible { outline: 2px solid var(--bright-blue); outline-offset: 3px; border-radius: 4px; }
+
+    .service-card, .build-card, .pricing-card, .st-row { cursor: pointer; }
+    .pricing-grid::-webkit-scrollbar { display: none; }
+    .pricing-grid { -ms-overflow-style: none; scrollbar-width: none; }
+    .form-group select option { background: #07070f; color: var(--white); }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,*::before,*::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .fade-in { opacity: 1; transform: none; }
+      #particle-canvas, .hero-orb { display: none; }
+      .hero-badge,.hero-h1,.hero-sub,.hero-ctas,.hero-float-card { opacity: 1; transform: none; animation: none; }
+    }
+
+    /* ═══════════════════════════════════════
+       NAVBAR
+    ═══════════════════════════════════════ */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 5%;
+      transition: background 0.3s, backdrop-filter 0.3s, border-color 0.3s;
+      border-bottom: 1px solid transparent;
+    }
+    #navbar.scrolled {
+      background: rgba(5,5,16,0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom-color: var(--border);
+    }
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo-icon {
+      width: 26px; height: 26px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .nav-logo-icon svg { width: 100%; height: 100%; }
+    .nav-logo-text { display: flex; flex-direction: column; gap: 0; }
+    .nav-logo-name {
+      font-family: var(--font-head);
+      font-size: 20px; font-weight: 700;
+      color: var(--white); letter-spacing: -0.02em; line-height: 1;
+    }
+    .nav-logo-name .dot { color: var(--bright-blue); }
+    .nav-logo-sub {
+      font-family: var(--font-body);
+      font-size: 8px; font-weight: 600;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: rgba(107,143,255,0.65);
+      line-height: 1; margin-top: 3px;
+    }
+    .nav-links { display: flex; gap: 4px; list-style: none; }
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 14px; font-weight: 500;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.06); }
+    .nav-cta { padding: 10px 22px; font-size: 13px; }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 8px;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--white); border-radius: 2px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .mobile-menu {
+      display: none; flex-direction: column; gap: 8px;
+      padding: 16px 0 24px; border-top: 1px solid var(--border);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .mobile-link {
+      display: block; padding: 10px 16px;
+      font-family: var(--font-body); font-size: 15px; font-weight: 500;
+      color: rgba(255,255,255,0.7); text-decoration: none;
+      border-radius: var(--radius-sm); transition: color 0.2s, background 0.2s;
+    }
+    .mobile-link:hover { color: var(--white); background: rgba(255,255,255,0.06); }
+    .mobile-menu .btn-primary { margin-top: 8px; justify-content: center; }
+    @media (max-width: 900px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ═══════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════ */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      padding: 80px 5% 60px;
+    }
+    #particle-canvas {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+    }
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(72px);
+      pointer-events: none;
+    }
+    .hero-orb-1 {
+      width: 640px; height: 640px;
+      background: radial-gradient(circle,rgba(41,82,217,0.2) 0%,transparent 70%);
+      top: -120px; left: 50%;
+      animation: orbMain 9s ease-in-out infinite;
+    }
+    .hero-orb-2 {
+      width: 420px; height: 420px;
+      background: radial-gradient(circle,rgba(107,143,255,0.1) 0%,transparent 70%);
+      bottom: 5%; right: 8%;
+      animation: orbSide 11s ease-in-out 2s infinite;
+    }
+    .hero-orb-3 {
+      width: 320px; height: 320px;
+      background: radial-gradient(circle,rgba(30,63,184,0.12) 0%,transparent 70%);
+      top: 35%; left: -4%;
+      animation: orbSide 13s ease-in-out 1s infinite reverse;
+    }
+    @keyframes orbMain {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-28px); }
+    }
+    @keyframes orbSide {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-22px); }
+    }
+
+    .hero-content { position: relative; z-index: 2; max-width: 860px; margin: 0 auto; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: rgba(41,82,217,0.1);
+      border: 1px solid rgba(41,82,217,0.32);
+      color: var(--light-blue);
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: heroUp 0.7s var(--ease-out) 0.1s forwards;
+    }
+    .badge-pulse {
+      width: 7px; height: 7px;
+      background: #4ade80; border-radius: 50%;
+      box-shadow: 0 0 6px #4ade80;
+      animation: bPulse 2s ease-in-out infinite;
+    }
+    @keyframes bPulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.55; transform: scale(0.8); }
+    }
+
+    .hero-h1 {
+      font-size: clamp(44px,8vw,88px);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.04;
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: heroUp 0.8s var(--ease-out) 0.25s forwards;
+    }
+    .hero-h1 .grad {
+      background: linear-gradient(135deg,#6B8FFF 0%,#2952D9 50%,#1E3FB8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: clamp(16px,2.2vw,20px);
+      color: rgba(255,255,255,0.55);
+      line-height: 1.75;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: heroUp 0.8s var(--ease-out) 0.4s forwards;
+    }
+    .hero-ctas {
+      display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+      margin-bottom: 56px;
+      opacity: 0;
+      animation: heroUp 0.8s var(--ease-out) 0.55s forwards;
+    }
+    .hero-ctas .btn-primary { padding: 15px 32px; font-size: 15px; }
+    .hero-ctas .btn-ghost  { padding: 14px 32px; font-size: 15px; }
+
+    @keyframes heroUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Floating stats card */
+    .hero-float-card {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 20px 36px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.04) inset;
+      opacity: 0;
+      animation: heroUp 0.8s var(--ease-out) 0.7s forwards;
+    }
+    .hero-stat { display: flex; flex-direction: column; align-items: center; padding: 0 28px; }
+    .hero-stat-num {
+      font-family: var(--font-head);
+      font-size: 28px; font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.03em; line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 11px; font-weight: 500;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.5px; margin-top: 5px;
+      white-space: nowrap;
+    }
+    .hero-stat-div { width: 1px; height: 36px; background: rgba(255,255,255,0.1); }
+
+    @media (max-width: 600px) {
+      .hero-float-card { flex-direction: column; gap: 16px; padding: 22px 28px; }
+      .hero-stat { padding: 0 20px; }
+      .hero-stat-div { width: 40px; height: 1px; }
+    }
+
+    /* ═══════════════════════════════════════
+       SERVICES
+    ═══════════════════════════════════════ */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(272px,1fr));
+      gap: 14px;
+    }
+    .service-card {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      transition: border-color 0.25s, background 0.25s, transform 0.25s var(--ease-out), box-shadow 0.25s;
+      position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg,rgba(41,82,217,0.06) 0%,transparent 60%);
+      opacity: 0; transition: opacity 0.25s; border-radius: inherit;
+    }
+    .service-card:hover {
+      border-color: rgba(41,82,217,0.4);
+      background: var(--surface-2);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(41,82,217,0.15);
+    }
+    .service-card:hover::before { opacity: 1; }
+    .service-icon {
+      width: 48px; height: 48px;
+      background: rgba(41,82,217,0.1);
+      border: 1px solid rgba(41,82,217,0.2);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .service-icon svg { width: 24px; height: 24px; }
+    .service-card h3 {
+      font-size: 17px; font-weight: 600;
+      color: var(--white); margin-bottom: 8px;
+    }
+    .service-card p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.48);
+      line-height: 1.65;
+    }
+
+    /* ═══════════════════════════════════════
+       PRICING
+    ═══════════════════════════════════════ */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 1100px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 700px)  { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 460px)  { .pricing-grid { grid-template-columns: 1fr; } }
+    .pricing-card {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 22px 22px;
+      display: flex; flex-direction: column;
+      position: relative;
+      transition: border-color 0.25s, transform 0.25s var(--ease-out), box-shadow 0.25s;
+    }
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(41,82,217,0.35);
+      box-shadow: 0 12px 40px rgba(41,82,217,0.14);
+    }
+    .featured-pricing {
+      border-color: rgba(41,82,217,0.5);
+      background: rgba(41,82,217,0.07);
+      box-shadow: 0 0 40px rgba(41,82,217,0.12);
+    }
+    .featured-badge {
+      position: absolute; top: -1px; right: 20px;
+      background: var(--bright-blue); color: var(--white);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 0 0 8px 8px;
+    }
+    .tier-name {
+      font-family: var(--font-head);
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--light-blue); margin-bottom: 12px;
+    }
+    .tier-price {
+      font-family: var(--font-head);
+      font-size: 30px; font-weight: 700;
+      color: var(--white); letter-spacing: -0.03em; line-height: 1;
+    }
+    .per-mo { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.38); }
+    .tier-usd { display: none; }
+    .tier-commit { font-size: 12px; color: rgba(255,255,255,0.42); margin-bottom: 2px; }
+    .tier-onboard {
+      font-size: 12px; color: rgba(107,143,255,0.65);
+      margin-bottom: 18px; padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+    .tier-features {
+      list-style: none; display: flex; flex-direction: column;
+      gap: 9px; flex: 1; margin-bottom: 22px;
+    }
+    .tier-features li {
+      font-size: 13px; color: rgba(255,255,255,0.62);
+      padding-left: 18px; position: relative; line-height: 1.5;
+    }
+    .tier-features li::before {
+      content: '';
+      position: absolute; left: 0; top: 7px;
+      width: 6px; height: 6px;
+      background: var(--bright-blue); border-radius: 50%; opacity: 0.65;
+    }
+    .tier-cta { width: 100%; text-align: center; justify-content: center; margin-top: auto; }
+    .scale-ctas { display: flex; flex-direction: column; gap: 8px; margin-top: auto; }
+    .scale-ctas .tier-cta { margin-top: 0; }
+    .payment-note { font-size: 13px; color: rgba(255,255,255,0.38); margin-bottom: 32px; font-style: italic; }
+    .pricing-footnote { font-size: 13px; color: rgba(255,255,255,0.3); margin-top: 24px; font-style: italic; }
+
+    /* ═══════════════════════════════════════
+       À LA CARTE
+    ═══════════════════════════════════════ */
+    .service-group { margin-bottom: 28px; }
+    .group-heading {
+      font-family: var(--font-head);
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--light-blue); margin-bottom: 10px;
+      padding-bottom: 10px; border-bottom: 1px solid var(--border);
+    }
+    .service-table {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .st-row {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      padding: 13px 20px; font-size: 14px;
+      transition: background 0.2s;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .st-row:last-child { border-bottom: none; }
+    .st-row:hover { background: rgba(255,255,255,0.04); }
+    .st-row span:first-child { color: rgba(255,255,255,0.72); flex: 1; padding-right: 16px; }
+    .st-price { font-family: var(--font-head); font-size: 14px; font-weight: 600; color: var(--light-blue); white-space: nowrap; }
+    .footnote-small { font-size: 12px; color: rgba(255,255,255,0.28); margin-top: 14px; font-style: italic; }
+
+    .builds-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .build-card {
+      flex: 1 1 190px;
+      max-width: 220px;
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 22px 20px;
+      transition: border-color 0.25s, transform 0.25s var(--ease-out), box-shadow 0.25s;
+      position: relative;
+    }
+    @media (max-width: 600px)  { .build-card { max-width: calc(50% - 6px); flex-basis: calc(50% - 6px); } }
+    @media (max-width: 400px)  { .build-card { max-width: 100%; flex-basis: 100%; } }
+    .build-card:hover {
+      border-color: rgba(41,82,217,0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(41,82,217,0.12);
+    }
+    .featured-build { border-color: rgba(41,82,217,0.4); background: rgba(41,82,217,0.05); }
+    .build-star { font-size: 11px; font-weight: 700; color: #fbbf24; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px; }
+    .build-name { font-family: var(--font-head); font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 6px; line-height: 1.4; }
+    .build-desc { font-size: 12px; color: rgba(255,255,255,0.42); margin-bottom: 12px; line-height: 1.55; }
+    .build-price { font-family: var(--font-head); font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 4px; letter-spacing: -0.02em; }
+    .build-maint { font-size: 11px; color: rgba(255,255,255,0.32); }
+
+    /* ═══════════════════════════════════════
+       QUIZ
+    ═══════════════════════════════════════ */
+    .quiz-container {
+      max-width: 620px; margin: 0 auto;
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .quiz-progress {
+      width: 100%; height: 3px;
+      background: rgba(255,255,255,0.08);
+      border-radius: var(--radius-pill);
+      margin-bottom: 20px; overflow: hidden;
+    }
+    .quiz-progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg,var(--brand-blue),var(--light-blue));
+      border-radius: var(--radius-pill);
+      transition: width 0.4s var(--ease-out);
+      width: 0%;
+    }
+    .quiz-step-label {
+      font-size: 11px; font-weight: 600;
+      color: rgba(255,255,255,0.38);
+      letter-spacing: 1.5px; text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .quiz-step { display: none; }
+    .quiz-step.active { display: block; }
+    .quiz-question {
+      font-family: var(--font-head);
+      font-size: 22px; font-weight: 600;
+      color: var(--white); margin-bottom: 24px;
+    }
+    .quiz-options { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
+    .quiz-opt {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-pill);
+      color: rgba(255,255,255,0.72);
+      font-family: var(--font-body); font-size: 14px; font-weight: 500;
+      padding: 13px 18px; cursor: pointer;
+      transition: all 0.2s var(--ease-out); text-align: center;
+    }
+    .quiz-opt:hover {
+      border-color: var(--bright-blue);
+      background: rgba(41,82,217,0.12);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    .result-tier-name { font-family: var(--font-head); font-size: 36px; font-weight: 700; color: var(--white); margin-bottom: 4px; letter-spacing: -0.03em; }
+    .result-price { font-family: var(--font-head); font-size: 24px; font-weight: 600; color: var(--light-blue); margin-bottom: 16px; }
+    .result-why { font-size: 15px; color: rgba(255,255,255,0.58); line-height: 1.75; margin-bottom: 24px; }
+    .result-services {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius-md);
+      padding: 20px; margin-bottom: 24px;
+    }
+    .result-services h4 {
+      font-family: var(--font-head); font-size: 12px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--light-blue); margin-bottom: 12px;
+    }
+    .result-services ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .result-services li { font-size: 14px; color: rgba(255,255,255,0.68); padding-left: 18px; position: relative; }
+    .result-services li::before { content: '→'; position: absolute; left: 0; color: var(--bright-blue); font-size: 12px; }
+    #result-wa-btn { width: 100%; justify-content: center; }
+    #quiz-restart { width: 100%; text-align: center; margin-top: 10px; justify-content: center; }
+    @media (max-width: 500px) { .quiz-container { padding: 24px 18px; } .quiz-options { grid-template-columns: 1fr; } }
+
+    /* ═══════════════════════════════════════
+       WHY NOVA
+    ═══════════════════════════════════════ */
+    .why-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+    }
+    .why-card { flex: 1 1 260px; max-width: 380px; }
+    .why-card {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      transition: border-color 0.25s, transform 0.25s var(--ease-out), box-shadow 0.25s;
+    }
+    .why-card:hover {
+      border-color: rgba(41,82,217,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(41,82,217,0.12);
+    }
+    .why-icon {
+      width: 52px; height: 52px;
+      background: rgba(41,82,217,0.1);
+      border: 1px solid rgba(41,82,217,0.2);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .why-icon svg { width: 28px; height: 28px; }
+    .why-card h3 { font-size: 17px; font-weight: 600; color: var(--white); margin-bottom: 10px; }
+    .why-card p { font-size: 14px; color: rgba(255,255,255,0.48); line-height: 1.7; }
+
+    /* ═══════════════════════════════════════
+       CONTACT
+    ═══════════════════════════════════════ */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    .contact-form-wrap {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+    .form-group label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.55); letter-spacing: 0.3px; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-sm);
+      color: var(--white);
+      font-family: var(--font-body); font-size: 15px;
+      padding: 12px 16px;
+      transition: border-color 0.2s, background 0.2s;
+      outline: none; -webkit-appearance: none; appearance: none;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,0.2); }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--bright-blue);
+      background: rgba(41,82,217,0.04);
+    }
+    .form-group select {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B8FFF' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 40px;
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .contact-form-wrap .btn-primary { width: 100%; justify-content: center; padding: 14px; font-size: 15px; }
+    .form-success-msg { font-size: 17px; color: var(--light-blue); text-align: center; padding: 40px 20px; line-height: 1.7; border: 1px solid rgba(41,82,217,0.3); border-radius: var(--radius-md); }
+    .contact-info { display: flex; flex-direction: column; gap: 24px; padding-top: 8px; }
+    .contact-wa { display: inline-flex; align-items: center; gap: 10px; padding: 15px 28px; font-size: 15px; }
+    .contact-link { font-size: 15px; color: var(--light-blue); text-decoration: none; font-weight: 600; transition: color 0.2s; }
+    .contact-link:hover { color: var(--white); }
+    .contact-socials { display: flex; flex-direction: column; gap: 14px; }
+    .social-link { display: flex; align-items: center; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.48); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .social-link:hover { color: var(--white); }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════ */
+    #footer { border-top: 1px solid var(--border); padding: 40px 5% 0; }
+    .footer-inner {
+      max-width: 1280px; margin: 0 auto;
+      display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap;
+      gap: 24px; padding-bottom: 32px;
+    }
+    .footer-left { display: flex; align-items: center; gap: 12px; }
+    .footer-brand { font-size: 13px; color: rgba(255,255,255,0.38); font-weight: 500; }
+    .footer-nav { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-nav a { font-size: 13px; color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--white); }
+    .footer-right { display: flex; align-items: center; gap: 16px; }
+    .footer-social { color: rgba(255,255,255,0.32); transition: color 0.2s; display: flex; }
+    .footer-social:hover { color: var(--white); }
+    .footer-email { font-size: 12px; color: rgba(107,143,255,0.55); text-decoration: none; transition: color 0.2s; }
+    .footer-email:hover { color: var(--light-blue); }
+    .footer-bottom { border-top: 1px solid var(--border); padding: 16px 0; max-width: 1280px; margin: 0 auto; }
+    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.18); }
+    @media (max-width: 768px) { .footer-inner { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+
+  <a href="#services" class="skip-link">Skip to main content</a>
+
+  <!-- ── Navbar ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="4,28 13,16 20,22 32,8" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="24,8 32,8 32,16" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">NOVA<span class="dot">.</span></span>
+          <span class="nav-logo-sub">Agency · Dubai</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#alacarte">À La Carte</a></li>
+        <li><a href="#quiz">Audit Quiz</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="https://wa.me/YOURNUMBER" class="btn-primary nav-cta" target="_blank" rel="noopener">WhatsApp Us</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#pricing" class="mobile-link">Pricing</a></li>
+        <li><a href="#alacarte" class="mobile-link">À La Carte</a></li>
+        <li><a href="#quiz" class="mobile-link">Audit Quiz</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+      <a href="https://wa.me/YOURNUMBER" class="btn-primary" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section id="hero">
+    <canvas id="particle-canvas"></canvas>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-pulse"></span>
+        Dubai's AI Marketing Agency
+      </div>
+      <h1 class="hero-h1"><span class="grad">AI Marketing</span><br>That Actually Works</h1>
+      <p class="hero-sub">AI-powered. Human-executed. Built for Dubai businesses ready to scale.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/YOURNUMBER" class="btn-primary" target="_blank" rel="noopener">WhatsApp Us</a>
+        <a href="#services" class="btn-ghost">See Our Services</a>
+      </div>
+      <div class="hero-float-card">
+        <div class="hero-stat">
+          <span class="hero-stat-num stat-num" data-target="21">0</span>
+          <span class="hero-stat-label">AI Services</span>
+        </div>
+        <div class="hero-stat-div"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">5 Tiers</span>
+          <span class="hero-stat-label">AED 1,200 – 32,000</span>
+        </div>
+        <div class="hero-stat-div"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">UAE</span>
+          <span class="hero-stat-label">Dubai-Based</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="gradient-divider"></div>
+
+  <!-- ── Services ── -->
+  <section id="services" class="full-section">
+    <span class="section-pill fade-in">What We Do</span>
+    <h2 class="section-heading fade-in">6 Core AI Services</h2>
+    <p class="section-sub fade-in">AI tools running underneath. Real people delivering results on top.</p>
+    <div class="services-grid">
+
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 16h6l4-8 4 16 4-12 4 4h6" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>AI Workflow Automation</h3>
+        <p>n8n / Make / Zapier — automate your operations end-to-end</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="6" width="24" height="16" rx="3" stroke="#2952D9" stroke-width="2.5"/>
+            <circle cx="11" cy="14" r="1.5" fill="#2952D9"/>
+            <circle cx="16" cy="14" r="1.5" fill="#2952D9"/>
+            <circle cx="21" cy="14" r="1.5" fill="#2952D9"/>
+            <path d="M10 22v4M22 22v4M8 26h16" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>WhatsApp + Website Chatbot</h3>
+        <p>Capture leads and answer customers 24/7 — no human needed</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="10" stroke="#2952D9" stroke-width="2.5"/>
+            <path d="M12 20c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="#2952D9" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="16" cy="12" r="2" fill="#2952D9"/>
+          </svg>
+        </div>
+        <h3>AI Voice Agent</h3>
+        <p>Inbound and outbound calling — answers, qualifies, and books</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 26L14 18M18 8l-4 10 4-10z" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 18h8l-4-10" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="26" cy="8" r="2.5" stroke="#2952D9" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>Cold Email Lead Gen</h3>
+        <p>500 qualified prospects/mo — AI writes, sends, and books meetings</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="4" width="13" height="24" rx="2" stroke="#2952D9" stroke-width="2.5"/>
+            <path d="M19 10h4a2 2 0 012 2v8" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M10 12h5M10 16h5M10 20h3" stroke="#2952D9" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>UGC Video Ads</h3>
+        <p>TikTok / Reels / Shorts — 20+ scroll-stopping video variants/mo</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="10" stroke="#2952D9" stroke-width="2.5"/>
+            <path d="M8 20c2-5 10-9 16-4" stroke="#2952D9" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16 6v4M16 22v4M6 16H2M30 16h-4" stroke="#2952D9" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>AI SEO + Content Engine</h3>
+        <p>Rank on Google AND ChatGPT, Perplexity, Gemini</p>
+      </div>
+
+    </div>
+  </section>
+  <div class="gradient-divider"></div>
+
+  <!-- ── Pricing ── -->
+  <section id="pricing" class="full-section">
+    <span class="section-pill fade-in">Pricing</span>
+    <h2 class="section-heading fade-in">Simple, Transparent Pricing</h2>
+    <p class="section-sub fade-in">No hidden fees. Ad spend always paid by you, directly to the platform.</p>
+    <p class="payment-note fade-in">Monthly · Installment (+5%) · Annual prepay (−10%) · One-time builds available</p>
+
+    <div class="pricing-grid">
+
+      <div class="pricing-card fade-in">
+        <div class="tier-name">Launch</div>
+        <div class="tier-price">AED 1,200<span class="per-mo">/mo</span></div>
+        <div class="tier-commit">Month-to-month</div>
+        <div class="tier-onboard">+ AED 500 onboarding</div>
+        <ul class="tier-features">
+          <li>1 platform (IG or TikTok)</li>
+          <li>10 posts/mo, AI captions</li>
+          <li>Content calendar (30 days)</li>
+          <li>1 short-form video/mo</li>
+          <li>5 product descriptions/mo</li>
+          <li>Monthly performance report</li>
+        </ul>
+        <a href="https://wa.me/YOURNUMBER?text=Hi+Nova+Agency,+interested+in+the+Launch+plan" class="btn-primary tier-cta" target="_blank" rel="noopener">Get Started</a>
+      </div>
+
+      <div class="pricing-card fade-in">
+        <div class="tier-name">Spark</div>
+        <div class="tier-price">AED 3,000<span class="per-mo">/mo</span></div>
+        <div class="tier-commit">Month-to-month</div>
+        <div class="tier-onboard">+ AED 500 onboarding</div>
+        <ul class="tier-features">
+          <li>Everything in Launch</li>
+          <li>2 platforms (IG + TikTok)</li>
+          <li>20 posts/mo</li>
+          <li>4 short-form videos/mo</li>
+          <li>Basic paid ads management</li>
+          <li>Bi-weekly strategy call</li>
+        </ul>
+        <a href="https://wa.me/YOURNUMBER?text=Hi+Nova+Agency,+interested+in+the+Spark+plan" class="btn-primary tier-cta" target="_blank" rel="noopener">Get Started</a>
+      </div>
+
+      <div class="pricing-card featured-pricing fade-in">
+        <div class="featured-badge">Most Popular</div>
+        <div class="tier-name">Foundation</div>
+        <div class="tier-price">AED 6,000<span class="per-mo">/mo</span></div>
+        <div class="tier-commit">3-month minimum</div>
+        <div class="tier-onboard">+ AED 1,000 onboarding</div>
+        <ul class="tier-features">
+          <li>Everything in Spark</li>
+          <li>3 platforms + LinkedIn</li>
+          <li>WhatsApp chatbot</li>
+          <li>Email marketing flows</li>
+          <li>8 short-form videos/mo</li>
+          <li>Monthly strategy call</li>
+        </ul>
+        <a href="https://wa.me/YOURNUMBER?text=Hi+Nova+Agency,+interested+in+the+Foundation+plan" class="btn-primary tier-cta" target="_blank" rel="noopener">Get Started</a>
+      </div>
+
+      <div class="pricing-card fade-in">
+        <div class="tier-name">Growth</div>
+        <div class="tier-price">AED 14,000<span class="per-mo">/mo</span></div>
+        <div class="tier-commit">6-month minimum</div>
+        <div class="tier-onboard">+ AED 1,500 onboarding</div>
+        <ul class="tier-features">
+          <li>Everything in Foundation</li>
+          <li>All platforms</li>
+          <li>Paid ads (Meta + TikTok)</li>
+          <li>Cold email — 500 leads/mo</li>
+          <li>WhatsApp automation</li>
+          <li>Analytics dashboard</li>
+          <li>Bi-weekly strategy call</li>
+        </ul>
+        <a href="https://wa.me/YOURNUMBER?text=Hi+Nova+Agency,+interested+in+the+Growth+plan" class="btn-primary tier-cta" target="_blank" rel="noopener">Get Started</a>
+      </div>
+
+      <div class="pricing-card fade-in">
+        <div class="tier-name">Scale</div>
+        <div class="tier-price">AED 32,000<span class="per-mo">/mo</span></div>
+        <div class="tier-commit">12-month minimum</div>
+        <div class="tier-onboard">+ AED 1,500 onboarding</div>
+        <ul class="tier-features">
+          <li>Everything in Growth</li>
+          <li>All platforms + TikTok Shop</li>
+          <li>Unlimited posts, 20+ videos/mo</li>
+          <li>AI SEO + GEO + AEO</li>
+          <li>Voice agent + RAG assistant</li>
+          <li>1 custom automation build</li>
+          <li>Dedicated strategist</li>
+          <li>Weekly call + quarterly review</li>
+        </ul>
+        <a href="https://wa.me/YOURNUMBER?text=Hi+Nova+Agency,+interested+in+the+Scale+plan" class="btn-primary tier-cta" target="_blank" rel="noopener">Get Started</a>
+      </div>
+
+    </div>
+    <p class="pricing-footnote">Launch = AED 40/day · Foundation = cheaper than hiring a social media manager (AED 8,000–12,000/mo salary)</p>
+  </section>
+  <div class="gradient-divider"></div>
+
+  <!-- ── À La Carte + One-Time Builds ── -->
+  <section id="alacarte" class="full-section">
+    <span class="section-pill fade-in">À La Carte</span>
+    <h2 class="section-heading fade-in">Pick What You Need</h2>
+    <p class="section-sub fade-in">On any tier or standalone. Add what you need, skip what you don't.</p>
+
+    <div class="service-group fade-in">
+      <h3 class="group-heading">Content &amp; Social</h3>
+      <div class="service-table">
+        <div class="st-row"><span>Social media management — 2 platforms</span><span class="st-price">AED 2,000/mo</span></div>
+        <div class="st-row"><span>Social media management — 4 platforms</span><span class="st-price">AED 3,500/mo</span></div>
+        <div class="st-row"><span>UGC / short-form video ads (20 variants/mo)</span><span class="st-price">AED 2,500/mo</span></div>
+        <div class="st-row"><span>Long-form video editing + 20 clips/mo</span><span class="st-price">AED 2,000/mo</span></div>
+        <div class="st-row"><span>AI content engine (blogs, scripts, copy)</span><span class="st-price">AED 1,800/mo</span></div>
+        <div class="st-row"><span>AI image generation for content</span><span class="st-price">AED 500/mo</span></div>
+        <div class="st-row"><span>Personal branding management</span><span class="st-price">AED 2,500/mo</span></div>
+      </div>
+    </div>
+
+    <div class="service-group fade-in">
+      <h3 class="group-heading">Platform Management</h3>
+      <div class="service-table">
+        <div class="st-row"><span>LinkedIn growth and management</span><span class="st-price">AED 1,500/mo</span></div>
+        <div class="st-row"><span>Snapchat management</span><span class="st-price">AED 1,200/mo</span></div>
+        <div class="st-row"><span>TikTok Shop management</span><span class="st-price">AED 2,000/mo</span></div>
+        <div class="st-row"><span>Google Business Profile optimization</span><span class="st-price">AED 800/mo</span></div>
+      </div>
+    </div>
+
+    <div class="service-group fade-in">
+      <h3 class="group-heading">Performance Marketing</h3>
+      <div class="service-table">
+        <div class="st-row"><span>Paid ads management (Meta + TikTok) + 10% of ad spend</span><span class="st-price">AED 3,500/mo</span></div>
+        <div class="st-row"><span>AI creative production for paid ads</span><span class="st-price">AED 2,500/mo</span></div>
+        <div class="st-row"><span>Email and SMS marketing (flows + campaigns)</span><span class="st-price">AED 2,500/mo</span></div>
+        <div class="st-row"><span>Cold email / outbound lead gen (500 prospects/mo)*</span><span class="st-price">AED 3,000/mo</span></div>
+        <div class="st-row"><span>AI SDR / sales agent deployment</span><span class="st-price">AED 2,500/mo</span></div>
+        <div class="st-row"><span>Influencer and UGC sourcing (3 creators/mo)</span><span class="st-price">AED 2,000/mo</span></div>
+        <div class="st-row"><span>SEO + GEO + AEO combined</span><span class="st-price">AED 4,000/mo</span></div>
+        <div class="st-row"><span>Analytics dashboard management</span><span class="st-price">AED 1,500/mo</span></div>
+      </div>
+    </div>
+
+    <div class="service-group fade-in">
+      <h3 class="group-heading">AI Automation (monthly management, after build)</h3>
+      <div class="service-table">
+        <div class="st-row"><span>WhatsApp automation management</span><span class="st-price">AED 1,500/mo</span></div>
+        <div class="st-row"><span>Workflow automation management</span><span class="st-price">AED 1,500/mo</span></div>
+        <div class="st-row"><span>Voice agent management</span><span class="st-price">AED 1,200 + AED 0.33/min</span></div>
+        <div class="st-row"><span>Booking automation management</span><span class="st-price">AED 600/mo</span></div>
+        <div class="st-row"><span>RAG knowledge base management</span><span class="st-price">AED 800/mo</span></div>
+      </div>
+    </div>
+    <p class="footnote-small">*Cold email: client is solely responsible for legal compliance with applicable anti-spam laws.</p>
+
+    <!-- One-Time Builds -->
+    <span class="section-pill fade-in" style="margin-top:64px;display:inline-flex">One-Time Builds</span>
+    <h2 class="section-heading fade-in">Pay Once. Own It Forever.</h2>
+    <p class="section-sub fade-in">Optional monthly maintenance after delivery.</p>
+
+    <div class="builds-grid">
+      <div class="build-card featured-build fade-in">
+        <div class="build-star">★ Best for first stores</div>
+        <div class="build-name">Shopify Starter Pack</div>
+        <div class="build-desc">Store + brand kit + chatbot + 1 month Launch free</div>
+        <div class="build-price">AED 4,500 flat</div>
+        <div class="build-maint">Maintenance: AED 1,500–3,500/mo</div>
+      </div>
+      <div class="build-card fade-in"><div class="build-name">Chatbot (web / WhatsApp / Messenger)</div><div class="build-price">AED 7,500–35,000</div><div class="build-maint">Maint: AED 1,000–2,500/mo</div></div>
+      <div class="build-card fade-in"><div class="build-name">WhatsApp Business Automation</div><div class="build-price">AED 7,500–25,000</div><div class="build-maint">Maint: AED 1,000–2,000/mo</div></div>
+      <div class="build-card fade-in"><div class="build-name">Voice Agent Setup</div><div class="build-price">AED 8,000–30,000</div><div class="build-maint">Maint: AED 1,200 + /min</div></div>
+      <div class="build-card fade-in"><div class="build-name">Workflow Automation (n8n / Make / Zapier)</div><div class="build-price">AED 6,000–40,000</div><div class="build-maint">Maint: AED 800–3,000/mo</div></div>
+      <div class="build-card fade-in"><div class="build-name">Booking Automation System</div><div class="build-price">AED 5,000–15,000</div><div class="build-maint">Maint: AED 600/mo</div></div>
+      <div class="build-card fade-in"><div class="build-name">RAG Knowledge Base Assistant</div><div class="build-price">AED 9,000–40,000</div><div class="build-maint">Maint: AED 800/mo</div></div>
+      <div class="build-card fade-in"><div class="build-name">Analytics Dashboard Setup</div><div class="build-price">AED 4,500–22,000</div><div class="build-maint">Maint: AED 500–1,500/mo</div></div>
+      <div class="build-card fade-in"><div class="build-name">Website Build (Framer / Webflow / Custom)</div><div class="build-price">AED 9,000–40,000</div><div class="build-maint">Maint: AED 400–1,200/mo</div></div>
+      <div class="build-card fade-in"><div class="build-name">Custom App Build</div><div class="build-price">AED 12,000–75,000</div><div class="build-maint">Maint: AED 500–2,000/mo</div></div>
+      <div class="build-card fade-in"><div class="build-name">Shopify Store Build (Standard)</div><div class="build-price">AED 6,000–18,000</div><div class="build-maint">Maint: AED 1,500–3,500/mo</div></div>
+      <div class="build-card fade-in"><div class="build-name">Brand Identity &amp; Design System</div><div class="build-price">AED 5,000–18,000</div><div class="build-maint">N/A</div></div>
+      <div class="build-card fade-in"><div class="build-name">Landing Page Sprint (48–72hr)</div><div class="build-price">AED 4,500–8,000</div><div class="build-maint">N/A</div></div>
+    </div>
+  </section>
+  <div class="gradient-divider"></div>
+
+  <!-- ── Audit Quiz ── -->
+  <section id="quiz" class="full-section">
+    <span class="section-pill fade-in">Free Audit</span>
+    <h2 class="section-heading fade-in">Not Sure Where to Start?</h2>
+    <p class="section-sub fade-in">Answer 3 questions and we'll tell you exactly what you need.</p>
+
+    <div class="quiz-container fade-in">
+      <div class="quiz-progress">
+        <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
+      </div>
+      <div class="quiz-step-label" id="quiz-step-label" aria-live="polite" aria-atomic="true">Step 1 of 3</div>
+
+      <div class="quiz-step active" id="step-1">
+        <h3 class="quiz-question">What's your business type?</h3>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-step="1" data-value="ecommerce">Ecommerce Store</button>
+          <button class="quiz-opt" data-step="1" data-value="dropshipping">Dropshipping</button>
+          <button class="quiz-opt" data-step="1" data-value="clothing">Clothing Brand</button>
+          <button class="quiz-opt" data-step="1" data-value="reseller">Reseller</button>
+          <button class="quiz-opt" data-step="1" data-value="local">Local Business</button>
+          <button class="quiz-opt" data-step="1" data-value="other">Other</button>
+        </div>
+      </div>
+
+      <div class="quiz-step" id="step-2">
+        <h3 class="quiz-question">What's your main goal?</h3>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-step="2" data-value="customers">Get more customers</button>
+          <button class="quiz-opt" data-step="2" data-value="automate">Automate my operations</button>
+          <button class="quiz-opt" data-step="2" data-value="social">Grow my social media</button>
+          <button class="quiz-opt" data-step="2" data-value="chatbot">Build a chatbot or AI tool</button>
+          <button class="quiz-opt" data-step="2" data-value="all">All of the above</button>
+        </div>
+      </div>
+
+      <div class="quiz-step" id="step-3">
+        <h3 class="quiz-question">What's your monthly budget?</h3>
+        <div class="quiz-options" style="grid-template-columns: repeat(2,1fr)">
+          <button class="quiz-opt" data-step="3" data-value="under3k">Under AED 3,000</button>
+          <button class="quiz-opt" data-step="3" data-value="3k7k">AED 3,000–7,000</button>
+          <button class="quiz-opt" data-step="3" data-value="7k15k">AED 7,000–15,000</button>
+          <button class="quiz-opt" data-step="3" data-value="15kplus">AED 15,000+</button>
+        </div>
+      </div>
+
+      <div class="quiz-step" id="quiz-results">
+        <div class="result-tier-name" id="result-tier-name"></div>
+        <div class="result-price" id="result-price"></div>
+        <p class="result-why" id="result-why"></p>
+        <div class="result-services">
+          <h4>Recommended for you:</h4>
+          <ul id="result-services-list"></ul>
+        </div>
+        <a id="result-wa-btn" class="btn-primary" target="_blank" rel="noopener" href="#">WhatsApp Us With Your Results</a>
+        <button class="btn-ghost" id="quiz-restart" style="margin-top:12px;width:100%;text-align:center">Start Over</button>
+      </div>
+    </div>
+  </section>
+  <div class="gradient-divider"></div>
+
+  <!-- ── Why Nova ── -->
+  <section id="why-nova" class="full-section">
+    <span class="section-pill fade-in">Why Nova</span>
+    <h2 class="section-heading fade-in">Why Nova Agency</h2>
+    <div class="why-grid">
+
+      <div class="why-card fade-in">
+        <div class="why-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="18" stroke="#2952D9" stroke-width="2.5"/>
+            <path d="M16 24l6 6 10-12" stroke="#2952D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>AI-Powered, Human-Executed</h3>
+        <p>Every service uses AI tools, but a real person manages and delivers it. No black boxes.</p>
+      </div>
+
+      <div class="why-card fade-in">
+        <div class="why-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="16" stroke="#2952D9" stroke-width="2.5"/>
+            <path d="M8 24h32M24 8c-5 4-8 10-8 16s3 12 8 16M24 8c5 4 8 10 8 16s-3 12-8 16" stroke="#2952D9" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Built for Dubai</h3>
+        <p>WhatsApp-first, AED pricing, GCC timezone, Arabic support where needed.</p>
+      </div>
+
+      <div class="why-card fade-in">
+        <div class="why-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="16" width="32" height="18" rx="3" stroke="#2952D9" stroke-width="2.5"/>
+            <path d="M16 34v6M32 34v6M12 40h24M8 24h32" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Retainer or One-Time</h3>
+        <p>Monthly packages or single builds. No lock-in on Launch and Spark.</p>
+      </div>
+
+    </div>
+  </section>
+  <div class="gradient-divider"></div>
+
+  <!-- ── Contact ── -->
+  <section id="contact" class="full-section">
+    <span class="section-pill fade-in">Contact</span>
+    <h2 class="section-heading fade-in">Ready to Grow?</h2>
+    <p class="section-sub fade-in">Talk to us on WhatsApp, email, or fill in the form below.</p>
+
+    <div class="contact-grid">
+
+      <div class="contact-form-wrap fade-in">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form">
+          <input type="hidden" name="form-name" value="contact">
+          <p style="display:none"><label>Skip: <input name="bot-field"></label></p>
+          <div class="form-group">
+            <label for="c-name">Your Name</label>
+            <input type="text" id="c-name" name="name" required placeholder="Omar Al-Rashid">
+          </div>
+          <div class="form-group">
+            <label for="c-wa">WhatsApp Number</label>
+            <input type="tel" id="c-wa" name="whatsapp" required placeholder="+971 50 000 0000">
+          </div>
+          <div class="form-group">
+            <label for="c-biz">Business Type</label>
+            <select id="c-biz" name="business-type" required>
+              <option value="" disabled selected>Select your business type</option>
+              <option>Ecommerce Store</option>
+              <option>Dropshipping</option>
+              <option>Clothing Brand</option>
+              <option>Reseller</option>
+              <option>Local Business</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="c-msg">Message (optional)</label>
+            <textarea id="c-msg" name="message" rows="4" placeholder="Tell us what you need..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+        <div id="form-success" style="display:none">
+          <p class="form-success-msg">Thanks! We'll WhatsApp you shortly.</p>
+        </div>
+      </div>
+
+      <div class="contact-info fade-in">
+        <a href="https://wa.me/YOURNUMBER" class="btn-primary contact-wa" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <a href="mailto:hello@novaagency.me" class="contact-link">hello@novaagency.me</a>
+        <div class="contact-socials">
+          <a href="https://instagram.com/novaagency.me" class="social-link" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            @novaagency.me
+          </a>
+          <a href="https://tiktok.com/@novaagency.me" class="social-link" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.19 8.19 0 004.79 1.52V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
+            @novaagency.me
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="4,28 13,16 20,22 32,8" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="24,8 32,8 32,16" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="footer-brand">NOVA<span style="color:var(--bright-blue)">.</span> Agency · Dubai</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#alacarte">À La Carte</a>
+        <a href="#quiz">Audit Quiz</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-right">
+        <a href="https://instagram.com/novaagency.me" class="footer-social" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://tiktok.com/@novaagency.me" class="footer-social" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.19 8.19 0 004.79 1.52V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
+        </a>
+        <a href="mailto:hello@novaagency.me" class="footer-email">hello@novaagency.me</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nova Agency. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Navbar scroll ─────────────────────────────────────────────────────────
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 80);
+    });
+
+    // ── Hamburger ─────────────────────────────────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ── Particle Canvas ───────────────────────────────────────────────────────
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const canvas = document.getElementById('particle-canvas');
+      const ctx = canvas.getContext('2d');
+      const COUNT = 60, CONNECT = 120, RGB = '41,82,217';
+      let pts = [];
+
+      function resize() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+      }
+
+      function mkPt() {
+        return {
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+          r: Math.random() * 2 + 1
+        };
+      }
+
+      function init() { resize(); pts = Array.from({ length: COUNT }, mkPt); }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        pts.forEach(p => {
+          p.x += p.vx; p.y += p.vy;
+          if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+          if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${RGB},0.5)`;
+          ctx.fill();
+        });
+        for (let i = 0; i < pts.length; i++) {
+          for (let j = i + 1; j < pts.length; j++) {
+            const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
+            const d = Math.sqrt(dx * dx + dy * dy);
+            if (d < CONNECT) {
+              ctx.beginPath();
+              ctx.moveTo(pts[i].x, pts[i].y);
+              ctx.lineTo(pts[j].x, pts[j].y);
+              ctx.strokeStyle = `rgba(${RGB},${0.4 * (1 - d / CONNECT)})`;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('resize', init);
+      init();
+      draw();
+    })();
+
+    // ── Counter Animation ─────────────────────────────────────────────────────
+    function animateCounter(el, target, duration) {
+      duration = duration || 1500;
+      const start = performance.now();
+      function tick(now) {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(eased * target);
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    const counterObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          animateCounter(el, parseInt(el.dataset.target));
+          counterObs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stat-num[data-target]').forEach(el => counterObs.observe(el));
+
+    // ── Scroll Fade-In ────────────────────────────────────────────────────────
+    const fadeObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          fadeObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+
+    // ── Audit Quiz ────────────────────────────────────────────────────────────
+    const quizState = { business: null, goal: null, budget: null };
+
+    const QUIZ_TIERS = {
+      under3k:       { name: 'Launch',     price: 'AED 1,200/mo', why: 'Launch is perfect for your budget — AED 40/day gets you a full social media presence with AI-powered content.' },
+      '3k7k_social': { name: 'Spark',      price: 'AED 3,000/mo', why: 'Spark gives you two platforms and more posts — great for testing what works before committing longer.' },
+      '3k7k_auto':   { name: 'Foundation', price: 'AED 6,000/mo', why: 'Foundation unlocks the chatbot, email flows, and video content you need for automation.' },
+      '7k15k_low':   { name: 'Foundation', price: 'AED 6,000/mo', why: 'Foundation covers social, video, chatbot, email, and a monthly strategy call — the full toolkit.' },
+      '7k15k_high':  { name: 'Growth',     price: 'AED 14,000/mo', why: 'Growth adds paid ads, WhatsApp automation, and cold email lead gen — your full-stack growth engine.' },
+      '15kplus':     { name: 'Growth',     price: 'AED 14,000/mo', why: 'Growth gives you everything — ads, automation, lead gen, analytics, and strategy calls.' },
+      '15kplus_all': { name: 'Scale',      price: 'AED 32,000/mo', why: 'Scale is your full outsourced AI marketing department — unlimited content, all platforms, voice agents, and a dedicated strategist.' }
+    };
+
+    const QUIZ_SERVICES = {
+      customers: ['Cold Email Lead Gen — 500 qualified prospects/mo', 'UGC Video Ads — TikTok / Reels / Shorts', 'AI SEO + Content Engine — rank on Google & AI search'],
+      automate:  ['AI Workflow Automation — n8n / Make / Zapier', 'WhatsApp + Website Chatbot — 24/7 lead capture', 'AI Voice Agent — inbound & outbound calling'],
+      social:    ['UGC Video Ads — TikTok / Reels / Shorts', 'AI SEO + Content Engine', 'Social Media Management — AI captions + scheduling'],
+      chatbot:   ['WhatsApp + Website Chatbot — 24/7 lead capture', 'AI Voice Agent — inbound & outbound calling', 'AI Workflow Automation — automate the follow-up'],
+      all: {
+        ecommerce:    ['UGC Video Ads', 'WhatsApp + Website Chatbot', 'Cold Email Lead Gen'],
+        dropshipping: ['UGC Video Ads', 'Cold Email Lead Gen', 'AI Workflow Automation'],
+        clothing:     ['UGC Video Ads', 'AI SEO + Content Engine', 'WhatsApp + Website Chatbot'],
+        reseller:     ['Cold Email Lead Gen', 'AI Workflow Automation', 'WhatsApp + Website Chatbot'],
+        local:        ['AI Voice Agent', 'WhatsApp + Website Chatbot', 'AI SEO + Content Engine'],
+        other:        ['AI Workflow Automation', 'WhatsApp + Website Chatbot', 'AI SEO + Content Engine']
+      }
+    };
+
+    function getRecommendation(business, goal, budget) {
+      let tierKey;
+      if (budget === 'under3k') {
+        tierKey = 'under3k';
+      } else if (budget === '3k7k') {
+        tierKey = (goal === 'automate' || goal === 'chatbot') ? '3k7k_auto' : '3k7k_social';
+      } else if (budget === '7k15k') {
+        tierKey = (goal === 'customers' || goal === 'all') ? '7k15k_high' : '7k15k_low';
+      } else {
+        tierKey = (goal === 'all') ? '15kplus_all' : '15kplus';
+      }
+
+      const services = (goal === 'all')
+        ? (QUIZ_SERVICES.all[business] || QUIZ_SERVICES.all.other)
+        : (QUIZ_SERVICES[goal] || QUIZ_SERVICES.customers);
+
+      return { tier: QUIZ_TIERS[tierKey], services };
+    }
+
+    function quizUpdateProgress(step) {
+      const pct = step === 'results' ? 100 : ((step - 1) / 3) * 100;
+      document.getElementById('quiz-progress-bar').style.width = pct + '%';
+      document.getElementById('quiz-step-label').textContent =
+        step === 'results' ? 'Your Results' : 'Step ' + step + ' of 3';
+    }
+
+    function quizShowStep(id) {
+      document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function quizShowResults() {
+      const rec = getRecommendation(quizState.business, quizState.goal, quizState.budget);
+      document.getElementById('result-tier-name').textContent = rec.tier.name;
+      document.getElementById('result-price').textContent = rec.tier.price;
+      document.getElementById('result-why').textContent = rec.tier.why;
+
+      const ul = document.getElementById('result-services-list');
+      ul.innerHTML = rec.services.map(s => '<li>' + s + '</li>').join('');
+
+      const bLabels = { ecommerce: 'Ecommerce Store', dropshipping: 'Dropshipping', clothing: 'Clothing Brand', reseller: 'Reseller', local: 'Local Business', other: 'Business' };
+      const gLabels = { customers: 'get more customers', automate: 'automate operations', social: 'grow social media', chatbot: 'build AI tools', all: 'grow in every way' };
+      const budLabels = { under3k: 'Under AED 3,000', '3k7k': 'AED 3,000–7,000', '7k15k': 'AED 7,000–15,000', '15kplus': 'AED 15,000+' };
+
+      const msg = encodeURIComponent(
+        'Hi Nova Agency, I completed the audit — I\'m a ' + bLabels[quizState.business] +
+        ' looking to ' + gLabels[quizState.goal] +
+        '. Budget: ' + budLabels[quizState.budget] +
+        '. Interested in the ' + rec.tier.name + ' plan.'
+      );
+      document.getElementById('result-wa-btn').href = 'https://wa.me/YOURNUMBER?text=' + msg;
+
+      quizUpdateProgress('results');
+      quizShowStep('quiz-results');
+    }
+
+    document.querySelectorAll('.quiz-opt').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const step = parseInt(btn.dataset.step);
+        const val = btn.dataset.value;
+        if (step === 1) { quizState.business = val; quizUpdateProgress(2); quizShowStep('step-2'); }
+        else if (step === 2) { quizState.goal = val; quizUpdateProgress(3); quizShowStep('step-3'); }
+        else { quizState.budget = val; quizShowResults(); }
+      });
+    });
+
+    document.getElementById('quiz-restart').addEventListener('click', () => {
+      quizState.business = quizState.goal = quizState.budget = null;
+      quizUpdateProgress(1);
+      quizShowStep('step-1');
+    });
+
+    // ── Contact Form (Netlify) ────────────────────────────────────────────────
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async e => {
+        e.preventDefault();
+        const btn = contactForm.querySelector('button[type="submit"]');
+        const originalText = btn.textContent;
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+        btn.style.opacity = '0.7';
+        try {
+          await fetch('/', { method: 'POST', body: new FormData(contactForm) });
+          contactForm.style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+        } catch {
+          btn.textContent = originalText;
+          btn.disabled = false;
+          btn.style.opacity = '';
+          alert('Something went wrong. Please WhatsApp us directly.');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
