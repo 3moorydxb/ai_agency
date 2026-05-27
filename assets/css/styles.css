@@ -1093,6 +1093,157 @@ html[dir="rtl"] .skip-link { left: auto; right: 8px; }
 }
 .error-404-ctas { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 
+/* 404 — extended elements used by the dedicated 404 page */
+.error-404-numeral {
+  font-family: 'Space Grotesk', var(--font-head);
+  font-size: clamp(8rem, 22vw, 18rem);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.04em;
+  display: inline-block;
+}
+/* Ensure the .grad mix-in works on a block-level numeral (div / h1) */
+.error-404-numeral.grad {
+  background: linear-gradient(135deg, #6B8FFF 0%, #2952D9 50%, #1E3FB8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.error-404-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0 3rem;
+}
+.error-404-popular {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid rgba(107,143,255,0.2);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.02);
+  text-align: left;
+}
+.error-404-popular h3 {
+  font-family: var(--font-head);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--light-blue);
+  margin-bottom: 14px;
+}
+.error-404-popular-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1.5rem;
+}
+.error-404-popular-list a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: block;
+  padding: 4px 0;
+}
+.error-404-popular-list a:hover { color: var(--white); }
+@media (max-width: 640px) {
+  .error-404-popular-list { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════
+   FLOATING LANGUAGE TOGGLE (AR / EN)
+   Fixed pill at bottom-left, opens popup above
+═══════════════════════════════════════ */
+.lang-fab {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #0a0a18;
+  border: 1px solid rgba(107,143,255,0.3);
+  color: #ffffff;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+.lang-fab:hover {
+  border-color: #6B8FFF;
+  transform: scale(1.03);
+}
+.lang-fab svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: rgba(107,143,255,0.9);
+}
+.lang-fab-popup {
+  position: fixed;
+  bottom: 76px;
+  left: 24px;
+  z-index: 91;
+  width: 180px;
+  background: #0a0a18;
+  border: 1px solid rgba(107,143,255,0.3);
+  border-radius: 14px;
+  padding: 6px;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.55);
+}
+.lang-fab-popup.is-open { display: flex; }
+.lang-fab-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.8);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
+}
+.lang-fab-option:hover {
+  background: rgba(107,143,255,0.1);
+  color: var(--white);
+}
+.lang-fab-option.active {
+  color: #6B8FFF;
+  background: rgba(107,143,255,0.08);
+}
+.lang-fab-option .check {
+  width: 14px;
+  height: 14px;
+  color: #6B8FFF;
+  opacity: 0;
+}
+.lang-fab-option.active .check { opacity: 1; }
+
+/* RTL adjustments for the floating language toggle */
+html[dir="rtl"] .lang-fab { left: auto; right: 24px; }
+html[dir="rtl"] .lang-fab-popup { left: auto; right: 24px; }
+
 /* ═══════════════════════════════════════
    SERVICE DETAIL PAGES
 ═══════════════════════════════════════ */

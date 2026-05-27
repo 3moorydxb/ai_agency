@@ -3,36 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pricing — Nova Agency Dubai · Every Price On The Site</title>
-  <meta name="description" content="Transparent monthly pricing from AED 1,200. Month-to-month on Launch and Spark. No discovery calls.">
+  <!--
+    CLOUDFLARE NOTE: For AI crawlers (GPTBot, PerplexityBot, ClaudeBot, etc.) to
+    index this site for GEO/AEO, add a Cloudflare WAF rule:
+    Security → WAF → Custom Rules → "Allow verified bots" → action: Skip.
+    Also see /robots.txt for explicit allow list.
+  -->
+  <title>Pricing — 5 Tiers from AED 1,200 | Nova Agency Dubai</title>
+  <meta name="description" content="Transparent monthly pricing. 5 tiers. Every price on the website. No discovery calls.">
   <link rel="canonical" href="https://novaagency.me/pricing.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Pricing — Nova Agency Dubai · Every Price On The Site">
-  <meta property="og:description" content="Transparent monthly pricing from AED 1,200. Month-to-month on Launch and Spark. No discovery calls.">
+  <meta property="og:title" content="Pricing — 5 Tiers from AED 1,200 | Nova Agency Dubai">
+  <meta property="og:description" content="Transparent monthly pricing. 5 tiers. Every price on the website. No discovery calls.">
   <meta property="og:url" content="https://novaagency.me/pricing.html">
   <meta property="og:image" content="https://novaagency.me/assets/img/og-default.jpg">
   <meta property="og:locale" content="en_AE">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Pricing — Nova Agency Dubai · Every Price On The Site">
-  <meta name="twitter:description" content="Transparent monthly pricing from AED 1,200. Month-to-month on Launch and Spark. No discovery calls.">
+  <meta name="twitter:title" content="Pricing — 5 Tiers from AED 1,200 | Nova Agency Dubai">
+  <meta name="twitter:description" content="Transparent monthly pricing. 5 tiers. Every price on the website. No discovery calls.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050510'/%3E%3Cpolyline points='4,24 11,14 18,19 28,6' fill='none' stroke='%232952D9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpolyline points='22,6 28,6 28,12' fill='none' stroke='%232952D9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <style>
-    /* Page-local: payment options trio (reuses service-card visuals) */
-    .payment-options-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    @media (max-width: 760px) { .payment-options-grid { grid-template-columns: 1fr; } }
-    .payment-options-grid .service-card { text-align: left; }
-    .payment-badge { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--light-blue); margin-bottom: 10px; }
-    /* Case-style cards already provided by .service-card. */
-    .build-card-link { text-decoration: none; color: inherit; display: contents; }
-    .builds-grid a { text-decoration: none; color: inherit; flex: 1 1 190px; max-width: 220px; display: block; }
-    .builds-grid a .build-card { width: 100%; max-width: 100%; }
-    .bottom-cta-block { text-align: center; padding: 40px 0 20px; }
+    /* Pricing-page-local styles */
+    .pay-toggle {
+      display: inline-flex;
+      gap: 0;
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill);
+      padding: 5px;
+      margin: 8px auto 32px;
+    }
+    .pay-toggle button {
+      background: transparent;
+      color: rgba(255,255,255,0.6);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 13px;
+      padding: 10px 22px;
+      border: none;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .pay-toggle button.active {
+      background: var(--bright-blue);
+      color: var(--white);
+      box-shadow: 0 0 18px rgba(41,82,217,0.4);
+    }
+    .pay-toggle button:hover:not(.active) { color: var(--white); }
+    .pay-toggle-wrap { text-align: center; }
+    .pay-note { display: block; font-size: 13px; color: rgba(255,255,255,0.45); margin-top: -16px; margin-bottom: 32px; text-align: center; }
+    .per-billing { font-family: var(--font-body); font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.4); margin-left: 4px; }
+    .bottom-cta-block { text-align: center; padding: 32px 0 16px; }
     .bottom-cta-block .btn-primary, .bottom-cta-block .btn-ghost { margin: 6px; }
+    .builds-grid a { text-decoration: none; color: inherit; flex: 1 1 200px; max-width: 230px; display: block; }
+    .builds-grid a .build-card { width: 100%; max-width: 100%; }
+    .faq-list-cta { text-align: center; margin-top: 32px; }
+    .faq-list-cta a { color: var(--light-blue); text-decoration: none; font-weight: 600; }
+    .faq-list-cta a:hover { text-decoration: underline; }
   </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the cheapest tier?","acceptedAnswer":{"@type":"Answer","text":"Launch at AED 1,200/mo — pick any single service, month-to-month."}},{"@type":"Question","name":"Can I switch tiers?","acceptedAnswer":{"@type":"Answer","text":"Yes, anytime. Upgrade or downgrade between billing cycles."}},{"@type":"Question","name":"Do I get a discount for paying annually?","acceptedAnswer":{"@type":"Answer","text":"Yes — 10% off if you prepay 12 months."}},{"@type":"Question","name":"What's the installment option?","acceptedAnswer":{"@type":"Answer","text":"Split a tier into 3 monthly payments at +5%."}},{"@type":"Question","name":"Is there a setup fee?","acceptedAnswer":{"@type":"Answer","text":"No. Every price you see is monthly. No hidden fees."}},{"@type":"Question","name":"Can I cancel?","acceptedAnswer":{"@type":"Answer","text":"Launch and Spark: month-to-month, cancel anytime. Foundation/Growth/Scale: cancel after minimum commitment."}}]}
+</script>
 </head>
 <body>
 
@@ -59,10 +96,8 @@
       <li><a href="/services.html" data-en="Services" data-ar="الخدمات">Services</a></li>
       <li><a href="/pricing.html" aria-current="page" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
       <li><a href="/work.html" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
+      <li><a href="/about.html" data-en="About" data-ar="من نحن">About</a></li>
       <li><a href="/contact.html" data-en="Contact" data-ar="اتصل">Contact</a></li>
-      <li>
-        <button type="button" id="lang-toggle" class="lang-toggle" aria-label="Switch to Arabic">عربي</button>
-      </li>
     </ul>
 
     <a href="https://wa.me/971544285018" class="btn-primary nav-cta" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
@@ -76,12 +111,12 @@
     <ul>
       <li><a href="/" class="mobile-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
       <li><a href="/services.html" class="mobile-link" data-en="Services" data-ar="الخدمات">Services</a></li>
-      <li><a href="/pricing.html" class="mobile-link" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
+      <li><a href="/pricing.html" class="mobile-link" aria-current="page" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
       <li><a href="/work.html" class="mobile-link" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
+      <li><a href="/about.html" class="mobile-link" data-en="About" data-ar="من نحن">About</a></li>
       <li><a href="/contact.html" class="mobile-link" data-en="Contact" data-ar="اتصل">Contact</a></li>
       <li><a href="/faq.html" class="mobile-link" data-en="FAQ" data-ar="الأسئلة">FAQ</a></li>
     </ul>
-    <button type="button" class="lang-toggle" aria-label="Switch to Arabic">عربي</button>
     <a href="https://wa.me/971544285018" class="btn-primary" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
   </div>
 </nav>
@@ -92,151 +127,145 @@
   <section class="page-hero">
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-orb hero-orb-2"></div>
-    <h1 data-en="Every Price. On The Site." data-ar="كل الأسعار. على الموقع."><span class="grad">Every Price.</span><br>On The Site.</h1>
-    <p class="lede" data-en="No discovery calls. No quote requests. Pick a tier or build à la carte." data-ar="لا مكالمات استكشاف. لا طلبات تسعير. اختر باقة أو ابنِ حسب احتياجك.">No discovery calls. No quote requests. Pick a tier or build à la carte.</p>
+    <span class="section-pill" data-en="Pricing" data-ar="الأسعار">Pricing</span>
+    <h1 data-en="Five Tiers. Transparent. Public." data-ar="خمس باقات. شفافة. علنية."><span class="grad">Five Tiers.</span> Transparent. Public.</h1>
+    <p class="lede" data-en="Every price is on the website. No discovery calls. No hidden setup fees." data-ar="كل سعر موجود على الموقع. لا مكالمات استكشاف. لا رسوم خفية.">Every price is on the website. No discovery calls. No hidden setup fees.</p>
     <div class="hero-ctas">
-      <a href="https://wa.me/971544285018" class="btn-primary" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
-      <a href="#tiers" class="btn-ghost" data-en="See Tiers ↓" data-ar="شاهد الباقات ↓">See Tiers ↓</a>
+      <a href="#tiers" class="btn-primary" data-en="See Tiers ↓" data-ar="شاهد الباقات ↓">See Tiers ↓</a>
+      <a href="https://wa.me/971544285018" class="btn-ghost" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
     </div>
   </section>
   <div class="gradient-divider"></div>
 
-  <!-- ── Payment Options ── -->
-  <section id="payment-options" class="full-section">
-    <span class="section-pill fade-in" data-en="Pay How You Want" data-ar="ادفع كما تشاء">Pay How You Want</span>
-    <h2 class="section-heading fade-in" data-en="Three Payment Options" data-ar="ثلاثة خيارات للدفع">Three Payment Options</h2>
-    <p class="section-sub fade-in" data-en="Whatever fits your cashflow. Same scope, three ways to pay." data-ar="ما يناسب تدفقك النقدي. نفس النطاق، ثلاث طرق للدفع.">Whatever fits your cashflow. Same scope, three ways to pay.</p>
+  <!-- ── Payment Options Toggle ── -->
+  <section id="payment-toggle" class="full-section" style="padding-top: clamp(40px,5vw,64px); padding-bottom: clamp(8px,1vw,16px);">
+    <div class="pay-toggle-wrap">
+      <span class="section-pill" data-en="Pay How You Want" data-ar="ادفع كما تشاء">Pay How You Want</span>
+      <h2 class="section-heading" style="margin-bottom: 8px;" data-en="Pick Your Billing" data-ar="اختر طريقة الدفع">Pick Your Billing</h2>
+      <p class="section-sub" style="margin: 0 auto 24px;" data-en="Toggle to update every price on this page." data-ar="بدّل لتحديث كل سعر على هذه الصفحة.">Toggle to update every price on this page.</p>
 
-    <div class="payment-options-grid">
-      <div class="service-card fade-in">
-        <span class="payment-badge">Monthly</span>
-        <h3 data-en="Pay Each Month" data-ar="ادفع شهريًا">Pay Each Month</h3>
-        <p data-en="No surprises. Same invoice, same date, every month. Cancel any time on Launch and Spark." data-ar="بدون مفاجآت. نفس الفاتورة، نفس التاريخ، كل شهر. ألغِ في أي وقت على Launch و Spark.">No surprises. Same invoice, same date, every month. Cancel any time on Launch and Spark.</p>
+      <div class="pay-toggle" role="tablist" aria-label="Payment options">
+        <button type="button" class="active" data-mode="monthly" role="tab" aria-selected="true" data-en="Monthly" data-ar="شهري">Monthly</button>
+        <button type="button" data-mode="installment" role="tab" aria-selected="false" data-en="Installment +5%" data-ar="أقساط +5٪">Installment +5%</button>
+        <button type="button" data-mode="annual" role="tab" aria-selected="false" data-en="Annual prepay −10%" data-ar="سنوي −10٪">Annual prepay −10%</button>
       </div>
-      <div class="service-card fade-in">
-        <span class="payment-badge">Installment +5%</span>
-        <h3 data-en="Split A Build" data-ar="قسّط البناء">Split A Build</h3>
-        <p data-en="Spread any one-time build across 3 months. 5% added to cover financing — that's it." data-ar="قسّط أي بناء على 3 أشهر. زيادة 5٪ تغطي التمويل — لا أكثر.">Spread any one-time build across 3 months. 5% added to cover financing — that's it.</p>
-      </div>
-      <div class="service-card fade-in">
-        <span class="payment-badge">Annual −10%</span>
-        <h3 data-en="Prepay & Save" data-ar="ادفع مقدمًا ووفّر">Prepay &amp; Save</h3>
-        <p data-en="Pay 12 months upfront on any tier, save 10%. Lock the price for a full year." data-ar="ادفع 12 شهرًا مقدمًا على أي باقة، ووفّر 10٪. ثبّت السعر لعام كامل.">Pay 12 months upfront on any tier, save 10%. Lock the price for a full year.</p>
-      </div>
+      <span class="pay-note" id="pay-note" data-en="Monthly billing · base price · cancel any time on month-to-month tiers." data-ar="فوترة شهرية · السعر الأساسي · ألغِ في أي وقت على الباقات الشهرية.">Monthly billing · base price · cancel any time on month-to-month tiers.</span>
     </div>
   </section>
-  <div class="gradient-divider"></div>
 
-  <!-- ── Tiers ── -->
-  <section id="tiers" class="full-section">
-    <span class="section-pill fade-in" data-en="Pricing Tiers" data-ar="باقات الأسعار">Pricing Tiers</span>
+  <!-- ── 5 Tier Cards ── -->
+  <section id="tiers" class="full-section" style="padding-top: clamp(16px,2vw,32px);">
+    <span class="section-pill fade-in" data-en="Tiers" data-ar="الباقات">Tiers</span>
     <h2 class="section-heading fade-in" data-en="5 Tiers. Pick One." data-ar="5 باقات. اختر واحدة.">5 Tiers. Pick One.</h2>
-    <p class="section-sub fade-in" data-en="No hidden fees. Ad spend always paid by you, directly to the platform." data-ar="لا رسوم خفية. ميزانية الإعلانات تدفعها أنت مباشرة للمنصة.">No hidden fees. Ad spend always paid by you, directly to the platform.</p>
+    <p class="section-sub fade-in" data-en="From solo founder to scaling team. Ad spend always paid directly by you to the platform." data-ar="من مؤسس فردي إلى فريق متنامي. ميزانية الإعلانات تدفعها أنت مباشرة للمنصة.">From solo founder to scaling team. Ad spend always paid directly by you to the platform.</p>
 
     <div class="pricing-grid">
 
       <div id="launch" class="pricing-card fade-in">
-        <div class="tier-name">Launch</div>
-        <div class="tier-price">AED 1,200<span class="per-mo">/mo</span></div>
-        <div class="tier-commit">Month-to-month</div>
-        <div class="tier-onboard">+ AED 500 onboarding</div>
+        <div class="tier-name" data-en="Launch" data-ar="انطلاق">Launch</div>
+        <div class="tier-price">AED <span class="price-num" data-monthly-price="1200">1,200</span><span class="per-mo">/mo</span><span class="per-billing" data-billing-label></span></div>
+        <div class="tier-commit" data-en="Month-to-month" data-ar="شهر بشهر">Month-to-month</div>
+        <div class="tier-onboard" data-en="1 service · solo founders" data-ar="خدمة واحدة · المؤسسون الأفراد">1 service · solo founders</div>
         <ul class="tier-features">
-          <li>1 platform (IG or TikTok)</li>
-          <li>10 posts/mo, AI captions</li>
-          <li>Content calendar (30 days)</li>
-          <li>1 short-form video/mo</li>
-          <li>5 product descriptions/mo</li>
-          <li>Monthly performance report</li>
-          <li>Monthly check-in call (20 min)</li>
+          <li data-en="Pick any 1 service from our list" data-ar="اختر خدمة واحدة من قائمتنا">Pick any 1 service from our list</li>
+          <li data-en="Monthly performance report" data-ar="تقرير أداء شهري">Monthly performance report</li>
+          <li data-en="WhatsApp support (business hours)" data-ar="دعم واتساب (ساعات العمل)">WhatsApp support (business hours)</li>
+          <li data-en="Monthly check-in call (20 min)" data-ar="مكالمة شهرية (20 دقيقة)">Monthly check-in call (20 min)</li>
+          <li data-en="48-hour onboarding" data-ar="إعداد خلال 48 ساعة">48-hour onboarding</li>
+          <li data-en="Cancel any time" data-ar="ألغِ في أي وقت">Cancel any time</li>
         </ul>
-        <a href="https://wa.me/971544285018?text=Hi+Nova+Agency,+interested+in+the+Launch+plan" class="btn-primary tier-cta" target="_blank" rel="noopener" data-en="Get Started" data-ar="ابدأ">Get Started</a>
+        <a href="https://wa.me/971544285018?text=Hi+Nova,+I+want+to+start+with+the+Launch+tier" class="btn-primary tier-cta" target="_blank" rel="noopener" data-en="Start with Launch" data-ar="ابدأ مع Launch">Start with Launch</a>
       </div>
 
       <div id="spark" class="pricing-card fade-in">
-        <div class="tier-name">Spark</div>
-        <div class="tier-price">AED 3,000<span class="per-mo">/mo</span></div>
-        <div class="tier-commit">Month-to-month</div>
-        <div class="tier-onboard">+ AED 500 onboarding</div>
+        <div class="tier-name" data-en="Spark" data-ar="سبارك">Spark</div>
+        <div class="tier-price">AED <span class="price-num" data-monthly-price="3000">3,000</span><span class="per-mo">/mo</span><span class="per-billing" data-billing-label></span></div>
+        <div class="tier-commit" data-en="Month-to-month" data-ar="شهر بشهر">Month-to-month</div>
+        <div class="tier-onboard" data-en="5 services bundled" data-ar="5 خدمات في باقة">5 services bundled</div>
         <ul class="tier-features">
-          <li>Everything in Launch</li>
-          <li>2 platforms (IG + TikTok)</li>
-          <li>20 posts/mo</li>
-          <li>4 short-form videos/mo</li>
-          <li>Basic paid ads management</li>
-          <li>Monthly strategy call (30 min)</li>
+          <li data-en="5 services from our catalog" data-ar="5 خدمات من قائمتنا">5 services from our catalog</li>
+          <li data-en="Monthly performance report" data-ar="تقرير أداء شهري">Monthly performance report</li>
+          <li data-en="Basic automation included" data-ar="أتمتة أساسية مشمولة">Basic automation included</li>
+          <li data-en="WhatsApp support" data-ar="دعم واتساب">WhatsApp support</li>
+          <li data-en="2 platforms covered" data-ar="منصتان مشمولتان">2 platforms covered</li>
+          <li data-en="Monthly strategy call (30 min)" data-ar="مكالمة استراتيجية شهرية (30 دقيقة)">Monthly strategy call (30 min)</li>
+          <li data-en="Cancel any time" data-ar="ألغِ في أي وقت">Cancel any time</li>
         </ul>
-        <a href="https://wa.me/971544285018?text=Hi+Nova+Agency,+interested+in+the+Spark+plan" class="btn-primary tier-cta" target="_blank" rel="noopener" data-en="Get Started" data-ar="ابدأ">Get Started</a>
+        <a href="https://wa.me/971544285018?text=Hi+Nova,+I+want+to+start+with+the+Spark+tier" class="btn-primary tier-cta" target="_blank" rel="noopener" data-en="Start with Spark" data-ar="ابدأ مع Spark">Start with Spark</a>
       </div>
 
       <div id="foundation" class="pricing-card featured-pricing fade-in">
-        <div class="featured-badge">Most Popular</div>
-        <div class="tier-name">Foundation</div>
-        <div class="tier-price">AED 6,000<span class="per-mo">/mo</span></div>
-        <div class="tier-commit">3-month minimum</div>
-        <div class="tier-onboard">+ AED 1,000 onboarding</div>
+        <div class="featured-badge" data-en="Most Popular" data-ar="الأكثر طلبًا">Most Popular</div>
+        <div class="tier-name" data-en="Foundation" data-ar="أساس">Foundation</div>
+        <div class="tier-price">AED <span class="price-num" data-monthly-price="6000">6,000</span><span class="per-mo">/mo</span><span class="per-billing" data-billing-label></span></div>
+        <div class="tier-commit" data-en="3 months min" data-ar="3 أشهر كحد أدنى">3 months min</div>
+        <div class="tier-onboard" data-en="20+ services · all categories" data-ar="20+ خدمة · كل الفئات">20+ services · all categories</div>
         <ul class="tier-features">
-          <li>Everything in Spark</li>
-          <li>3 platforms + LinkedIn</li>
-          <li>WhatsApp chatbot</li>
-          <li>Email marketing flows</li>
-          <li>8 short-form videos/mo</li>
-          <li>Bi-weekly strategy call (30 min)</li>
+          <li data-en="20+ services across all categories" data-ar="أكثر من 20 خدمة في كل الفئات">20+ services across all categories</li>
+          <li data-en="AI chatbot (WhatsApp / web)" data-ar="روبوت دردشة AI (واتساب / ويب)">AI chatbot (WhatsApp / web)</li>
+          <li data-en="Weekly performance reporting" data-ar="تقارير أداء أسبوعية">Weekly performance reporting</li>
+          <li data-en="3 platforms + LinkedIn" data-ar="3 منصات + لينكدإن">3 platforms + LinkedIn</li>
+          <li data-en="Email marketing flows" data-ar="حملات بريد إلكتروني تلقائية">Email marketing flows</li>
+          <li data-en="Bi-weekly strategy call (30 min)" data-ar="مكالمة استراتيجية كل أسبوعين">Bi-weekly strategy call (30 min)</li>
+          <li data-en="Priority WhatsApp support" data-ar="دعم واتساب بأولوية">Priority WhatsApp support</li>
+          <li data-en="Account manager assigned" data-ar="مدير حساب مخصص">Account manager assigned</li>
         </ul>
-        <a href="https://wa.me/971544285018?text=Hi+Nova+Agency,+interested+in+the+Foundation+plan" class="btn-primary tier-cta" target="_blank" rel="noopener" data-en="Get Started" data-ar="ابدأ">Get Started</a>
+        <a href="https://wa.me/971544285018?text=Hi+Nova,+I+want+to+start+with+the+Foundation+tier" class="btn-primary tier-cta" target="_blank" rel="noopener" data-en="Start with Foundation" data-ar="ابدأ مع Foundation">Start with Foundation</a>
       </div>
 
       <div id="growth" class="pricing-card fade-in">
-        <div class="tier-name">Growth</div>
-        <div class="tier-price">AED 14,000<span class="per-mo">/mo</span></div>
-        <div class="tier-commit">6-month minimum</div>
-        <div class="tier-onboard">+ AED 1,500 onboarding</div>
+        <div class="tier-name" data-en="Growth" data-ar="نمو">Growth</div>
+        <div class="tier-price">AED <span class="price-num" data-monthly-price="14000">14,000</span><span class="per-mo">/mo</span><span class="per-billing" data-billing-label></span></div>
+        <div class="tier-commit" data-en="6 months min" data-ar="6 أشهر كحد أدنى">6 months min</div>
+        <div class="tier-onboard" data-en="30+ services · dedicated manager" data-ar="30+ خدمة · مدير مخصص">30+ services · dedicated manager</div>
         <ul class="tier-features">
-          <li>Everything in Foundation</li>
-          <li>All platforms</li>
-          <li>Paid ads (Meta + TikTok)</li>
-          <li>Cold email — 500 leads/mo</li>
-          <li>WhatsApp automation</li>
-          <li>Analytics dashboard</li>
-          <li>Weekly strategy call (30 min)</li>
+          <li data-en="30+ services across the catalog" data-ar="أكثر من 30 خدمة من القائمة">30+ services across the catalog</li>
+          <li data-en="Dedicated account manager" data-ar="مدير حساب مخصص بالكامل">Dedicated account manager</li>
+          <li data-en="Custom automations built monthly" data-ar="أتمتة مخصصة شهريًا">Custom automations built monthly</li>
+          <li data-en="Weekly strategy calls (30 min)" data-ar="مكالمات أسبوعية (30 دقيقة)">Weekly strategy calls (30 min)</li>
+          <li data-en="Paid ads (Meta + TikTok + Google)" data-ar="إعلانات (ميتا + تيك توك + قوقل)">Paid ads (Meta + TikTok + Google)</li>
+          <li data-en="Cold email lead gen — 500 leads/mo" data-ar="جذب عملاء بالبريد البارد — 500/شهر">Cold email lead gen — 500 leads/mo</li>
+          <li data-en="WhatsApp + voice automation" data-ar="أتمتة واتساب + الصوت">WhatsApp + voice automation</li>
+          <li data-en="Analytics dashboard included" data-ar="لوحة تحليلات مشمولة">Analytics dashboard included</li>
         </ul>
-        <a href="https://wa.me/971544285018?text=Hi+Nova+Agency,+interested+in+the+Growth+plan" class="btn-primary tier-cta" target="_blank" rel="noopener" data-en="Get Started" data-ar="ابدأ">Get Started</a>
+        <a href="https://wa.me/971544285018?text=Hi+Nova,+I+want+to+start+with+the+Growth+tier" class="btn-primary tier-cta" target="_blank" rel="noopener" data-en="Start with Growth" data-ar="ابدأ مع Growth">Start with Growth</a>
       </div>
 
       <div id="scale" class="pricing-card fade-in">
-        <div class="tier-name">Scale</div>
-        <div class="tier-price">AED 32,000<span class="per-mo">/mo</span></div>
-        <div class="tier-commit">12-month minimum</div>
-        <div class="tier-onboard">+ AED 1,500 onboarding</div>
+        <div class="tier-name" data-en="Scale" data-ar="توسع">Scale</div>
+        <div class="tier-price">AED <span class="price-num" data-monthly-price="32000">32,000</span><span class="per-mo">/mo</span><span class="per-billing" data-billing-label></span></div>
+        <div class="tier-commit" data-en="12 months min" data-ar="12 شهرًا كحد أدنى">12 months min</div>
+        <div class="tier-onboard" data-en="All 50+ services + custom builds" data-ar="جميع الخدمات + مشاريع مخصصة">All 50+ services + custom builds</div>
         <ul class="tier-features">
-          <li>Everything in Growth</li>
-          <li>All platforms + TikTok Shop</li>
-          <li>Unlimited posts, 20+ videos/mo</li>
-          <li>AI SEO + GEO + AEO</li>
-          <li>Voice agent + RAG assistant</li>
-          <li>1 custom automation build</li>
-          <li>Dedicated strategist</li>
-          <li>Weekly strategy call (45 min)</li>
-          <li>Quarterly business review</li>
+          <li data-en="Everything in Growth, unlocked" data-ar="كل ما في Growth مفتوح">Everything in Growth, unlocked</li>
+          <li data-en="1 custom build per quarter included" data-ar="مشروع مخصص كل ربع سنة">1 custom build per quarter included</li>
+          <li data-en="Daily Slack access" data-ar="وصول يومي عبر سلاك">Daily Slack access</li>
+          <li data-en="Founder strategy calls (monthly)" data-ar="مكالمات مع المؤسس شهريًا">Founder strategy calls (monthly)</li>
+          <li data-en="Dedicated strategist + manager" data-ar="مستشار ومدير مخصص">Dedicated strategist + manager</li>
+          <li data-en="Voice agent + RAG assistant" data-ar="وكيل صوتي + مساعد RAG">Voice agent + RAG assistant</li>
+          <li data-en="Full SEO + GEO + AEO program" data-ar="برنامج SEO + GEO + AEO كامل">Full SEO + GEO + AEO program</li>
+          <li data-en="Quarterly business review" data-ar="مراجعة أعمال ربع سنوية">Quarterly business review</li>
+          <li data-en="Priority everything" data-ar="أولوية في كل شيء">Priority everything</li>
         </ul>
-        <a href="https://wa.me/971544285018?text=Hi+Nova+Agency,+interested+in+the+Scale+plan" class="btn-primary tier-cta" target="_blank" rel="noopener" data-en="Get Started" data-ar="ابدأ">Get Started</a>
+        <a href="https://wa.me/971544285018?text=Hi+Nova,+I+want+to+start+with+the+Scale+tier" class="btn-primary tier-cta" target="_blank" rel="noopener" data-en="Start with Scale" data-ar="ابدأ مع Scale">Start with Scale</a>
       </div>
 
     </div>
-    <p class="pricing-footnote">Launch = AED 40/day · Foundation = cheaper than hiring a social media manager (AED 8,000–12,000/mo salary)</p>
+    <p class="pricing-footnote" data-en="Launch = AED 40/day. Foundation = cheaper than hiring a social media manager (AED 8–12k/mo salary)." data-ar="Launch = 40 درهم يوميًا. Foundation = أرخص من توظيف مدير سوشيال (8-12 ألف درهم شهريًا).">Launch = AED 40/day. Foundation = cheaper than hiring a social media manager (AED 8–12k/mo salary).</p>
   </section>
   <div class="gradient-divider"></div>
 
-  <!-- ── Compare ── -->
+  <!-- ── Comparison Table ── -->
   <section id="compare" class="full-section">
-    <span class="section-pill fade-in" data-en="Side-by-side" data-ar="مقارنة جنبًا إلى جنب">Side-by-side</span>
+    <span class="section-pill fade-in" data-en="Side-by-side" data-ar="مقارنة">Side-by-side</span>
     <h2 class="section-heading fade-in" data-en="Compare All Tiers" data-ar="قارن جميع الباقات">Compare All Tiers</h2>
-    <p class="section-sub fade-in" data-en="Foundation column is highlighted — it's our most popular." data-ar="عمود Foundation مميّز — إنه الأكثر طلبًا.">Foundation column is highlighted — it's our most popular.</p>
+    <p class="section-sub fade-in" data-en="Foundation column is highlighted — it's our most popular." data-ar="عمود Foundation مميز — إنه الأكثر طلبًا.">Foundation column is highlighted — it's our most popular.</p>
 
     <div class="compare-table-wrap fade-in">
       <table class="compare-table">
         <thead>
           <tr>
-            <th>Feature</th>
+            <th data-en="Feature" data-ar="الميزة">Feature</th>
             <th>Launch</th>
             <th>Spark</th>
             <th class="nova-col">Foundation</th>
@@ -245,22 +274,22 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>Monthly price</td><td>AED 1,200</td><td>AED 3,000</td><td class="nova-col">AED 6,000</td><td>AED 14,000</td><td>AED 32,000</td></tr>
-          <tr><td>Onboarding</td><td>AED 500</td><td>AED 500</td><td class="nova-col">AED 1,000</td><td>AED 1,500</td><td>AED 1,500</td></tr>
-          <tr><td>Commitment</td><td>Month-to-month</td><td>Month-to-month</td><td class="nova-col">3 months</td><td>6 months</td><td>12 months</td></tr>
-          <tr><td>Platforms covered</td><td>1</td><td>2</td><td class="nova-col">3 + LinkedIn</td><td>All</td><td>All + TikTok Shop</td></tr>
-          <tr><td>Posts / month</td><td>10</td><td>20</td><td class="nova-col">30+</td><td>Unlimited</td><td>Unlimited</td></tr>
-          <tr><td>Short-form videos / mo</td><td>1</td><td>4</td><td class="nova-col">8</td><td>12</td><td>20+</td></tr>
-          <tr><td>Paid ads</td><td><span class="compare-x">—</span></td><td>Basic</td><td class="nova-col">Basic</td><td>Full Meta + TikTok</td><td>Full</td></tr>
-          <tr><td>WhatsApp chatbot</td><td><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td class="nova-col"><span class="compare-check">✓</span></td><td><span class="compare-check">✓</span></td><td><span class="compare-check">✓</span></td></tr>
-          <tr><td>Email marketing</td><td><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td class="nova-col"><span class="compare-check">✓</span></td><td><span class="compare-check">✓</span></td><td><span class="compare-check">✓</span></td></tr>
-          <tr><td>WhatsApp automation</td><td><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td class="nova-col"><span class="compare-x">—</span></td><td><span class="compare-check">✓</span></td><td><span class="compare-check">✓</span></td></tr>
-          <tr><td>Cold email lead gen</td><td><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td class="nova-col"><span class="compare-x">—</span></td><td>500/mo</td><td>500/mo</td></tr>
-          <tr><td>SEO + GEO + AEO</td><td><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td class="nova-col"><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td><span class="compare-check">✓</span></td></tr>
-          <tr><td>Voice agent + RAG</td><td><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td class="nova-col"><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td><span class="compare-check">✓</span></td></tr>
-          <tr><td>Custom automation build</td><td><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td class="nova-col"><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td>1 included</td></tr>
-          <tr><td>Strategy call</td><td>Monthly 20m</td><td>Monthly 30m</td><td class="nova-col">Bi-weekly 30m</td><td>Weekly 30m</td><td>Weekly 45m</td></tr>
-          <tr><td>Dedicated strategist</td><td><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td class="nova-col"><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td><span class="compare-check">✓</span></td></tr>
+          <tr><td data-en="Monthly cost (AED)" data-ar="التكلفة الشهرية (درهم)">Monthly cost (AED)</td><td>1,200</td><td>3,000</td><td class="nova-col">6,000</td><td>14,000</td><td>32,000</td></tr>
+          <tr><td data-en="Commitment" data-ar="الالتزام">Commitment</td><td data-en="Month-to-month" data-ar="شهري">Month-to-month</td><td data-en="Month-to-month" data-ar="شهري">Month-to-month</td><td class="nova-col" data-en="3 months" data-ar="3 أشهر">3 months</td><td data-en="6 months" data-ar="6 أشهر">6 months</td><td data-en="12 months" data-ar="12 شهرًا">12 months</td></tr>
+          <tr><td data-en="Number of services" data-ar="عدد الخدمات">Number of services</td><td>1</td><td>5</td><td class="nova-col">20+</td><td>30+</td><td data-en="All 50+" data-ar="جميع الـ50+">All 50+</td></tr>
+          <tr><td data-en="AI chatbot" data-ar="روبوت دردشة AI">AI chatbot</td><td><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td class="nova-col"><span class="compare-check">✓</span></td><td><span class="compare-check">✓</span></td><td><span class="compare-check">✓</span></td></tr>
+          <tr><td data-en="Content per month" data-ar="المحتوى شهريًا">Content per month</td><td>10 posts</td><td>20 posts</td><td class="nova-col">30+ posts</td><td data-en="Unlimited" data-ar="غير محدود">Unlimited</td><td data-en="Unlimited" data-ar="غير محدود">Unlimited</td></tr>
+          <tr><td data-en="Paid ads management" data-ar="إدارة الإعلانات">Paid ads management</td><td><span class="compare-x">—</span></td><td data-en="Basic" data-ar="أساسي">Basic</td><td class="nova-col" data-en="Basic" data-ar="أساسي">Basic</td><td data-en="Full Meta + TikTok" data-ar="ميتا + تيك توك كامل">Full Meta + TikTok</td><td data-en="Full + Google" data-ar="كامل + قوقل">Full + Google</td></tr>
+          <tr><td data-en="Reporting frequency" data-ar="تكرار التقارير">Reporting frequency</td><td data-en="Monthly" data-ar="شهري">Monthly</td><td data-en="Monthly" data-ar="شهري">Monthly</td><td class="nova-col" data-en="Weekly" data-ar="أسبوعي">Weekly</td><td data-en="Weekly" data-ar="أسبوعي">Weekly</td><td data-en="Daily dashboard" data-ar="لوحة يومية">Daily dashboard</td></tr>
+          <tr><td data-en="Dedicated account manager" data-ar="مدير حساب مخصص">Dedicated account manager</td><td><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td class="nova-col" data-en="Shared" data-ar="مشترك">Shared</td><td><span class="compare-check">✓</span></td><td><span class="compare-check">✓</span></td></tr>
+          <tr><td data-en="WhatsApp support" data-ar="دعم واتساب">WhatsApp support</td><td data-en="Business hours" data-ar="ساعات العمل">Business hours</td><td data-en="Business hours" data-ar="ساعات العمل">Business hours</td><td class="nova-col" data-en="Priority" data-ar="بأولوية">Priority</td><td data-en="Priority" data-ar="بأولوية">Priority</td><td data-en="Daily Slack" data-ar="سلاك يوميًا">Daily Slack</td></tr>
+          <tr><td data-en="Weekly calls" data-ar="مكالمات أسبوعية">Weekly calls</td><td><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td class="nova-col" data-en="Bi-weekly" data-ar="كل أسبوعين">Bi-weekly</td><td><span class="compare-check">✓</span></td><td><span class="compare-check">✓</span></td></tr>
+          <tr><td data-en="Custom builds included" data-ar="مشاريع مخصصة مشمولة">Custom builds included</td><td><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td class="nova-col"><span class="compare-x">—</span></td><td data-en="On request" data-ar="عند الطلب">On request</td><td data-en="1 per quarter" data-ar="1 لكل ربع">1 per quarter</td></tr>
+          <tr><td data-en="Arabic content" data-ar="محتوى عربي">Arabic content</td><td data-en="Add-on" data-ar="إضافة">Add-on</td><td><span class="compare-check">✓</span></td><td class="nova-col"><span class="compare-check">✓</span></td><td><span class="compare-check">✓</span></td><td><span class="compare-check">✓</span></td></tr>
+          <tr><td data-en="Priority support" data-ar="دعم بأولوية">Priority support</td><td><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td class="nova-col"><span class="compare-check">✓</span></td><td><span class="compare-check">✓</span></td><td><span class="compare-check">✓</span></td></tr>
+          <tr><td data-en="Founder access" data-ar="وصول إلى المؤسس">Founder access</td><td><span class="compare-x">—</span></td><td><span class="compare-x">—</span></td><td class="nova-col"><span class="compare-x">—</span></td><td data-en="Quarterly" data-ar="ربع سنوي">Quarterly</td><td data-en="Monthly" data-ar="شهريًا">Monthly</td></tr>
+          <tr><td data-en="Setup time" data-ar="وقت الإعداد">Setup time</td><td>48h</td><td>48h</td><td class="nova-col">48h</td><td data-en="3–5 days" data-ar="3-5 أيام">3–5 days</td><td data-en="5–7 days" data-ar="5-7 أيام">5–7 days</td></tr>
+          <tr><td data-en="Cancellation" data-ar="الإلغاء">Cancellation</td><td data-en="Any time" data-ar="أي وقت">Any time</td><td data-en="Any time" data-ar="أي وقت">Any time</td><td class="nova-col" data-en="After 3 months" data-ar="بعد 3 أشهر">After 3 months</td><td data-en="After 6 months" data-ar="بعد 6 أشهر">After 6 months</td><td data-en="After 12 months" data-ar="بعد 12 شهرًا">After 12 months</td></tr>
         </tbody>
       </table>
     </div>
@@ -274,28 +303,20 @@
     <p class="section-sub fade-in" data-en="Standalone projects you keep. Optional maintenance after delivery." data-ar="مشاريع مستقلة تحتفظ بها. صيانة اختيارية بعد التسليم.">Standalone projects you keep. Optional maintenance after delivery.</p>
 
     <div class="builds-grid">
-      <a href="/services/build-shopify-starter.html">
-        <div class="build-card featured-build fade-in">
-          <div class="build-star">★ Best Value</div>
-          <div class="build-name">Shopify Starter Pack</div>
-          <div class="build-desc">Store + brand kit + chatbot + 1 month Launch free</div>
-          <div class="build-price">AED 4,500 flat</div>
-          <div class="build-maint">Maintenance: AED 1,500–3,500/mo</div>
-        </div>
-      </a>
-      <a href="/services/build-chatbot.html"><div class="build-card fade-in"><div class="build-name">Chatbot (web / WhatsApp / Messenger)</div><div class="build-price">AED 7,500–35,000</div><div class="build-maint">Maint: AED 1,000–2,500/mo</div></div></a>
-      <a href="/services/build-whatsapp-automation.html"><div class="build-card fade-in"><div class="build-name">WhatsApp Business Automation</div><div class="build-price">AED 7,500–25,000</div><div class="build-maint">Maint: AED 1,000–2,000/mo</div></div></a>
-      <a href="/services/build-voice-agent.html"><div class="build-card fade-in"><div class="build-name">Voice Agent Setup</div><div class="build-price">AED 8,000–30,000</div><div class="build-maint">Maint: AED 1,200 + /min</div></div></a>
-      <a href="/services/build-workflow-automation.html"><div class="build-card fade-in"><div class="build-name">Workflow Automation (n8n / Make / Zapier)</div><div class="build-price">AED 6,000–40,000</div><div class="build-maint">Maint: AED 800–3,000/mo</div></div></a>
-      <a href="/services/build-booking-system.html"><div class="build-card fade-in"><div class="build-name">Booking Automation System</div><div class="build-price">AED 5,000–15,000</div><div class="build-maint">Maint: AED 600/mo</div></div></a>
-      <a href="/services/build-rag-assistant.html"><div class="build-card fade-in"><div class="build-name">RAG Knowledge Base Assistant</div><div class="build-price">AED 9,000–40,000</div><div class="build-maint">Maint: AED 800/mo</div></div></a>
-      <a href="/services/build-analytics-dashboard.html"><div class="build-card fade-in"><div class="build-name">Analytics Dashboard Setup</div><div class="build-price">AED 4,500–22,000</div><div class="build-maint">Maint: AED 500–1,500/mo</div></div></a>
-      <a href="/services/build-website.html"><div class="build-card fade-in"><div class="build-name">Website Build (Framer / Webflow / Custom)</div><div class="build-price">AED 9,000–40,000</div><div class="build-maint">Maint: AED 400–1,200/mo</div></div></a>
-      <a href="/services/build-custom-app.html"><div class="build-card fade-in"><div class="build-name">Custom App Build</div><div class="build-price">AED 12,000–75,000</div><div class="build-maint">Maint: AED 500–2,000/mo</div></div></a>
-      <a href="/services/build-shopify-store.html"><div class="build-card fade-in"><div class="build-name">Shopify Store Build (Standard)</div><div class="build-price">AED 6,000–18,000</div><div class="build-maint">Maint: AED 1,500–3,500/mo</div></div></a>
-      <a href="/services/build-brand-identity.html"><div class="build-card fade-in"><div class="build-name">Brand Identity &amp; Design System</div><div class="build-price">AED 5,000–18,000</div><div class="build-maint">N/A</div></div></a>
-      <a href="/services/build-landing-page.html"><div class="build-card fade-in"><div class="build-name">Landing Page Sprint (48–72hr)</div><div class="build-price">AED 4,500–8,000</div><div class="build-maint">N/A</div></div></a>
-      <a href="/services/build-crm-setup.html"><div class="build-card fade-in"><div class="build-name">CRM Setup (HubSpot / Zoho)</div><div class="build-price">AED 5,000–15,000</div><div class="build-maint">Maint: AED 2,000/mo</div></div></a>
+      <a href="/services/build-website.html"><div class="build-card fade-in"><div class="build-name" data-en="Website Build" data-ar="بناء موقع">Website Build</div><div class="build-price">AED 9,000–40,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
+      <a href="/services/build-landing-page.html"><div class="build-card fade-in"><div class="build-name" data-en="Landing Page Sprint" data-ar="صفحة هبوط سريعة">Landing Page Sprint</div><div class="build-price">AED 4,500–8,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
+      <a href="/services/build-chatbot.html"><div class="build-card fade-in"><div class="build-name" data-en="Chatbot" data-ar="روبوت دردشة">Chatbot</div><div class="build-price">AED 7,500–35,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
+      <a href="/services/build-voice-agent.html"><div class="build-card fade-in"><div class="build-name" data-en="Voice Agent" data-ar="وكيل صوتي">Voice Agent</div><div class="build-price">AED 8,000–30,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
+      <a href="/services/build-whatsapp-automation.html"><div class="build-card fade-in"><div class="build-name" data-en="WhatsApp Automation" data-ar="أتمتة واتساب">WhatsApp Automation</div><div class="build-price">AED 7,500–25,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
+      <a href="/services/build-workflow-automation.html"><div class="build-card fade-in"><div class="build-name" data-en="Workflow Automation" data-ar="أتمتة سير العمل">Workflow Automation</div><div class="build-price">AED 6,000–40,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
+      <a href="/services/build-shopify-starter.html"><div class="build-card featured-build fade-in"><div class="build-star">★ Best Value</div><div class="build-name" data-en="Shopify Starter" data-ar="شوبيفاي مبتدئ">Shopify Starter</div><div class="build-price">AED 4,500 flat</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
+      <a href="/services/build-shopify-store.html"><div class="build-card fade-in"><div class="build-name" data-en="Shopify Store" data-ar="متجر شوبيفاي">Shopify Store</div><div class="build-price">AED 6,000–18,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
+      <a href="/services/build-custom-app.html"><div class="build-card fade-in"><div class="build-name" data-en="Custom App" data-ar="تطبيق مخصص">Custom App</div><div class="build-price">AED 12,000–75,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
+      <a href="/services/build-rag-assistant.html"><div class="build-card fade-in"><div class="build-name" data-en="RAG Assistant" data-ar="مساعد RAG">RAG Assistant</div><div class="build-price">AED 9,000–40,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
+      <a href="/services/build-booking-system.html"><div class="build-card fade-in"><div class="build-name" data-en="Booking System" data-ar="نظام حجوزات">Booking System</div><div class="build-price">AED 5,000–15,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
+      <a href="/services/build-analytics-dashboard.html"><div class="build-card fade-in"><div class="build-name" data-en="Analytics Dashboard" data-ar="لوحة تحليلات">Analytics Dashboard</div><div class="build-price">AED 4,500–22,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
+      <a href="/services/build-crm-setup.html"><div class="build-card fade-in"><div class="build-name" data-en="CRM Setup" data-ar="إعداد CRM">CRM Setup</div><div class="build-price">AED 5,000–15,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
+      <a href="/services/build-brand-identity.html"><div class="build-card fade-in"><div class="build-name" data-en="Brand Identity" data-ar="هوية بصرية">Brand Identity</div><div class="build-price">AED 5,000–18,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
     </div>
   </section>
   <div class="gradient-divider"></div>
@@ -304,33 +325,37 @@
   <section id="pricing-faq" class="full-section">
     <span class="section-pill fade-in" data-en="FAQ" data-ar="الأسئلة">FAQ</span>
     <h2 class="section-heading fade-in" data-en="Pricing Questions" data-ar="أسئلة عن الأسعار">Pricing Questions</h2>
-    <p class="section-sub fade-in" data-en="Six things people ask before signing up." data-ar="ستة أسئلة شائعة قبل التسجيل.">Six things people ask before signing up.</p>
+    <p class="section-sub fade-in" data-en="Six things people ask before signing up." data-ar="ستة أسئلة قبل التسجيل.">Six things people ask before signing up.</p>
 
     <div class="faq-list">
       <div class="faq-item fade-in">
-        <button class="faq-question" type="button" aria-expanded="false">What's included in onboarding?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">Account setup, brand assets review, 1-hour kickoff call, first month's content calendar built out.</div></div>
+        <button class="faq-question" type="button" aria-expanded="false" data-en="What's the cheapest tier?" data-ar="ما هي أرخص باقة؟">What's the cheapest tier?</button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-en="Launch at AED 1,200/mo — pick any single service, month-to-month." data-ar="باقة Launch بـ 1,200 درهم شهريًا — اختر أي خدمة واحدة، شهر بشهر.">Launch at AED 1,200/mo — pick any single service, month-to-month.</div></div>
       </div>
       <div class="faq-item fade-in">
-        <button class="faq-question" type="button" aria-expanded="false">Can I switch tiers?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">Yes. Upgrade anytime, downgrade at the start of the next billing cycle. Month-to-month tiers have no penalty.</div></div>
+        <button class="faq-question" type="button" aria-expanded="false" data-en="Can I switch tiers?" data-ar="هل يمكنني تغيير الباقة؟">Can I switch tiers?</button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-en="Yes, anytime. Upgrade or downgrade between billing cycles." data-ar="نعم، في أي وقت. ارفع أو خفّض الباقة بين دورات الفوترة.">Yes, anytime. Upgrade or downgrade between billing cycles.</div></div>
       </div>
       <div class="faq-item fade-in">
-        <button class="faq-question" type="button" aria-expanded="false">Who pays for ad spend?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">You do, directly to Meta/TikTok/Google. Our fee covers management only. Spend never touches our account.</div></div>
+        <button class="faq-question" type="button" aria-expanded="false" data-en="Do I get a discount for paying annually?" data-ar="هل أحصل على خصم عند الدفع السنوي؟">Do I get a discount for paying annually?</button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-en="Yes — 10% off if you prepay 12 months." data-ar="نعم — خصم 10٪ إذا دفعت 12 شهرًا مقدمًا.">Yes — 10% off if you prepay 12 months.</div></div>
       </div>
       <div class="faq-item fade-in">
-        <button class="faq-question" type="button" aria-expanded="false">What happens if I cancel?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">Launch and Spark cancel any time (month-to-month). Foundation/Growth/Scale honour their minimum, then go month-to-month. Zero exit fees on month-to-month tiers.</div></div>
+        <button class="faq-question" type="button" aria-expanded="false" data-en="What's the installment option?" data-ar="ما هو خيار الأقساط؟">What's the installment option?</button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-en="Split a tier into 3 monthly payments at +5%." data-ar="قسّم الباقة على 3 دفعات شهرية بزيادة 5٪.">Split a tier into 3 monthly payments at +5%.</div></div>
       </div>
       <div class="faq-item fade-in">
-        <button class="faq-question" type="button" aria-expanded="false">Do you work with non-Dubai businesses?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">Yes for online businesses (ecommerce, SaaS, services). Local marketing services (Google Business Profile, in-person events) are Dubai/UAE only.</div></div>
+        <button class="faq-question" type="button" aria-expanded="false" data-en="Is there a setup fee?" data-ar="هل توجد رسوم إعداد؟">Is there a setup fee?</button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-en="No. Every price you see is monthly. No hidden fees." data-ar="لا. كل الأسعار التي تراها شهرية. لا توجد رسوم خفية.">No. Every price you see is monthly. No hidden fees.</div></div>
       </div>
       <div class="faq-item fade-in">
-        <button class="faq-question" type="button" aria-expanded="false">Do you offer custom pricing?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">Only for Scale-tier clients adding non-standard scope. Everything else is on the website.</div></div>
+        <button class="faq-question" type="button" aria-expanded="false" data-en="Can I cancel?" data-ar="هل يمكنني الإلغاء؟">Can I cancel?</button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-en="Launch and Spark: month-to-month, cancel anytime. Foundation/Growth/Scale: cancel after minimum commitment." data-ar="Launch و Spark: شهر بشهر، ألغِ في أي وقت. Foundation/Growth/Scale: ألغِ بعد الحد الأدنى للالتزام.">Launch and Spark: month-to-month, cancel anytime. Foundation/Growth/Scale: cancel after minimum commitment.</div></div>
       </div>
+    </div>
+
+    <div class="faq-list-cta">
+      <a href="/faq.html" data-en="Have more questions? See all FAQs →" data-ar="عندك أسئلة أخرى؟ شاهد جميع الأسئلة ←">Have more questions? See all FAQs →</a>
     </div>
   </section>
   <div class="gradient-divider"></div>
@@ -338,17 +363,17 @@
   <!-- ── Bottom CTA ── -->
   <section class="full-section">
     <div class="bottom-cta-block">
-      <h2 class="section-heading" data-en="Ready to start?" data-ar="مستعد للبدء؟">Ready to start?</h2>
-      <p class="section-sub" data-en="One message on WhatsApp. We reply in two hours." data-ar="رسالة واحدة على واتساب. نرد خلال ساعتين.">One message on WhatsApp. We reply in two hours.</p>
-      <a href="https://wa.me/971544285018" class="btn-primary" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
-      <a href="/#quiz" class="btn-ghost" data-en="Or take the audit quiz →" data-ar="أو خذ اختبار التدقيق ←">Or take the audit quiz →</a>
+      <h2 class="section-heading" data-en="Still not sure which tier is right?" data-ar="ما زلت غير متأكد من الباقة المناسبة؟">Still not sure which tier is right?</h2>
+      <p class="section-sub" style="margin: 0 auto 24px;" data-en="Take the 2-minute audit or just WhatsApp us. We don't sell — we recommend." data-ar="خذ تدقيقًا من دقيقتين أو راسلنا على واتساب. لا نبيع — نوصي.">Take the 2-minute audit or just WhatsApp us. We don't sell — we recommend.</p>
+      <a href="/#audit-quiz" class="btn-primary" data-en="Take 2-Min Audit" data-ar="خذ تدقيقًا من دقيقتين">Take 2-Min Audit</a>
+      <a href="https://wa.me/971544285018" class="btn-ghost" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
     </div>
   </section>
 
 </main>
 
-<footer id="footer" role="contentinfo">
-  <div class="footer-inner">
+<footer id="footer" class="site-footer" role="contentinfo">
+  <div class="site-footer-inner">
 
     <div class="footer-col footer-brand">
       <a href="/" class="footer-logo" aria-label="Nova Agency home">
@@ -394,6 +419,7 @@
       <ul class="footer-links">
         <li><a href="https://wa.me/971544285018" target="_blank" rel="noopener" data-en="WhatsApp · +971 54 428 5018" data-ar="واتساب · +971 54 428 5018">WhatsApp · +971 54 428 5018</a></li>
         <li><a href="mailto:hello@novaagency.me">hello@novaagency.me</a></li>
+        <li><a href="#" target="_blank" rel="noopener" data-en="Find us on Google Business" data-ar="نحن على Google Business">Find us on Google Business</a></li>
         <li><span data-en="Dubai, UAE" data-ar="دبي، الإمارات">Dubai, UAE</span></li>
       </ul>
     </div>
@@ -422,8 +448,8 @@
 <aside id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cookie-banner-title" hidden>
   <div class="cookie-banner-body">
     <h2 id="cookie-banner-title" class="cookie-banner-title" data-en="We use cookies" data-ar="نحن نستخدم ملفات تعريف الارتباط">We use cookies</h2>
-    <p class="cookie-banner-text" data-en="We use cookies for analytics and to improve your experience. By using this site you agree to our use of cookies. UAE PDPL compliant." data-ar="نستخدم ملفات تعريف الارتباط للتحليلات وتحسين تجربتك. باستخدام هذا الموقع، فإنك توافق على استخدامنا لها. متوافق مع قانون حماية البيانات الشخصية الإماراتي.">
-      We use cookies for analytics and to improve your experience. By using this site you agree to our use of cookies. UAE PDPL compliant.
+    <p class="cookie-banner-text" data-en="We use cookies to improve your experience. By continuing you agree to our privacy policy." data-ar="نستخدم ملفات تعريف الارتباط لتحسين تجربتك. بمواصلة التصفح فإنك توافق على سياسة الخصوصية الخاصة بنا.">
+      We use cookies to improve your experience. By continuing you agree to our privacy policy.
     </p>
   </div>
   <div class="cookie-banner-actions">
@@ -432,6 +458,74 @@
   </div>
 </aside>
 
+<button type="button" id="lang-fab" class="lang-fab" aria-haspopup="true" aria-expanded="false" aria-controls="lang-fab-popup" aria-label="Change language">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M3 12h18" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9s1.3-6.3 3.8-9z" stroke="currentColor" stroke-width="1.8"/>
+  </svg>
+  <span id="lang-fab-label">EN</span>
+</button>
+
+<div id="lang-fab-popup" class="lang-fab-popup" role="menu" aria-labelledby="lang-fab">
+  <button type="button" class="lang-fab-option" data-lang="en" role="menuitemradio" aria-checked="true">
+    <span>English</span>
+    <svg class="check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <button type="button" class="lang-fab-option" data-lang="ar" role="menuitemradio" aria-checked="false">
+    <span>العربية</span>
+    <svg class="check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+</div>
+
 <script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/counter.js" defer></script>
+
+<!-- ── Payment toggle: recalculates every .price-num based on data-monthly-price ── -->
+<script>
+(function(){
+  const toggle = document.querySelector('.pay-toggle');
+  if (!toggle) return;
+  const buttons = toggle.querySelectorAll('button[data-mode]');
+  const priceNums = document.querySelectorAll('.price-num[data-monthly-price]');
+  const billingLabels = document.querySelectorAll('[data-billing-label]');
+  const payNote = document.getElementById('pay-note');
+  const fmt = (n) => Math.round(n).toLocaleString('en-US');
+
+  const modes = {
+    monthly:     { factor: 1,    suffix: '',          noteEn: 'Monthly billing · base price · cancel any time on month-to-month tiers.',           noteAr: 'فوترة شهرية · السعر الأساسي · ألغِ في أي وقت على الباقات الشهرية.' },
+    installment: { factor: 1.05, suffix: ' × 3',      noteEn: 'Split into 3 monthly payments at +5%. Total = 3 × shown amount.',                   noteAr: 'مقسم على 3 دفعات شهرية بزيادة 5٪. الإجمالي = 3 × المبلغ الظاهر.' },
+    annual:      { factor: 0.9,  suffix: ' (annual)', noteEn: 'Annual prepay: 10% off the monthly rate. Pay 12 months upfront, lock the price.',  noteAr: 'دفع سنوي مقدمًا: خصم 10٪ من السعر الشهري. ثبّت السعر لعام كامل.' }
+  };
+
+  function setMode(mode) {
+    const cfg = modes[mode] || modes.monthly;
+    priceNums.forEach(el => {
+      const base = parseFloat(el.getAttribute('data-monthly-price'));
+      if (isNaN(base)) return;
+      el.textContent = fmt(base * cfg.factor);
+    });
+    billingLabels.forEach(el => { el.textContent = cfg.suffix; });
+    if (payNote) {
+      payNote.setAttribute('data-en', cfg.noteEn);
+      payNote.setAttribute('data-ar', cfg.noteAr);
+      const lang = document.documentElement.getAttribute('lang') || 'en';
+      payNote.textContent = (lang === 'ar') ? cfg.noteAr : cfg.noteEn;
+    }
+    buttons.forEach(b => {
+      const active = b.getAttribute('data-mode') === mode;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+  }
+
+  buttons.forEach(b => b.addEventListener('click', () => setMode(b.getAttribute('data-mode'))));
+})();
+</script>
+
 </body>
 </html>

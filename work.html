@@ -3,57 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Work — Nova Agency Dubai · Case Studies</title>
-  <meta name="description" content="Case studies in progress. We're documenting results from our first cohort of clients.">
+  <title>Our Work — Case Studies | Nova Agency Dubai</title>
+  <meta name="description" content="Real client work from Nova Agency Dubai. Case studies being documented as we grow.">
   <link rel="canonical" href="https://novaagency.me/work.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Our Work — Nova Agency Dubai · Case Studies">
-  <meta property="og:description" content="Case studies in progress. We're documenting results from our first cohort of clients.">
+  <meta property="og:title" content="Our Work — Case Studies | Nova Agency Dubai">
+  <meta property="og:description" content="Real client work from Nova Agency Dubai. Case studies being documented as we grow.">
   <meta property="og:url" content="https://novaagency.me/work.html">
   <meta property="og:image" content="https://novaagency.me/assets/img/og-default.jpg">
   <meta property="og:locale" content="en_AE">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Our Work — Nova Agency Dubai · Case Studies">
-  <meta name="twitter:description" content="Case studies in progress. We're documenting results from our first cohort of clients.">
+  <meta name="twitter:title" content="Our Work — Case Studies | Nova Agency Dubai">
+  <meta name="twitter:description" content="Real client work from Nova Agency Dubai. Case studies being documented as we grow.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050510'/%3E%3Cpolyline points='4,24 11,14 18,19 28,6' fill='none' stroke='%232952D9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpolyline points='22,6 28,6 28,12' fill='none' stroke='%232952D9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <style>
-    /* Page-local: case study placeholder grid */
-    .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    @media (max-width: 960px) { .case-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 600px) { .case-grid { grid-template-columns: 1fr; } }
+    /* Work page-local */
+    .cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    @media (max-width: 980px) { .cases-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 620px) { .cases-grid { grid-template-columns: 1fr; } }
     .case-card {
       background: var(--surface-1);
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
-      padding: 24px 22px;
-      display: flex; flex-direction: column; gap: 12px;
-      transition: border-color 0.25s, transform 0.25s var(--ease-out);
+      overflow: hidden;
+      transition: border-color 0.25s, transform 0.25s var(--ease-out), background 0.25s;
     }
-    .case-card:hover { border-color: rgba(41,82,217,0.3); transform: translateY(-3px); }
-    .case-industry {
-      align-self: flex-start;
-      font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    .case-card:hover { border-color: rgba(41,82,217,0.4); background: var(--surface-2); transform: translateY(-3px); }
+    .case-img {
+      position: relative;
+      height: 220px;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(41,82,217,0.35) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(107,143,255,0.22) 0%, transparent 55%),
+        linear-gradient(135deg, #0a1240 0%, #050510 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .case-img svg { color: rgba(255,255,255,0.4); width: 48px; height: 48px; }
+    .case-body { padding: 22px; }
+    .case-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
       color: var(--light-blue);
       background: rgba(41,82,217,0.1);
-      padding: 5px 10px; border-radius: var(--radius-pill);
+      border: 1px solid rgba(41,82,217,0.28);
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 12px;
     }
-    .case-tagline { font-family: var(--font-head); font-size: 16px; font-weight: 600; color: var(--white); line-height: 1.4; }
-    .case-status { font-size: 13px; color: rgba(255,255,255,0.55); }
-    .case-metrics { display: flex; flex-direction: column; gap: 6px; margin-top: 6px; padding-top: 14px; border-top: 1px solid var(--border); }
-    .case-metric { font-size: 12px; color: rgba(255,255,255,0.42); display: flex; justify-content: space-between; gap: 8px; }
-    .case-metric strong { color: rgba(255,255,255,0.62); font-weight: 500; }
-    .bottom-cta-block {
-      max-width: 720px; margin: 0 auto; text-align: center;
-      background: var(--surface-1); border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 48px 32px;
+    .case-title { font-family: var(--font-head); font-size: 18px; font-weight: 600; color: var(--white); margin-bottom: 6px; letter-spacing: -0.01em; }
+    .case-blurb { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.65; }
+
+    .transparency-body {
+      font-size: clamp(16px,1.6vw,19px);
+      line-height: 1.8;
+      color: rgba(255,255,255,0.78);
+      max-width: 820px;
     }
+
+    .bottom-cta-block { text-align: center; padding: 32px 0 16px; }
     .bottom-cta-block .btn-primary, .bottom-cta-block .btn-ghost { margin: 6px; }
   </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Nova Agency","url":"https://novaagency.me","publisher":{"@type":"Organization","name":"Nova Agency","url":"https://novaagency.me"}}
+</script>
 </head>
 <body>
 
@@ -80,10 +99,8 @@
       <li><a href="/services.html" data-en="Services" data-ar="الخدمات">Services</a></li>
       <li><a href="/pricing.html" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
       <li><a href="/work.html" aria-current="page" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
+      <li><a href="/about.html" data-en="About" data-ar="من نحن">About</a></li>
       <li><a href="/contact.html" data-en="Contact" data-ar="اتصل">Contact</a></li>
-      <li>
-        <button type="button" id="lang-toggle" class="lang-toggle" aria-label="Switch to Arabic">عربي</button>
-      </li>
     </ul>
 
     <a href="https://wa.me/971544285018" class="btn-primary nav-cta" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
@@ -98,11 +115,11 @@
       <li><a href="/" class="mobile-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
       <li><a href="/services.html" class="mobile-link" data-en="Services" data-ar="الخدمات">Services</a></li>
       <li><a href="/pricing.html" class="mobile-link" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
-      <li><a href="/work.html" class="mobile-link" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
+      <li><a href="/work.html" class="mobile-link" aria-current="page" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
+      <li><a href="/about.html" class="mobile-link" data-en="About" data-ar="من نحن">About</a></li>
       <li><a href="/contact.html" class="mobile-link" data-en="Contact" data-ar="اتصل">Contact</a></li>
       <li><a href="/faq.html" class="mobile-link" data-en="FAQ" data-ar="الأسئلة">FAQ</a></li>
     </ul>
-    <button type="button" class="lang-toggle" aria-label="Switch to Arabic">عربي</button>
     <a href="https://wa.me/971544285018" class="btn-primary" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
   </div>
 </nav>
@@ -113,114 +130,81 @@
   <section class="page-hero">
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-orb hero-orb-2"></div>
-    <h1 data-en="Real Work. Real Results." data-ar="عمل حقيقي. نتائج حقيقية."><span class="grad">Real Work.</span><br>Real Results.</h1>
-    <p class="lede" data-en="We launched in 2026. We're documenting results from our first cohort. Check back monthly." data-ar="انطلقنا في 2026. نوثّق نتائج أول مجموعة من عملائنا. تابعنا شهريًا.">We launched in 2026. We're documenting results from our first cohort. Check back monthly.</p>
-    <div class="hero-ctas">
-      <a href="https://wa.me/971544285018?text=Hi+Nova,+I'd+like+to+become+a+case+study" class="btn-primary" target="_blank" rel="noopener" data-en="Become a case study" data-ar="كن قصة نجاحنا">Become a case study</a>
-    </div>
+    <span class="section-pill" data-en="Case Studies" data-ar="دراسات حالة">Case Studies</span>
+    <h1 data-en="Results We've Delivered" data-ar="النتائج التي حققناها"><span class="grad">Results</span> We've Delivered</h1>
+    <p class="lede" data-en="Real work. Real results. More being added as we grow." data-ar="عمل حقيقي. نتائج حقيقية. المزيد يُضاف كلما نمونا.">Real work. Real results. More being added as we grow.</p>
   </section>
   <div class="gradient-divider"></div>
 
-  <!-- ── Placeholder grid ── -->
+  <!-- ── Case Study Placeholders ── -->
   <section class="full-section">
-    <span class="section-pill fade-in" data-en="In Progress" data-ar="قيد التنفيذ">In Progress</span>
-    <h2 class="section-heading fade-in" data-en="Results Being Documented" data-ar="نوثّق النتائج الآن">Results Being Documented</h2>
-    <p class="section-sub fade-in" data-en="Live engagements with real businesses. Numbers locked until we can prove them." data-ar="ارتباطات حية مع شركات حقيقية. الأرقام مغلقة حتى نتمكن من إثباتها.">Live engagements with real businesses. Numbers locked until we can prove them.</p>
+    <span class="section-pill fade-in" data-en="In Progress" data-ar="قيد العمل">In Progress</span>
+    <h2 class="section-heading fade-in" data-en="Work In Progress" data-ar="عمل قيد التنفيذ">Work In Progress</h2>
+    <p class="section-sub fade-in" data-en="Three case studies currently being documented. Full numbers, full names, full transparency — once clients approve." data-ar="ثلاث دراسات حالة قيد التوثيق حاليًا. أرقام كاملة، أسماء كاملة، شفافية كاملة — بعد موافقة العملاء.">Three case studies currently being documented. Full numbers, full names, full transparency — once clients approve.</p>
 
-    <div class="case-grid">
+    <div class="cases-grid">
 
-      <div class="case-card fade-in">
-        <span class="case-industry">Ecommerce</span>
-        <h3 class="case-tagline">AI chatbot deployment + Shopify revamp</h3>
-        <p class="case-status">📋 Documenting results</p>
-        <div class="case-metrics">
-          <div class="case-metric"><span>Revenue impact</span><strong>pending</strong></div>
-          <div class="case-metric"><span>Time saved</span><strong>pending</strong></div>
-          <div class="case-metric"><span>Tier</span><strong>Foundation</strong></div>
+      <article class="case-card fade-in">
+        <div class="case-img" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
         </div>
-      </div>
-
-      <div class="case-card fade-in">
-        <span class="case-industry">Local Service</span>
-        <h3 class="case-tagline">Paid ads + email flows + booking automation</h3>
-        <p class="case-status">📋 Documenting results</p>
-        <div class="case-metrics">
-          <div class="case-metric"><span>Revenue impact</span><strong>pending</strong></div>
-          <div class="case-metric"><span>Time saved</span><strong>pending</strong></div>
-          <div class="case-metric"><span>Tier</span><strong>Growth</strong></div>
+        <div class="case-body">
+          <span class="case-tag" data-en="Real Estate" data-ar="عقارات">Real Estate</span>
+          <h3 class="case-title" data-en="Case study being documented" data-ar="دراسة حالة قيد التوثيق">Case study being documented</h3>
+          <p class="case-blurb" data-en="Detailed results coming soon." data-ar="النتائج التفصيلية قريبًا.">Detailed results coming soon.</p>
         </div>
-      </div>
+      </article>
 
-      <div class="case-card fade-in">
-        <span class="case-industry">SaaS</span>
-        <h3 class="case-tagline">WhatsApp automation rebuild + cold email</h3>
-        <p class="case-status">📋 Documenting results</p>
-        <div class="case-metrics">
-          <div class="case-metric"><span>Revenue impact</span><strong>pending</strong></div>
-          <div class="case-metric"><span>Time saved</span><strong>pending</strong></div>
-          <div class="case-metric"><span>Tier</span><strong>Growth</strong></div>
+      <article class="case-card fade-in">
+        <div class="case-img" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
         </div>
-      </div>
+        <div class="case-body">
+          <span class="case-tag" data-en="F&amp;B" data-ar="أغذية ومشروبات">F&amp;B</span>
+          <h3 class="case-title" data-en="Case study being documented" data-ar="دراسة حالة قيد التوثيق">Case study being documented</h3>
+          <p class="case-blurb" data-en="Detailed results coming soon." data-ar="النتائج التفصيلية قريبًا.">Detailed results coming soon.</p>
+        </div>
+      </article>
 
-      <div class="case-card fade-in">
-        <span class="case-industry">Personal Brand</span>
-        <h3 class="case-tagline">Content engine + short-form video pipeline</h3>
-        <p class="case-status">📋 Documenting results</p>
-        <div class="case-metrics">
-          <div class="case-metric"><span>Revenue impact</span><strong>pending</strong></div>
-          <div class="case-metric"><span>Time saved</span><strong>pending</strong></div>
-          <div class="case-metric"><span>Tier</span><strong>Spark</strong></div>
+      <article class="case-card fade-in">
+        <div class="case-img" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
         </div>
-      </div>
-
-      <div class="case-card fade-in">
-        <span class="case-industry">Ecommerce</span>
-        <h3 class="case-tagline">RAG knowledge base + voice agent for support</h3>
-        <p class="case-status">📋 Documenting results</p>
-        <div class="case-metrics">
-          <div class="case-metric"><span>Revenue impact</span><strong>pending</strong></div>
-          <div class="case-metric"><span>Time saved</span><strong>pending</strong></div>
-          <div class="case-metric"><span>Tier</span><strong>Scale</strong></div>
+        <div class="case-body">
+          <span class="case-tag" data-en="E-commerce" data-ar="تجارة إلكترونية">E-commerce</span>
+          <h3 class="case-title" data-en="Case study being documented" data-ar="دراسة حالة قيد التوثيق">Case study being documented</h3>
+          <p class="case-blurb" data-en="Detailed results coming soon." data-ar="النتائج التفصيلية قريبًا.">Detailed results coming soon.</p>
         </div>
-      </div>
-
-      <div class="case-card fade-in">
-        <span class="case-industry">Local Service</span>
-        <h3 class="case-tagline">Brand identity + landing page sprint</h3>
-        <p class="case-status">📋 Documenting results</p>
-        <div class="case-metrics">
-          <div class="case-metric"><span>Revenue impact</span><strong>pending</strong></div>
-          <div class="case-metric"><span>Time saved</span><strong>pending</strong></div>
-          <div class="case-metric"><span>Tier</span><strong>Launch + Build</strong></div>
-        </div>
-      </div>
+      </article>
 
     </div>
   </section>
   <div class="gradient-divider"></div>
 
-  <!-- ── Why no case studies yet ── -->
+  <!-- ── Transparency Block ── -->
   <section class="full-section">
     <span class="section-pill fade-in" data-en="Transparency" data-ar="شفافية">Transparency</span>
-    <h2 class="section-heading fade-in" data-en="We Don't Fake Reviews." data-ar="نحن لا نزيّف المراجعات.">We Don't Fake Reviews.</h2>
-    <p class="section-sub fade-in" data-en="Every agency in Dubai has stock-photo testimonials. We don't. We launched in 2026 and we'd rather show you nothing than show you fake. Real case studies coming soon — with real names, real metrics, real screenshots." data-ar="كل وكالة في دبي لديها شهادات بصور جاهزة. نحن لا. انطلقنا في 2026 ونفضّل ألا نعرض شيئًا على أن نعرض شيئًا مزيفًا. قصص نجاح حقيقية قريبًا — بأسماء حقيقية وأرقام حقيقية ولقطات شاشة حقيقية.">Every agency in Dubai has stock-photo testimonials. We don't. We launched in 2026 and we'd rather show you nothing than show you fake. Real case studies coming soon — with real names, real metrics, real screenshots.</p>
+    <h2 class="section-heading fade-in" data-en="We don't fake reviews" data-ar="نحن لا نزيّف التقييمات">We don't fake reviews</h2>
+    <p class="transparency-body fade-in" data-en="We launched in May 2026. The case studies above are placeholders for real work in progress. When we ship results, we publish them — with permission, with numbers, and with the founder's name attached." data-ar="انطلقنا في مايو 2026. دراسات الحالة أعلاه هي عناصر بديلة لعمل حقيقي قيد التنفيذ. عندما نقدم النتائج، ننشرها — بإذن، بأرقام، وباسم المؤسس مرفقًا.">
+      We launched in May 2026. The case studies above are placeholders for real work in progress. When we ship results, we publish them — with permission, with numbers, and with the founder's name attached.
+    </p>
   </section>
   <div class="gradient-divider"></div>
 
-  <!-- ── Be Our Next Case Study CTA ── -->
+  <!-- ── CTA ── -->
   <section class="full-section">
     <div class="bottom-cta-block">
-      <h2 class="section-heading" data-en="Be Our Next Case Study" data-ar="كن قصتنا القادمة">Be Our Next Case Study</h2>
-      <p class="section-sub" data-en="First-cohort clients get discounted pricing in exchange for permission to publish results. Real numbers, your name, your call." data-ar="عملاء أول مجموعة يحصلون على سعر مخفّض مقابل إذن نشر النتائج. أرقام حقيقية، باسمك، وقرارك.">First-cohort clients get discounted pricing in exchange for permission to publish results. Real numbers, your name, your call.</p>
-      <a href="https://wa.me/971544285018?text=Hi+Nova,+I'd+like+to+become+a+case+study" class="btn-primary" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
-      <a href="/services.html" class="btn-ghost" data-en="See Services →" data-ar="شاهد الخدمات ←">See Services →</a>
+      <span class="section-pill" data-en="Want to be next?" data-ar="تريد أن تكون التالي؟">Want to be next?</span>
+      <h2 class="section-heading" data-en="Be our next case study" data-ar="كن دراسة الحالة القادمة">Be our next case study</h2>
+      <p class="section-sub" style="margin: 0 auto 24px;" data-en="Early clients get the most attention, the lowest prices, and a permanent spot on this page." data-ar="العملاء الأوائل يحصلون على أقصى اهتمام، وأقل الأسعار، ومكان دائم على هذه الصفحة.">Early clients get the most attention, the lowest prices, and a permanent spot on this page.</p>
+      <a href="https://wa.me/971544285018?text=Hi+Nova,+I'd+like+to+become+a+case+study." class="btn-primary" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
     </div>
   </section>
 
 </main>
 
-<footer id="footer" role="contentinfo">
-  <div class="footer-inner">
+<footer id="footer" class="site-footer" role="contentinfo">
+  <div class="site-footer-inner">
 
     <div class="footer-col footer-brand">
       <a href="/" class="footer-logo" aria-label="Nova Agency home">
@@ -266,6 +250,7 @@
       <ul class="footer-links">
         <li><a href="https://wa.me/971544285018" target="_blank" rel="noopener" data-en="WhatsApp · +971 54 428 5018" data-ar="واتساب · +971 54 428 5018">WhatsApp · +971 54 428 5018</a></li>
         <li><a href="mailto:hello@novaagency.me">hello@novaagency.me</a></li>
+        <li><a href="#" target="_blank" rel="noopener" data-en="Find us on Google Business" data-ar="نحن على Google Business">Find us on Google Business</a></li>
         <li><span data-en="Dubai, UAE" data-ar="دبي، الإمارات">Dubai, UAE</span></li>
       </ul>
     </div>
@@ -294,8 +279,8 @@
 <aside id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cookie-banner-title" hidden>
   <div class="cookie-banner-body">
     <h2 id="cookie-banner-title" class="cookie-banner-title" data-en="We use cookies" data-ar="نحن نستخدم ملفات تعريف الارتباط">We use cookies</h2>
-    <p class="cookie-banner-text" data-en="We use cookies for analytics and to improve your experience. By using this site you agree to our use of cookies. UAE PDPL compliant." data-ar="نستخدم ملفات تعريف الارتباط للتحليلات وتحسين تجربتك. باستخدام هذا الموقع، فإنك توافق على استخدامنا لها. متوافق مع قانون حماية البيانات الشخصية الإماراتي.">
-      We use cookies for analytics and to improve your experience. By using this site you agree to our use of cookies. UAE PDPL compliant.
+    <p class="cookie-banner-text" data-en="We use cookies to improve your experience. By continuing you agree to our privacy policy." data-ar="نستخدم ملفات تعريف الارتباط لتحسين تجربتك. بمواصلة التصفح فإنك توافق على سياسة الخصوصية الخاصة بنا.">
+      We use cookies to improve your experience. By continuing you agree to our privacy policy.
     </p>
   </div>
   <div class="cookie-banner-actions">
@@ -304,6 +289,32 @@
   </div>
 </aside>
 
+<button type="button" id="lang-fab" class="lang-fab" aria-haspopup="true" aria-expanded="false" aria-controls="lang-fab-popup" aria-label="Change language">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M3 12h18" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9s1.3-6.3 3.8-9z" stroke="currentColor" stroke-width="1.8"/>
+  </svg>
+  <span id="lang-fab-label">EN</span>
+</button>
+
+<div id="lang-fab-popup" class="lang-fab-popup" role="menu" aria-labelledby="lang-fab">
+  <button type="button" class="lang-fab-option" data-lang="en" role="menuitemradio" aria-checked="true">
+    <span>English</span>
+    <svg class="check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <button type="button" class="lang-fab-option" data-lang="ar" role="menuitemradio" aria-checked="false">
+    <span>العربية</span>
+    <svg class="check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+</div>
+
 <script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/counter.js" defer></script>
+
 </body>
 </html>

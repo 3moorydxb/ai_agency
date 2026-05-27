@@ -1,183 +1,171 @@
-# Nova Agency — JSON-LD Schema Snippets
+# JSON-LD Schema Snippets — Nova Agency Dubai
 
-Reference file for structured data. Paste into the `<head>` of the relevant page inside a `<script type="application/ld+json">` tag.
+Reference blocks to paste into the relevant pages. Each is a complete, drop-in
+`<script type="application/ld+json">` block.
 
 ---
 
-### 1. LocalBusiness — paste into `<head>` of `/index.html`
+## 1. LocalBusiness — paste into `index.html`
 
-```json
+```html
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://novaagency.me/#business",
   "name": "Nova Agency",
-  "alternateName": "Nova Agency Dubai",
-  "description": "AI-powered marketing agency in Dubai. Chatbots, social media, automation, paid ads, content. From AED 1,200/mo.",
+  "description": "Dubai's AI Marketing Agency",
   "url": "https://novaagency.me",
   "telephone": "+971544285018",
-  "priceRange": "AED 1,200 - AED 75,000",
-  "address": {"@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE"},
-  "areaServed": [{"@type": "Country", "name": "AE"}, {"@type": "Place", "name": "GCC"}],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dubai",
+    "addressCountry": "AE"
+  },
+  "priceRange": "AED 1,200 - AED 32,000",
+  "openingHours": "Mo-Su 00:00-24:00",
   "sameAs": ["https://wa.me/971544285018"],
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
-    "opens": "09:00",
-    "closes": "19:00"
-  }]
+  "image": "https://novaagency.me/assets/img/og-default.jpg",
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Arab Emirates"
+  }
 }
+</script>
 ```
 
 ---
 
-### 2. Organization — alternative for `/index.html` if LocalBusiness feels too narrow
+## 2. Organization — paste into `about.html`
 
-```json
+```html
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Nova Agency",
   "url": "https://novaagency.me",
   "logo": "https://novaagency.me/assets/img/logo.png",
-  "sameAs": ["https://wa.me/971544285018"],
-  "contactPoint": {"@type": "ContactPoint", "telephone": "+971544285018", "contactType": "customer service", "areaServed": "AE"}
+  "description": "Dubai's AI Marketing Agency. We build AI marketing systems, automations, and creative for ambitious brands.",
+  "telephone": "+971544285018",
+  "email": "hello@novaagency.me",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dubai",
+    "addressCountry": "AE"
+  },
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Omar Abusalem",
+      "jobTitle": "CTO"
+    },
+    {
+      "@type": "Person",
+      "name": "Nizar",
+      "jobTitle": "CEO"
+    }
+  ],
+  "sameAs": ["https://wa.me/971544285018"]
 }
+</script>
 ```
 
 ---
 
-### 3. FAQPage — paste into `<head>` of `/faq.html` (replace placeholder Q&A with the 10 real entries)
+## 3. FAQPage — paste into `faq.html` and `pricing.html`
 
-```json
+Replace the `mainEntity` array items with the actual Q&A pairs on the page.
+
+```html
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "QUESTION 1 TEXT HERE",
+      "name": "How fast can Nova Agency launch a campaign?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ANSWER 1 TEXT HERE"
+        "text": "Most campaigns launch within 5–10 business days from signed agreement. Builds (apps, RAG assistants, full systems) ship in 2–6 weeks depending on scope."
       }
     },
     {
       "@type": "Question",
-      "name": "QUESTION 2 TEXT HERE",
+      "name": "Do you work outside the UAE?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ANSWER 2 TEXT HERE"
+        "text": "Yes. We're Dubai-based but serve clients across the GCC and globally. All work is delivered remotely with WhatsApp and email as the primary channels."
       }
     },
     {
       "@type": "Question",
-      "name": "QUESTION 3 TEXT HERE",
+      "name": "What's included in the AED 1,200 starter tier?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ANSWER 3 TEXT HERE"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "QUESTION 4 TEXT HERE",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ANSWER 4 TEXT HERE"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "QUESTION 5 TEXT HERE",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ANSWER 5 TEXT HERE"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "QUESTION 6 TEXT HERE",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ANSWER 6 TEXT HERE"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "QUESTION 7 TEXT HERE",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ANSWER 7 TEXT HERE"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "QUESTION 8 TEXT HERE",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ANSWER 8 TEXT HERE"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "QUESTION 9 TEXT HERE",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ANSWER 9 TEXT HERE"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "QUESTION 10 TEXT HERE",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ANSWER 10 TEXT HERE"
+        "text": "The starter tier covers a single-channel campaign or a focused automation — full scope is listed on the pricing page."
       }
     }
   ]
 }
+</script>
 ```
 
 ---
 
-### 4. Service — paste into `<head>` of each `/services/<slug>.html` (replace placeholder fields)
+## 4. Service — template for each `/services/*.html`
 
-```json
+Replace `{{SERVICE_NAME}}`, `{{SERVICE_DESCRIPTION}}`, `{{SERVICE_SLUG}}`, and
+`{{PRICE}}` per page. Drop the `offers` block if pricing is on-request.
+
+```html
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "SERVICE NAME HERE",
-  "name": "SERVICE NAME HERE",
-  "description": "SHORT SERVICE DESCRIPTION HERE",
-  "url": "https://novaagency.me/services/SLUG-HERE.html",
+  "name": "{{SERVICE_NAME}}",
+  "description": "{{SERVICE_DESCRIPTION}}",
+  "url": "https://novaagency.me/services/{{SERVICE_SLUG}}.html",
   "provider": {
-    "@type": "LocalBusiness",
-    "@id": "https://novaagency.me/#business",
+    "@type": "Organization",
     "name": "Nova Agency",
     "url": "https://novaagency.me",
-    "telephone": "+971544285018",
-    "address": {"@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE"}
+    "telephone": "+971544285018"
   },
-  "areaServed": [{"@type": "Country", "name": "AE"}, {"@type": "Place", "name": "GCC"}],
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Arab Emirates"
+  },
   "offers": {
     "@type": "Offer",
-    "price": "PRICE-NUMBER-HERE",
-    "priceCurrency": "AED",
-    "url": "https://novaagency.me/services/SLUG-HERE.html",
-    "availability": "https://schema.org/InStock"
+    "price": "{{PRICE}}",
+    "priceCurrency": "AED"
   }
 }
+</script>
 ```
 
 ---
 
-### 5. WebSite + SearchAction — paste into `<head>` of `/index.html` (enables Google sitelinks search box)
+## 5. WebSite — site-wide (safe to include on every page)
 
-```json
+```html
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "name": "Nova Agency",
   "url": "https://novaagency.me",
-  "name": "Nova Agency"
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://novaagency.me/services.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nova Agency",
+    "url": "https://novaagency.me"
+  }
 }
+</script>
 ```

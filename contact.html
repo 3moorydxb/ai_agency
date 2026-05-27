@@ -3,39 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Nova Agency Dubai</title>
-  <meta name="description" content="WhatsApp first, email second. We respond inside 2 hours during Dubai business hours.">
+  <title>Contact Nova Agency Dubai — WhatsApp, Email, In-Person</title>
+  <meta name="description" content="WhatsApp +971 54 428 5018. Email hello@novaagency.me. Or fill out the form.">
   <link rel="canonical" href="https://novaagency.me/contact.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Contact — Nova Agency Dubai">
-  <meta property="og:description" content="WhatsApp first, email second. We respond inside 2 hours during Dubai business hours.">
+  <meta property="og:title" content="Contact Nova Agency Dubai — WhatsApp, Email, In-Person">
+  <meta property="og:description" content="WhatsApp +971 54 428 5018. Email hello@novaagency.me. Or fill out the form.">
   <meta property="og:url" content="https://novaagency.me/contact.html">
   <meta property="og:image" content="https://novaagency.me/assets/img/og-default.jpg">
   <meta property="og:locale" content="en_AE">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact — Nova Agency Dubai">
-  <meta name="twitter:description" content="WhatsApp first, email second. We respond inside 2 hours during Dubai business hours.">
+  <meta name="twitter:title" content="Contact Nova Agency Dubai — WhatsApp, Email, In-Person">
+  <meta name="twitter:description" content="WhatsApp +971 54 428 5018. Email hello@novaagency.me. Or fill out the form.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050510'/%3E%3Cpolyline points='4,24 11,14 18,19 28,6' fill='none' stroke='%232952D9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpolyline points='22,6 28,6 28,12' fill='none' stroke='%232952D9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <style>
-    /* Page-local: contact methods grid + hours block */
-    .methods-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    @media (max-width: 760px) { .methods-grid { grid-template-columns: 1fr; } }
-    .methods-grid a { text-decoration: none; color: inherit; display: block; }
-    .methods-grid .service-card h3 { margin-bottom: 8px; }
-    .hours-block {
-      max-width: 720px; margin: 0 auto; text-align: center;
-      background: var(--surface-1); border: 1px solid var(--border);
+    /* Contact page-local */
+    .contact-methods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 820px) { .contact-methods { grid-template-columns: 1fr; } }
+    .cm-card {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
       border-radius: var(--radius-md);
-      padding: 32px 24px;
-      display: flex; flex-direction: column; gap: 10px;
+      padding: 28px;
+      transition: border-color 0.25s, transform 0.25s var(--ease-out), background 0.25s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
-    .hours-block .hl { color: var(--light-blue); font-family: var(--font-head); font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
-    .hours-block p { color: rgba(255,255,255,0.6); font-size: 15px; line-height: 1.7; }
+    .cm-card:hover { border-color: rgba(41,82,217,0.4); background: var(--surface-2); transform: translateY(-3px); }
+    .cm-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: rgba(41,82,217,0.12);
+      border: 1px solid rgba(41,82,217,0.28);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--light-blue);
+      margin-bottom: 16px;
+    }
+    .cm-title { font-family: var(--font-head); font-size: 18px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .cm-detail { color: var(--light-blue); font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+    .cm-sub { color: rgba(255,255,255,0.55); font-size: 13px; line-height: 1.6; }
+
+    .contact-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    .contact-form-wrap {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 32px;
+    }
+    .contact-info-col {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 32px;
+    }
+    .contact-info-col h3 {
+      font-family: var(--font-head);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+    .contact-info-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-info-row:last-child { border-bottom: none; }
+    .contact-info-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--light-blue); }
+    .contact-info-value { font-size: 15px; color: var(--white); }
+    .contact-info-value a { color: var(--white); text-decoration: none; transition: color 0.2s; }
+    .contact-info-value a:hover { color: var(--light-blue); }
+
+    .form-success {
+      background: rgba(41,82,217,0.12);
+      border: 1px solid rgba(41,82,217,0.4);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      color: var(--white);
+      margin-top: 16px;
+    }
+    .form-success-title { font-family: var(--font-head); font-weight: 600; margin-bottom: 4px; color: var(--light-blue); }
+
+    .map-block {
+      margin-top: 32px;
+      background:
+        radial-gradient(circle at 30% 50%, rgba(41,82,217,0.25) 0%, transparent 50%),
+        radial-gradient(circle at 70% 50%, rgba(107,143,255,0.15) 0%, transparent 50%),
+        linear-gradient(135deg, #0a1240 0%, #050510 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 56px 24px;
+      text-align: center;
+    }
+    .map-pin {
+      width: 48px; height: 48px;
+      margin: 0 auto 12px;
+      color: var(--light-blue);
+    }
+    .map-title { font-family: var(--font-head); font-size: 22px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .map-sub { color: rgba(255,255,255,0.55); font-size: 14px; }
   </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ContactPage","name":"Contact Nova Agency","url":"https://novaagency.me/contact.html","mainEntity":{"@type":"Organization","name":"Nova Agency","telephone":"+971544285018","email":"hello@novaagency.me","address":{"@type":"PostalAddress","addressLocality":"Dubai","addressCountry":"AE"}}}
+</script>
 </head>
 <body>
 
@@ -62,10 +141,8 @@
       <li><a href="/services.html" data-en="Services" data-ar="الخدمات">Services</a></li>
       <li><a href="/pricing.html" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
       <li><a href="/work.html" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
+      <li><a href="/about.html" data-en="About" data-ar="من نحن">About</a></li>
       <li><a href="/contact.html" aria-current="page" data-en="Contact" data-ar="اتصل">Contact</a></li>
-      <li>
-        <button type="button" id="lang-toggle" class="lang-toggle" aria-label="Switch to Arabic">عربي</button>
-      </li>
     </ul>
 
     <a href="https://wa.me/971544285018" class="btn-primary nav-cta" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
@@ -81,10 +158,10 @@
       <li><a href="/services.html" class="mobile-link" data-en="Services" data-ar="الخدمات">Services</a></li>
       <li><a href="/pricing.html" class="mobile-link" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
       <li><a href="/work.html" class="mobile-link" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
-      <li><a href="/contact.html" class="mobile-link" data-en="Contact" data-ar="اتصل">Contact</a></li>
+      <li><a href="/about.html" class="mobile-link" data-en="About" data-ar="من نحن">About</a></li>
+      <li><a href="/contact.html" class="mobile-link" aria-current="page" data-en="Contact" data-ar="اتصل">Contact</a></li>
       <li><a href="/faq.html" class="mobile-link" data-en="FAQ" data-ar="الأسئلة">FAQ</a></li>
     </ul>
-    <button type="button" class="lang-toggle" aria-label="Switch to Arabic">عربي</button>
     <a href="https://wa.me/971544285018" class="btn-primary" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
   </div>
 </nav>
@@ -95,117 +172,166 @@
   <section class="page-hero">
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-orb hero-orb-2"></div>
-    <h1 data-en="Let's Talk." data-ar="لنتحدّث.">Let's Talk.</h1>
-    <p class="lede" data-en="WhatsApp is fastest. We respond within 2 hours during Dubai business hours (9am–7pm GST)." data-ar="واتساب الأسرع. نرد خلال ساعتين خلال ساعات العمل في دبي (9 صباحًا – 7 مساءً بتوقيت الخليج).">WhatsApp is fastest. We respond within 2 hours during Dubai business hours (9am–7pm GST).</p>
+    <span class="section-pill" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</span>
+    <h1 data-en="Let's talk. Today, not next week." data-ar="لنتحدث. اليوم، وليس الأسبوع القادم."><span class="grad">Let's talk.</span> Today, not next week.</h1>
+    <p class="lede" data-en="WhatsApp is the fastest. Pick whatever works." data-ar="واتساب الأسرع. اختر ما يناسبك.">WhatsApp is the fastest. Pick whatever works.</p>
   </section>
   <div class="gradient-divider"></div>
 
-  <!-- ── Contact methods ── -->
+  <!-- ── 3 Contact Method Cards ── -->
   <section class="full-section">
     <span class="section-pill fade-in" data-en="Three Ways" data-ar="ثلاث طرق">Three Ways</span>
-    <h2 class="section-heading fade-in" data-en="How To Reach Us" data-ar="كيف تصل إلينا">How To Reach Us</h2>
-    <p class="section-sub fade-in" data-en="Pick the channel you actually use." data-ar="اختر القناة التي تستخدمها فعلاً.">Pick the channel you actually use.</p>
+    <h2 class="section-heading fade-in" data-en="How to reach us" data-ar="كيف تصل إلينا">How to reach us</h2>
+    <p class="section-sub fade-in" data-en="Pick your channel. We answer fast." data-ar="اختر القناة. نرد بسرعة.">Pick your channel. We answer fast.</p>
 
-    <div class="methods-grid">
-
-      <a href="https://wa.me/971544285018" target="_blank" rel="noopener">
-        <div class="service-card fade-in">
-          <h3 data-en="WhatsApp" data-ar="واتساب">WhatsApp</h3>
-          <p data-en="Fastest. Click to message. Replies inside 2 hours during business hours." data-ar="الأسرع. اضغط للمراسلة. ردود خلال ساعتين خلال ساعات العمل.">Fastest. Click to message. Replies inside 2 hours during business hours.</p>
-          <p style="margin-top:10px;color:var(--light-blue);font-size:14px;font-weight:600;">+971 54 428 5018 →</p>
+    <div class="contact-methods">
+      <a class="cm-card fade-in" href="https://wa.me/971544285018" target="_blank" rel="noopener">
+        <div class="cm-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.51 3.58 1.4 5.07L2 22l5.07-1.4A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.49 14.18c-.2.57-1.16 1.09-1.62 1.13-.41.05-.95.07-1.52-.1-.35-.11-.81-.27-1.39-.52-2.45-1.06-4.05-3.54-4.17-3.7-.12-.16-1-1.33-1-2.53s.63-1.8.85-2.04c.22-.24.49-.31.65-.31.16 0 .33.01.46.01.16.01.36-.06.56.43.21.49.71 1.7.77 1.82.06.12.1.27.02.43-.08.17-.12.27-.24.42-.12.15-.25.33-.36.44-.12.12-.24.25-.1.49.13.24.6.99 1.29 1.6.88.79 1.62 1.04 1.86 1.16.24.12.38.1.52-.06.13-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.6-.14 1.17z"/></svg>
         </div>
+        <div class="cm-title" data-en="WhatsApp" data-ar="واتساب">WhatsApp</div>
+        <div class="cm-detail">+971 54 428 5018</div>
+        <div class="cm-sub" data-en="Reply within minutes during business hours." data-ar="نرد خلال دقائق في ساعات العمل.">Reply within minutes during business hours.</div>
       </a>
 
-      <a href="mailto:hello@novaagency.me">
-        <div class="service-card fade-in">
-          <h3 data-en="Email" data-ar="البريد الإلكتروني">Email</h3>
-          <p data-en="For longer briefs or attachments. Replies inside 24 hours." data-ar="للموجزات الطويلة أو المرفقات. ردود خلال 24 ساعة.">For longer briefs or attachments. Replies inside 24 hours.</p>
-          <p style="margin-top:10px;color:var(--light-blue);font-size:14px;font-weight:600;">hello@novaagency.me →</p>
+      <a class="cm-card fade-in" href="mailto:hello@novaagency.me">
+        <div class="cm-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
+        <div class="cm-title" data-en="Email" data-ar="بريد إلكتروني">Email</div>
+        <div class="cm-detail">hello@novaagency.me</div>
+        <div class="cm-sub" data-en="For longer briefs and contracts." data-ar="للموجزات الأطول والعقود.">For longer briefs and contracts.</div>
       </a>
 
-      <a href="https://wa.me/971544285018?text=Hi+Nova,+I'd+like+to+book+a+coffee" target="_blank" rel="noopener">
-        <div class="service-card fade-in">
-          <h3 data-en="In Person" data-ar="حضوريًا">In Person</h3>
-          <p data-en="Dubai-based. Coffee meetings available on request. Message us to set a time." data-ar="مقرّنا دبي. اجتماعات قهوة عند الطلب. راسلنا لتحديد موعد.">Dubai-based. Coffee meetings available on request. Message us to set a time.</p>
-          <p style="margin-top:10px;color:var(--light-blue);font-size:14px;font-weight:600;" data-en="Book a coffee →" data-ar="احجز قهوة ←">Book a coffee →</p>
+      <a class="cm-card fade-in" href="https://wa.me/971544285018?text=Hi+Nova,+I'd+like+to+book+an+in-person+meeting." target="_blank" rel="noopener">
+        <div class="cm-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
+        <div class="cm-title" data-en="In-Person" data-ar="مقابلة شخصية">In-Person</div>
+        <div class="cm-detail" data-en="Dubai · by appointment" data-ar="دبي · بموعد">Dubai · by appointment</div>
+        <div class="cm-sub" data-en="Coffee on us. WhatsApp to book." data-ar="القهوة علينا. احجز عبر واتساب.">Coffee on us. WhatsApp to book.</div>
       </a>
-
     </div>
   </section>
   <div class="gradient-divider"></div>
 
-  <!-- ── Contact form ── -->
+  <!-- ── Form + Info ── -->
   <section class="full-section">
-    <span class="section-pill fade-in" data-en="Drop a note" data-ar="اترك ملاحظة">Drop a note</span>
-    <h2 class="section-heading fade-in" data-en="Or Send Us Details" data-ar="أو أرسل لنا التفاصيل">Or Send Us Details</h2>
-    <p class="section-sub fade-in" data-en="Fill this in — we'll open WhatsApp with your message pre-filled. No backend, no spam list." data-ar="املأ الحقول — سنفتح لك واتساب برسالتك جاهزة. لا خادم خلفي ولا قوائم بريد عشوائي.">Fill this in — we'll open WhatsApp with your message pre-filled. No backend, no spam list.</p>
+    <span class="section-pill fade-in" data-en="Brief Us" data-ar="عرّفنا بمشروعك">Brief Us</span>
+    <h2 class="section-heading fade-in" data-en="Tell us about your business" data-ar="حدثنا عن أعمالك">Tell us about your business</h2>
+    <p class="section-sub fade-in" data-en="Fill the form and we'll WhatsApp you back with a tier recommendation." data-ar="املأ النموذج وسنرد عليك عبر واتساب بتوصية الباقة.">Fill the form and we'll WhatsApp you back with a tier recommendation.</p>
 
-    <div class="contact-form-wrap fade-in">
-      <form id="contact-form" onsubmit="return novaContactSubmit(event)">
-        <div class="form-group">
-          <label for="c-name" data-en="Your Name" data-ar="اسمك">Your Name</label>
-          <input type="text" id="c-name" name="name" required placeholder="Omar Al-Rashid">
+    <div class="contact-grid">
+      <div class="contact-form-wrap fade-in">
+        <form id="contact-form" onsubmit="return novaContactSubmit(event)" novalidate>
+          <div class="form-group">
+            <label for="cf-name" data-en="Your name" data-ar="اسمك">Your name</label>
+            <input type="text" id="cf-name" name="name" required placeholder="Omar Abusalem">
+          </div>
+
+          <div class="form-group">
+            <label for="cf-business" data-en="Business name" data-ar="اسم الشركة">Business name</label>
+            <input type="text" id="cf-business" name="business" required placeholder="Nova Coffee Co.">
+          </div>
+
+          <div class="form-group">
+            <label for="cf-industry" data-en="Industry" data-ar="القطاع">Industry</label>
+            <select id="cf-industry" name="industry" required>
+              <option value="" data-en="Select industry…" data-ar="اختر القطاع…">Select industry…</option>
+              <option value="Real Estate" data-en="Real Estate" data-ar="عقارات">Real Estate</option>
+              <option value="F&amp;B / Restaurants" data-en="F&amp;B / Restaurants" data-ar="مطاعم وأغذية">F&amp;B / Restaurants</option>
+              <option value="E-commerce" data-en="E-commerce" data-ar="تجارة إلكترونية">E-commerce</option>
+              <option value="Healthcare" data-en="Healthcare" data-ar="رعاية صحية">Healthcare</option>
+              <option value="Education" data-en="Education" data-ar="تعليم">Education</option>
+              <option value="Professional Services" data-en="Professional Services" data-ar="خدمات مهنية">Professional Services</option>
+              <option value="Other" data-en="Other" data-ar="أخرى">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="cf-revenue" data-en="Monthly revenue (AED)" data-ar="الإيراد الشهري (درهم)">Monthly revenue (AED)</label>
+            <select id="cf-revenue" name="revenue" required>
+              <option value="" data-en="Select range…" data-ar="اختر النطاق…">Select range…</option>
+              <option value="<10k AED" data-en="<10k AED" data-ar="أقل من 10 آلاف">&lt;10k AED</option>
+              <option value="10-50k AED" data-en="10–50k AED" data-ar="10-50 ألف">10–50k AED</option>
+              <option value="50-200k AED" data-en="50–200k AED" data-ar="50-200 ألف">50–200k AED</option>
+              <option value="200k-1M AED" data-en="200k–1M AED" data-ar="200 ألف-مليون">200k–1M AED</option>
+              <option value="1M+ AED" data-en="1M+ AED" data-ar="أكثر من مليون">1M+ AED</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="cf-tier" data-en="Tier interested in" data-ar="الباقة المهتم بها">Tier interested in</label>
+            <select id="cf-tier" name="tier" required>
+              <option value="" data-en="Select tier…" data-ar="اختر الباقة…">Select tier…</option>
+              <option value="Launch">Launch</option>
+              <option value="Spark">Spark</option>
+              <option value="Foundation">Foundation</option>
+              <option value="Growth">Growth</option>
+              <option value="Scale">Scale</option>
+              <option value="Not sure" data-en="Not sure — recommend one" data-ar="لست متأكدًا — أوصِ لي">Not sure — recommend one</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="cf-message" data-en="Message" data-ar="الرسالة">Message</label>
+            <textarea id="cf-message" name="message" rows="4" placeholder="Tell us what you're trying to grow."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" data-en="Send via WhatsApp" data-ar="إرسال عبر واتساب">Send via WhatsApp</button>
+
+          <div id="form-success" class="form-success" hidden>
+            <div class="form-success-title" data-en="Opened WhatsApp" data-ar="تم فتح واتساب">Opened WhatsApp</div>
+            <p data-en="We've opened WhatsApp in a new tab with your message pre-filled. Hit send and we'll reply within minutes." data-ar="فتحنا واتساب في نافذة جديدة مع رسالتك جاهزة. اضغط إرسال وسنرد خلال دقائق.">We've opened WhatsApp in a new tab with your message pre-filled. Hit send and we'll reply within minutes.</p>
+          </div>
+        </form>
+      </div>
+
+      <div class="contact-info-col fade-in">
+        <h3 data-en="Direct channels" data-ar="القنوات المباشرة">Direct channels</h3>
+
+        <div class="contact-info-row">
+          <span class="contact-info-label" data-en="WhatsApp" data-ar="واتساب">WhatsApp</span>
+          <span class="contact-info-value"><a href="https://wa.me/971544285018" target="_blank" rel="noopener">+971 54 428 5018</a></span>
         </div>
-        <div class="form-group">
-          <label for="c-email" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
-          <input type="email" id="c-email" name="email" required placeholder="you@business.com">
+        <div class="contact-info-row">
+          <span class="contact-info-label" data-en="Email" data-ar="بريد إلكتروني">Email</span>
+          <span class="contact-info-value"><a href="mailto:hello@novaagency.me">hello@novaagency.me</a></span>
         </div>
-        <div class="form-group">
-          <label for="c-phone" data-en="Phone (optional)" data-ar="الهاتف (اختياري)">Phone (optional)</label>
-          <input type="tel" id="c-phone" name="phone" placeholder="+971 50 000 0000">
+        <div class="contact-info-row">
+          <span class="contact-info-label">Instagram</span>
+          <span class="contact-info-value"><a href="#" target="_blank" rel="noopener" data-en="@novaagency.ae · coming soon" data-ar="@novaagency.ae · قريبًا">@novaagency.ae · coming soon</a></span>
         </div>
-        <div class="form-group">
-          <label for="c-biz" data-en="Business Type" data-ar="نوع النشاط">Business Type</label>
-          <select id="c-biz" name="business-type" required>
-            <option value="" disabled selected>Select your business type</option>
-            <option>Ecommerce</option>
-            <option>Local Business</option>
-            <option>Personal Brand</option>
-            <option>SaaS</option>
-            <option>Other</option>
-          </select>
+        <div class="contact-info-row">
+          <span class="contact-info-label">TikTok</span>
+          <span class="contact-info-value"><a href="#" target="_blank" rel="noopener" data-en="@novaagency.ae · coming soon" data-ar="@novaagency.ae · قريبًا">@novaagency.ae · coming soon</a></span>
         </div>
-        <div class="form-group">
-          <label for="c-budget" data-en="Monthly Budget" data-ar="الميزانية الشهرية">Monthly Budget</label>
-          <select id="c-budget" name="budget" required>
-            <option value="" disabled selected>Pick a range</option>
-            <option>Under AED 3K</option>
-            <option>AED 3-7K</option>
-            <option>AED 7-15K</option>
-            <option>AED 15K+</option>
-          </select>
+        <div class="contact-info-row">
+          <span class="contact-info-label" data-en="Location" data-ar="الموقع">Location</span>
+          <span class="contact-info-value" data-en="Dubai, UAE" data-ar="دبي، الإمارات">Dubai, UAE</span>
         </div>
-        <div class="form-group">
-          <label for="c-msg" data-en="Message" data-ar="الرسالة">Message</label>
-          <textarea id="c-msg" name="message" rows="5" required placeholder="What do you need help with?"></textarea>
+        <div class="contact-info-row">
+          <span class="contact-info-label" data-en="Business hours" data-ar="ساعات العمل">Business hours</span>
+          <span class="contact-info-value" data-en="Sun–Thu 9am–6pm GST · Always available on WhatsApp" data-ar="الأحد–الخميس 9 صباحًا–6 مساءً · واتساب دائمًا متاح">Sun–Thu 9am–6pm GST · Always available on WhatsApp</span>
         </div>
-        <button type="submit" class="btn-primary" data-en="Send via WhatsApp" data-ar="أرسل عبر واتساب">Send via WhatsApp</button>
-      </form>
+      </div>
     </div>
-  </section>
-  <div class="gradient-divider"></div>
 
-  <!-- ── Hours / Location ── -->
-  <section class="full-section">
-    <span class="section-pill fade-in" data-en="Business Hours" data-ar="ساعات العمل">Business Hours</span>
-    <h2 class="section-heading fade-in" data-en="When We're Online" data-ar="متى نكون متاحين">When We're Online</h2>
-
-    <div class="hours-block fade-in">
-      <span class="hl" data-en="Location" data-ar="الموقع">Location</span>
-      <p data-en="Dubai, UAE · GMT+4" data-ar="دبي، الإمارات · GMT+4">Dubai, UAE · GMT+4</p>
-      <span class="hl" data-en="Hours" data-ar="الساعات">Hours</span>
-      <p data-en="Open Sun–Thu 9am–7pm" data-ar="مفتوح الأحد–الخميس 9 صباحًا – 7 مساءً">Open Sun–Thu 9am–7pm</p>
-      <span class="hl" data-en="Response Time" data-ar="وقت الاستجابة">Response Time</span>
-      <p data-en="Replies within 2 hours during business hours, 24h on weekends." data-ar="ردود خلال ساعتين خلال ساعات العمل، و24 ساعة في عطلة نهاية الأسبوع.">Replies within 2 hours during business hours, 24h on weekends.</p>
+    <!-- ── Map / Location placeholder ── -->
+    <div class="map-block fade-in" aria-hidden="false">
+      <svg class="map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+      <div class="map-title" data-en="Dubai, UAE" data-ar="دبي، الإمارات">Dubai, UAE</div>
+      <div class="map-sub" data-en="Meetings by appointment · WhatsApp to schedule." data-ar="اللقاءات بموعد · حدد عبر واتساب.">Meetings by appointment · WhatsApp to schedule.</div>
     </div>
   </section>
 
 </main>
 
-<footer id="footer" role="contentinfo">
-  <div class="footer-inner">
+<footer id="footer" class="site-footer" role="contentinfo">
+  <div class="site-footer-inner">
 
     <div class="footer-col footer-brand">
       <a href="/" class="footer-logo" aria-label="Nova Agency home">
@@ -251,6 +377,7 @@
       <ul class="footer-links">
         <li><a href="https://wa.me/971544285018" target="_blank" rel="noopener" data-en="WhatsApp · +971 54 428 5018" data-ar="واتساب · +971 54 428 5018">WhatsApp · +971 54 428 5018</a></li>
         <li><a href="mailto:hello@novaagency.me">hello@novaagency.me</a></li>
+        <li><a href="#" target="_blank" rel="noopener" data-en="Find us on Google Business" data-ar="نحن على Google Business">Find us on Google Business</a></li>
         <li><span data-en="Dubai, UAE" data-ar="دبي، الإمارات">Dubai, UAE</span></li>
       </ul>
     </div>
@@ -279,8 +406,8 @@
 <aside id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cookie-banner-title" hidden>
   <div class="cookie-banner-body">
     <h2 id="cookie-banner-title" class="cookie-banner-title" data-en="We use cookies" data-ar="نحن نستخدم ملفات تعريف الارتباط">We use cookies</h2>
-    <p class="cookie-banner-text" data-en="We use cookies for analytics and to improve your experience. By using this site you agree to our use of cookies. UAE PDPL compliant." data-ar="نستخدم ملفات تعريف الارتباط للتحليلات وتحسين تجربتك. باستخدام هذا الموقع، فإنك توافق على استخدامنا لها. متوافق مع قانون حماية البيانات الشخصية الإماراتي.">
-      We use cookies for analytics and to improve your experience. By using this site you agree to our use of cookies. UAE PDPL compliant.
+    <p class="cookie-banner-text" data-en="We use cookies to improve your experience. By continuing you agree to our privacy policy." data-ar="نستخدم ملفات تعريف الارتباط لتحسين تجربتك. بمواصلة التصفح فإنك توافق على سياسة الخصوصية الخاصة بنا.">
+      We use cookies to improve your experience. By continuing you agree to our privacy policy.
     </p>
   </div>
   <div class="cookie-banner-actions">
@@ -289,31 +416,70 @@
   </div>
 </aside>
 
+<button type="button" id="lang-fab" class="lang-fab" aria-haspopup="true" aria-expanded="false" aria-controls="lang-fab-popup" aria-label="Change language">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M3 12h18" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9s1.3-6.3 3.8-9z" stroke="currentColor" stroke-width="1.8"/>
+  </svg>
+  <span id="lang-fab-label">EN</span>
+</button>
+
+<div id="lang-fab-popup" class="lang-fab-popup" role="menu" aria-labelledby="lang-fab">
+  <button type="button" class="lang-fab-option" data-lang="en" role="menuitemradio" aria-checked="true">
+    <span>English</span>
+    <svg class="check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <button type="button" class="lang-fab-option" data-lang="ar" role="menuitemradio" aria-checked="false">
+    <span>العربية</span>
+    <svg class="check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+</div>
+
+<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/counter.js" defer></script>
+
+<!-- ── Contact form submission: serialise → WhatsApp ── -->
 <script>
-  function novaContactSubmit(e) {
-    e.preventDefault();
-    var f = e.target;
-    var name = (f['name'].value || '').trim();
-    var email = (f['email'].value || '').trim();
-    var phone = (f['phone'].value || '').trim();
-    var biz = f['business-type'].value || '';
-    var budget = f['budget'].value || '';
-    var msg = (f['message'].value || '').trim();
-    var lines = [
-      "Hi Nova, here are my details:",
-      "Name: " + name,
-      "Email: " + email
-    ];
-    if (phone) lines.push("Phone: " + phone);
-    lines.push("Business type: " + biz);
-    lines.push("Monthly budget: " + budget);
-    lines.push("");
-    lines.push(msg);
-    var url = "https://wa.me/971544285018?text=" + encodeURIComponent(lines.join("\n"));
-    window.open(url, "_blank", "noopener");
+function novaContactSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = {
+    name:     form.querySelector('#cf-name').value.trim(),
+    business: form.querySelector('#cf-business').value.trim(),
+    industry: form.querySelector('#cf-industry').value,
+    revenue:  form.querySelector('#cf-revenue').value,
+    tier:     form.querySelector('#cf-tier').value,
+    message:  form.querySelector('#cf-message').value.trim()
+  };
+  if (!data.name || !data.business || !data.industry || !data.revenue || !data.tier) {
+    form.reportValidity();
     return false;
   }
+  const lines = [
+    'Hi Nova,',
+    '',
+    'Name: '     + data.name,
+    'Business: ' + data.business,
+    'Industry: ' + data.industry,
+    'Revenue: '  + data.revenue,
+    'Tier: '     + data.tier
+  ];
+  if (data.message) { lines.push('', 'Message:', data.message); }
+  const text = encodeURIComponent(lines.join('\n'));
+  window.open('https://wa.me/971544285018?text=' + text, '_blank', 'noopener');
+  const success = document.getElementById('form-success');
+  if (success) {
+    success.hidden = false;
+    success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+  return false;
+}
 </script>
-<script src="/assets/js/main.js" defer></script>
+
 </body>
 </html>

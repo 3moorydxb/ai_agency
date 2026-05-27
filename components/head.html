@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--
-    CLOUDFLARE NOTE: For AI crawlers (GPTBot, PerplexityBot, ClaudeBot, etc.) to
-    index this site for GEO/AEO, add a Cloudflare WAF rule:
-    Security → WAF → Custom Rules → "Allow verified bots" → action: Skip.
-    Also see /robots.txt for explicit allow list.
+    CLOUDFLARE WAF RULE NEEDED FOR GEO/AEO:
+    Dashboard → Security → WAF → Custom Rules
+    Name: Allow AI crawlers
+    Expression: (cf.client.bot)
+    Action: Skip → All Security Rules
+    This allows GPTBot, PerplexityBot etc to crawl the site for GEO/AEO ranking.
   -->
   <title>{{TITLE}}</title>
   <meta name="description" content="{{DESCRIPTION}}">
@@ -32,4 +34,6 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
   <!-- Meta Pixel (placeholder — replace PIXEL_ID with real ID) -->
   <!-- <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','PIXEL_ID');fbq('track','PageView');</script> -->
+  <meta name="google-site-verification" content="REPLACE_WITH_VERIFICATION_CODE">
+  <meta name="msvalidate.01" content="REPLACE_WITH_BING_VERIFICATION_CODE">
 </head>

@@ -99,10 +99,11 @@
     });
   }
 
-  // ── AR / EN language toggle ───────────────────────────────────────────────
+  // ── AR / EN language toggle (floating pill + popup) ───────────────────────
   // Reads data-en and data-ar attributes on user-visible elements and swaps
   // textContent. Persists choice in localStorage under 'nova_lang'.
   function applyLang(lang) {
+    if (lang !== 'ar' && lang !== 'en') lang = 'en';
     var dir = lang === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.setAttribute('lang', lang);
     document.documentElement.setAttribute('dir', dir);
@@ -110,25 +111,70 @@
       var val = el.getAttribute('data-' + lang);
       if (val !== null) el.textContent = val;
     });
-    // Update toggle labels (button shows the OTHER language)
-    document.querySelectorAll('.lang-toggle').forEach(function (btn) {
-      btn.textContent = lang === 'ar' ? 'EN' : 'عربي';
-      btn.setAttribute('aria-label', lang === 'ar' ? 'Switch to English' : 'Switch to Arabic');
+    // Update the floating language button label
+    var label = document.getElementById('lang-fab-label');
+    if (label) label.textContent = lang === 'ar' ? 'AR' : 'EN';
+    // Mark the active option in the popup
+    document.querySelectorAll('.lang-fab-option').forEach(function (opt) {
+      var isActive = opt.getAttribute('data-lang') === lang;
+      opt.classList.toggle('active', isActive);
+      opt.setAttribute('aria-checked', isActive ? 'true' : 'false');
     });
   }
+
+  function setLang(lang) {
+    applyLang(lang);
+    try { localStorage.setItem('nova_lang', lang); } catch (e) {}
+  }
+
   function initLangToggle() {
+    // 1. Apply saved language immediately so the page renders in the chosen
+    //    direction on first paint (initLangToggle runs at DOMContentLoaded).
     var saved = null;
     try { saved = localStorage.getItem('nova_lang'); } catch (e) {}
-    if (saved === 'ar' || saved === 'en') applyLang(saved);
-    else applyLang('en');
+    applyLang(saved === 'ar' ? 'ar' : 'en');
 
-    document.querySelectorAll('#lang-toggle, .lang-toggle').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var current = document.documentElement.getAttribute('lang') || 'en';
-        var next = current === 'ar' ? 'en' : 'ar';
-        applyLang(next);
-        try { localStorage.setItem('nova_lang', next); } catch (e) {}
+    var fab = document.getElementById('lang-fab');
+    var popup = document.getElementById('lang-fab-popup');
+    if (!fab || !popup) return;
+
+    function closePopup() {
+      popup.classList.remove('is-open');
+      fab.setAttribute('aria-expanded', 'false');
+    }
+    function openPopup() {
+      popup.classList.add('is-open');
+      fab.setAttribute('aria-expanded', 'true');
+    }
+    function togglePopup() {
+      if (popup.classList.contains('is-open')) closePopup();
+      else openPopup();
+    }
+
+    fab.addEventListener('click', function (e) {
+      e.stopPropagation();
+      togglePopup();
+    });
+
+    popup.querySelectorAll('.lang-fab-option').forEach(function (opt) {
+      opt.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var lang = opt.getAttribute('data-lang');
+        if (lang) setLang(lang);
+        closePopup();
       });
+    });
+
+    // Click outside closes the popup
+    document.addEventListener('click', function (e) {
+      if (!popup.classList.contains('is-open')) return;
+      if (popup.contains(e.target) || fab.contains(e.target)) return;
+      closePopup();
+    });
+
+    // Escape key closes the popup
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closePopup();
     });
   }
 
@@ -168,6 +214,7 @@
   // Expose a small public API for pages that need it
   window.Nova = {
     applyLang: applyLang,
+    setLang: setLang,
     initFadeIn: initFadeIn,
     initFaq: initFaq
   };

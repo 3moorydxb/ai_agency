@@ -52,7 +52,7 @@ From `styles.css` — every page may use these freely:
 
 **State** — `.skeleton`, `.skeleton-card`, `.skeleton-text`, `.skeleton-on-load`
 
-**Comparison** — `.compare-table`, `.compare-nova` (highlighted column)
+**Comparison** — `.compare-table`, `.nova-col` (highlighted column)
 
 **FAQ** — `.faq-item`, `.faq-question`, `.faq-answer`
 

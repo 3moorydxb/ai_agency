@@ -22,8 +22,8 @@ const CATEGORIES = [
   { id: 'platforms',   pill: 'Platform Management',     heading: 'Platform Management',                     sub: '6 standalone platform-specific services for niche channels.' },
   { id: 'performance', pill: 'Performance Marketing',   heading: 'Performance Marketing',                   sub: '10 services to drive paid traffic, qualified leads, and measurable revenue.' },
   { id: 'automation',  pill: 'AI Automation',           heading: 'AI Automation — Monthly Management',      sub: 'Keep your AI systems tuned, monitored, and improving every month.' },
-  { id: 'operations',  pill: 'Business Operations',     heading: 'Client & Business Operations',            sub: '3 services to keep your CRM, PR and affiliate engine moving.' },
-  { id: 'builds',      pill: 'One-Time Builds',         heading: 'One-Time Builds',                         sub: '14 fixed-scope projects delivered fast — chatbots, voice agents, websites, dashboards, and more.' },
+  { id: 'operations',  pill: 'Business Operations',     heading: 'Client & Business Operations',            sub: '2 services to keep your CRM and PR engine moving.' },
+  { id: 'builds',      pill: 'One-Time Builds',         heading: 'One-Time Builds',                         sub: '15 fixed-scope projects delivered fast — chatbots, voice agents, websites, dashboards, and more.' },
 ];
 
 // Generic chevron icon for services without a custom one
@@ -555,20 +555,6 @@ const SERVICES = [
       ['Established brands','Quarterly campaigns, awards entries, exec announcements.'],
     ]
   },
-  { slug:'affiliate-program', cat:'operations', icon:'link',
-    name:'Affiliate / Referral Program Management', price:'AED 1,500/mo', priceShort:'AED 1,500/mo',
-    one:'Recruit and pay affiliates on autopilot.',
-    desc:'Affiliate + referral programs done right. We set up tracking (Refersion, UpPromote, custom), recruit affiliates each month, manage payouts, and provide creative + landing pages for top performers.',
-    steps:[
-      ['Brief','Define commission structure, ICP affiliates, brand assets.'],
-      ['Build','Tracking installed, affiliate portal live, T&Cs and creative pack ready.'],
-      ['Launch','5-10 new affiliates recruited/mo, payouts handled, monthly performance report.'],
-    ],
-    who:[
-      ['DTC ecom brands','Affiliates + creators on commission = your best CAC.'],
-      ['SaaS & subscription products','Referral programs that compound (Notion, Webflow, Dropbox style).'],
-    ]
-  },
 
   // ── F. One-Time Builds (14) ─────────────────────────────────────
   { slug:'build-chatbot', cat:'builds', icon:'chat',
@@ -767,6 +753,20 @@ const SERVICES = [
       ['Founders moving from one CRM to another','HubSpot → Zoho or vice-versa with clean migration.'],
     ]
   },
+  { slug:'affiliate-program', cat:'builds', icon:'link',
+    name:'Affiliate / Referral Program Build', price:'AED 3,500–8,000', priceShort:'From AED 3,500',
+    one:'Launch your own affiliate engine.',
+    desc:'A full affiliate + referral program built and launched in one project. Tracking platform (Refersion, UpPromote, Tolt or custom), commission structure, T&Cs, affiliate portal, landing pages, creative pack and a first wave of 5-10 affiliates recruited. Optional monthly management after.',
+    steps:[
+      ['Brief','Define commission structure, ICP affiliates, brand assets and target launch date.'],
+      ['Build','Tracking installed, affiliate portal live, T&Cs and creative pack ready, payout flows wired.'],
+      ['Launch','5-10 inaugural affiliates recruited, onboarded and live. Handover with training and SOPs.'],
+    ],
+    who:[
+      ['DTC ecom brands','Affiliates + creators on commission = your best CAC.'],
+      ['SaaS & subscription products','Referral programs that compound (Notion, Webflow, Dropbox style).'],
+    ]
+  },
 ];
 
 // ───────────────────────────────────────────────────────────────────
@@ -824,10 +824,8 @@ const NAV = ({ activeServices=false } = {}) => `
       <li><a href="/services.html"${activeServices ? ' aria-current="page"' : ''} data-en="Services" data-ar="الخدمات">Services</a></li>
       <li><a href="/pricing.html" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
       <li><a href="/work.html" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
+      <li><a href="/about.html" data-en="About" data-ar="من نحن">About</a></li>
       <li><a href="/contact.html" data-en="Contact" data-ar="اتصل">Contact</a></li>
-      <li>
-        <button type="button" id="lang-toggle" class="lang-toggle" aria-label="Switch to Arabic">عربي</button>
-      </li>
     </ul>
 
     <a href="https://wa.me/971544285018" class="btn-primary nav-cta" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
@@ -843,17 +841,17 @@ const NAV = ({ activeServices=false } = {}) => `
       <li><a href="/services.html" class="mobile-link"${activeServices ? ' aria-current="page"' : ''} data-en="Services" data-ar="الخدمات">Services</a></li>
       <li><a href="/pricing.html" class="mobile-link" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
       <li><a href="/work.html" class="mobile-link" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
+      <li><a href="/about.html" class="mobile-link" data-en="About" data-ar="من نحن">About</a></li>
       <li><a href="/contact.html" class="mobile-link" data-en="Contact" data-ar="اتصل">Contact</a></li>
       <li><a href="/faq.html" class="mobile-link" data-en="FAQ" data-ar="الأسئلة">FAQ</a></li>
     </ul>
-    <button type="button" class="lang-toggle" aria-label="Switch to Arabic">عربي</button>
     <a href="https://wa.me/971544285018" class="btn-primary" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
   </div>
 </nav>`;
 
 const FOOTER = `
-<footer id="footer" role="contentinfo">
-  <div class="footer-inner">
+<footer id="footer" class="site-footer" role="contentinfo">
+  <div class="site-footer-inner">
 
     <div class="footer-col footer-brand">
       <a href="/" class="footer-logo" aria-label="Nova Agency home">
@@ -899,6 +897,7 @@ const FOOTER = `
       <ul class="footer-links">
         <li><a href="https://wa.me/971544285018" target="_blank" rel="noopener" data-en="WhatsApp · +971 54 428 5018" data-ar="واتساب · +971 54 428 5018">WhatsApp · +971 54 428 5018</a></li>
         <li><a href="mailto:hello@novaagency.me">hello@novaagency.me</a></li>
+        <li><a href="#" target="_blank" rel="noopener" data-en="Find us on Google Business" data-ar="نحن على Google Business">Find us on Google Business</a></li>
         <li><span data-en="Dubai, UAE" data-ar="دبي، الإمارات">Dubai, UAE</span></li>
       </ul>
     </div>
@@ -929,8 +928,8 @@ const COOKIE = `
 <aside id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cookie-banner-title" hidden>
   <div class="cookie-banner-body">
     <h2 id="cookie-banner-title" class="cookie-banner-title" data-en="We use cookies" data-ar="نحن نستخدم ملفات تعريف الارتباط">We use cookies</h2>
-    <p class="cookie-banner-text" data-en="We use cookies for analytics and to improve your experience. By using this site you agree to our use of cookies. UAE PDPL compliant." data-ar="نستخدم ملفات تعريف الارتباط للتحليلات وتحسين تجربتك. باستخدام هذا الموقع، فإنك توافق على استخدامنا لها. متوافق مع قانون حماية البيانات الشخصية الإماراتي.">
-      We use cookies for analytics and to improve your experience. By using this site you agree to our use of cookies. UAE PDPL compliant.
+    <p class="cookie-banner-text" data-en="We use cookies to improve your experience. By continuing you agree to our privacy policy." data-ar="نستخدم ملفات تعريف الارتباط لتحسين تجربتك. بمواصلة التصفح فإنك توافق على سياسة الخصوصية الخاصة بنا.">
+      We use cookies to improve your experience. By continuing you agree to our privacy policy.
     </p>
   </div>
   <div class="cookie-banner-actions">
@@ -938,6 +937,31 @@ const COOKIE = `
     <button type="button" id="cookie-accept" class="btn-primary" data-en="Accept" data-ar="قبول">Accept</button>
   </div>
 </aside>`;
+
+const LANG_TOGGLE = `
+<button type="button" id="lang-fab" class="lang-fab" aria-haspopup="true" aria-expanded="false" aria-controls="lang-fab-popup" aria-label="Change language">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M3 12h18" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9s1.3-6.3 3.8-9z" stroke="currentColor" stroke-width="1.8"/>
+  </svg>
+  <span id="lang-fab-label">EN</span>
+</button>
+
+<div id="lang-fab-popup" class="lang-fab-popup" role="menu" aria-labelledby="lang-fab">
+  <button type="button" class="lang-fab-option" data-lang="en" role="menuitemradio" aria-checked="true">
+    <span>English</span>
+    <svg class="check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <button type="button" class="lang-fab-option" data-lang="ar" role="menuitemradio" aria-checked="false">
+    <span>العربية</span>
+    <svg class="check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+</div>`;
 
 const SCRIPTS = `<script src="/assets/js/main.js" defer></script>
 <script src="/assets/js/counter.js" defer></script>`;
@@ -1005,6 +1029,7 @@ ${sections}
 ${FOOTER}
 ${FAB}
 ${COOKIE}
+${LANG_TOGGLE}
 
 ${SCRIPTS}
 </body>
@@ -1052,10 +1077,14 @@ ${NAV({ activeServices:true })}
 
   <!-- ── Hero ── -->
   <section class="service-detail-hero">
-    <p class="fade-in" style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:18px;">
-      <a href="/services.html" style="color:inherit;text-decoration:none;">Services</a>
+    <p class="fade-in" style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:18px;" aria-label="Breadcrumb">
+      <a href="/" style="color:inherit;text-decoration:none;" data-en="Home" data-ar="الرئيسية">Home</a>
+      <span style="opacity:0.5;">›</span>
+      <a href="/services.html" style="color:inherit;text-decoration:none;" data-en="Services" data-ar="الخدمات">Services</a>
       <span style="opacity:0.5;">›</span>
       <a href="/services.html#${s.cat}" style="color:inherit;text-decoration:none;">${catName}</a>
+      <span style="opacity:0.5;">›</span>
+      <span style="color:rgba(255,255,255,0.75);">${s.name}</span>
     </p>
     <span class="section-pill fade-in">${categoryPill(s.cat)}</span>
     <h1 class="fade-in" data-en="${s.name.replace(/"/g,'&quot;')}">${s.name}</h1>
@@ -1162,6 +1191,7 @@ ${who}
 ${FOOTER}
 ${FAB}
 ${COOKIE}
+${LANG_TOGGLE}
 
 ${SCRIPTS}
 </body>
@@ -1200,7 +1230,7 @@ for (const s of SERVICES) byCat[s.cat] = (byCat[s.cat] || 0) + 1;
 console.log(`✓ ${count} detail pages written`);
 console.log('  Per category:', JSON.stringify(byCat));
 
-const expected = { content: 12, platforms: 6, performance: 10, automation: 5, operations: 3, builds: 14 };
+const expected = { content: 12, platforms: 6, performance: 10, automation: 5, operations: 2, builds: 15 };
 for (const k of Object.keys(expected)) {
   if (byCat[k] !== expected[k]) {
     console.error(`✗ Mismatch in ${k}: expected ${expected[k]}, got ${byCat[k]}`);
@@ -1211,4 +1241,4 @@ if (count !== 50) {
   console.error(`✗ Total: expected 50, got ${count}`);
   process.exit(1);
 }
-console.log('✓ All counts correct (12 + 6 + 10 + 5 + 3 + 14 = 50)');
+console.log('✓ All counts correct (12 + 6 + 10 + 5 + 2 + 15 = 50)');
