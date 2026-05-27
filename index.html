@@ -1,850 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nova Agency — AI Marketing Dubai</title>
+  <!--
+    CLOUDFLARE NOTE: For AI crawlers (GPTBot, PerplexityBot, ClaudeBot, etc.) to
+    index this site for GEO/AEO, add a Cloudflare WAF rule:
+    Security → WAF → Custom Rules → "Allow verified bots" → action: Skip.
+    Also see /robots.txt for explicit allow list.
+  -->
+  <title>Nova Agency — AI Marketing Dubai · From AED 1,200/mo</title>
+  <meta name="description" content="Dubai's AI marketing agency. Chatbots live in 48 hours. Built by engineers who code live trading algorithms. Month-to-month from AED 1,200.">
+  <link rel="canonical" href="https://novaagency.me/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nova Agency — AI Marketing Dubai · From AED 1,200/mo">
+  <meta property="og:description" content="Dubai's AI marketing agency. Chatbots live in 48 hours. Built by engineers who code live trading algorithms. Month-to-month from AED 1,200.">
+  <meta property="og:url" content="https://novaagency.me/">
+  <meta property="og:image" content="https://novaagency.me/assets/img/og-default.jpg">
+  <meta property="og:locale" content="en_AE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nova Agency — AI Marketing Dubai · From AED 1,200/mo">
+  <meta name="twitter:description" content="Dubai's AI marketing agency. Chatbots live in 48 hours. Built by engineers who code live trading algorithms. Month-to-month from AED 1,200.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050510'/%3E%3Cpolyline points='4,24 11,14 18,19 28,6' fill='none' stroke='%232952D9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpolyline points='22,6 28,6 28,12' fill='none' stroke='%232952D9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-  <meta name="description" content="AI-powered marketing agency in Dubai. Social media, chatbots, automation, ads and more. From AED 1,200/mo.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --nova-black: #050510;
-      --deep-navy: #0D1F6E;
-      --brand-blue: #1E3FB8;
-      --bright-blue: #2952D9;
-      --light-blue: #6B8FFF;
-      --white: #FFFFFF;
-      --surface-1: rgba(255,255,255,0.04);
-      --surface-2: rgba(255,255,255,0.07);
-      --border: rgba(255,255,255,0.08);
-      --font-head: 'Space Grotesk', sans-serif;
-      --font-body: 'Inter', sans-serif;
-      --ease-out: cubic-bezier(0.16,1,0.3,1);
-      --radius-sm: 8px;
-      --radius-md: 16px;
-      --radius-lg: 24px;
-      --radius-pill: 999px;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--nova-black);
-      color: var(--white);
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.6;
-      overflow-x: hidden;
-      padding-top: 72px;
-    }
-
-    h1,h2,h3,h4 {
-      font-family: var(--font-head);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-    }
-
-    .full-section {
-      padding: clamp(64px,8vw,112px) 5%;
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-
-    /* ── Section pill label ── */
-    .section-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(41,82,217,0.1);
-      border: 1px solid rgba(41,82,217,0.28);
-      color: var(--light-blue);
-      font-family: var(--font-body);
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: var(--radius-pill);
-      margin-bottom: 14px;
-    }
-
-    .section-heading {
-      font-size: clamp(30px,5vw,52px);
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 12px;
-    }
-
-    .section-sub {
-      font-size: clamp(15px,2vw,18px);
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 52px;
-      line-height: 1.75;
-      max-width: 580px;
-    }
-
-    /* ── Buttons ── */
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--bright-blue);
-      color: var(--white);
-      font-family: var(--font-body);
-      font-weight: 600;
-      font-size: 14px;
-      padding: 13px 28px;
-      border-radius: var(--radius-pill);
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      transition: box-shadow 0.25s var(--ease-out), transform 0.25s var(--ease-out);
-      position: relative;
-      overflow: hidden;
-    }
-    .btn-primary::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg,rgba(255,255,255,0.14) 0%,transparent 60%);
-      opacity: 0;
-      transition: opacity 0.2s;
-      border-radius: inherit;
-    }
-    .btn-primary:hover {
-      box-shadow: 0 0 28px rgba(41,82,217,0.55), 0 4px 18px rgba(41,82,217,0.25);
-      transform: translateY(-2px);
-    }
-    .btn-primary:hover::after { opacity: 1; }
-
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: transparent;
-      color: var(--white);
-      font-family: var(--font-body);
-      font-weight: 600;
-      font-size: 14px;
-      padding: 12px 28px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(255,255,255,0.18);
-      cursor: pointer;
-      text-decoration: none;
-      transition: border-color 0.2s, background 0.2s, transform 0.2s var(--ease-out);
-    }
-    .btn-ghost:hover {
-      border-color: rgba(255,255,255,0.45);
-      background: rgba(255,255,255,0.05);
-      transform: translateY(-2px);
-    }
-
-    /* ── Divider ── */
-    .gradient-divider {
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(90deg,transparent,rgba(41,82,217,0.4),transparent);
-    }
-
-    /* ── Fade-in ── */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
-    }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-    /* ── Skip link ── */
-    .skip-link {
-      position: absolute;
-      top: -100%;
-      left: 8px;
-      background: var(--bright-blue);
-      color: var(--white);
-      padding: 8px 16px;
-      font-size: 13px;
-      font-weight: 700;
-      border-radius: 0 0 8px 8px;
-      text-decoration: none;
-      z-index: 200;
-      transition: top 0.1s;
-    }
-    .skip-link:focus { top: 8px; }
-
-    :focus-visible { outline: 2px solid var(--bright-blue); outline-offset: 3px; border-radius: 4px; }
-
-    .service-card, .build-card, .pricing-card, .st-row { cursor: pointer; }
-    .pricing-grid::-webkit-scrollbar { display: none; }
-    .pricing-grid { -ms-overflow-style: none; scrollbar-width: none; }
-    .form-group select option { background: #07070f; color: var(--white); }
-
-    @media (prefers-reduced-motion: reduce) {
-      *,*::before,*::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-      .fade-in { opacity: 1; transform: none; }
-      #particle-canvas, .hero-orb { display: none; }
-      .hero-badge,.hero-h1,.hero-sub,.hero-ctas,.hero-float-card { opacity: 1; transform: none; animation: none; }
-    }
-
-    /* ═══════════════════════════════════════
-       NAVBAR
-    ═══════════════════════════════════════ */
-    #navbar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 0 5%;
-      transition: background 0.3s, backdrop-filter 0.3s, border-color 0.3s;
-      border-bottom: 1px solid transparent;
-    }
-    #navbar.scrolled {
-      background: rgba(5,5,16,0.88);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom-color: var(--border);
-    }
-    .nav-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-    }
-    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav-logo-icon {
-      width: 26px; height: 26px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .nav-logo-icon svg { width: 100%; height: 100%; }
-    .nav-logo-text { display: flex; flex-direction: column; gap: 0; }
-    .nav-logo-name {
-      font-family: var(--font-head);
-      font-size: 20px; font-weight: 700;
-      color: var(--white); letter-spacing: -0.02em; line-height: 1;
-    }
-    .nav-logo-name .dot { color: var(--bright-blue); }
-    .nav-logo-sub {
-      font-family: var(--font-body);
-      font-size: 8px; font-weight: 600;
-      letter-spacing: 2.5px; text-transform: uppercase;
-      color: rgba(107,143,255,0.65);
-      line-height: 1; margin-top: 3px;
-    }
-    .nav-links { display: flex; gap: 4px; list-style: none; }
-    .nav-links a {
-      font-family: var(--font-body);
-      font-size: 14px; font-weight: 500;
-      color: rgba(255,255,255,0.6);
-      text-decoration: none;
-      padding: 6px 14px;
-      border-radius: var(--radius-pill);
-      transition: color 0.2s, background 0.2s;
-    }
-    .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.06); }
-    .nav-cta { padding: 10px 22px; font-size: 13px; }
-    .hamburger {
-      display: none; flex-direction: column; gap: 5px;
-      background: none; border: none; cursor: pointer; padding: 8px;
-    }
-    .hamburger span {
-      display: block; width: 22px; height: 2px;
-      background: var(--white); border-radius: 2px;
-      transition: transform 0.2s, opacity 0.2s;
-    }
-    .mobile-menu {
-      display: none; flex-direction: column; gap: 8px;
-      padding: 16px 0 24px; border-top: 1px solid var(--border);
-    }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
-    .mobile-link {
-      display: block; padding: 10px 16px;
-      font-family: var(--font-body); font-size: 15px; font-weight: 500;
-      color: rgba(255,255,255,0.7); text-decoration: none;
-      border-radius: var(--radius-sm); transition: color 0.2s, background 0.2s;
-    }
-    .mobile-link:hover { color: var(--white); background: rgba(255,255,255,0.06); }
-    .mobile-menu .btn-primary { margin-top: 8px; justify-content: center; }
-    @media (max-width: 900px) {
-      .nav-links, .nav-cta { display: none; }
-      .hamburger { display: flex; }
-    }
-
-    /* ═══════════════════════════════════════
-       HERO
-    ═══════════════════════════════════════ */
-    #hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-      padding: 80px 5% 60px;
-    }
-    #particle-canvas {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      pointer-events: none;
-    }
-    .hero-orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(72px);
-      pointer-events: none;
-    }
-    .hero-orb-1 {
-      width: 640px; height: 640px;
-      background: radial-gradient(circle,rgba(41,82,217,0.2) 0%,transparent 70%);
-      top: -120px; left: 50%;
-      animation: orbMain 9s ease-in-out infinite;
-    }
-    .hero-orb-2 {
-      width: 420px; height: 420px;
-      background: radial-gradient(circle,rgba(107,143,255,0.1) 0%,transparent 70%);
-      bottom: 5%; right: 8%;
-      animation: orbSide 11s ease-in-out 2s infinite;
-    }
-    .hero-orb-3 {
-      width: 320px; height: 320px;
-      background: radial-gradient(circle,rgba(30,63,184,0.12) 0%,transparent 70%);
-      top: 35%; left: -4%;
-      animation: orbSide 13s ease-in-out 1s infinite reverse;
-    }
-    @keyframes orbMain {
-      0%,100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(-28px); }
-    }
-    @keyframes orbSide {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-22px); }
-    }
-
-    .hero-content { position: relative; z-index: 2; max-width: 860px; margin: 0 auto; }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      background: rgba(41,82,217,0.1);
-      border: 1px solid rgba(41,82,217,0.32);
-      color: var(--light-blue);
-      font-size: 11px; font-weight: 600;
-      letter-spacing: 1.5px; text-transform: uppercase;
-      padding: 7px 18px;
-      border-radius: var(--radius-pill);
-      margin-bottom: 28px;
-      opacity: 0;
-      animation: heroUp 0.7s var(--ease-out) 0.1s forwards;
-    }
-    .badge-pulse {
-      width: 7px; height: 7px;
-      background: #4ade80; border-radius: 50%;
-      box-shadow: 0 0 6px #4ade80;
-      animation: bPulse 2s ease-in-out infinite;
-    }
-    @keyframes bPulse {
-      0%,100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.55; transform: scale(0.8); }
-    }
-
-    .hero-h1 {
-      font-size: clamp(44px,8vw,88px);
-      font-weight: 700;
-      letter-spacing: -0.04em;
-      line-height: 1.04;
-      margin-bottom: 24px;
-      opacity: 0;
-      animation: heroUp 0.8s var(--ease-out) 0.25s forwards;
-    }
-    .hero-h1 .grad {
-      background: linear-gradient(135deg,#6B8FFF 0%,#2952D9 50%,#1E3FB8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-sub {
-      font-size: clamp(16px,2.2vw,20px);
-      color: rgba(255,255,255,0.55);
-      line-height: 1.75;
-      margin-bottom: 40px;
-      opacity: 0;
-      animation: heroUp 0.8s var(--ease-out) 0.4s forwards;
-    }
-    .hero-ctas {
-      display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
-      margin-bottom: 56px;
-      opacity: 0;
-      animation: heroUp 0.8s var(--ease-out) 0.55s forwards;
-    }
-    .hero-ctas .btn-primary { padding: 15px 32px; font-size: 15px; }
-    .hero-ctas .btn-ghost  { padding: 14px 32px; font-size: 15px; }
-
-    @keyframes heroUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Floating stats card */
-    .hero-float-card {
-      display: inline-flex;
-      align-items: center;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius-lg);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      padding: 20px 36px;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.04) inset;
-      opacity: 0;
-      animation: heroUp 0.8s var(--ease-out) 0.7s forwards;
-    }
-    .hero-stat { display: flex; flex-direction: column; align-items: center; padding: 0 28px; }
-    .hero-stat-num {
-      font-family: var(--font-head);
-      font-size: 28px; font-weight: 700;
-      color: var(--white);
-      letter-spacing: -0.03em; line-height: 1;
-    }
-    .hero-stat-label {
-      font-size: 11px; font-weight: 500;
-      color: rgba(255,255,255,0.4);
-      letter-spacing: 0.5px; margin-top: 5px;
-      white-space: nowrap;
-    }
-    .hero-stat-div { width: 1px; height: 36px; background: rgba(255,255,255,0.1); }
-
-    @media (max-width: 600px) {
-      .hero-float-card { flex-direction: column; gap: 16px; padding: 22px 28px; }
-      .hero-stat { padding: 0 20px; }
-      .hero-stat-div { width: 40px; height: 1px; }
-    }
-
-    /* ═══════════════════════════════════════
-       SERVICES
-    ═══════════════════════════════════════ */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill,minmax(272px,1fr));
-      gap: 14px;
-    }
-    .service-card {
-      background: var(--surface-1);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 28px 24px;
-      transition: border-color 0.25s, background 0.25s, transform 0.25s var(--ease-out), box-shadow 0.25s;
-      position: relative; overflow: hidden;
-    }
-    .service-card::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(135deg,rgba(41,82,217,0.06) 0%,transparent 60%);
-      opacity: 0; transition: opacity 0.25s; border-radius: inherit;
-    }
-    .service-card:hover {
-      border-color: rgba(41,82,217,0.4);
-      background: var(--surface-2);
-      transform: translateY(-4px);
-      box-shadow: 0 8px 32px rgba(41,82,217,0.15);
-    }
-    .service-card:hover::before { opacity: 1; }
-    .service-icon {
-      width: 48px; height: 48px;
-      background: rgba(41,82,217,0.1);
-      border: 1px solid rgba(41,82,217,0.2);
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 18px;
-    }
-    .service-icon svg { width: 24px; height: 24px; }
-    .service-card h3 {
-      font-size: 17px; font-weight: 600;
-      color: var(--white); margin-bottom: 8px;
-    }
-    .service-card p {
-      font-size: 14px;
-      color: rgba(255,255,255,0.48);
-      line-height: 1.65;
-    }
-
-    /* ═══════════════════════════════════════
-       PRICING
-    ═══════════════════════════════════════ */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
-    }
-    @media (max-width: 1100px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 700px)  { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 460px)  { .pricing-grid { grid-template-columns: 1fr; } }
-    .pricing-card {
-      background: var(--surface-1);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 28px 22px 22px;
-      display: flex; flex-direction: column;
-      position: relative;
-      transition: border-color 0.25s, transform 0.25s var(--ease-out), box-shadow 0.25s;
-    }
-    .pricing-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(41,82,217,0.35);
-      box-shadow: 0 12px 40px rgba(41,82,217,0.14);
-    }
-    .featured-pricing {
-      border-color: rgba(41,82,217,0.5);
-      background: rgba(41,82,217,0.07);
-      box-shadow: 0 0 40px rgba(41,82,217,0.12);
-    }
-    .featured-badge {
-      position: absolute; top: -1px; right: 20px;
-      background: var(--bright-blue); color: var(--white);
-      font-size: 10px; font-weight: 700;
-      letter-spacing: 1.5px; text-transform: uppercase;
-      padding: 4px 12px; border-radius: 0 0 8px 8px;
-    }
-    .tier-name {
-      font-family: var(--font-head);
-      font-size: 12px; font-weight: 700;
-      letter-spacing: 2.5px; text-transform: uppercase;
-      color: var(--light-blue); margin-bottom: 12px;
-    }
-    .tier-price {
-      font-family: var(--font-head);
-      font-size: 30px; font-weight: 700;
-      color: var(--white); letter-spacing: -0.03em; line-height: 1;
-    }
-    .per-mo { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.38); }
-    .tier-usd { display: none; }
-    .tier-commit { font-size: 12px; color: rgba(255,255,255,0.42); margin-bottom: 2px; }
-    .tier-onboard {
-      font-size: 12px; color: rgba(107,143,255,0.65);
-      margin-bottom: 18px; padding-bottom: 18px;
-      border-bottom: 1px solid var(--border);
-    }
-    .tier-features {
-      list-style: none; display: flex; flex-direction: column;
-      gap: 9px; flex: 1; margin-bottom: 22px;
-    }
-    .tier-features li {
-      font-size: 13px; color: rgba(255,255,255,0.62);
-      padding-left: 18px; position: relative; line-height: 1.5;
-    }
-    .tier-features li::before {
-      content: '';
-      position: absolute; left: 0; top: 7px;
-      width: 6px; height: 6px;
-      background: var(--bright-blue); border-radius: 50%; opacity: 0.65;
-    }
-    .tier-cta { width: 100%; text-align: center; justify-content: center; margin-top: auto; }
-    .scale-ctas { display: flex; flex-direction: column; gap: 8px; margin-top: auto; }
-    .scale-ctas .tier-cta { margin-top: 0; }
-    .payment-note { font-size: 13px; color: rgba(255,255,255,0.38); margin-bottom: 32px; font-style: italic; }
-    .pricing-footnote { font-size: 13px; color: rgba(255,255,255,0.3); margin-top: 24px; font-style: italic; }
-
-    /* ═══════════════════════════════════════
-       À LA CARTE
-    ═══════════════════════════════════════ */
-    .service-group { margin-bottom: 28px; }
-    .group-heading {
-      font-family: var(--font-head);
-      font-size: 13px; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase;
-      color: var(--light-blue); margin-bottom: 10px;
-      padding-bottom: 10px; border-bottom: 1px solid var(--border);
-    }
-    .service-table {
-      background: var(--surface-1);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-    }
-    .st-row {
-      display: flex; align-items: center;
-      justify-content: space-between;
-      padding: 13px 20px; font-size: 14px;
-      transition: background 0.2s;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-    }
-    .st-row:last-child { border-bottom: none; }
-    .st-row:hover { background: rgba(255,255,255,0.04); }
-    .st-row span:first-child { color: rgba(255,255,255,0.72); flex: 1; padding-right: 16px; }
-    .st-price { font-family: var(--font-head); font-size: 14px; font-weight: 600; color: var(--light-blue); white-space: nowrap; }
-    .footnote-small { font-size: 12px; color: rgba(255,255,255,0.28); margin-top: 14px; font-style: italic; }
-
-    .builds-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-    }
-    .build-card {
-      flex: 1 1 190px;
-      max-width: 220px;
-      background: var(--surface-1);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 22px 20px;
-      transition: border-color 0.25s, transform 0.25s var(--ease-out), box-shadow 0.25s;
-      position: relative;
-    }
-    @media (max-width: 600px)  { .build-card { max-width: calc(50% - 6px); flex-basis: calc(50% - 6px); } }
-    @media (max-width: 400px)  { .build-card { max-width: 100%; flex-basis: 100%; } }
-    .build-card:hover {
-      border-color: rgba(41,82,217,0.3);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(41,82,217,0.12);
-    }
-    .featured-build { border-color: rgba(41,82,217,0.4); background: rgba(41,82,217,0.05); }
-    .build-star { font-size: 11px; font-weight: 700; color: #fbbf24; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px; }
-    .build-name { font-family: var(--font-head); font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 6px; line-height: 1.4; }
-    .build-desc { font-size: 12px; color: rgba(255,255,255,0.42); margin-bottom: 12px; line-height: 1.55; }
-    .build-price { font-family: var(--font-head); font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 4px; letter-spacing: -0.02em; }
-    .build-maint { font-size: 11px; color: rgba(255,255,255,0.32); }
-
-    /* ═══════════════════════════════════════
-       QUIZ
-    ═══════════════════════════════════════ */
-    .quiz-container {
-      max-width: 620px; margin: 0 auto;
-      background: var(--surface-1);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 36px 32px;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-    .quiz-progress {
-      width: 100%; height: 3px;
-      background: rgba(255,255,255,0.08);
-      border-radius: var(--radius-pill);
-      margin-bottom: 20px; overflow: hidden;
-    }
-    .quiz-progress-bar {
-      height: 100%;
-      background: linear-gradient(90deg,var(--brand-blue),var(--light-blue));
-      border-radius: var(--radius-pill);
-      transition: width 0.4s var(--ease-out);
-      width: 0%;
-    }
-    .quiz-step-label {
-      font-size: 11px; font-weight: 600;
-      color: rgba(255,255,255,0.38);
-      letter-spacing: 1.5px; text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    .quiz-step { display: none; }
-    .quiz-step.active { display: block; }
-    .quiz-question {
-      font-family: var(--font-head);
-      font-size: 22px; font-weight: 600;
-      color: var(--white); margin-bottom: 24px;
-    }
-    .quiz-options { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
-    .quiz-opt {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius-pill);
-      color: rgba(255,255,255,0.72);
-      font-family: var(--font-body); font-size: 14px; font-weight: 500;
-      padding: 13px 18px; cursor: pointer;
-      transition: all 0.2s var(--ease-out); text-align: center;
-    }
-    .quiz-opt:hover {
-      border-color: var(--bright-blue);
-      background: rgba(41,82,217,0.12);
-      color: var(--white);
-      transform: translateY(-2px);
-    }
-    .result-tier-name { font-family: var(--font-head); font-size: 36px; font-weight: 700; color: var(--white); margin-bottom: 4px; letter-spacing: -0.03em; }
-    .result-price { font-family: var(--font-head); font-size: 24px; font-weight: 600; color: var(--light-blue); margin-bottom: 16px; }
-    .result-why { font-size: 15px; color: rgba(255,255,255,0.58); line-height: 1.75; margin-bottom: 24px; }
-    .result-services {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: var(--radius-md);
-      padding: 20px; margin-bottom: 24px;
-    }
-    .result-services h4 {
-      font-family: var(--font-head); font-size: 12px; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase;
-      color: var(--light-blue); margin-bottom: 12px;
-    }
-    .result-services ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .result-services li { font-size: 14px; color: rgba(255,255,255,0.68); padding-left: 18px; position: relative; }
-    .result-services li::before { content: '→'; position: absolute; left: 0; color: var(--bright-blue); font-size: 12px; }
-    #result-wa-btn { width: 100%; justify-content: center; }
-    #quiz-restart { width: 100%; text-align: center; margin-top: 10px; justify-content: center; }
-    @media (max-width: 500px) { .quiz-container { padding: 24px 18px; } .quiz-options { grid-template-columns: 1fr; } }
-
-    /* ═══════════════════════════════════════
-       WHY NOVA
-    ═══════════════════════════════════════ */
-    .why-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      justify-content: center;
-    }
-    .why-card { flex: 1 1 260px; max-width: 380px; }
-    .why-card {
-      background: var(--surface-1);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 32px 28px;
-      transition: border-color 0.25s, transform 0.25s var(--ease-out), box-shadow 0.25s;
-    }
-    .why-card:hover {
-      border-color: rgba(41,82,217,0.3);
-      transform: translateY(-4px);
-      box-shadow: 0 8px 32px rgba(41,82,217,0.12);
-    }
-    .why-icon {
-      width: 52px; height: 52px;
-      background: rgba(41,82,217,0.1);
-      border: 1px solid rgba(41,82,217,0.2);
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 20px;
-    }
-    .why-icon svg { width: 28px; height: 28px; }
-    .why-card h3 { font-size: 17px; font-weight: 600; color: var(--white); margin-bottom: 10px; }
-    .why-card p { font-size: 14px; color: rgba(255,255,255,0.48); line-height: 1.7; }
-
-    /* ═══════════════════════════════════════
-       CONTACT
-    ═══════════════════════════════════════ */
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-    .contact-form-wrap {
-      background: var(--surface-1);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 32px 28px;
-    }
-    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
-    .form-group label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.55); letter-spacing: 0.3px; }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius-sm);
-      color: var(--white);
-      font-family: var(--font-body); font-size: 15px;
-      padding: 12px 16px;
-      transition: border-color 0.2s, background 0.2s;
-      outline: none; -webkit-appearance: none; appearance: none;
-    }
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: rgba(255,255,255,0.2); }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--bright-blue);
-      background: rgba(41,82,217,0.04);
-    }
-    .form-group select {
-      cursor: pointer;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B8FFF' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 14px center;
-      padding-right: 40px;
-    }
-    .form-group textarea { resize: vertical; min-height: 100px; }
-    .contact-form-wrap .btn-primary { width: 100%; justify-content: center; padding: 14px; font-size: 15px; }
-    .form-success-msg { font-size: 17px; color: var(--light-blue); text-align: center; padding: 40px 20px; line-height: 1.7; border: 1px solid rgba(41,82,217,0.3); border-radius: var(--radius-md); }
-    .contact-info { display: flex; flex-direction: column; gap: 24px; padding-top: 8px; }
-    .contact-wa { display: inline-flex; align-items: center; gap: 10px; padding: 15px 28px; font-size: 15px; }
-    .contact-link { font-size: 15px; color: var(--light-blue); text-decoration: none; font-weight: 600; transition: color 0.2s; }
-    .contact-link:hover { color: var(--white); }
-    .contact-socials { display: flex; flex-direction: column; gap: 14px; }
-    .social-link { display: flex; align-items: center; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.48); text-decoration: none; font-weight: 500; transition: color 0.2s; }
-    .social-link:hover { color: var(--white); }
-    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
-
-    /* ═══════════════════════════════════════
-       FOOTER
-    ═══════════════════════════════════════ */
-    #footer { border-top: 1px solid var(--border); padding: 40px 5% 0; }
-    .footer-inner {
-      max-width: 1280px; margin: 0 auto;
-      display: flex; align-items: center;
-      justify-content: space-between; flex-wrap: wrap;
-      gap: 24px; padding-bottom: 32px;
-    }
-    .footer-left { display: flex; align-items: center; gap: 12px; }
-    .footer-brand { font-size: 13px; color: rgba(255,255,255,0.38); font-weight: 500; }
-    .footer-nav { display: flex; gap: 24px; flex-wrap: wrap; }
-    .footer-nav a { font-size: 13px; color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.2s; }
-    .footer-nav a:hover { color: var(--white); }
-    .footer-right { display: flex; align-items: center; gap: 16px; }
-    .footer-social { color: rgba(255,255,255,0.32); transition: color 0.2s; display: flex; }
-    .footer-social:hover { color: var(--white); }
-    .footer-email { font-size: 12px; color: rgba(107,143,255,0.55); text-decoration: none; transition: color 0.2s; }
-    .footer-email:hover { color: var(--light-blue); }
-    .footer-bottom { border-top: 1px solid var(--border); padding: 16px 0; max-width: 1280px; margin: 0 auto; }
-    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.18); }
-    @media (max-width: 768px) { .footer-inner { flex-direction: column; align-items: flex-start; } }
-  </style>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://novaagency.me/#business",
+    "name": "Nova Agency",
+    "description": "AI-powered marketing agency in Dubai. Social media, chatbots, automation, ads, and more from AED 1,200/mo.",
+    "url": "https://novaagency.me",
+    "telephone": "+971544285018",
+    "priceRange": "AED 1,200 - AED 32,000",
+    "address": {"@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE"},
+    "areaServed": ["AE", "GCC"],
+    "sameAs": ["https://wa.me/971544285018"]
+  }
+  </script>
+  <!-- Google Analytics 4 (placeholder — replace G-XXXXXXXXXX with real ID) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
+  <!-- Meta Pixel (placeholder — replace PIXEL_ID with real ID) -->
+  <!-- <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','PIXEL_ID');fbq('track','PageView');</script> -->
 </head>
 <body>
 
-  <a href="#services" class="skip-link">Skip to main content</a>
+<a href="#main" class="skip-link" data-en="Skip to main content" data-ar="تخطي إلى المحتوى الرئيسي">Skip to main content</a>
 
-  <!-- ── Navbar ── -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">
-        <div class="nav-logo-icon">
-          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <polyline points="4,28 13,16 20,22 32,8" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <polyline points="24,8 32,8 32,16" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="nav-logo-text">
-          <span class="nav-logo-name">NOVA<span class="dot">.</span></span>
-          <span class="nav-logo-sub">Agency · Dubai</span>
-        </div>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#alacarte">À La Carte</a></li>
-        <li><a href="#quiz">Audit Quiz</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a href="https://wa.me/971544285018" class="btn-primary nav-cta" target="_blank" rel="noopener">WhatsApp Us</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="mobile-menu" id="mobile-menu">
-      <ul>
-        <li><a href="#services" class="mobile-link">Services</a></li>
-        <li><a href="#pricing" class="mobile-link">Pricing</a></li>
-        <li><a href="#alacarte" class="mobile-link">À La Carte</a></li>
-        <li><a href="#quiz" class="mobile-link">Audit Quiz</a></li>
-        <li><a href="#contact" class="mobile-link">Contact</a></li>
-      </ul>
-      <a href="https://wa.me/971544285018" class="btn-primary" target="_blank" rel="noopener">WhatsApp Us</a>
-    </div>
-  </nav>
+<nav id="navbar" aria-label="Main navigation">
+  <div class="nav-inner">
 
-  <!-- ── Hero ── -->
+    <a href="/" class="nav-logo" aria-label="Nova Agency home">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polyline points="4,28 13,16 20,22 32,8" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="24,8 32,8 32,16" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">NOVA<span class="dot">.</span></span>
+        <span class="nav-logo-sub" data-en="Agency · Dubai" data-ar="وكالة · دبي">Agency · Dubai</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="/" aria-current="page" data-en="Home" data-ar="الرئيسية">Home</a></li>
+      <li><a href="/services.html" data-en="Services" data-ar="الخدمات">Services</a></li>
+      <li><a href="/pricing.html" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
+      <li><a href="/work.html" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
+      <li><a href="/contact.html" data-en="Contact" data-ar="اتصل">Contact</a></li>
+      <li>
+        <button type="button" id="lang-toggle" class="lang-toggle" aria-label="Switch to Arabic">عربي</button>
+      </li>
+    </ul>
+
+    <a href="https://wa.me/971544285018" class="btn-primary nav-cta" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="/" class="mobile-link" aria-current="page" data-en="Home" data-ar="الرئيسية">Home</a></li>
+      <li><a href="/services.html" class="mobile-link" data-en="Services" data-ar="الخدمات">Services</a></li>
+      <li><a href="/pricing.html" class="mobile-link" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
+      <li><a href="/work.html" class="mobile-link" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
+      <li><a href="/contact.html" class="mobile-link" data-en="Contact" data-ar="اتصل">Contact</a></li>
+      <li><a href="/faq.html" class="mobile-link" data-en="FAQ" data-ar="الأسئلة">FAQ</a></li>
+    </ul>
+    <button type="button" class="lang-toggle" aria-label="Switch to Arabic">عربي</button>
+    <a href="https://wa.me/971544285018" class="btn-primary" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       1. HERO
+  ═══════════════════════════════════════════════════════════════════════ -->
   <section id="hero">
     <canvas id="particle-canvas"></canvas>
     <div class="hero-orb hero-orb-1"></div>
@@ -853,52 +112,156 @@
     <div class="hero-content">
       <div class="hero-badge">
         <span class="badge-pulse"></span>
-        Dubai's AI Marketing Agency
+        <span data-en="Dubai's AI Marketing Agency" data-ar="وكالة دبي للتسويق بالذكاء الاصطناعي">Dubai's AI Marketing Agency</span>
       </div>
-      <h1 class="hero-h1"><span class="grad">AI Marketing</span><br>That Actually Works</h1>
-      <p class="hero-sub">AI-powered. Human-executed. Built for Dubai businesses ready to scale.</p>
+      <h1 class="hero-h1" data-en="AI Marketing That Actually Works" data-ar="تسويق ذكي يعمل فعلاً"><span class="grad">AI Marketing</span><br>That Actually Works</h1>
+      <p class="hero-sub" data-en="AI-powered. Human-executed. Built for Dubai businesses ready to scale." data-ar="مدعوم بالذكاء الاصطناعي. ينفذه بشر. مصمم لشركات دبي الجاهزة للنمو.">AI-powered. Human-executed. Built for Dubai businesses ready to scale.</p>
       <div class="hero-ctas">
-        <a href="https://wa.me/971544285018" class="btn-primary" target="_blank" rel="noopener">WhatsApp Us</a>
-        <a href="#services" class="btn-ghost">See Our Services</a>
+        <a href="https://wa.me/971544285018" class="btn-primary" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
+        <a href="/services.html" class="btn-ghost" data-en="See Our Services" data-ar="اطلع على خدماتنا">See Our Services</a>
       </div>
       <div class="hero-float-card">
-        <div class="hero-stat">
-          <span class="hero-stat-num stat-num" data-target="21">0</span>
-          <span class="hero-stat-label">AI Services</span>
-        </div>
+        <a href="/services.html" class="hero-stat" style="text-decoration:none;color:inherit">
+          <span class="hero-stat-num stat-num" data-target="50">0</span>
+          <span class="hero-stat-label" data-en="Services Available" data-ar="خدمات متاحة">Services Available</span>
+        </a>
         <div class="hero-stat-div"></div>
-        <div class="hero-stat">
-          <span class="hero-stat-num">5 Tiers</span>
-          <span class="hero-stat-label">AED 1,200 – 32,000</span>
-        </div>
+        <a href="/pricing.html" class="hero-stat" style="text-decoration:none;color:inherit">
+          <span class="hero-stat-num" data-en="5 Tiers" data-ar="5 باقات">5 Tiers</span>
+          <span class="hero-stat-label" data-en="AED 1,200 – 32,000" data-ar="1,200 – 32,000 درهم">AED 1,200 – 32,000</span>
+        </a>
         <div class="hero-stat-div"></div>
-        <div class="hero-stat">
-          <span class="hero-stat-num">UAE</span>
-          <span class="hero-stat-label">Dubai-Based</span>
-        </div>
+        <a href="#why" class="hero-stat" style="text-decoration:none;color:inherit">
+          <span class="hero-stat-num" data-en="UAE" data-ar="الإمارات">UAE</span>
+          <span class="hero-stat-label" data-en="Dubai-Based" data-ar="مقرها دبي">Dubai-Based</span>
+        </a>
       </div>
     </div>
   </section>
   <div class="gradient-divider"></div>
 
-  <!-- ── Services ── -->
-  <section id="services" class="full-section">
-    <span class="section-pill fade-in">What We Do</span>
-    <h2 class="section-heading fade-in">6 Core AI Services</h2>
-    <p class="section-sub fade-in">AI tools running underneath. Real people delivering results on top.</p>
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       2. WHY NOVA
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <section id="why" class="full-section">
+    <span class="section-pill fade-in" data-en="Why Nova" data-ar="لماذا نوفا">Why Nova</span>
+    <h2 class="section-heading fade-in" data-en="Why Businesses Pick Us" data-ar="لماذا تختارنا الشركات">Why Businesses Pick Us</h2>
+    <p class="section-sub fade-in" data-en="Nine specific reasons clients in Dubai trust us over a freelancer, an in-house hire, or another agency." data-ar="تسعة أسباب محددة تجعل عملاءنا في دبي يثقون بنا أكثر من المستقل أو الموظف الداخلي أو وكالة أخرى.">Nine specific reasons clients in Dubai trust us over a freelancer, an in-house hire, or another agency.</p>
+
     <div class="services-grid">
 
       <div class="service-card fade-in">
+        <div class="service-icon"><span style="font-family:var(--font-head);font-weight:700;color:#6B8FFF">01</span></div>
+        <h3 data-en="Your chatbot goes live in 48 hours" data-ar="روبوت المحادثة الخاص بك يعمل خلال 48 ساعة">Your chatbot goes live in 48 hours</h3>
+        <p data-en="Specific delivery promise, not vague claims." data-ar="وعد تسليم محدد، وليس ادعاءات غامضة.">Specific delivery promise, not vague claims.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon"><span style="font-family:var(--font-head);font-weight:700;color:#6B8FFF">02</span></div>
+        <h3 data-en="Built by someone who codes live trading algorithms" data-ar="بناه من يكتب خوارزميات تداول حية">Built by someone who codes live trading algorithms</h3>
+        <p data-en="Our CTO built an orderflow trading algo running on live futures markets. Real engineering, not marketers who learned Canva." data-ar="بنى مديرنا التقني خوارزمية تداول orderflow تعمل على أسواق العقود الآجلة الحية. هندسة حقيقية، وليس مسوقين تعلموا Canva.">Our CTO built an orderflow trading algo running on live futures markets. Real engineering, not marketers who learned Canva.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon"><span style="font-family:var(--font-head);font-weight:700;color:#6B8FFF">03</span></div>
+        <h3 data-en="We run on the same AI we sell" data-ar="نستخدم نفس الذكاء الاصطناعي الذي نبيعه">We run on the same AI we sell</h3>
+        <p data-en="Every system we offer, we use internally first. You're getting battle-tested builds, not experiments." data-ar="كل نظام نقدمه نستخدمه داخلياً أولاً. تحصل على أنظمة مجربة وليست تجارب.">Every system we offer, we use internally first. You're getting battle-tested builds, not experiments.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon"><span style="font-family:var(--font-head);font-weight:700;color:#6B8FFF">04</span></div>
+        <h3 data-en="Arabic content, natively written" data-ar="محتوى عربي مكتوب أصلياً">Arabic content, natively written</h3>
+        <p data-en="Not Google Translated. Real Arabic copy for UAE and GCC audiences." data-ar="ليست ترجمة جوجل. محتوى عربي حقيقي لجمهور الإمارات والخليج.">Not Google Translated. Real Arabic copy for UAE and GCC audiences.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon"><span style="font-family:var(--font-head);font-weight:700;color:#6B8FFF">05</span></div>
+        <h3 data-en="Leave anytime. Zero exit fees." data-ar="غادر متى شئت. بدون رسوم خروج.">Leave anytime. Zero exit fees.</h3>
+        <p data-en="Launch and Spark are month-to-month from day one. No contracts, no cancellation fees, no awkward conversations. If we don't deliver, you walk." data-ar="باقتا Launch وSpark شهرياً من اليوم الأول. لا عقود، لا رسوم إلغاء. إذا لم ننفذ، ترحل.">Launch and Spark are month-to-month from day one. No contracts, no cancellation fees, no awkward conversations. If we don't deliver, you walk.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon"><span style="font-family:var(--font-head);font-weight:700;color:#6B8FFF">06</span></div>
+        <h3 data-en="Every price is on the website" data-ar="كل الأسعار على الموقع">Every price is on the website</h3>
+        <p data-en="No discovery calls to find out what things cost. Full transparency." data-ar="لا مكالمات استكشاف لمعرفة التكلفة. شفافية كاملة.">No discovery calls to find out what things cost. Full transparency.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon"><span style="font-family:var(--font-head);font-weight:700;color:#6B8FFF">07</span></div>
+        <h3 data-en="Your accounts stay yours" data-ar="حساباتك تبقى لك">Your accounts stay yours</h3>
+        <p data-en="Passwords, ad accounts, content — everything is yours from day one. We never hold your business hostage." data-ar="كلمات المرور وحسابات الإعلانات والمحتوى — كل شيء ملكك من اليوم الأول. لن نحتجز أعمالك.">Passwords, ad accounts, content — everything is yours from day one. We never hold your business hostage.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon"><span style="font-family:var(--font-head);font-weight:700;color:#6B8FFF">08</span></div>
+        <h3 data-en="WhatsApp first, website second" data-ar="واتساب أولاً، الموقع ثانياً">WhatsApp first, website second</h3>
+        <p data-en="Built for Dubai. 98% WhatsApp open rates. Our automations reflect how business actually gets done here." data-ar="مصمم لدبي. معدلات فتح واتساب 98%. تعكس أتمتتنا كيفية إنجاز الأعمال هنا فعلياً.">Built for Dubai. 98% WhatsApp open rates. Our automations reflect how business actually gets done here.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon"><span style="font-family:var(--font-head);font-weight:700;color:#6B8FFF">09</span></div>
+        <h3 data-en="One team for everything" data-ar="فريق واحد لكل شيء">One team for everything</h3>
+        <p data-en="Social, ads, content, automation, chatbots — handled in-house. No subcontractors, no finger-pointing." data-ar="السوشيال والإعلانات والمحتوى والأتمتة وروبوتات المحادثة — كل شيء داخلياً. لا مقاولين من الباطن ولا تبادل اللوم.">Social, ads, content, automation, chatbots — handled in-house. No subcontractors, no finger-pointing.</p>
+      </div>
+
+    </div>
+  </section>
+  <div class="gradient-divider"></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       3. HOW IT WORKS
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <section id="how" class="full-section">
+    <span class="section-pill fade-in" data-en="The Process" data-ar="الخطوات">The Process</span>
+    <h2 class="section-heading fade-in" data-en="From Sign-Up to Results in 48 Hours" data-ar="من التسجيل إلى النتائج في 48 ساعة">From Sign-Up to Results in 48 Hours</h2>
+    <p class="section-sub fade-in" data-en="Four steps. No long onboarding. No 6-week kick-off meetings." data-ar="أربع خطوات. لا تأهيل طويل. لا اجتماعات انطلاق لستة أسابيع.">Four steps. No long onboarding. No 6-week kick-off meetings.</p>
+
+    <div class="how-timeline">
+      <div class="how-step fade-in">
+        <div class="how-step-num">01</div>
+        <h3 data-en="Brief" data-ar="الإحاطة">Brief</h3>
+        <p data-en="You tell us your business, goals, and platforms." data-ar="تخبرنا عن عملك وأهدافك ومنصاتك.">You tell us your business, goals, and platforms.</p>
+      </div>
+      <div class="how-step fade-in">
+        <div class="how-step-num">02</div>
+        <h3 data-en="Build" data-ar="البناء">Build</h3>
+        <p data-en="We set up your systems, content, and automations." data-ar="نقوم بإعداد أنظمتك ومحتواك وأتمتتك.">We set up your systems, content, and automations.</p>
+      </div>
+      <div class="how-step fade-in">
+        <div class="how-step-num">03</div>
+        <h3 data-en="Launch" data-ar="الإطلاق">Launch</h3>
+        <p data-en="Everything goes live. We handle the whole thing." data-ar="كل شيء يصبح مباشراً. نتولى كل العملية.">Everything goes live. We handle the whole thing.</p>
+      </div>
+      <div class="how-step fade-in">
+        <div class="how-step-num">04</div>
+        <h3 data-en="Grow" data-ar="النمو">Grow</h3>
+        <p data-en="Monthly reports, optimizations, scaling." data-ar="تقارير شهرية وتحسينات وتوسع.">Monthly reports, optimizations, scaling.</p>
+      </div>
+    </div>
+  </section>
+  <div class="gradient-divider"></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       4. SERVICE TEASERS
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <section id="services-teaser" class="full-section">
+    <span class="section-pill fade-in" data-en="What We Do" data-ar="ما نقدمه">What We Do</span>
+    <h2 class="section-heading fade-in" data-en="6 Core AI Services" data-ar="6 خدمات ذكاء اصطناعي أساسية">6 Core AI Services</h2>
+    <p class="section-sub fade-in" data-en="AI tools running underneath. Real people delivering results on top." data-ar="أدوات ذكاء اصطناعي في الأساس. أشخاص حقيقيون يقدمون النتائج فوقها.">AI tools running underneath. Real people delivering results on top.</p>
+
+    <div class="services-grid">
+
+      <a href="/services.html" class="service-card fade-in" style="text-decoration:none;color:inherit;display:block">
         <div class="service-icon">
           <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M4 16h6l4-8 4 16 4-12 4 4h6" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <h3>AI Workflow Automation</h3>
-        <p>n8n / Make / Zapier — automate your operations end-to-end</p>
-      </div>
+        <h3 data-en="AI Workflow Automation" data-ar="أتمتة سير العمل بالذكاء الاصطناعي">AI Workflow Automation</h3>
+        <p data-en="n8n / Make / Zapier — automate your operations end-to-end" data-ar="n8n / Make / Zapier — أتمتة عملياتك من البداية إلى النهاية">n8n / Make / Zapier — automate your operations end-to-end</p>
+      </a>
 
-      <div class="service-card fade-in">
+      <a href="/services.html" class="service-card fade-in" style="text-decoration:none;color:inherit;display:block">
         <div class="service-icon">
           <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="4" y="6" width="24" height="16" rx="3" stroke="#2952D9" stroke-width="2.5"/>
@@ -908,11 +271,11 @@
             <path d="M10 22v4M22 22v4M8 26h16" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round"/>
           </svg>
         </div>
-        <h3>WhatsApp + Website Chatbot</h3>
-        <p>Capture leads and answer customers 24/7 — no human needed</p>
-      </div>
+        <h3 data-en="WhatsApp + Website Chatbot" data-ar="روبوت واتساب والموقع">WhatsApp + Website Chatbot</h3>
+        <p data-en="Capture leads and answer customers 24/7 — no human needed" data-ar="التقط العملاء المحتملين وأجب على العملاء على مدار الساعة">Capture leads and answer customers 24/7 — no human needed</p>
+      </a>
 
-      <div class="service-card fade-in">
+      <a href="/services.html" class="service-card fade-in" style="text-decoration:none;color:inherit;display:block">
         <div class="service-icon">
           <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="16" cy="16" r="10" stroke="#2952D9" stroke-width="2.5"/>
@@ -920,11 +283,11 @@
             <circle cx="16" cy="12" r="2" fill="#2952D9"/>
           </svg>
         </div>
-        <h3>AI Voice Agent</h3>
-        <p>Inbound and outbound calling — answers, qualifies, and books</p>
-      </div>
+        <h3 data-en="AI Voice Agent" data-ar="وكيل صوتي بالذكاء الاصطناعي">AI Voice Agent</h3>
+        <p data-en="Inbound and outbound calling — answers, qualifies, and books" data-ar="مكالمات واردة وصادرة — يجيب ويؤهل ويحجز">Inbound and outbound calling — answers, qualifies, and books</p>
+      </a>
 
-      <div class="service-card fade-in">
+      <a href="/services.html" class="service-card fade-in" style="text-decoration:none;color:inherit;display:block">
         <div class="service-icon">
           <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6 26L14 18M18 8l-4 10 4-10z" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -932,11 +295,11 @@
             <circle cx="26" cy="8" r="2.5" stroke="#2952D9" stroke-width="2"/>
           </svg>
         </div>
-        <h3>Cold Email Lead Gen</h3>
-        <p>500 qualified prospects/mo — AI writes, sends, and books meetings</p>
-      </div>
+        <h3 data-en="Cold Email Lead Gen" data-ar="جذب العملاء بالبريد البارد">Cold Email Lead Gen</h3>
+        <p data-en="500 qualified prospects/mo — AI writes, sends, and books meetings" data-ar="500 عميل محتمل مؤهل شهرياً — الذكاء الاصطناعي يكتب ويرسل ويحجز">500 qualified prospects/mo — AI writes, sends, and books meetings</p>
+      </a>
 
-      <div class="service-card fade-in">
+      <a href="/services.html" class="service-card fade-in" style="text-decoration:none;color:inherit;display:block">
         <div class="service-icon">
           <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="6" y="4" width="13" height="24" rx="2" stroke="#2952D9" stroke-width="2.5"/>
@@ -944,11 +307,11 @@
             <path d="M10 12h5M10 16h5M10 20h3" stroke="#2952D9" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </div>
-        <h3>UGC Video Ads</h3>
-        <p>TikTok / Reels / Shorts — 20+ scroll-stopping video variants/mo</p>
-      </div>
+        <h3 data-en="UGC Video Ads" data-ar="إعلانات فيديو UGC">UGC Video Ads</h3>
+        <p data-en="TikTok / Reels / Shorts — 20+ scroll-stopping video variants/mo" data-ar="تيك توك / ريلز / شورتس — 20+ فيديو شهرياً">TikTok / Reels / Shorts — 20+ scroll-stopping video variants/mo</p>
+      </a>
 
-      <div class="service-card fade-in">
+      <a href="/services.html" class="service-card fade-in" style="text-decoration:none;color:inherit;display:block">
         <div class="service-icon">
           <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="16" cy="16" r="10" stroke="#2952D9" stroke-width="2.5"/>
@@ -956,223 +319,173 @@
             <path d="M16 6v4M16 22v4M6 16H2M30 16h-4" stroke="#2952D9" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </div>
-        <h3>AI SEO + Content Engine</h3>
-        <p>Rank on Google AND ChatGPT, Perplexity, Gemini</p>
-      </div>
+        <h3 data-en="AI SEO + Content Engine" data-ar="محرك المحتوى وSEO بالذكاء الاصطناعي">AI SEO + Content Engine</h3>
+        <p data-en="Rank on Google AND ChatGPT, Perplexity, Gemini" data-ar="تصدّر نتائج Google وChatGPT وPerplexity وGemini">Rank on Google AND ChatGPT, Perplexity, Gemini</p>
+      </a>
 
+    </div>
+
+    <div style="margin-top:40px;text-align:center" class="fade-in">
+      <a href="/services.html" class="btn-ghost" data-en="See all 50 services →" data-ar="جميع الخدمات الـ50 ←">See all 50 services →</a>
     </div>
   </section>
   <div class="gradient-divider"></div>
 
-  <!-- ── Pricing ── -->
-  <section id="pricing" class="full-section">
-    <span class="section-pill fade-in">Pricing</span>
-    <h2 class="section-heading fade-in">Simple, Transparent Pricing</h2>
-    <p class="section-sub fade-in">No hidden fees. Ad spend always paid by you, directly to the platform.</p>
-    <p class="payment-note fade-in">Monthly · Installment (+5%) · Annual prepay (−10%) · One-time builds available</p>
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       5. TIER TEASERS
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <section id="tiers-teaser" class="full-section">
+    <span class="section-pill fade-in" data-en="Pricing" data-ar="الأسعار">Pricing</span>
+    <h2 class="section-heading fade-in" data-en="5 Tiers. Every Price On The Site." data-ar="5 باقات. كل الأسعار على الموقع.">5 Tiers. Every Price On The Site.</h2>
+    <p class="section-sub fade-in" data-en="Pick a plan or build à la carte." data-ar="اختر باقة أو ابنِ خدمات منفصلة.">Pick a plan or build à la carte.</p>
 
     <div class="pricing-grid">
 
       <div class="pricing-card fade-in">
-        <div class="tier-name">Launch</div>
+        <div class="tier-name" data-en="Launch" data-ar="Launch">Launch</div>
         <div class="tier-price">AED 1,200<span class="per-mo">/mo</span></div>
-        <div class="tier-commit">Month-to-month</div>
-        <div class="tier-onboard">+ AED 500 onboarding</div>
+        <div class="tier-commit" data-en="Month-to-month" data-ar="شهري">Month-to-month</div>
+        <div class="tier-onboard" data-en="No commitment" data-ar="بدون التزام">No commitment</div>
         <ul class="tier-features">
-          <li>1 platform (IG or TikTok)</li>
-          <li>10 posts/mo, AI captions</li>
-          <li>Content calendar (30 days)</li>
-          <li>1 short-form video/mo</li>
-          <li>5 product descriptions/mo</li>
-          <li>Monthly performance report</li>
-          <li>Monthly check-in call (20 min)</li>
+          <li data-en="1 platform (IG or TikTok)" data-ar="منصة واحدة">1 platform (IG or TikTok)</li>
+          <li data-en="10 posts/mo, AI captions" data-ar="10 منشورات شهرياً">10 posts/mo, AI captions</li>
+          <li data-en="AI content calendar" data-ar="تقويم محتوى بالذكاء الاصطناعي">AI content calendar</li>
         </ul>
-        <a href="https://wa.me/971544285018?text=Hi+Nova+Agency,+interested+in+the+Launch+plan" class="btn-primary tier-cta" target="_blank" rel="noopener">Get Started</a>
+        <a href="/pricing.html#launch" class="btn-primary tier-cta" data-en="See Full Tier" data-ar="عرض الباقة">See Full Tier</a>
       </div>
 
       <div class="pricing-card fade-in">
-        <div class="tier-name">Spark</div>
+        <div class="tier-name" data-en="Spark" data-ar="Spark">Spark</div>
         <div class="tier-price">AED 3,000<span class="per-mo">/mo</span></div>
-        <div class="tier-commit">Month-to-month</div>
-        <div class="tier-onboard">+ AED 500 onboarding</div>
+        <div class="tier-commit" data-en="Month-to-month" data-ar="شهري">Month-to-month</div>
+        <div class="tier-onboard" data-en="No commitment" data-ar="بدون التزام">No commitment</div>
         <ul class="tier-features">
-          <li>Everything in Launch</li>
-          <li>2 platforms (IG + TikTok)</li>
-          <li>20 posts/mo</li>
-          <li>4 short-form videos/mo</li>
-          <li>Basic paid ads management</li>
-          <li>Monthly strategy call (30 min)</li>
+          <li data-en="2 platforms (IG + TikTok)" data-ar="منصتان">2 platforms (IG + TikTok)</li>
+          <li data-en="20 posts/mo" data-ar="20 منشوراً شهرياً">20 posts/mo</li>
+          <li data-en="Basic paid ads" data-ar="إعلانات مدفوعة أساسية">Basic paid ads</li>
         </ul>
-        <a href="https://wa.me/971544285018?text=Hi+Nova+Agency,+interested+in+the+Spark+plan" class="btn-primary tier-cta" target="_blank" rel="noopener">Get Started</a>
+        <a href="/pricing.html#spark" class="btn-primary tier-cta" data-en="See Full Tier" data-ar="عرض الباقة">See Full Tier</a>
       </div>
 
       <div class="pricing-card featured-pricing fade-in">
-        <div class="featured-badge">Most Popular</div>
-        <div class="tier-name">Foundation</div>
+        <div class="featured-badge" data-en="Most Popular" data-ar="الأكثر شعبية">Most Popular</div>
+        <div class="tier-name" data-en="Foundation" data-ar="Foundation">Foundation</div>
         <div class="tier-price">AED 6,000<span class="per-mo">/mo</span></div>
-        <div class="tier-commit">3-month minimum</div>
-        <div class="tier-onboard">+ AED 1,000 onboarding</div>
+        <div class="tier-commit" data-en="3-month minimum" data-ar="حد أدنى 3 أشهر">3-month minimum</div>
+        <div class="tier-onboard" data-en="Then month-to-month" data-ar="ثم شهري">Then month-to-month</div>
         <ul class="tier-features">
-          <li>Everything in Spark</li>
-          <li>3 platforms + LinkedIn</li>
-          <li>WhatsApp chatbot</li>
-          <li>Email marketing flows</li>
-          <li>8 short-form videos/mo</li>
-          <li>Bi-weekly strategy call (30 min)</li>
+          <li data-en="3 platforms + WhatsApp chatbot" data-ar="3 منصات + روبوت واتساب">3 platforms + WhatsApp chatbot</li>
+          <li data-en="Email marketing flows" data-ar="حملات البريد الإلكتروني">Email marketing flows</li>
+          <li data-en="Bi-weekly strategy calls" data-ar="مكالمات استراتيجية كل أسبوعين">Bi-weekly strategy calls</li>
         </ul>
-        <a href="https://wa.me/971544285018?text=Hi+Nova+Agency,+interested+in+the+Foundation+plan" class="btn-primary tier-cta" target="_blank" rel="noopener">Get Started</a>
+        <a href="/pricing.html#foundation" class="btn-primary tier-cta" data-en="See Full Tier" data-ar="عرض الباقة">See Full Tier</a>
       </div>
 
       <div class="pricing-card fade-in">
-        <div class="tier-name">Growth</div>
+        <div class="tier-name" data-en="Growth" data-ar="Growth">Growth</div>
         <div class="tier-price">AED 14,000<span class="per-mo">/mo</span></div>
-        <div class="tier-commit">6-month minimum</div>
-        <div class="tier-onboard">+ AED 1,500 onboarding</div>
+        <div class="tier-commit" data-en="6-month minimum" data-ar="حد أدنى 6 أشهر">6-month minimum</div>
+        <div class="tier-onboard" data-en="Then month-to-month" data-ar="ثم شهري">Then month-to-month</div>
         <ul class="tier-features">
-          <li>Everything in Foundation</li>
-          <li>All platforms</li>
-          <li>Paid ads (Meta + TikTok)</li>
-          <li>Cold email — 500 leads/mo</li>
-          <li>WhatsApp automation</li>
-          <li>Analytics dashboard</li>
-          <li>Weekly strategy call (30 min)</li>
+          <li data-en="All platforms + paid ads" data-ar="جميع المنصات + إعلانات">All platforms + paid ads</li>
+          <li data-en="Cold email lead gen" data-ar="جذب العملاء بالبريد البارد">Cold email lead gen</li>
+          <li data-en="WhatsApp automation" data-ar="أتمتة واتساب">WhatsApp automation</li>
         </ul>
-        <a href="https://wa.me/971544285018?text=Hi+Nova+Agency,+interested+in+the+Growth+plan" class="btn-primary tier-cta" target="_blank" rel="noopener">Get Started</a>
+        <a href="/pricing.html#growth" class="btn-primary tier-cta" data-en="See Full Tier" data-ar="عرض الباقة">See Full Tier</a>
       </div>
 
       <div class="pricing-card fade-in">
-        <div class="tier-name">Scale</div>
+        <div class="tier-name" data-en="Scale" data-ar="Scale">Scale</div>
         <div class="tier-price">AED 32,000<span class="per-mo">/mo</span></div>
-        <div class="tier-commit">12-month minimum</div>
-        <div class="tier-onboard">+ AED 1,500 onboarding</div>
+        <div class="tier-commit" data-en="12-month minimum" data-ar="حد أدنى 12 شهراً">12-month minimum</div>
+        <div class="tier-onboard" data-en="Full AI dept" data-ar="قسم ذكاء اصطناعي كامل">Full AI dept</div>
         <ul class="tier-features">
-          <li>Everything in Growth</li>
-          <li>All platforms + TikTok Shop</li>
-          <li>Unlimited posts, 20+ videos/mo</li>
-          <li>AI SEO + GEO + AEO</li>
-          <li>Voice agent + RAG assistant</li>
-          <li>1 custom automation build</li>
-          <li>Dedicated strategist</li>
-          <li>Weekly strategy call (45 min)</li>
-          <li>Quarterly business review</li>
+          <li data-en="Everything in Growth" data-ar="كل ما في Growth">Everything in Growth</li>
+          <li data-en="AI voice agent" data-ar="وكيل صوتي بالذكاء الاصطناعي">AI voice agent</li>
+          <li data-en="Dedicated strategist" data-ar="استراتيجي مخصص">Dedicated strategist</li>
         </ul>
-        <a href="https://wa.me/971544285018?text=Hi+Nova+Agency,+interested+in+the+Scale+plan" class="btn-primary tier-cta" target="_blank" rel="noopener">Get Started</a>
+        <a href="/pricing.html#scale" class="btn-primary tier-cta" data-en="See Full Tier" data-ar="عرض الباقة">See Full Tier</a>
       </div>
 
     </div>
-    <p class="pricing-footnote">Launch = AED 40/day · Foundation = cheaper than hiring a social media manager (AED 8,000–12,000/mo salary)</p>
-  </section>
-  <div class="gradient-divider"></div>
 
-  <!-- ── À La Carte + One-Time Builds ── -->
-  <section id="alacarte" class="full-section">
-    <span class="section-pill fade-in">À La Carte</span>
-    <h2 class="section-heading fade-in">Pick What You Need</h2>
-    <p class="section-sub fade-in">On any tier or standalone. Add what you need, skip what you don't.</p>
-
-    <div class="service-group fade-in">
-      <h3 class="group-heading">Content &amp; Social</h3>
-      <div class="service-table">
-        <div class="st-row"><span>Social media management — 2 platforms</span><span class="st-price">AED 2,000/mo</span></div>
-        <div class="st-row"><span>Social media management — 4 platforms</span><span class="st-price">AED 3,500/mo</span></div>
-        <div class="st-row"><span>Instagram management (standalone)</span><span class="st-price">AED 1,200/mo</span></div>
-        <div class="st-row"><span>YouTube management</span><span class="st-price">AED 2,000/mo</span></div>
-        <div class="st-row"><span>UGC / short-form video ads (20 variants/mo)</span><span class="st-price">AED 2,500/mo</span></div>
-        <div class="st-row"><span>Long-form video editing + 20 clips/mo</span><span class="st-price">AED 2,000/mo</span></div>
-        <div class="st-row"><span>LARP content automation (daily photo + text posts)</span><span class="st-price">AED 1,500/mo</span></div>
-        <div class="st-row"><span>AI content engine (blogs, scripts, copy)</span><span class="st-price">AED 1,800/mo</span></div>
-        <div class="st-row"><span>AI image generation for content</span><span class="st-price">AED 500/mo</span></div>
-        <div class="st-row"><span>AI product photography (ecom / Shopify)</span><span class="st-price">AED 1,200/mo</span></div>
-        <div class="st-row"><span>Personal branding management</span><span class="st-price">AED 2,500/mo</span></div>
-        <div class="st-row"><span>Arabic content creation (captions, copy, scripts — UAE/GCC)</span><span class="st-price">AED 2,500/mo</span></div>
-      </div>
-    </div>
-
-    <div class="service-group fade-in">
-      <h3 class="group-heading">Platform Management</h3>
-      <div class="service-table">
-        <div class="st-row"><span>LinkedIn growth and management</span><span class="st-price">AED 1,500/mo</span></div>
-        <div class="st-row"><span>Snapchat management</span><span class="st-price">AED 1,200/mo</span></div>
-        <div class="st-row"><span>TikTok Shop management</span><span class="st-price">AED 2,000/mo</span></div>
-        <div class="st-row"><span>Google Business Profile optimization</span><span class="st-price">AED 800/mo</span></div>
-        <div class="st-row"><span>TikTok Live / Instagram Live management</span><span class="st-price">AED 1,500/mo</span></div>
-        <div class="st-row"><span>Community management (WhatsApp, Telegram, Discord)</span><span class="st-price">AED 1,000/mo</span></div>
-      </div>
-    </div>
-
-    <div class="service-group fade-in">
-      <h3 class="group-heading">Performance Marketing</h3>
-      <div class="service-table">
-        <div class="st-row"><span>Paid ads management (Meta + TikTok) + 10% of ad spend</span><span class="st-price">AED 3,500/mo</span></div>
-        <div class="st-row"><span>AI creative production for paid ads</span><span class="st-price">AED 2,500/mo</span></div>
-        <div class="st-row"><span>Email and SMS marketing (flows + campaigns)</span><span class="st-price">AED 2,500/mo</span></div>
-        <div class="st-row"><span>WhatsApp broadcast campaigns</span><span class="st-price">AED 1,500/mo</span></div>
-        <div class="st-row"><span>Cold email / outbound lead gen (500 prospects/mo)*</span><span class="st-price">AED 3,000/mo</span></div>
-        <div class="st-row"><span>AI SDR / sales agent deployment</span><span class="st-price">AED 2,500/mo</span></div>
-        <div class="st-row"><span>Influencer and UGC sourcing (3 creators/mo)</span><span class="st-price">AED 2,000/mo</span></div>
-        <div class="st-row"><span>SEO + GEO + AEO combined</span><span class="st-price">AED 4,000/mo</span></div>
-        <div class="st-row"><span>Analytics dashboard management</span><span class="st-price">AED 1,500/mo</span></div>
-        <div class="st-row"><span>Reputation management (Google reviews, negative review handling)</span><span class="st-price">AED 1,200/mo</span></div>
-      </div>
-    </div>
-
-    <div class="service-group fade-in">
-      <h3 class="group-heading">Client &amp; Business Operations</h3>
-      <div class="service-table">
-        <div class="st-row"><span>CRM setup and management (HubSpot / Zoho)</span><span class="st-price">AED 2,000/mo</span></div>
-        <div class="st-row"><span>PR and press releases (UAE / Dubai media placement)</span><span class="st-price">AED 2,500/mo</span></div>
-        <div class="st-row"><span>Affiliate / referral program setup</span><span class="st-price">See builds</span></div>
-      </div>
-    </div>
-
-    <div class="service-group fade-in">
-      <h3 class="group-heading">AI Automation (monthly management, after build)</h3>
-      <div class="service-table">
-        <div class="st-row"><span>WhatsApp automation management</span><span class="st-price">AED 1,500/mo</span></div>
-        <div class="st-row"><span>Workflow automation management</span><span class="st-price">AED 1,500/mo</span></div>
-        <div class="st-row"><span>Voice agent management</span><span class="st-price">AED 1,200 + AED 0.33/min</span></div>
-        <div class="st-row"><span>Booking automation management</span><span class="st-price">AED 600/mo</span></div>
-        <div class="st-row"><span>RAG knowledge base management</span><span class="st-price">AED 800/mo</span></div>
-      </div>
-    </div>
-    <p class="footnote-small">*Cold email: client is solely responsible for legal compliance with applicable anti-spam laws.</p>
-
-    <!-- One-Time Builds -->
-    <span class="section-pill fade-in" style="margin-top:64px;display:inline-flex">One-Time Builds</span>
-    <h2 class="section-heading fade-in">Pay Once. Own It Forever.</h2>
-    <p class="section-sub fade-in">Optional monthly maintenance after delivery.</p>
-
-    <div class="builds-grid">
-      <div class="build-card featured-build fade-in">
-        <div class="build-star">★ Best for first stores</div>
-        <div class="build-name">Shopify Starter Pack</div>
-        <div class="build-desc">Store + brand kit + chatbot + 1 month Launch free</div>
-        <div class="build-price">AED 4,500 flat</div>
-        <div class="build-maint">Maintenance: AED 1,500–3,500/mo</div>
-      </div>
-      <div class="build-card fade-in"><div class="build-name">Chatbot (web / WhatsApp / Messenger)</div><div class="build-price">AED 7,500–35,000</div><div class="build-maint">Maint: AED 1,000–2,500/mo</div></div>
-      <div class="build-card fade-in"><div class="build-name">WhatsApp Business Automation</div><div class="build-price">AED 7,500–25,000</div><div class="build-maint">Maint: AED 1,000–2,000/mo</div></div>
-      <div class="build-card fade-in"><div class="build-name">Voice Agent Setup</div><div class="build-price">AED 8,000–30,000</div><div class="build-maint">Maint: AED 1,200 + /min</div></div>
-      <div class="build-card fade-in"><div class="build-name">Workflow Automation (n8n / Make / Zapier)</div><div class="build-price">AED 6,000–40,000</div><div class="build-maint">Maint: AED 800–3,000/mo</div></div>
-      <div class="build-card fade-in"><div class="build-name">Booking Automation System</div><div class="build-price">AED 5,000–15,000</div><div class="build-maint">Maint: AED 600/mo</div></div>
-      <div class="build-card fade-in"><div class="build-name">RAG Knowledge Base Assistant</div><div class="build-price">AED 9,000–40,000</div><div class="build-maint">Maint: AED 800/mo</div></div>
-      <div class="build-card fade-in"><div class="build-name">Analytics Dashboard Setup</div><div class="build-price">AED 4,500–22,000</div><div class="build-maint">Maint: AED 500–1,500/mo</div></div>
-      <div class="build-card fade-in"><div class="build-name">Website Build (Framer / Webflow / Custom)</div><div class="build-price">AED 9,000–40,000</div><div class="build-maint">Maint: AED 400–1,200/mo</div></div>
-      <div class="build-card fade-in"><div class="build-name">Custom App Build</div><div class="build-price">AED 12,000–75,000</div><div class="build-maint">Maint: AED 500–2,000/mo</div></div>
-      <div class="build-card fade-in"><div class="build-name">Shopify Store Build (Standard)</div><div class="build-price">AED 6,000–18,000</div><div class="build-maint">Maint: AED 1,500–3,500/mo</div></div>
-      <div class="build-card fade-in"><div class="build-name">Brand Identity &amp; Design System</div><div class="build-price">AED 5,000–18,000</div><div class="build-maint">N/A</div></div>
-      <div class="build-card fade-in"><div class="build-name">Landing Page Sprint (48–72hr)</div><div class="build-price">AED 4,500–8,000</div><div class="build-maint">N/A</div></div>
-      <div class="build-card fade-in"><div class="build-name">CRM Setup (HubSpot / Zoho)</div><div class="build-price">AED 5,000–15,000</div><div class="build-maint">Maint: AED 2,000/mo</div></div>
-      <div class="build-card fade-in"><div class="build-name">Affiliate / Referral Program</div><div class="build-price">AED 3,500–8,000</div><div class="build-maint">Maint: AED 500/mo</div></div>
+    <div style="margin-top:40px;text-align:center" class="fade-in">
+      <a href="/pricing.html" class="btn-ghost" data-en="Compare all tiers →" data-ar="قارن جميع الباقات ←">Compare all tiers →</a>
     </div>
   </section>
   <div class="gradient-divider"></div>
 
-  <!-- ── Audit Quiz ── -->
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       6. NOVA vs IN-HOUSE
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <section id="vs-inhouse" class="full-section">
+    <span class="section-pill fade-in" data-en="Compare" data-ar="قارن">Compare</span>
+    <h2 class="section-heading fade-in" data-en="Why Pay More For Less?" data-ar="لماذا تدفع أكثر مقابل أقل؟">Why Pay More For Less?</h2>
+    <p class="section-sub fade-in" data-en="Foundation tier vs hiring one social media manager — side by side." data-ar="باقة Foundation مقابل توظيف مدير سوشيال ميديا واحد — جنباً إلى جنب.">Foundation tier vs hiring one social media manager — side by side.</p>
+
+    <div class="compare-table-wrap fade-in">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="nova-col" data-en="Nova · Foundation — AED 6,000/mo" data-ar="نوفا · Foundation — 6,000 درهم/شهر">Nova · Foundation — AED 6,000/mo</th>
+            <th data-en="In-house hire — AED 10,000/mo" data-ar="موظف داخلي — 10,000 درهم/شهر">In-house hire — AED 10,000/mo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-en="Monthly cost" data-ar="التكلفة الشهرية">Monthly cost</td>
+            <td class="nova-col">AED 6,000</td>
+            <td>AED 10,000+</td>
+          </tr>
+          <tr>
+            <td data-en="Services covered" data-ar="الخدمات المغطاة">Services covered</td>
+            <td class="nova-col" data-en="Social + chatbot + email + ads + content" data-ar="سوشيال + روبوت + بريد + إعلانات + محتوى">Social + chatbot + email + ads + content</td>
+            <td data-en="Social only" data-ar="سوشيال فقط">Social only</td>
+          </tr>
+          <tr>
+            <td data-en="Setup time" data-ar="وقت الإعداد">Setup time</td>
+            <td class="nova-col" data-en="48 hours" data-ar="48 ساعة">48 hours</td>
+            <td data-en="4-6 weeks hiring" data-ar="4-6 أسابيع للتوظيف">4-6 weeks hiring</td>
+          </tr>
+          <tr>
+            <td data-en="AI-powered" data-ar="مدعوم بالذكاء الاصطناعي">AI-powered</td>
+            <td class="nova-col"><span class="compare-check">✓</span></td>
+            <td><span class="compare-x">✗</span></td>
+          </tr>
+          <tr>
+            <td data-en="Cancel anytime" data-ar="إلغاء في أي وقت">Cancel anytime</td>
+            <td class="nova-col" data-en="✓ (after 3 months)" data-ar="✓ (بعد 3 أشهر)"><span class="compare-check">✓</span> <span data-en="(after 3 months)" data-ar="(بعد 3 أشهر)">(after 3 months)</span></td>
+            <td data-en="Severance + notice period" data-ar="تعويض + فترة إشعار">Severance + notice period</td>
+          </tr>
+          <tr>
+            <td data-en="Arabic content" data-ar="محتوى عربي">Arabic content</td>
+            <td class="nova-col"><span class="compare-check">✓</span> <span data-en="Native" data-ar="أصلي">Native</span></td>
+            <td data-en="Depends on hire" data-ar="يعتمد على الموظف">Depends on hire</td>
+          </tr>
+          <tr>
+            <td data-en="24/7 availability" data-ar="متاح 24/7">24/7 availability</td>
+            <td class="nova-col"><span class="compare-check">✓</span> <span data-en="Always-on automations" data-ar="أتمتة دائمة">Always-on automations</span></td>
+            <td data-en="9-to-5 only" data-ar="فقط من 9 إلى 5">9-to-5 only</td>
+          </tr>
+          <tr>
+            <td data-en="Sick days / vacation" data-ar="إجازات مرضية / عطلة">Sick days / vacation</td>
+            <td class="nova-col" data-en="Never" data-ar="أبداً">Never</td>
+            <td data-en="Yes" data-ar="نعم">Yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <div class="gradient-divider"></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       7. AUDIT QUIZ
+  ═══════════════════════════════════════════════════════════════════════ -->
   <section id="quiz" class="full-section">
-    <span class="section-pill fade-in">Free Audit</span>
-    <h2 class="section-heading fade-in">Not Sure Where to Start?</h2>
-    <p class="section-sub fade-in">Answer 3 questions and we'll tell you exactly what you need.</p>
+    <span class="section-pill fade-in" data-en="Free Audit" data-ar="تدقيق مجاني">Free Audit</span>
+    <h2 class="section-heading fade-in" data-en="Not Sure Where to Start?" data-ar="غير متأكد من أين تبدأ؟">Not Sure Where to Start?</h2>
+    <p class="section-sub fade-in" data-en="Answer 3 questions and we'll tell you exactly what you need." data-ar="أجب على 3 أسئلة وسنخبرك بما تحتاج بالضبط.">Answer 3 questions and we'll tell you exactly what you need.</p>
 
     <div class="quiz-container fade-in">
       <div class="quiz-progress">
@@ -1181,35 +494,35 @@
       <div class="quiz-step-label" id="quiz-step-label" aria-live="polite" aria-atomic="true">Step 1 of 3</div>
 
       <div class="quiz-step active" id="step-1">
-        <h3 class="quiz-question">What's your business type?</h3>
+        <h3 class="quiz-question" data-en="What's your business type?" data-ar="ما نوع عملك؟">What's your business type?</h3>
         <div class="quiz-options">
-          <button class="quiz-opt" data-step="1" data-value="ecommerce">Ecommerce Store</button>
-          <button class="quiz-opt" data-step="1" data-value="dropshipping">Dropshipping</button>
-          <button class="quiz-opt" data-step="1" data-value="clothing">Clothing Brand</button>
-          <button class="quiz-opt" data-step="1" data-value="reseller">Reseller</button>
-          <button class="quiz-opt" data-step="1" data-value="local">Local Business</button>
-          <button class="quiz-opt" data-step="1" data-value="other">Other</button>
+          <button class="quiz-opt" data-step="1" data-value="ecommerce" data-en="Ecommerce Store" data-ar="متجر إلكتروني">Ecommerce Store</button>
+          <button class="quiz-opt" data-step="1" data-value="dropshipping" data-en="Dropshipping" data-ar="دروبشيبينغ">Dropshipping</button>
+          <button class="quiz-opt" data-step="1" data-value="clothing" data-en="Clothing Brand" data-ar="علامة ملابس">Clothing Brand</button>
+          <button class="quiz-opt" data-step="1" data-value="reseller" data-en="Reseller" data-ar="بائع جملة">Reseller</button>
+          <button class="quiz-opt" data-step="1" data-value="local" data-en="Local Business" data-ar="عمل محلي">Local Business</button>
+          <button class="quiz-opt" data-step="1" data-value="other" data-en="Other" data-ar="آخر">Other</button>
         </div>
       </div>
 
       <div class="quiz-step" id="step-2">
-        <h3 class="quiz-question">What's your main goal?</h3>
+        <h3 class="quiz-question" data-en="What's your main goal?" data-ar="ما هدفك الرئيسي؟">What's your main goal?</h3>
         <div class="quiz-options">
-          <button class="quiz-opt" data-step="2" data-value="customers">Get more customers</button>
-          <button class="quiz-opt" data-step="2" data-value="automate">Automate my operations</button>
-          <button class="quiz-opt" data-step="2" data-value="social">Grow my social media</button>
-          <button class="quiz-opt" data-step="2" data-value="chatbot">Build a chatbot or AI tool</button>
-          <button class="quiz-opt" data-step="2" data-value="all">All of the above</button>
+          <button class="quiz-opt" data-step="2" data-value="customers" data-en="Get more customers" data-ar="جذب المزيد من العملاء">Get more customers</button>
+          <button class="quiz-opt" data-step="2" data-value="automate" data-en="Automate my operations" data-ar="أتمتة عملياتي">Automate my operations</button>
+          <button class="quiz-opt" data-step="2" data-value="social" data-en="Grow my social media" data-ar="تنمية السوشيال ميديا">Grow my social media</button>
+          <button class="quiz-opt" data-step="2" data-value="chatbot" data-en="Build a chatbot or AI tool" data-ar="بناء روبوت محادثة أو أداة ذكاء اصطناعي">Build a chatbot or AI tool</button>
+          <button class="quiz-opt" data-step="2" data-value="all" data-en="All of the above" data-ar="كل ما سبق">All of the above</button>
         </div>
       </div>
 
       <div class="quiz-step" id="step-3">
-        <h3 class="quiz-question">What's your monthly budget?</h3>
+        <h3 class="quiz-question" data-en="What's your monthly budget?" data-ar="ما هي ميزانيتك الشهرية؟">What's your monthly budget?</h3>
         <div class="quiz-options" style="grid-template-columns: repeat(2,1fr)">
-          <button class="quiz-opt" data-step="3" data-value="under3k">Under AED 3,000</button>
-          <button class="quiz-opt" data-step="3" data-value="3k7k">AED 3,000–7,000</button>
-          <button class="quiz-opt" data-step="3" data-value="7k15k">AED 7,000–15,000</button>
-          <button class="quiz-opt" data-step="3" data-value="15kplus">AED 15,000+</button>
+          <button class="quiz-opt" data-step="3" data-value="under3k" data-en="Under AED 3,000" data-ar="أقل من 3,000 درهم">Under AED 3,000</button>
+          <button class="quiz-opt" data-step="3" data-value="3k7k" data-en="AED 3,000–7,000" data-ar="3,000–7,000 درهم">AED 3,000–7,000</button>
+          <button class="quiz-opt" data-step="3" data-value="7k15k" data-en="AED 7,000–15,000" data-ar="7,000–15,000 درهم">AED 7,000–15,000</button>
+          <button class="quiz-opt" data-step="3" data-value="15kplus" data-en="AED 15,000+" data-ar="15,000+ درهم">AED 15,000+</button>
         </div>
       </div>
 
@@ -1218,273 +531,225 @@
         <div class="result-price" id="result-price"></div>
         <p class="result-why" id="result-why"></p>
         <div class="result-services">
-          <h4>Recommended for you:</h4>
+          <h4 data-en="Recommended for you:" data-ar="موصى به لك:">Recommended for you:</h4>
           <ul id="result-services-list"></ul>
         </div>
-        <a id="result-wa-btn" class="btn-primary" target="_blank" rel="noopener" href="#">WhatsApp Us With Your Results</a>
-        <button class="btn-ghost" id="quiz-restart" style="margin-top:12px;width:100%;text-align:center">Start Over</button>
+        <a id="result-wa-btn" class="btn-primary" target="_blank" rel="noopener" href="#" data-en="WhatsApp Us With Your Results" data-ar="راسلنا على واتساب بنتائجك">WhatsApp Us With Your Results</a>
+        <button class="btn-ghost" id="quiz-restart" style="margin-top:12px;width:100%;text-align:center" data-en="Start Over" data-ar="ابدأ من جديد">Start Over</button>
       </div>
     </div>
   </section>
   <div class="gradient-divider"></div>
 
-  <!-- ── Why Nova ── -->
-  <section id="why-nova" class="full-section">
-    <span class="section-pill fade-in">Why Nova</span>
-    <h2 class="section-heading fade-in">Why Nova Agency</h2>
-    <div class="why-grid">
-
-      <div class="why-card fade-in">
-        <div class="why-icon">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="18" stroke="#2952D9" stroke-width="2.5"/>
-            <path d="M16 24l6 6 10-12" stroke="#2952D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3>AI-Powered, Human-Executed</h3>
-        <p>Every service uses AI tools, but a real person manages and delivers it. No black boxes.</p>
-      </div>
-
-      <div class="why-card fade-in">
-        <div class="why-icon">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="16" stroke="#2952D9" stroke-width="2.5"/>
-            <path d="M8 24h32M24 8c-5 4-8 10-8 16s3 12 8 16M24 8c5 4 8 10 8 16s-3 12-8 16" stroke="#2952D9" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3>Built for Dubai</h3>
-        <p>WhatsApp-first, AED pricing, GCC timezone, Arabic support where needed.</p>
-      </div>
-
-      <div class="why-card fade-in">
-        <div class="why-icon">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="8" y="16" width="32" height="18" rx="3" stroke="#2952D9" stroke-width="2.5"/>
-            <path d="M16 34v6M32 34v6M12 40h24M8 24h32" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3>Retainer or One-Time</h3>
-        <p>Monthly packages or single builds. No lock-in on Launch and Spark.</p>
-      </div>
-
-    </div>
-  </section>
-  <div class="gradient-divider"></div>
-
-  <!-- ── Contact ── -->
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       8. CONTACT
+  ═══════════════════════════════════════════════════════════════════════ -->
   <section id="contact" class="full-section">
-    <span class="section-pill fade-in">Contact</span>
-    <h2 class="section-heading fade-in">Ready to Grow?</h2>
-    <p class="section-sub fade-in">Talk to us on WhatsApp, email, or fill in the form below.</p>
+    <span class="section-pill fade-in" data-en="Contact" data-ar="اتصل">Contact</span>
+    <h2 class="section-heading fade-in" data-en="Ready When You Are" data-ar="جاهزون عندما تكون جاهزاً">Ready When You Are</h2>
+    <p class="section-sub fade-in" data-en="WhatsApp is fastest. Email also works." data-ar="واتساب هو الأسرع. البريد الإلكتروني يعمل أيضاً.">WhatsApp is fastest. Email also works.</p>
 
     <div class="contact-grid">
 
-      <div class="contact-form-wrap fade-in">
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form">
-          <input type="hidden" name="form-name" value="contact">
-          <p style="display:none"><label>Skip: <input name="bot-field"></label></p>
-          <div class="form-group">
-            <label for="c-name">Your Name</label>
-            <input type="text" id="c-name" name="name" required placeholder="Omar Al-Rashid">
-          </div>
-          <div class="form-group">
-            <label for="c-wa">WhatsApp Number</label>
-            <input type="tel" id="c-wa" name="whatsapp" required placeholder="+971 50 000 0000">
-          </div>
-          <div class="form-group">
-            <label for="c-biz">Business Type</label>
-            <select id="c-biz" name="business-type" required>
-              <option value="" disabled selected>Select your business type</option>
-              <option>Ecommerce Store</option>
-              <option>Dropshipping</option>
-              <option>Clothing Brand</option>
-              <option>Reseller</option>
-              <option>Local Business</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="c-msg">Message (optional)</label>
-            <textarea id="c-msg" name="message" rows="4" placeholder="Tell us what you need..."></textarea>
-          </div>
-          <button type="submit" class="btn-primary">Send Message</button>
-        </form>
-        <div id="form-success" style="display:none">
-          <p class="form-success-msg">Thanks! We'll WhatsApp you shortly.</p>
-        </div>
+      <div class="contact-info fade-in">
+        <p style="font-size:16px;color:rgba(255,255,255,0.7);line-height:1.7" data-en="No discovery calls. No long forms. Send us a message and we'll reply within a few hours — usually faster." data-ar="لا مكالمات استكشاف. لا نماذج طويلة. أرسل لنا رسالة وسنرد خلال ساعات قليلة.">No discovery calls. No long forms. Send us a message and we'll reply within a few hours — usually faster.</p>
+
+        <a href="https://wa.me/971544285018" class="btn-primary contact-wa" target="_blank" rel="noopener" data-en="WhatsApp · +971 54 428 5018" data-ar="واتساب · +971 54 428 5018">
+          <svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.4.66 4.74 1.9 6.78L3 29l6.4-1.86A12.9 12.9 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3Z" fill="currentColor"/></svg>
+          WhatsApp · +971 54 428 5018
+        </a>
+
+        <a href="mailto:hello@novaagency.me" class="contact-link">hello@novaagency.me</a>
+
+        <p style="font-size:14px;color:rgba(255,255,255,0.5)" data-en="Dubai, UAE" data-ar="دبي، الإمارات">Dubai, UAE</p>
       </div>
 
-      <div class="contact-info fade-in">
-        <a href="https://wa.me/971544285018" class="btn-primary contact-wa" target="_blank" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          WhatsApp Us
-        </a>
-        <a href="mailto:hello@novaagency.me" class="contact-link">hello@novaagency.me</a>
-        <div class="contact-socials">
-          <a href="https://instagram.com/novaagency.me" class="social-link" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            @novaagency.me
-          </a>
-          <a href="https://tiktok.com/@novaagency.me" class="social-link" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.19 8.19 0 004.79 1.52V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
-            @novaagency.me
-          </a>
-        </div>
+      <div class="contact-form-wrap fade-in">
+        <form id="contact-form" name="contact" method="POST">
+          <div class="form-group">
+            <label for="cf-name" data-en="Name" data-ar="الاسم">Name</label>
+            <input type="text" id="cf-name" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="cf-email" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+            <input type="email" id="cf-email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="cf-phone" data-en="Phone (optional)" data-ar="الهاتف (اختياري)">Phone (optional)</label>
+            <input type="tel" id="cf-phone" name="phone" placeholder="+971 …">
+          </div>
+          <div class="form-group">
+            <label for="cf-message" data-en="Message" data-ar="رسالة">Message</label>
+            <textarea id="cf-message" name="message" rows="4" required placeholder="Tell us what you need…"></textarea>
+          </div>
+          <button type="submit" class="btn-primary" data-en="Send" data-ar="إرسال">Send</button>
+        </form>
       </div>
 
     </div>
   </section>
 
-  <!-- ── Footer ── -->
-  <footer id="footer">
-    <div class="footer-inner">
-      <div class="footer-left">
+</main>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     PAGE FOOTER
+═══════════════════════════════════════════════════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="footer-inner">
+
+    <div class="footer-col footer-brand">
+      <a href="/" class="footer-logo" aria-label="Nova Agency home">
         <div class="nav-logo-icon">
-          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <polyline points="4,28 13,16 20,22 32,8" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             <polyline points="24,8 32,8 32,16" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <span class="footer-brand">NOVA<span style="color:var(--bright-blue)">.</span> Agency · Dubai</span>
-      </div>
-      <nav class="footer-nav">
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#alacarte">À La Carte</a>
-        <a href="#quiz">Audit Quiz</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="footer-right">
-        <a href="https://instagram.com/novaagency.me" class="footer-social" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        </a>
-        <a href="https://tiktok.com/@novaagency.me" class="footer-social" target="_blank" rel="noopener" aria-label="TikTok">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.19 8.19 0 004.79 1.52V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
-        </a>
-        <a href="mailto:hello@novaagency.me" class="footer-email">hello@novaagency.me</a>
-      </div>
+        <span class="nav-logo-name">NOVA<span class="dot">.</span></span>
+      </a>
+      <p class="footer-tagline" data-en="AI-powered marketing for Dubai businesses. Built by engineers who code live trading algorithms — not marketers who learned Canva." data-ar="تسويق مدعوم بالذكاء الاصطناعي لشركات دبي. بناء مهندسين، وليس مسوقين.">
+        AI-powered marketing for Dubai businesses. Built by engineers who code live trading algorithms — not marketers who learned Canva.
+      </p>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 Nova Agency. All rights reserved.</p>
+
+    <div class="footer-col">
+      <h4 class="footer-heading" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="/" data-en="Home" data-ar="الرئيسية">Home</a></li>
+        <li><a href="/services.html" data-en="Services" data-ar="الخدمات">Services</a></li>
+        <li><a href="/pricing.html" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
+        <li><a href="/work.html" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
+        <li><a href="/contact.html" data-en="Contact" data-ar="اتصل">Contact</a></li>
+        <li><a href="/faq.html" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</a></li>
+      </ul>
     </div>
-  </footer>
 
-  <script>
-    // ── Navbar scroll ─────────────────────────────────────────────────────────
-    window.addEventListener('scroll', () => {
-      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 80);
-    });
+    <div class="footer-col">
+      <h4 class="footer-heading" data-en="Services" data-ar="الخدمات">Services</h4>
+      <ul class="footer-links">
+        <li><a href="/services.html#content" data-en="Content &amp; Social" data-ar="المحتوى والسوشيال">Content &amp; Social</a></li>
+        <li><a href="/services.html#platforms" data-en="Platform Management" data-ar="إدارة المنصات">Platform Management</a></li>
+        <li><a href="/services.html#performance" data-en="Performance Marketing" data-ar="تسويق الأداء">Performance Marketing</a></li>
+        <li><a href="/services.html#automation" data-en="AI Automation" data-ar="أتمتة بالذكاء الاصطناعي">AI Automation</a></li>
+        <li><a href="/services.html#operations" data-en="Business Operations" data-ar="العمليات">Business Operations</a></li>
+        <li><a href="/services.html#builds" data-en="One-Time Builds" data-ar="مشاريع لمرة واحدة">One-Time Builds</a></li>
+      </ul>
+    </div>
 
-    // ── Hamburger ─────────────────────────────────────────────────────────────
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
-      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-    });
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
+    <div class="footer-col">
+      <h4 class="footer-heading" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</h4>
+      <ul class="footer-links">
+        <li><a href="https://wa.me/971544285018" target="_blank" rel="noopener" data-en="WhatsApp · +971 54 428 5018" data-ar="واتساب · +971 54 428 5018">WhatsApp · +971 54 428 5018</a></li>
+        <li><a href="mailto:hello@novaagency.me">hello@novaagency.me</a></li>
+        <li><span data-en="Dubai, UAE" data-ar="دبي، الإمارات">Dubai, UAE</span></li>
+      </ul>
+    </div>
 
-    // ── Particle Canvas ───────────────────────────────────────────────────────
-    (function () {
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      const canvas = document.getElementById('particle-canvas');
-      const ctx = canvas.getContext('2d');
-      const COUNT = 60, CONNECT = 120, RGB = '41,82,217';
-      let pts = [];
+  </div>
 
-      function resize() {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
-      }
+  <div class="footer-bottom">
+    <p data-en="© 2026 Nova Agency · Dubai, UAE" data-ar="© 2026 وكالة نوفا · دبي، الإمارات">© 2026 Nova Agency · Dubai, UAE</p>
+    <p data-en="Built with AI · Run by humans" data-ar="بُني بالذكاء الاصطناعي · يُدار بأيدي بشرية">Built with AI · Run by humans</p>
+  </div>
+</footer>
 
-      function mkPt() {
-        return {
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.4,
-          vy: (Math.random() - 0.5) * 0.4,
-          r: Math.random() * 2 + 1
-        };
-      }
+<!-- ═══════════════════════════════════════════════════════════════════════
+     WHATSAPP FAB
+═══════════════════════════════════════════════════════════════════════ -->
+<a href="https://wa.me/971544285018"
+   class="fab-whatsapp"
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat with Nova Agency on WhatsApp"
+   data-en="Chat with us on WhatsApp"
+   data-ar="تحدث معنا على واتساب">
+  <span class="fab-whatsapp-pulse" aria-hidden="true"></span>
+  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M16 3C8.82 3 3 8.82 3 16c0 2.4.66 4.74 1.9 6.78L3 29l6.4-1.86A12.9 12.9 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3Zm0 23.6c-2.05 0-4.06-.55-5.82-1.6l-.42-.25-3.8 1.1 1.13-3.7-.27-.43A10.55 10.55 0 0 1 5.4 16C5.4 10.15 10.15 5.4 16 5.4S26.6 10.15 26.6 16 21.85 26.6 16 26.6Zm5.83-7.92c-.32-.16-1.88-.93-2.17-1.04-.29-.1-.5-.16-.71.16-.21.32-.81 1.04-.99 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.58-1.6a9.7 9.7 0 0 1-1.79-2.23c-.19-.32-.02-.5.14-.66.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.1-.21.05-.4-.03-.55-.08-.16-.71-1.71-.98-2.34-.26-.62-.52-.53-.71-.54l-.61-.01c-.21 0-.55.08-.84.4-.29.32-1.1 1.07-1.1 2.61 0 1.55 1.12 3.04 1.28 3.25.16.21 2.21 3.38 5.36 4.74.75.32 1.34.52 1.79.66.75.24 1.43.21 1.97.13.6-.09 1.88-.77 2.14-1.51.27-.74.27-1.37.19-1.51-.08-.13-.29-.21-.61-.37Z" fill="currentColor"/>
+  </svg>
+</a>
 
-      function init() { resize(); pts = Array.from({ length: COUNT }, mkPt); }
+<!-- ═══════════════════════════════════════════════════════════════════════
+     COOKIE BANNER
+═══════════════════════════════════════════════════════════════════════ -->
+<aside id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cookie-banner-title" hidden>
+  <div class="cookie-banner-body">
+    <h2 id="cookie-banner-title" class="cookie-banner-title" data-en="We use cookies" data-ar="نحن نستخدم ملفات تعريف الارتباط">We use cookies</h2>
+    <p class="cookie-banner-text" data-en="We use cookies for analytics and to improve your experience. By using this site you agree to our use of cookies. UAE PDPL compliant." data-ar="نستخدم ملفات تعريف الارتباط للتحليلات وتحسين تجربتك. باستخدام هذا الموقع، فإنك توافق على استخدامنا لها. متوافق مع قانون حماية البيانات الشخصية الإماراتي.">
+      We use cookies for analytics and to improve your experience. By using this site you agree to our use of cookies. UAE PDPL compliant.
+    </p>
+  </div>
+  <div class="cookie-banner-actions">
+    <button type="button" id="cookie-decline" class="btn-ghost" data-en="Decline" data-ar="رفض">Decline</button>
+    <button type="button" id="cookie-accept" class="btn-primary" data-en="Accept" data-ar="قبول">Accept</button>
+  </div>
+</aside>
 
-      function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        pts.forEach(p => {
-          p.x += p.vx; p.y += p.vy;
-          if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-          if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(${RGB},0.5)`;
-          ctx.fill();
-        });
-        for (let i = 0; i < pts.length; i++) {
-          for (let j = i + 1; j < pts.length; j++) {
-            const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
-            const d = Math.sqrt(dx * dx + dy * dy);
-            if (d < CONNECT) {
-              ctx.beginPath();
-              ctx.moveTo(pts[i].x, pts[i].y);
-              ctx.lineTo(pts[j].x, pts[j].y);
-              ctx.strokeStyle = `rgba(${RGB},${0.4 * (1 - d / CONNECT)})`;
-              ctx.lineWidth = 0.8;
-              ctx.stroke();
-            }
-          }
-        }
-        requestAnimationFrame(draw);
-      }
+<!-- ═══════════════════════════════════════════════════════════════════════
+     INLINE SCRIPTS — particle canvas + audit quiz + contact form
+═══════════════════════════════════════════════════════════════════════ -->
+<script>
+  // ── Particle Canvas ───────────────────────────────────────────────────────
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const canvas = document.getElementById('particle-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const COUNT = 60, CONNECT = 120, RGB = '41,82,217';
+    let pts = [];
 
-      window.addEventListener('resize', init);
-      init();
-      draw();
-    })();
-
-    // ── Counter Animation ─────────────────────────────────────────────────────
-    function animateCounter(el, target, duration) {
-      duration = duration || 1500;
-      const start = performance.now();
-      function tick(now) {
-        const p = Math.min((now - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = Math.round(eased * target);
-        if (p < 1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
+    function resize() {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
     }
 
-    const counterObs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          const el = e.target;
-          animateCounter(el, parseInt(el.dataset.target));
-          counterObs.unobserve(el);
-        }
+    function mkPt() {
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        r: Math.random() * 2 + 1
+      };
+    }
+
+    function init() { resize(); pts = Array.from({ length: COUNT }, mkPt); }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      pts.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${RGB},0.5)`;
+        ctx.fill();
       });
-    }, { threshold: 0.5 });
-
-    document.querySelectorAll('.stat-num[data-target]').forEach(el => counterObs.observe(el));
-
-    // ── Scroll Fade-In ────────────────────────────────────────────────────────
-    const fadeObs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          fadeObs.unobserve(e.target);
+      for (let i = 0; i < pts.length; i++) {
+        for (let j = i + 1; j < pts.length; j++) {
+          const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
+          const d = Math.sqrt(dx * dx + dy * dy);
+          if (d < CONNECT) {
+            ctx.beginPath();
+            ctx.moveTo(pts[i].x, pts[i].y);
+            ctx.lineTo(pts[j].x, pts[j].y);
+            ctx.strokeStyle = `rgba(${RGB},${0.4 * (1 - d / CONNECT)})`;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+          }
         }
-      });
-    }, { threshold: 0.1 });
+      }
+      requestAnimationFrame(draw);
+    }
 
-    document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+    window.addEventListener('resize', init);
+    init();
+    draw();
+  })();
 
-    // ── Audit Quiz ────────────────────────────────────────────────────────────
+  // ── Audit Quiz ────────────────────────────────────────────────────────────
+  (function () {
     const quizState = { business: null, goal: null, budget: null };
 
     const QUIZ_TIERS = {
@@ -1578,34 +843,41 @@
       });
     });
 
-    document.getElementById('quiz-restart').addEventListener('click', () => {
-      quizState.business = quizState.goal = quizState.budget = null;
-      quizUpdateProgress(1);
-      quizShowStep('step-1');
-    });
-
-    // ── Contact Form (Netlify) ────────────────────────────────────────────────
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.addEventListener('submit', async e => {
-        e.preventDefault();
-        const btn = contactForm.querySelector('button[type="submit"]');
-        const originalText = btn.textContent;
-        btn.textContent = 'Sending…';
-        btn.disabled = true;
-        btn.style.opacity = '0.7';
-        try {
-          await fetch('/', { method: 'POST', body: new FormData(contactForm) });
-          contactForm.style.display = 'none';
-          document.getElementById('form-success').style.display = 'block';
-        } catch {
-          btn.textContent = originalText;
-          btn.disabled = false;
-          btn.style.opacity = '';
-          alert('Something went wrong. Please WhatsApp us directly.');
-        }
+    const restartBtn = document.getElementById('quiz-restart');
+    if (restartBtn) {
+      restartBtn.addEventListener('click', () => {
+        quizState.business = quizState.goal = quizState.budget = null;
+        quizUpdateProgress(1);
+        quizShowStep('step-1');
       });
     }
-  </script>
+  })();
+
+  // ── Contact Form (mailto fallback) ────────────────────────────────────────
+  (function () {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = (data.get('name') || '').toString();
+      const email = (data.get('email') || '').toString();
+      const phone = (data.get('phone') || '').toString();
+      const message = (data.get('message') || '').toString();
+      const subject = encodeURIComponent('New enquiry from ' + (name || 'website'));
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Phone: ' + phone + '\n\n' +
+        'Message:\n' + message
+      );
+      window.location.href = 'mailto:hello@novaagency.me?subject=' + subject + '&body=' + body;
+    });
+  })();
+</script>
+
+<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/counter.js" defer></script>
+
 </body>
 </html>

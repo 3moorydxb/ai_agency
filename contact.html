@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Nova Agency Dubai</title>
+  <meta name="description" content="WhatsApp first, email second. We respond inside 2 hours during Dubai business hours.">
+  <link rel="canonical" href="https://novaagency.me/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact — Nova Agency Dubai">
+  <meta property="og:description" content="WhatsApp first, email second. We respond inside 2 hours during Dubai business hours.">
+  <meta property="og:url" content="https://novaagency.me/contact.html">
+  <meta property="og:image" content="https://novaagency.me/assets/img/og-default.jpg">
+  <meta property="og:locale" content="en_AE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — Nova Agency Dubai">
+  <meta name="twitter:description" content="WhatsApp first, email second. We respond inside 2 hours during Dubai business hours.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050510'/%3E%3Cpolyline points='4,24 11,14 18,19 28,6' fill='none' stroke='%232952D9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpolyline points='22,6 28,6 28,12' fill='none' stroke='%232952D9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+    /* Page-local: contact methods grid + hours block */
+    .methods-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    @media (max-width: 760px) { .methods-grid { grid-template-columns: 1fr; } }
+    .methods-grid a { text-decoration: none; color: inherit; display: block; }
+    .methods-grid .service-card h3 { margin-bottom: 8px; }
+    .hours-block {
+      max-width: 720px; margin: 0 auto; text-align: center;
+      background: var(--surface-1); border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .hours-block .hl { color: var(--light-blue); font-family: var(--font-head); font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+    .hours-block p { color: rgba(255,255,255,0.6); font-size: 15px; line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip-link" data-en="Skip to main content" data-ar="تخطي إلى المحتوى الرئيسي">Skip to main content</a>
+
+<nav id="navbar" aria-label="Main navigation">
+  <div class="nav-inner">
+
+    <a href="/" class="nav-logo" aria-label="Nova Agency home">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polyline points="4,28 13,16 20,22 32,8" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="24,8 32,8 32,16" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">NOVA<span class="dot">.</span></span>
+        <span class="nav-logo-sub" data-en="Agency · Dubai" data-ar="وكالة · دبي">Agency · Dubai</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="/" data-en="Home" data-ar="الرئيسية">Home</a></li>
+      <li><a href="/services.html" data-en="Services" data-ar="الخدمات">Services</a></li>
+      <li><a href="/pricing.html" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
+      <li><a href="/work.html" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
+      <li><a href="/contact.html" aria-current="page" data-en="Contact" data-ar="اتصل">Contact</a></li>
+      <li>
+        <button type="button" id="lang-toggle" class="lang-toggle" aria-label="Switch to Arabic">عربي</button>
+      </li>
+    </ul>
+
+    <a href="https://wa.me/971544285018" class="btn-primary nav-cta" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="/" class="mobile-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
+      <li><a href="/services.html" class="mobile-link" data-en="Services" data-ar="الخدمات">Services</a></li>
+      <li><a href="/pricing.html" class="mobile-link" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
+      <li><a href="/work.html" class="mobile-link" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
+      <li><a href="/contact.html" class="mobile-link" data-en="Contact" data-ar="اتصل">Contact</a></li>
+      <li><a href="/faq.html" class="mobile-link" data-en="FAQ" data-ar="الأسئلة">FAQ</a></li>
+    </ul>
+    <button type="button" class="lang-toggle" aria-label="Switch to Arabic">عربي</button>
+    <a href="https://wa.me/971544285018" class="btn-primary" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp Us</a>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ── Hero ── -->
+  <section class="page-hero">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <h1 data-en="Let's Talk." data-ar="لنتحدّث.">Let's Talk.</h1>
+    <p class="lede" data-en="WhatsApp is fastest. We respond within 2 hours during Dubai business hours (9am–7pm GST)." data-ar="واتساب الأسرع. نرد خلال ساعتين خلال ساعات العمل في دبي (9 صباحًا – 7 مساءً بتوقيت الخليج).">WhatsApp is fastest. We respond within 2 hours during Dubai business hours (9am–7pm GST).</p>
+  </section>
+  <div class="gradient-divider"></div>
+
+  <!-- ── Contact methods ── -->
+  <section class="full-section">
+    <span class="section-pill fade-in" data-en="Three Ways" data-ar="ثلاث طرق">Three Ways</span>
+    <h2 class="section-heading fade-in" data-en="How To Reach Us" data-ar="كيف تصل إلينا">How To Reach Us</h2>
+    <p class="section-sub fade-in" data-en="Pick the channel you actually use." data-ar="اختر القناة التي تستخدمها فعلاً.">Pick the channel you actually use.</p>
+
+    <div class="methods-grid">
+
+      <a href="https://wa.me/971544285018" target="_blank" rel="noopener">
+        <div class="service-card fade-in">
+          <h3 data-en="WhatsApp" data-ar="واتساب">WhatsApp</h3>
+          <p data-en="Fastest. Click to message. Replies inside 2 hours during business hours." data-ar="الأسرع. اضغط للمراسلة. ردود خلال ساعتين خلال ساعات العمل.">Fastest. Click to message. Replies inside 2 hours during business hours.</p>
+          <p style="margin-top:10px;color:var(--light-blue);font-size:14px;font-weight:600;">+971 54 428 5018 →</p>
+        </div>
+      </a>
+
+      <a href="mailto:hello@novaagency.me">
+        <div class="service-card fade-in">
+          <h3 data-en="Email" data-ar="البريد الإلكتروني">Email</h3>
+          <p data-en="For longer briefs or attachments. Replies inside 24 hours." data-ar="للموجزات الطويلة أو المرفقات. ردود خلال 24 ساعة.">For longer briefs or attachments. Replies inside 24 hours.</p>
+          <p style="margin-top:10px;color:var(--light-blue);font-size:14px;font-weight:600;">hello@novaagency.me →</p>
+        </div>
+      </a>
+
+      <a href="https://wa.me/971544285018?text=Hi+Nova,+I'd+like+to+book+a+coffee" target="_blank" rel="noopener">
+        <div class="service-card fade-in">
+          <h3 data-en="In Person" data-ar="حضوريًا">In Person</h3>
+          <p data-en="Dubai-based. Coffee meetings available on request. Message us to set a time." data-ar="مقرّنا دبي. اجتماعات قهوة عند الطلب. راسلنا لتحديد موعد.">Dubai-based. Coffee meetings available on request. Message us to set a time.</p>
+          <p style="margin-top:10px;color:var(--light-blue);font-size:14px;font-weight:600;" data-en="Book a coffee →" data-ar="احجز قهوة ←">Book a coffee →</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+  <div class="gradient-divider"></div>
+
+  <!-- ── Contact form ── -->
+  <section class="full-section">
+    <span class="section-pill fade-in" data-en="Drop a note" data-ar="اترك ملاحظة">Drop a note</span>
+    <h2 class="section-heading fade-in" data-en="Or Send Us Details" data-ar="أو أرسل لنا التفاصيل">Or Send Us Details</h2>
+    <p class="section-sub fade-in" data-en="Fill this in — we'll open WhatsApp with your message pre-filled. No backend, no spam list." data-ar="املأ الحقول — سنفتح لك واتساب برسالتك جاهزة. لا خادم خلفي ولا قوائم بريد عشوائي.">Fill this in — we'll open WhatsApp with your message pre-filled. No backend, no spam list.</p>
+
+    <div class="contact-form-wrap fade-in">
+      <form id="contact-form" onsubmit="return novaContactSubmit(event)">
+        <div class="form-group">
+          <label for="c-name" data-en="Your Name" data-ar="اسمك">Your Name</label>
+          <input type="text" id="c-name" name="name" required placeholder="Omar Al-Rashid">
+        </div>
+        <div class="form-group">
+          <label for="c-email" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+          <input type="email" id="c-email" name="email" required placeholder="you@business.com">
+        </div>
+        <div class="form-group">
+          <label for="c-phone" data-en="Phone (optional)" data-ar="الهاتف (اختياري)">Phone (optional)</label>
+          <input type="tel" id="c-phone" name="phone" placeholder="+971 50 000 0000">
+        </div>
+        <div class="form-group">
+          <label for="c-biz" data-en="Business Type" data-ar="نوع النشاط">Business Type</label>
+          <select id="c-biz" name="business-type" required>
+            <option value="" disabled selected>Select your business type</option>
+            <option>Ecommerce</option>
+            <option>Local Business</option>
+            <option>Personal Brand</option>
+            <option>SaaS</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="c-budget" data-en="Monthly Budget" data-ar="الميزانية الشهرية">Monthly Budget</label>
+          <select id="c-budget" name="budget" required>
+            <option value="" disabled selected>Pick a range</option>
+            <option>Under AED 3K</option>
+            <option>AED 3-7K</option>
+            <option>AED 7-15K</option>
+            <option>AED 15K+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="c-msg" data-en="Message" data-ar="الرسالة">Message</label>
+          <textarea id="c-msg" name="message" rows="5" required placeholder="What do you need help with?"></textarea>
+        </div>
+        <button type="submit" class="btn-primary" data-en="Send via WhatsApp" data-ar="أرسل عبر واتساب">Send via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+  <div class="gradient-divider"></div>
+
+  <!-- ── Hours / Location ── -->
+  <section class="full-section">
+    <span class="section-pill fade-in" data-en="Business Hours" data-ar="ساعات العمل">Business Hours</span>
+    <h2 class="section-heading fade-in" data-en="When We're Online" data-ar="متى نكون متاحين">When We're Online</h2>
+
+    <div class="hours-block fade-in">
+      <span class="hl" data-en="Location" data-ar="الموقع">Location</span>
+      <p data-en="Dubai, UAE · GMT+4" data-ar="دبي، الإمارات · GMT+4">Dubai, UAE · GMT+4</p>
+      <span class="hl" data-en="Hours" data-ar="الساعات">Hours</span>
+      <p data-en="Open Sun–Thu 9am–7pm" data-ar="مفتوح الأحد–الخميس 9 صباحًا – 7 مساءً">Open Sun–Thu 9am–7pm</p>
+      <span class="hl" data-en="Response Time" data-ar="وقت الاستجابة">Response Time</span>
+      <p data-en="Replies within 2 hours during business hours, 24h on weekends." data-ar="ردود خلال ساعتين خلال ساعات العمل، و24 ساعة في عطلة نهاية الأسبوع.">Replies within 2 hours during business hours, 24h on weekends.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer id="footer" role="contentinfo">
+  <div class="footer-inner">
+
+    <div class="footer-col footer-brand">
+      <a href="/" class="footer-logo" aria-label="Nova Agency home">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polyline points="4,28 13,16 20,22 32,8" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="24,8 32,8 32,16" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="nav-logo-name">NOVA<span class="dot">.</span></span>
+      </a>
+      <p class="footer-tagline" data-en="AI-powered marketing for Dubai businesses. Built by engineers who code live trading algorithms — not marketers who learned Canva." data-ar="تسويق مدعوم بالذكاء الاصطناعي لشركات دبي. بناء مهندسين، وليس مسوقين.">
+        AI-powered marketing for Dubai businesses. Built by engineers who code live trading algorithms — not marketers who learned Canva.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-heading" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="/" data-en="Home" data-ar="الرئيسية">Home</a></li>
+        <li><a href="/services.html" data-en="Services" data-ar="الخدمات">Services</a></li>
+        <li><a href="/pricing.html" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
+        <li><a href="/work.html" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
+        <li><a href="/contact.html" data-en="Contact" data-ar="اتصل">Contact</a></li>
+        <li><a href="/faq.html" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-heading" data-en="Services" data-ar="الخدمات">Services</h4>
+      <ul class="footer-links">
+        <li><a href="/services.html#content" data-en="Content &amp; Social" data-ar="المحتوى والسوشيال">Content &amp; Social</a></li>
+        <li><a href="/services.html#platforms" data-en="Platform Management" data-ar="إدارة المنصات">Platform Management</a></li>
+        <li><a href="/services.html#performance" data-en="Performance Marketing" data-ar="تسويق الأداء">Performance Marketing</a></li>
+        <li><a href="/services.html#automation" data-en="AI Automation" data-ar="أتمتة بالذكاء الاصطناعي">AI Automation</a></li>
+        <li><a href="/services.html#operations" data-en="Business Operations" data-ar="العمليات">Business Operations</a></li>
+        <li><a href="/services.html#builds" data-en="One-Time Builds" data-ar="مشاريع لمرة واحدة">One-Time Builds</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-heading" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</h4>
+      <ul class="footer-links">
+        <li><a href="https://wa.me/971544285018" target="_blank" rel="noopener" data-en="WhatsApp · +971 54 428 5018" data-ar="واتساب · +971 54 428 5018">WhatsApp · +971 54 428 5018</a></li>
+        <li><a href="mailto:hello@novaagency.me">hello@novaagency.me</a></li>
+        <li><span data-en="Dubai, UAE" data-ar="دبي، الإمارات">Dubai, UAE</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p data-en="© 2026 Nova Agency · Dubai, UAE" data-ar="© 2026 وكالة نوفا · دبي، الإمارات">© 2026 Nova Agency · Dubai, UAE</p>
+    <p data-en="Built with AI · Run by humans" data-ar="بُني بالذكاء الاصطناعي · يُدار بأيدي بشرية">Built with AI · Run by humans</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/971544285018"
+   class="fab-whatsapp"
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat with Nova Agency on WhatsApp"
+   data-en="Chat with us on WhatsApp"
+   data-ar="تحدث معنا على واتساب">
+  <span class="fab-whatsapp-pulse" aria-hidden="true"></span>
+  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M16 3C8.82 3 3 8.82 3 16c0 2.4.66 4.74 1.9 6.78L3 29l6.4-1.86A12.9 12.9 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3Zm0 23.6c-2.05 0-4.06-.55-5.82-1.6l-.42-.25-3.8 1.1 1.13-3.7-.27-.43A10.55 10.55 0 0 1 5.4 16C5.4 10.15 10.15 5.4 16 5.4S26.6 10.15 26.6 16 21.85 26.6 16 26.6Zm5.83-7.92c-.32-.16-1.88-.93-2.17-1.04-.29-.1-.5-.16-.71.16-.21.32-.81 1.04-.99 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.58-1.6a9.7 9.7 0 0 1-1.79-2.23c-.19-.32-.02-.5.14-.66.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.1-.21.05-.4-.03-.55-.08-.16-.71-1.71-.98-2.34-.26-.62-.52-.53-.71-.54l-.61-.01c-.21 0-.55.08-.84.4-.29.32-1.1 1.07-1.1 2.61 0 1.55 1.12 3.04 1.28 3.25.16.21 2.21 3.38 5.36 4.74.75.32 1.34.52 1.79.66.75.24 1.43.21 1.97.13.6-.09 1.88-.77 2.14-1.51.27-.74.27-1.37.19-1.51-.08-.13-.29-.21-.61-.37Z" fill="currentColor"/>
+  </svg>
+</a>
+
+<aside id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cookie-banner-title" hidden>
+  <div class="cookie-banner-body">
+    <h2 id="cookie-banner-title" class="cookie-banner-title" data-en="We use cookies" data-ar="نحن نستخدم ملفات تعريف الارتباط">We use cookies</h2>
+    <p class="cookie-banner-text" data-en="We use cookies for analytics and to improve your experience. By using this site you agree to our use of cookies. UAE PDPL compliant." data-ar="نستخدم ملفات تعريف الارتباط للتحليلات وتحسين تجربتك. باستخدام هذا الموقع، فإنك توافق على استخدامنا لها. متوافق مع قانون حماية البيانات الشخصية الإماراتي.">
+      We use cookies for analytics and to improve your experience. By using this site you agree to our use of cookies. UAE PDPL compliant.
+    </p>
+  </div>
+  <div class="cookie-banner-actions">
+    <button type="button" id="cookie-decline" class="btn-ghost" data-en="Decline" data-ar="رفض">Decline</button>
+    <button type="button" id="cookie-accept" class="btn-primary" data-en="Accept" data-ar="قبول">Accept</button>
+  </div>
+</aside>
+
+<script>
+  function novaContactSubmit(e) {
+    e.preventDefault();
+    var f = e.target;
+    var name = (f['name'].value || '').trim();
+    var email = (f['email'].value || '').trim();
+    var phone = (f['phone'].value || '').trim();
+    var biz = f['business-type'].value || '';
+    var budget = f['budget'].value || '';
+    var msg = (f['message'].value || '').trim();
+    var lines = [
+      "Hi Nova, here are my details:",
+      "Name: " + name,
+      "Email: " + email
+    ];
+    if (phone) lines.push("Phone: " + phone);
+    lines.push("Business type: " + biz);
+    lines.push("Monthly budget: " + budget);
+    lines.push("");
+    lines.push(msg);
+    var url = "https://wa.me/971544285018?text=" + encodeURIComponent(lines.join("\n"));
+    window.open(url, "_blank", "noopener");
+    return false;
+  }
+</script>
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>
