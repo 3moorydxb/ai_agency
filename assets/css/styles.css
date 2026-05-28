@@ -1843,3 +1843,214 @@ html[dir="rtl"] .st-row span:first-child { padding-right: 0; padding-left: 16px;
 html[dir="rtl"] .form-group select { padding-right: 16px; padding-left: 40px; background-position: left 14px center; }
 html[dir="rtl"] .nav-links { flex-direction: row-reverse; }
 
+/* ═══════════════════════════════════════════════════════════════════════
+   NOVA CHAT WIDGET
+   Floating button (bottom-right) + slide-out panel, glassmorphism.
+   Stacks 12px above the lang FAB. Llama 3.1 streaming. Bilingual.
+═══════════════════════════════════════════════════════════════════════ */
+.nova-chat-fab {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  z-index: 92;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: #3B6FFF;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 24px rgba(59,111,255,0.35), 0 0 0 1px rgba(255,255,255,0.04) inset;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.nova-chat-fab:hover {
+  background: #6366F1;
+  box-shadow: 0 10px 32px rgba(99,102,241,0.55), 0 0 0 1px rgba(255,255,255,0.06) inset;
+  transform: translateY(-1px);
+}
+.nova-chat-fab:focus-visible {
+  outline: 2px solid #6366F1;
+  outline-offset: 3px;
+}
+.nova-chat-fab svg { width: 24px; height: 24px; }
+
+.nova-chat-panel {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  z-index: 93;
+  width: 360px;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: rgba(10,10,24,0.88);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+  font-family: var(--font-body, 'Inter', sans-serif);
+  color: #F0F0F0;
+  overflow: hidden;
+  transform: translateY(12px);
+  opacity: 0;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+.nova-chat-panel.is-open { transform: translateY(0); opacity: 1; }
+.nova-chat-panel[hidden] { display: none; }
+
+.nova-chat-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+}
+.nova-chat-title {
+  font-family: var(--font-head, 'Clash Display', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  color: #fff;
+}
+.nova-chat-close {
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  display: inline-flex;
+  transition: background 0.15s, color 0.15s;
+}
+.nova-chat-close:hover { background: rgba(255,255,255,0.06); color: #fff; }
+.nova-chat-close svg { width: 18px; height: 18px; }
+
+.nova-chat-messages {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.15) transparent;
+}
+.nova-chat-messages::-webkit-scrollbar { width: 6px; }
+.nova-chat-messages::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 3px; }
+
+.nova-chat-bubble {
+  max-width: 85%;
+  padding: 10px 13px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.nova-chat-bubble--user {
+  align-self: flex-end;
+  background: #3B6FFF;
+  color: #fff;
+  border-bottom-right-radius: 6px;
+}
+.nova-chat-bubble--assistant {
+  align-self: flex-start;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #F0F0F0;
+  border-bottom-left-radius: 6px;
+}
+.nova-chat-bubble--ephemeral { opacity: 0.85; font-style: italic; }
+.nova-chat-bubble--streaming::after {
+  content: '▍';
+  display: inline-block;
+  margin-left: 2px;
+  animation: nova-chat-blink 1s steps(2) infinite;
+  color: rgba(255,255,255,0.6);
+}
+@keyframes nova-chat-blink { 50% { opacity: 0; } }
+.nova-chat-link { color: #6B8FFF; text-decoration: underline; }
+
+.nova-chat-input {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+}
+.nova-chat-input textarea {
+  flex: 1 1 auto;
+  resize: none;
+  max-height: 120px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  color: #F0F0F0;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 9px 12px;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.nova-chat-input textarea:focus { border-color: #3B6FFF; background: rgba(255,255,255,0.06); }
+.nova-chat-input textarea::placeholder { color: rgba(255,255,255,0.4); }
+
+.nova-chat-send {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  border: none;
+  background: #3B6FFF;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s, transform 0.15s;
+}
+.nova-chat-send:hover { background: #6366F1; }
+.nova-chat-send:active { transform: scale(0.95); }
+.nova-chat-send svg { width: 18px; height: 18px; }
+
+/* RTL — when panel has dir="rtl", flip bubble corners */
+.nova-chat-panel[dir="rtl"] .nova-chat-bubble--user {
+  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 6px;
+}
+.nova-chat-panel[dir="rtl"] .nova-chat-bubble--assistant {
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 6px;
+}
+
+/* Mobile — chat lifts above lang FAB, panel slides to bottom sheet */
+@media (max-width: 768px) {
+  .nova-chat-fab {
+    bottom: 88px;
+    right: 16px;
+    width: 52px; height: 52px;
+  }
+  .nova-chat-fab svg { width: 22px; height: 22px; }
+  .nova-chat-panel {
+    inset: auto 0 0 0;
+    width: 100%;
+    max-height: 80vh;
+    border-radius: 16px 16px 0 0;
+    bottom: 0; right: 0;
+  }
+}
+
+/* In RTL mode, lang FAB lives on the right — keep chat FAB on the right too (above it) */
+html[dir="rtl"] .nova-chat-fab { right: 24px; left: auto; }
+html[dir="rtl"] .nova-chat-panel { right: 24px; left: auto; }
+@media (max-width: 768px) {
+  html[dir="rtl"] .nova-chat-fab { right: 16px; left: auto; }
+  html[dir="rtl"] .nova-chat-panel { right: 0; left: 0; }
+}
+
+/* Reduced motion — disable slide, fade only */
+@media (prefers-reduced-motion: reduce) {
+  .nova-chat-panel { transition: opacity 0.15s ease; transform: none; }
+  .nova-chat-panel.is-open { transform: none; }
+  .nova-chat-bubble--streaming::after { animation: none; }
+}
+

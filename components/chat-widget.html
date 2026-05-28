@@ -1,0 +1,35 @@
+<!-- ═══════════════════════════════════════════════════════════════════════
+     NOVA AGENCY — CHAT WIDGET MARKUP
+     This is the markup the chat widget injects at runtime via
+     /assets/js/chat-widget.js. The script also handles the streaming
+     SSE response from /api/chat and the language toggle.
+
+     Do NOT paste this into pages — the script handles injection so
+     the button only appears when /api/chat-health reports the Workers
+     AI binding is live. Pages just include:
+        <script src="/assets/js/chat-widget.js" defer></script>
+═══════════════════════════════════════════════════════════════════════ -->
+<button type="button" id="nova-chat-fab" class="nova-chat-fab" aria-haspopup="dialog" aria-expanded="false" aria-controls="nova-chat-panel" aria-label="Chat with Nova">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M4 6a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3h-6l-5 4v-4H7a3 3 0 01-3-3V6z" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+  </svg>
+</button>
+<div id="nova-chat-panel" class="nova-chat-panel" role="dialog" aria-modal="false" aria-labelledby="nova-chat-title" hidden>
+  <header class="nova-chat-header">
+    <h3 id="nova-chat-title" class="nova-chat-title">Chat with Nova</h3>
+    <button type="button" class="nova-chat-close" aria-label="Close chat">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </header>
+  <div class="nova-chat-messages" id="nova-chat-messages" aria-live="polite"></div>
+  <form class="nova-chat-input" id="nova-chat-form">
+    <textarea id="nova-chat-text" rows="1" maxlength="1500" placeholder="Type a message..." aria-label="Message"></textarea>
+    <button type="submit" class="nova-chat-send" aria-label="Send">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 12l16-8-6 18-3-8-7-2z" stroke="white" stroke-width="1.8" stroke-linejoin="round" fill="white"/>
+      </svg>
+    </button>
+  </form>
+</div>
