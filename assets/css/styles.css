@@ -1452,6 +1452,9 @@ html[dir="rtl"] .faq-question { text-align: right; }
   border-collapse: collapse;
   min-width: 640px;
 }
+.compare-table.compare-table-3col {
+  min-width: 820px;
+}
 .compare-table th,
 .compare-table td {
   padding: 14px 18px;
