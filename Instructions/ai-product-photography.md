@@ -42,4 +42,6 @@ Drive folder per product. Plus a contact sheet (PDF) showing all variants so the
 - White-background shots truly white (#FFFFFF check)
 
 ## Tier availability
-Standalone — priced ad-hoc or as part of Shopify Starter Pack / Shopify store build. [NEEDS CLARIFICATION: not in PDF service list. Website has this page. Confirm pricing model — likely per-product or bundled in builds.]
+Standalone — priced ad-hoc or as part of Shopify Starter Pack / Shopify store build.
+
+Pricing: Contact for pricing — quoted case-by-case based on scope. The Nova website lists this service as "Contact for pricing" rather than a published number. Standard quote turnaround: 24h after a scoping call.

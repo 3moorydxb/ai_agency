@@ -1,7 +1,9 @@
 # Build: CRM Setup (HubSpot / Zoho)
 
 ## What the client gets
-A fully configured CRM — pipelines, custom properties, automations, integrations with web forms / email / calendar / Shopify, dashboards, and team workflows. Build covers HubSpot, Pipedrive, Zoho, or Salesforce. After build, see `crm-management.md` for retainer. Build price [NEEDS CLARIFICATION: not in PDF builds table. Website has `build-crm-setup.html`. Suggest AED 5,000–18,000 depending on complexity].
+A fully configured CRM — pipelines, custom properties, automations, integrations with web forms / email / calendar / Shopify, dashboards, and team workflows. Build covers HubSpot, Pipedrive, Zoho, or Salesforce. After build, see `crm-management.md` for retainer.
+
+Pricing: Contact for pricing — quoted case-by-case based on scope. The Nova website lists this service as "Contact for pricing" rather than a published number. Standard quote turnaround: 24h after a scoping call.
 
 ## What Worker does — step by step
 
@@ -77,4 +79,6 @@ A fully configured CRM — pipelines, custom properties, automations, integratio
 - Backup + export schedule established
 
 ## Tier availability
-One-time build standalone. [NEEDS CLARIFICATION: price range not in PDF. Confirm with Omar.]
+One-time build standalone.
+
+Pricing: Contact for pricing — quoted case-by-case based on scope. The Nova website lists this service as "Contact for pricing" rather than a published number. Standard quote turnaround: 24h after a scoping call.

@@ -3,7 +3,7 @@
 ## What the client gets
 End-to-end TikTok Shop operation: product listings optimized for TikTok search, shoppable LIVE / video content, affiliate/creator outreach, order management oversight, and growth reporting. For ecom brands selling via TikTok in regions where TikTok Shop is available.
 
-[NEEDS CLARIFICATION: TikTok Shop is not yet live in UAE/KSA as of writing. Confirm client geography — likely US, UK, SEA. If UAE-based client, this service may be for their export market only.]
+TikTok Shop is available in the UAE as of 2026. Verify the specific client's seller-account status before quoting timelines.
 
 ## What Worker does — step by step
 

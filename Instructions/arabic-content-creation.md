@@ -10,7 +10,7 @@ All Nova content services delivered in modern standard Arabic and/or Khaleeji (G
 2. **Translation vs. transcreation — Claude.ai Project.** For every piece of content:
    > "Transcreate this English content for {{ARABIC_DIALECT}} speakers in {{GCC_COUNTRY}}. Do not translate literally. Adapt: idioms, cultural references, religious sensitivities (avoid alcohol, gambling, pork, suggestive imagery), local slang, and humor. Maintain {{CLIENT_NAME}}'s brand voice. Output in Arabic script with English back-translation in italics underneath each paragraph."
 
-3. **Native review — human Arabic speaker required.** [NEEDS CLARIFICATION: Nova currently has no in-house Arabic native reviewer. Options: (a) Karl or partner reviews, (b) hire a freelance Arabic editor on Upwork/Khamsat for AED 50-100 per piece, (c) Omar's network. Confirm with Omar.] Worker sends the Arabic + back-translation to the reviewer with this brief: "Flag anything that reads as Google Translate, any cultural misfire, any awkward phrasing."
+3. **Native review — human Arabic speaker required.** Reviewer: vetted Arabic-native freelancer from Omar's network. Rate ~AED 50–100 per piece, billed inside the retainer. Worker submits the draft to the freelancer via a shared Google Drive folder per client; SLA 24h. Worker sends the Arabic + back-translation to the reviewer with this brief: "Flag anything that reads as Google Translate, any cultural misfire, any awkward phrasing."
 
 4. **Right-to-left formatting — Canva or Photoshop.** Arabic graphics must be RTL: right-aligned text, mirrored CTA arrows, Arabic numerals where appropriate. Use Arabic fonts: 29LT Bukra, Dubai Font, IBM Plex Sans Arabic.
 
@@ -41,4 +41,6 @@ Same as English deliverables but in Arabic. Bilingual clients get both versions 
 - Arabic numerals consistent (٠١٢٣ vs. 0123 — pick one per brand)
 
 ## Tier availability
-Add-on to any tier. Critical for GCC market. [NEEDS CLARIFICATION: not in PDF price list — confirm with Omar whether this is a standalone-priced add-on or always bundled.]
+Add-on to any tier. Critical for GCC market.
+
+Pricing: Contact for pricing — quoted case-by-case based on scope. The Nova website lists this service as "Contact for pricing" rather than a published number. Standard quote turnaround: 24h after a scoping call.

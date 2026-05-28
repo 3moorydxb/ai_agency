@@ -56,4 +56,6 @@ Press release drafting + distribution + journalist outreach. Goal: media coverag
 - Embargoes respected
 
 ## Tier availability
-Add-on. [NEEDS CLARIFICATION: not in PDF price list. Website has `pr-press-releases.html`. Suggest AED 4,000-8,000/mo depending on cadence. Confirm with Omar.]
+Add-on.
+
+Pricing: Contact for pricing — quoted case-by-case based on scope. The Nova website lists this service as "Contact for pricing" rather than a published number. Standard quote turnaround: 24h after a scoping call.

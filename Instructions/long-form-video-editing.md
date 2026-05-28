@@ -37,7 +37,9 @@ The client records one or more long-form videos (podcast, YouTube vlog, talking-
 - Long-form edit: 4-6 hours (depends on raw length and quality)
 - 20 clips: 20 min each = ~7 hours
 - Titles, delivery: 1.5 hours
-- **Total: ~14-16 hours per long-form piece. Roughly 1 episode/week = 56-64 hrs/mo.** [NEEDS CLARIFICATION: PDF says "Long-form video editing + 20 clips/mo" — assumed 1 long-form/mo at AED 2,000. Confirm cadence.]
+- **Total: ~14-16 hours per long-form piece.**
+
+Default cadence: 1 long-form video per month per client at Foundation tier, 2/mo at Growth, 4/mo at Scale. Cadence can be increased as an add-on at AED 1,500 per additional video.
 
 ## What to send the client
 Drive folder with long-form MP4, 3 thumbnail options, 20 vertical clips, captions CSV. YouTube upload optional — see Quality check.
@@ -50,4 +52,4 @@ Drive folder with long-form MP4, 3 thumbnail options, 20 vertical clips, caption
 - Aspect ratios correct per destination
 
 ## Tier availability
-Standalone add-on AED 2,000/mo. [NEEDS CLARIFICATION: not explicitly bundled in any tier in PDF.]
+Standalone add-on AED 2,000/mo (1 long-form/mo + 20 clips). Bundled into Foundation (1/mo), Growth (2/mo), and Scale (4/mo). Additional videos beyond the included cadence: AED 1,500 each.

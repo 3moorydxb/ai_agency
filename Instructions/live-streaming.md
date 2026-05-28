@@ -15,7 +15,7 @@ Production and operation of regular live shopping or content streams on TikTok L
 
 4. **Stream day — 2-person setup ideal (host on camera + worker behind the scenes):**
    - Worker manages comments, pins key questions, drops promo codes on cue, manages product overlays in TikTok Shop, mutes/bans trolls.
-   - Claude.ai live tab open — paste any tricky audience questions, get instant draft answers for host's earpiece if Bluetooth comms used. [NEEDS CLARIFICATION: realistic without audio comms gear? May need to relay via on-screen monitor.]
+   - Claude.ai live tab open — paste any tricky audience questions, get instant draft answers for the host. Use the client's existing on-camera setup. Nova provides remote backstage comms via WhatsApp group during the stream — no on-air comms gear from Nova in v1.
 
 5. **Post-stream — within 6 hours.** Pull replay, send to `long-form-video-editing.md` pipeline for clip generation (target 5-10 clips per stream). Generate "missed it?" recap post via Claude. Calculate session metrics.
 
@@ -47,4 +47,6 @@ Production and operation of regular live shopping or content streams on TikTok L
 - Hook in first 30 seconds: viewer must understand value immediately
 
 ## Tier availability
-Add-on. [NEEDS CLARIFICATION: not in PDF price list. Website has the page. Suggest AED 3,000-6,000/mo depending on cadence. Confirm with Omar.]
+Add-on.
+
+Pricing: Contact for pricing — quoted case-by-case based on scope. The Nova website lists this service as "Contact for pricing" rather than a published number. Standard quote turnaround: 24h after a scoping call.

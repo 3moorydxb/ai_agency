@@ -7,8 +7,8 @@ A deployed AI SDR — an autonomous agent that qualifies inbound leads, books me
 
 1. **Sales playbook ingestion — Claude.ai Project.** Get the client's: ICP doc, product/service details, common objections + answers, pricing, qualification criteria (BANT, MEDDIC, or custom), competitor positioning. Build `SDR_PLAYBOOK.md`.
 
-2. **Choose the stack:** [NEEDS CLARIFICATION: confirm Nova's preferred SDR stack with Omar. Options: (a) Smartlead AI Reply + Claude API (best for cold email), (b) Outreach.io + custom AI layer, (c) custom build using Claude Code + n8n + Calendly + CRM webhooks.]
-   - Default recommendation: custom build with Claude API as the brain, n8n as orchestration, Calendly for booking, HubSpot/Pipedrive as CRM. See `build-workflow-automation.html`-style architecture.
+2. **Choose the stack:** Tool: Smartlead. Sequences live in Smartlead; warm-up handled by Smartlead's built-in warm-up; reply detection routes to a dedicated inbox.
+   - Default recommendation: Smartlead as the cold-email engine, Claude API as the reply-classification brain, Calendly for booking, HubSpot/Pipedrive as CRM. n8n optional for custom orchestration where Smartlead doesn't cover the step.
 
 3. **Build the agent flows — Claude Code + n8n.** Core flows:
    - **Inbound web chat reply** → see `build-chatbot.md` for chatbot; SDR layer adds: qualification questions, calendar offer if qualified, hand-off to human if not.

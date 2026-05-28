@@ -64,4 +64,6 @@ A live affiliate or referral program: tracking links, commission tiers, payout s
 - No conflict with paid ads brand-bidding rules
 
 ## Tier availability
-One-time build standalone. [NEEDS CLARIFICATION: not in PDF builds table. Website has `affiliate-program.html`. Suggest AED 5,000–15,000. Confirm with Omar.]
+One-time build standalone.
+
+Pricing: Contact for pricing — quoted case-by-case based on scope. The Nova website lists this service as "Contact for pricing" rather than a published number. Standard quote turnaround: 24h after a scoping call.

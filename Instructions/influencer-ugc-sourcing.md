@@ -17,7 +17,7 @@ Three vetted creators sourced, briefed, and managed per month. Each creator prod
 3. **Outreach — Claude.ai.** Per creator:
    > "Write a DM/email to {{CREATOR_HANDLE}} offering {{CLIENT_NAME}}'s {{CAMPAIGN}}. Personalize off their recent {{POST_OR_VIDEO}}. Lead with what's in it for them. Mention rate transparently. Attach brief."
 
-4. **Negotiation + contract — DocuSign or PandaDoc.** Standard creator agreement (Nova should have a template — [NEEDS CLARIFICATION: confirm Nova has a creator agreement template; if not, draft one with a UAE legal review.]). Cover: deliverables, deadline, usage rights, exclusivity window, payment terms, kill fee.
+4. **Negotiation + contract — DocuSign or Adobe Sign.** Use the Nova Creator Agreement template at `Documentation/creator-agreement-template.md`. Send via DocuSign or Adobe Sign; one signed copy per creator stored in the client's Google Drive folder. Cover: deliverables, deadline, usage rights, exclusivity window, payment terms, kill fee.
 
 5. **Brief delivery + check-in — Notion or Loom.** Send creator the brief in Loom format (more clicks-through). Check in midway through production to catch off-brand drift early.
 

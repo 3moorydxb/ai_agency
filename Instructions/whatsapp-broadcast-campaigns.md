@@ -42,4 +42,6 @@ Outbound WhatsApp marketing campaigns (one-off and recurring) sent to the client
 - Reply handling capacity matches send volume
 
 ## Tier availability
-Add-on / standalone. [NEEDS CLARIFICATION: not in PDF price list. Website has `whatsapp-broadcasts.html`. Suggest AED 1,500-2,500/mo for 4 campaigns. Confirm with Omar.]
+Add-on / standalone.
+
+Pricing: Contact for pricing — quoted case-by-case based on scope. The Nova website lists this service as "Contact for pricing" rather than a published number. Standard quote turnaround: 24h after a scoping call.
