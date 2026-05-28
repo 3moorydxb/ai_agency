@@ -66,6 +66,31 @@
     .faq-list-cta { text-align: center; margin-top: 32px; }
     .faq-list-cta a { color: var(--light-blue); text-decoration: none; font-weight: 600; }
     .faq-list-cta a:hover { text-decoration: underline; }
+
+    /* Tier blurb + fit-for + delivers — 2026-05-28 expanded tier cards */
+    .pricing-card .tier-blurb {
+      font-size: 14px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.78);
+      margin: 14px 0 0;
+    }
+    .pricing-card .tier-fit,
+    .pricing-card .tier-delivers {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.68);
+      margin: 10px 0 0;
+      padding: 10px 12px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px;
+    }
+    .pricing-card .tier-fit strong,
+    .pricing-card .tier-delivers strong {
+      color: var(--light-blue);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
   </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the cheapest tier?","acceptedAnswer":{"@type":"Answer","text":"Launch at AED 1,200/mo — pick any single service, month-to-month."}},{"@type":"Question","name":"Can I switch tiers?","acceptedAnswer":{"@type":"Answer","text":"Yes, anytime. Upgrade or downgrade between billing cycles."}},{"@type":"Question","name":"Do I get a discount for paying annually?","acceptedAnswer":{"@type":"Answer","text":"Yes — 10% off if you prepay 12 months."}},{"@type":"Question","name":"What's the installment option?","acceptedAnswer":{"@type":"Answer","text":"Split a tier into 3 monthly payments at +5%."}},{"@type":"Question","name":"Is there a setup fee?","acceptedAnswer":{"@type":"Answer","text":"No. Every price you see is monthly. No hidden fees."}},{"@type":"Question","name":"Can I cancel?","acceptedAnswer":{"@type":"Answer","text":"Launch and Spark: month-to-month, cancel anytime. Foundation/Growth/Scale: cancel after minimum commitment."}}]}
@@ -164,12 +189,17 @@
         <div class="tier-price">AED <span class="price-num" data-monthly-price="1200">1,200</span><span class="per-mo">/mo</span><span class="per-billing" data-billing-label></span></div>
         <div class="tier-commit" data-en="Month-to-month" data-ar="شهر بشهر">Month-to-month</div>
         <div class="tier-onboard" data-en="1 service · solo founders" data-ar="خدمة واحدة · المؤسسون الأفراد">1 service · solo founders</div>
+        <p class="tier-blurb">Entry level, no commitment, AED 40/day. Built for young entrepreneurs and first-time store owners who need one service running professionally without a long contract. The fastest, lowest-risk way to start working with us.</p>
+        <p class="tier-fit"><strong>Best for:</strong> first-time Shopify owners, dropshippers testing their first product, and solo founders who only need one channel managed.</p>
+        <p class="tier-delivers"><strong>What you get:</strong> one focused channel (Instagram or TikTok) handled end-to-end — 10 posts/mo with AI captions, a 30-day content calendar, one short-form video, five product descriptions, and a monthly report.</p>
         <ul class="tier-features">
           <li data-en="Pick any 1 service from our list" data-ar="اختر خدمة واحدة من قائمتنا">Pick any 1 service from our list</li>
+          <li data-en="10 posts/mo + AI captions + hashtag research" data-ar="10 منشورات شهريًا">10 posts/mo + AI captions + hashtag research</li>
+          <li data-en="1 short-form video/mo (Reel or TikTok)" data-ar="فيديو قصير شهريًا">1 short-form video/mo (Reel or TikTok)</li>
+          <li data-en="5 product page descriptions/mo" data-ar="5 أوصاف منتجات شهريًا">5 product page descriptions/mo</li>
           <li data-en="Monthly performance report" data-ar="تقرير أداء شهري">Monthly performance report</li>
           <li data-en="WhatsApp support (business hours)" data-ar="دعم واتساب (ساعات العمل)">WhatsApp support (business hours)</li>
-          <li data-en="Monthly check-in call (20 min)" data-ar="مكالمة شهرية (20 دقيقة)">Monthly check-in call (20 min)</li>
-          <li data-en="48-hour onboarding" data-ar="إعداد خلال 48 ساعة">48-hour onboarding</li>
+          <li data-en="48-hour onboarding · AED 500 one-time" data-ar="إعداد 48 ساعة · 500 درهم لمرة واحدة">48-hour onboarding · AED 500 one-time</li>
           <li data-en="Cancel any time" data-ar="ألغِ في أي وقت">Cancel any time</li>
         </ul>
         <a href="https://wa.me/971544285018?text=Hi+Nova,+I+want+to+start+with+the+Launch+tier" class="btn-primary tier-cta" target="_blank" rel="noopener" data-en="Start with Launch" data-ar="ابدأ مع Launch">Start with Launch</a>
@@ -180,13 +210,16 @@
         <div class="tier-price">AED <span class="price-num" data-monthly-price="3000">3,000</span><span class="per-mo">/mo</span><span class="per-billing" data-billing-label></span></div>
         <div class="tier-commit" data-en="Month-to-month" data-ar="شهر بشهر">Month-to-month</div>
         <div class="tier-onboard" data-en="5 services bundled" data-ar="5 خدمات في باقة">5 services bundled</div>
+        <p class="tier-blurb">Everything in Launch plus a second platform and the basics of engagement. AED 100/day — less than a business lunch in Dubai — and still month-to-month. The sensible step up once one channel is working and you want to expand.</p>
+        <p class="tier-fit"><strong>Best for:</strong> early-stage ecom stores testing two channels, F&amp;B brands ready to be on IG and TikTok, and service businesses moving past the "post when I remember" stage.</p>
+        <p class="tier-delivers"><strong>What you get:</strong> 2 platforms managed, 15 posts/mo with AI captions and hashtag research, basic comment and DM responses, plus a monthly performance report and a 30-minute strategy call.</p>
         <ul class="tier-features">
-          <li data-en="5 services from our catalog" data-ar="5 خدمات من قائمتنا">5 services from our catalog</li>
-          <li data-en="Monthly performance report" data-ar="تقرير أداء شهري">Monthly performance report</li>
-          <li data-en="Basic automation included" data-ar="أتمتة أساسية مشمولة">Basic automation included</li>
-          <li data-en="WhatsApp support" data-ar="دعم واتساب">WhatsApp support</li>
-          <li data-en="2 platforms covered" data-ar="منصتان مشمولتان">2 platforms covered</li>
+          <li data-en="Everything in Launch, plus:" data-ar="كل ما في Launch، إضافةً إلى:">Everything in Launch, plus:</li>
+          <li data-en="2nd platform added (IG · TikTok · X · FB · Snapchat)" data-ar="إضافة منصة ثانية">2nd platform added (IG · TikTok · X · FB · Snapchat)</li>
+          <li data-en="15 posts/mo with AI captions and hashtags" data-ar="15 منشورًا شهريًا">15 posts/mo with AI captions and hashtags</li>
+          <li data-en="Basic comment and DM responses" data-ar="ردود أساسية على التعليقات والرسائل">Basic comment and DM responses</li>
           <li data-en="Monthly strategy call (30 min)" data-ar="مكالمة استراتيجية شهرية (30 دقيقة)">Monthly strategy call (30 min)</li>
+          <li data-en="48-hour onboarding · AED 500 one-time" data-ar="إعداد 48 ساعة · 500 درهم لمرة واحدة">48-hour onboarding · AED 500 one-time</li>
           <li data-en="Cancel any time" data-ar="ألغِ في أي وقت">Cancel any time</li>
         </ul>
         <a href="https://wa.me/971544285018?text=Hi+Nova,+I+want+to+start+with+the+Spark+tier" class="btn-primary tier-cta" target="_blank" rel="noopener" data-en="Start with Spark" data-ar="ابدأ مع Spark">Start with Spark</a>
@@ -198,15 +231,19 @@
         <div class="tier-price">AED <span class="price-num" data-monthly-price="6000">6,000</span><span class="per-mo">/mo</span><span class="per-billing" data-billing-label></span></div>
         <div class="tier-commit" data-en="3 months min" data-ar="3 أشهر كحد أدنى">3 months min</div>
         <div class="tier-onboard" data-en="20+ services · all categories" data-ar="20+ خدمة · كل الفئات">20+ services · all categories</div>
+        <p class="tier-blurb">Our most popular tier and the inflection point where AI starts compounding. Cheaper than hiring one social media manager (AED 8,000–12,000/mo salary) but you get content, video, chatbot, email, and reporting in one package. The system, not the headcount.</p>
+        <p class="tier-fit"><strong>Best for:</strong> growing ecom brands ready for consistent output, clinics and salons that need a chatbot answering after hours, and B2B service businesses wanting a real content engine.</p>
+        <p class="tier-delivers"><strong>What you get:</strong> 3 platforms, 20 posts/mo, 4 short-form videos/mo, an AI content engine producing 4 blogs or scripts, a basic web chatbot, email flows + a weekly broadcast, plus a monthly strategy call.</p>
         <ul class="tier-features">
-          <li data-en="20+ services across all categories" data-ar="أكثر من 20 خدمة في كل الفئات">20+ services across all categories</li>
-          <li data-en="AI chatbot (WhatsApp / web)" data-ar="روبوت دردشة AI (واتساب / ويب)">AI chatbot (WhatsApp / web)</li>
-          <li data-en="Weekly performance reporting" data-ar="تقارير أداء أسبوعية">Weekly performance reporting</li>
-          <li data-en="3 platforms + LinkedIn" data-ar="3 منصات + لينكدإن">3 platforms + LinkedIn</li>
-          <li data-en="Email marketing flows" data-ar="حملات بريد إلكتروني تلقائية">Email marketing flows</li>
-          <li data-en="Bi-weekly strategy call (30 min)" data-ar="مكالمة استراتيجية كل أسبوعين">Bi-weekly strategy call (30 min)</li>
-          <li data-en="Priority WhatsApp support" data-ar="دعم واتساب بأولوية">Priority WhatsApp support</li>
-          <li data-en="Account manager assigned" data-ar="مدير حساب مخصص">Account manager assigned</li>
+          <li data-en="Everything in Spark, plus:" data-ar="كل ما في Spark، إضافةً إلى:">Everything in Spark, plus:</li>
+          <li data-en="3rd platform added" data-ar="إضافة منصة ثالثة">3rd platform added</li>
+          <li data-en="20 posts/mo across all platforms" data-ar="20 منشورًا شهريًا">20 posts/mo across all platforms</li>
+          <li data-en="4 short-form videos/mo (Reels · TikTok · Shorts)" data-ar="4 فيديوهات قصيرة شهريًا">4 short-form videos/mo (Reels · TikTok · Shorts)</li>
+          <li data-en="AI content engine — 4 blogs or scripts/mo" data-ar="محرك محتوى AI — 4 مقالات أو سكربتات شهريًا">AI content engine — 4 blogs or scripts/mo</li>
+          <li data-en="Basic web chatbot (FAQs + lead capture)" data-ar="روبوت دردشة أساسي للويب">Basic web chatbot (FAQs + lead capture)</li>
+          <li data-en="Email marketing — 3 flows + 1 weekly campaign" data-ar="تسويق بريد — 3 سير عمل + حملة أسبوعية">Email marketing — 3 flows + 1 weekly campaign</li>
+          <li data-en="Monthly strategy call (30 min)" data-ar="مكالمة استراتيجية شهرية (30 دقيقة)">Monthly strategy call (30 min)</li>
+          <li data-en="Onboarding AED 1,500 one-time" data-ar="رسوم إعداد 1,500 درهم لمرة واحدة">Onboarding AED 1,500 one-time</li>
         </ul>
         <a href="https://wa.me/971544285018?text=Hi+Nova,+I+want+to+start+with+the+Foundation+tier" class="btn-primary tier-cta" target="_blank" rel="noopener" data-en="Start with Foundation" data-ar="ابدأ مع Foundation">Start with Foundation</a>
       </div>
@@ -216,15 +253,20 @@
         <div class="tier-price">AED <span class="price-num" data-monthly-price="14000">14,000</span><span class="per-mo">/mo</span><span class="per-billing" data-billing-label></span></div>
         <div class="tier-commit" data-en="6 months min" data-ar="6 أشهر كحد أدنى">6 months min</div>
         <div class="tier-onboard" data-en="30+ services · dedicated manager" data-ar="30+ خدمة · مدير مخصص">30+ services · dedicated manager</div>
+        <p class="tier-blurb">Foundation plus paid acquisition, WhatsApp automation, cold email, influencer sourcing, and an analytics dashboard tying it all together. The tier where marketing stops being a cost line and starts being a measurable system you scale on purpose.</p>
+        <p class="tier-fit"><strong>Best for:</strong> ecom brands ready to scale paid ads aggressively, B2B teams wanting an outbound pipeline running daily, and real-estate or clinic groups using WhatsApp as their primary sales channel.</p>
+        <p class="tier-delivers"><strong>What you get:</strong> 4 platforms, 30 posts/mo, 10 short-form videos/mo, full Meta + TikTok ads management, WhatsApp Business AI automation, 500 cold-email prospects/mo, 3 sourced creators/mo, plus an analytics dashboard and bi-weekly strategy call. Ad spend is paid by you directly to Meta and TikTok.</p>
         <ul class="tier-features">
-          <li data-en="30+ services across the catalog" data-ar="أكثر من 30 خدمة من القائمة">30+ services across the catalog</li>
-          <li data-en="Dedicated account manager" data-ar="مدير حساب مخصص بالكامل">Dedicated account manager</li>
-          <li data-en="Custom automations built monthly" data-ar="أتمتة مخصصة شهريًا">Custom automations built monthly</li>
-          <li data-en="Weekly strategy calls (30 min)" data-ar="مكالمات أسبوعية (30 دقيقة)">Weekly strategy calls (30 min)</li>
-          <li data-en="Paid ads (Meta + TikTok + Google)" data-ar="إعلانات (ميتا + تيك توك + قوقل)">Paid ads (Meta + TikTok + Google)</li>
-          <li data-en="Cold email lead gen — 500 leads/mo" data-ar="جذب عملاء بالبريد البارد — 500/شهر">Cold email lead gen — 500 leads/mo</li>
-          <li data-en="WhatsApp + voice automation" data-ar="أتمتة واتساب + الصوت">WhatsApp + voice automation</li>
-          <li data-en="Analytics dashboard included" data-ar="لوحة تحليلات مشمولة">Analytics dashboard included</li>
+          <li data-en="Everything in Foundation, plus:" data-ar="كل ما في Foundation، إضافةً إلى:">Everything in Foundation, plus:</li>
+          <li data-en="4th platform added" data-ar="إضافة منصة رابعة">4th platform added</li>
+          <li data-en="30 posts/mo + 10 short-form videos/mo" data-ar="30 منشورًا + 10 فيديوهات قصيرة شهريًا">30 posts/mo + 10 short-form videos/mo</li>
+          <li data-en="Paid ads — Meta + TikTok (ad spend paid by you)" data-ar="إعلانات مدفوعة — ميتا + تيك توك">Paid ads — Meta + TikTok (ad spend paid by you)</li>
+          <li data-en="WhatsApp Business AI automation" data-ar="أتمتة واتساب الذكية">WhatsApp Business AI automation</li>
+          <li data-en="Cold email lead gen — 500 prospects/mo" data-ar="بريد بارد — 500 عميل محتمل شهريًا">Cold email lead gen — 500 prospects/mo</li>
+          <li data-en="Influencer + UGC sourcing — 3 creators/mo" data-ar="مصادر مؤثرين — 3 صانعي محتوى شهريًا">Influencer + UGC sourcing — 3 creators/mo</li>
+          <li data-en="Analytics dashboard — all platforms in one view" data-ar="لوحة تحليلات موحدة">Analytics dashboard — all platforms in one view</li>
+          <li data-en="Bi-weekly strategy call (30 min)" data-ar="مكالمة كل أسبوعين (30 دقيقة)">Bi-weekly strategy call (30 min)</li>
+          <li data-en="Onboarding AED 1,500 one-time" data-ar="رسوم إعداد 1,500 درهم لمرة واحدة">Onboarding AED 1,500 one-time</li>
         </ul>
         <a href="https://wa.me/971544285018?text=Hi+Nova,+I+want+to+start+with+the+Growth+tier" class="btn-primary tier-cta" target="_blank" rel="noopener" data-en="Start with Growth" data-ar="ابدأ مع Growth">Start with Growth</a>
       </div>
@@ -234,16 +276,20 @@
         <div class="tier-price">AED <span class="price-num" data-monthly-price="32000">32,000</span><span class="per-mo">/mo</span><span class="per-billing" data-billing-label></span></div>
         <div class="tier-commit" data-en="12 months min" data-ar="12 شهرًا كحد أدنى">12 months min</div>
         <div class="tier-onboard" data-en="All 50+ services + custom builds" data-ar="جميع الخدمات + مشاريع مخصصة">All 50+ services + custom builds</div>
+        <p class="tier-blurb">Your full outsourced AI marketing department. Every platform, every service, voice agents, RAG assistants, TikTok Shop, SEO + GEO + AEO, plus one custom workflow build every quarter. Note: not sold before our third month of operation while internal SOPs lock.</p>
+        <p class="tier-fit"><strong>Best for:</strong> funded scale-ups replacing a 4–6 person in-house team, multi-location groups running coordinated campaigns, and established Dubai brands wanting one partner handling everything end-to-end.</p>
+        <p class="tier-delivers"><strong>What you get:</strong> all platforms including LinkedIn, Snapchat, and TikTok Shop, unlimited posts, 20+ short-form videos/mo, AI SEO + GEO + AEO, voice agents on top of your chatbot, a RAG knowledge base assistant, a dedicated strategist, weekly 45-minute calls, and a quarterly business review.</p>
         <ul class="tier-features">
           <li data-en="Everything in Growth, unlocked" data-ar="كل ما في Growth مفتوح">Everything in Growth, unlocked</li>
-          <li data-en="1 custom build per quarter included" data-ar="مشروع مخصص كل ربع سنة">1 custom build per quarter included</li>
-          <li data-en="Daily Slack access" data-ar="وصول يومي عبر سلاك">Daily Slack access</li>
-          <li data-en="Founder strategy calls (monthly)" data-ar="مكالمات مع المؤسس شهريًا">Founder strategy calls (monthly)</li>
-          <li data-en="Dedicated strategist + manager" data-ar="مستشار ومدير مخصص">Dedicated strategist + manager</li>
-          <li data-en="Voice agent + RAG assistant" data-ar="وكيل صوتي + مساعد RAG">Voice agent + RAG assistant</li>
-          <li data-en="Full SEO + GEO + AEO program" data-ar="برنامج SEO + GEO + AEO كامل">Full SEO + GEO + AEO program</li>
-          <li data-en="Quarterly business review" data-ar="مراجعة أعمال ربع سنوية">Quarterly business review</li>
-          <li data-en="Priority everything" data-ar="أولوية في كل شيء">Priority everything</li>
+          <li data-en="All platforms + LinkedIn + Snapchat + TikTok Shop" data-ar="جميع المنصات + لينكدإن + سناب شات + TikTok Shop">All platforms + LinkedIn + Snapchat + TikTok Shop</li>
+          <li data-en="Unlimited posts + 20+ short-form videos/mo" data-ar="منشورات غير محدودة + 20+ فيديو شهريًا">Unlimited posts + 20+ short-form videos/mo</li>
+          <li data-en="SEO + GEO + AEO — Google, ChatGPT, Perplexity, Gemini" data-ar="SEO + GEO + AEO على جميع المحركات">SEO + GEO + AEO — Google, ChatGPT, Perplexity, Gemini</li>
+          <li data-en="TikTok Shop management (listings + affiliates)" data-ar="إدارة TikTok Shop">TikTok Shop management (listings + affiliates)</li>
+          <li data-en="1 custom workflow automation build included" data-ar="بناء سير عمل مخصص مشمول">1 custom workflow automation build included</li>
+          <li data-en="Voice agents + RAG knowledge base assistant" data-ar="وكلاء صوتيون + مساعد RAG">Voice agents + RAG knowledge base assistant</li>
+          <li data-en="Dedicated strategist — single point of contact" data-ar="مستشار مخصص">Dedicated strategist — single point of contact</li>
+          <li data-en="Weekly strategy call (45 min) + quarterly review" data-ar="مكالمة أسبوعية (45 دقيقة) + مراجعة ربع سنوية">Weekly strategy call (45 min) + quarterly review</li>
+          <li data-en="Onboarding AED 1,500 (waivable for committed accounts)" data-ar="رسوم إعداد قابلة للإعفاء">Onboarding AED 1,500 (waivable for committed accounts)</li>
         </ul>
         <a href="https://wa.me/971544285018?text=Hi+Nova,+I+want+to+start+with+the+Scale+tier" class="btn-primary tier-cta" target="_blank" rel="noopener" data-en="Start with Scale" data-ar="ابدأ مع Scale">Start with Scale</a>
       </div>
@@ -315,6 +361,7 @@
       <a href="/services/build-analytics-dashboard.html"><div class="build-card fade-in"><div class="build-name" data-en="Analytics Dashboard" data-ar="لوحة تحليلات">Analytics Dashboard</div><div class="build-price">AED 4,500–22,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
       <a href="/services/build-crm-setup.html"><div class="build-card fade-in"><div class="build-name" data-en="CRM Setup" data-ar="إعداد CRM">CRM Setup</div><div class="build-price">AED 5,000–15,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
       <a href="/services/build-brand-identity.html"><div class="build-card fade-in"><div class="build-name" data-en="Brand Identity" data-ar="هوية بصرية">Brand Identity</div><div class="build-price">AED 5,000–18,000</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
+      <a href="/services/affiliate-program.html"><div class="build-card fade-in"><div class="build-name" data-en="Affiliate Program" data-ar="برنامج إحالات">Affiliate Program</div><div class="build-price">From AED 3,500</div><div class="build-maint" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</div></div></a>
     </div>
   </section>
   <div class="gradient-divider"></div>
