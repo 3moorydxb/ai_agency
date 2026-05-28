@@ -189,7 +189,6 @@ h1,h2,h3,h4 {
   .fade-in { opacity: 1; transform: none; }
   #particle-canvas, .hero-orb { display: none; }
   .hero-badge,.hero-h1,.hero-sub,.hero-ctas,.hero-float-card { opacity: 1; transform: none; animation: none; }
-  .fab-whatsapp { animation: none; }
 }
 
 /* ═══════════════════════════════════════
@@ -909,38 +908,9 @@ h1,h2,h3,h4 {
 }
 
 /* ═══════════════════════════════════════
-   FLOATING WHATSAPP BUTTON
+   FLOATING WHATSAPP BUTTON — REMOVED 2026-05-28
+   Replaced by future Cloudflare Workers AI chat widget.
 ═══════════════════════════════════════ */
-.fab-whatsapp {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 56px;
-  height: 56px;
-  background: var(--bright-blue);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: var(--white);
-  box-shadow: 0 6px 24px rgba(41,82,217,0.45), 0 2px 8px rgba(0,0,0,0.4);
-  z-index: 100;
-  transition: transform 0.25s var(--ease-out), box-shadow 0.25s;
-  animation: fabPulse 2.8s ease-in-out infinite;
-}
-.fab-whatsapp svg { width: 28px; height: 28px; }
-.fab-whatsapp:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 36px rgba(41,82,217,0.6), 0 4px 12px rgba(0,0,0,0.5);
-}
-@keyframes fabPulse {
-  0%,100% { box-shadow: 0 6px 24px rgba(41,82,217,0.45), 0 2px 8px rgba(0,0,0,0.4), 0 0 0 0 rgba(41,82,217,0.55); }
-  50% { box-shadow: 0 6px 24px rgba(41,82,217,0.45), 0 2px 8px rgba(0,0,0,0.4), 0 0 0 14px rgba(41,82,217,0); }
-}
-@media (max-width: 700px) {
-  .fab-whatsapp { bottom: 88px; right: 18px; }
-}
 
 /* ═══════════════════════════════════════
    COOKIE BANNER (UAE PDPL)
@@ -1031,10 +1001,6 @@ html[dir="rtl"] .footer-inner,
 html[dir="rtl"] .site-footer-inner { direction: rtl; }
 html[dir="rtl"] .section-sub,
 html[dir="rtl"] .footer-tagline { text-align: right; }
-html[dir="rtl"] .fab-whatsapp { right: auto; left: 24px; }
-@media (max-width: 700px) {
-  html[dir="rtl"] .fab-whatsapp { left: 18px; right: auto; }
-}
 html[dir="rtl"] .cookie-banner { left: auto; right: 20px; }
 @media (max-width: 560px) {
   html[dir="rtl"] .cookie-banner { right: 12px; left: 12px; }
