@@ -91,6 +91,19 @@
       font-weight: 600;
       letter-spacing: 0.02em;
     }
+
+    /* ───────── 2026-05-28 PASS 3 — PRICING MOBILE OVERRIDES (390px) ───────── */
+    @media (max-width: 768px) {
+      .pay-toggle       { width: 100%; max-width: 320px; margin: 8px auto 24px; }
+      .pay-toggle button { flex: 1; padding: 10px 14px; font-size: 12.5px; }
+      .pay-note         { font-size: 12.5px; padding: 0 8px; }
+      .pricing-card .tier-blurb { font-size: 14px; line-height: 1.65; }
+      .pricing-card .tier-fit,
+      .pricing-card .tier-delivers { font-size: 13px; padding: 10px 12px; }
+      .bottom-cta-block .btn-primary,
+      .bottom-cta-block .btn-ghost { width: 100%; max-width: 300px; margin: 6px auto; display: block; }
+      .builds-grid a { flex: 1 1 100%; max-width: 100%; }
+    }
   </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the cheapest tier?","acceptedAnswer":{"@type":"Answer","text":"Launch at AED 1,200/mo — pick any single service, month-to-month."}},{"@type":"Question","name":"Can I switch tiers?","acceptedAnswer":{"@type":"Answer","text":"Yes, anytime. Upgrade or downgrade between billing cycles."}},{"@type":"Question","name":"Do I get a discount for paying annually?","acceptedAnswer":{"@type":"Answer","text":"Yes — 10% off if you prepay 12 months."}},{"@type":"Question","name":"What's the installment option?","acceptedAnswer":{"@type":"Answer","text":"Split a tier into 3 monthly payments at +5%."}},{"@type":"Question","name":"Is there a setup fee?","acceptedAnswer":{"@type":"Answer","text":"No. Every price you see is monthly. No hidden fees."}},{"@type":"Question","name":"Can I cancel?","acceptedAnswer":{"@type":"Answer","text":"Launch and Spark: month-to-month, cancel anytime. Foundation/Growth/Scale: cancel after minimum commitment."}}]}

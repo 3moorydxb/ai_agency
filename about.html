@@ -96,6 +96,30 @@
 
     .bottom-cta-block { text-align: center; padding: 32px 0 16px; }
     .bottom-cta-block .btn-primary, .bottom-cta-block .btn-ghost { margin: 6px; }
+
+    /* ───────── 2026-05-28 PASS 3 — ABOUT MOBILE OVERRIDES (390px) ───────── */
+    @media (max-width: 768px) {
+      .about-mission-body { font-size: 15.5px; line-height: 1.75; }
+      .team-grid        { grid-template-columns: 1fr; gap: 14px; }
+      .team-card        { padding: 24px 20px; }
+      .team-name        { font-size: 20px; }
+      .team-role-label  { font-size: 10.5px; }
+      .team-bio         { font-size: 14.5px; line-height: 1.7; }
+      .framework-grid   { grid-template-columns: 1fr; gap: 14px; }
+      .framework-card   { padding: 24px 20px; }
+      .framework-title  { font-size: 19px; }
+      .framework-body   { font-size: 14.5px; line-height: 1.7; }
+      .stats-row        { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .stat-block       { padding: 18px 12px; }
+      .stat-num         { font-size: 26px; }
+      .stat-label       { font-size: 12.5px; }
+      .bottom-cta-block .btn-primary,
+      .bottom-cta-block .btn-ghost { width: 100%; max-width: 300px; margin: 6px auto; display: block; }
+    }
+
+    @media (max-width: 420px) {
+      .stats-row        { grid-template-columns: 1fr; }
+    }
   </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Nova Agency","url":"https://novaagency.me","description":"Dubai's AI Marketing Agency. We build AI marketing systems, automations, and creative for ambitious brands.","telephone":"+971544285018","email":"hello@novaagency.me","address":{"@type":"PostalAddress","addressLocality":"Dubai","addressCountry":"AE"},"founder":[{"@type":"Person","name":"Omar Abusalem","jobTitle":"CTO"},{"@type":"Person","name":"Nizar","jobTitle":"CEO"}],"sameAs":["https://wa.me/971544285018"]}

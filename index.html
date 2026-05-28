@@ -467,6 +467,66 @@
       padding: 3px 8px; border-radius: 999px;
       margin-bottom: 6px;
     }
+
+    /* ───────── 2026-05-28 PASS 3 — INDEX MOBILE OVERRIDES (390px iPhone) ─────────
+       These sit AFTER /assets/css/styles.css in source order so they win
+       the cascade for index-local class names like .about-stat-num,
+       .how-node, .why-card, .teaser-card. */
+    @media (max-width: 768px) {
+      .why-grid    { grid-template-columns: 1fr; gap: 14px; margin-top: 28px; }
+      .why-card    { padding: 22px 20px; }
+      .why-card h3 { font-size: 17px; }
+      .why-card p  { font-size: 14.5px; line-height: 1.65; }
+      .why-card-more { font-size: 12px; }
+
+      .teaser-grid    { grid-template-columns: 1fr; gap: 14px; margin-top: 28px; }
+      .teaser-card    { padding: 22px 20px; }
+      .teaser-card h3 { font-size: 19px; }
+      .teaser-card p  { font-size: 14.5px; line-height: 1.65; }
+
+      .about-grid    { grid-template-columns: 1fr; gap: 28px; margin-top: 28px; }
+      .about-copy p  { font-size: 15.5px; line-height: 1.75; }
+      .about-stat    { padding: 20px; }
+      .about-stat-num { font-size: 32px; }
+      .about-stat-label { font-size: 13px; }
+
+      .how-line       { grid-template-columns: 1fr; gap: 28px; margin-top: 32px; }
+      .how-line::before { display: none; }
+      .how-circle     { width: 48px; height: 48px; font-size: 19px; margin-bottom: 12px; }
+      .how-node h3    { font-size: 17px; }
+      .how-node p     { font-size: 14px; max-width: none; }
+
+      .tier-grid      { grid-template-columns: 1fr; gap: 14px; margin-top: 28px; }
+      .tier-card      { padding: 22px 20px; }
+      .tier-card .tier-name { font-size: 17px; }
+      .tier-card .tier-price { font-size: 24px; }
+      .tier-card .tier-meta { font-size: 13.5px; }
+
+      .work-grid      { grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
+      .work-thumb     { height: 160px; }
+      .work-meta      { padding: 16px 18px 18px; }
+
+      .contact-row    { grid-template-columns: 1fr; gap: 14px; margin-top: 28px; }
+      .contact-card   { padding: 22px 20px; }
+      .contact-card h3 { font-size: 17px; }
+      .contact-card .contact-val { font-size: 14.5px; }
+
+      #audit-quiz .quiz-shell { padding: 24px 18px; margin-top: 28px; }
+      .quiz-question  { font-size: 19px; }
+      .quiz-options   { grid-template-columns: 1fr; gap: 8px; }
+      .quiz-opt       { padding: 13px 14px; font-size: 14px; }
+      .quiz-result-name { font-size: 24px; }
+      .quiz-result-price { font-size: 18px; }
+      .quiz-result-actions .btn-primary,
+      .quiz-result-actions .btn-ghost { width: 100%; max-width: none; }
+    }
+
+    @media (max-width: 420px) {
+      .about-stat-num { font-size: 28px; }
+      .teaser-card h3 { font-size: 18px; }
+      .tier-card .tier-price { font-size: 22px; }
+      .quiz-question  { font-size: 18px; }
+    }
   </style>
 </head>
 <body>

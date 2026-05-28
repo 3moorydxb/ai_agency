@@ -1637,92 +1637,215 @@ html[dir="rtl"] .how-step { text-align: right; }
 
 /* ═══════════════════════════════════════════════════════════════════════════
    2026-05-28 — iPhone / mobile responsive (max-width: 768px)
-   One consolidated breakpoint covering hero, nav, sections, grids, tiers, CTAs.
+   Pass 3 rewrite: target = 390px (iPhone 15). Also verified at 360/414.
+   Covers: nav, hero, sections, grids, tiers, CTAs, language pill, footer.
 ═══════════════════════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
-  /* Section spacing: tighten so content isn't dwarfed on small screens. */
-  .full-section { padding: clamp(48px,10vw,72px) 5%; }
-  .page-hero { padding: clamp(72px,14vw,96px) 5% clamp(32px,8vw,56px); }
+  /* Body type baseline — 15.5px feels right on iPhone 15. */
+  body { font-size: 15.5px; line-height: 1.6; }
+
+  /* Horizontal page padding: 20px (5% at 390px = 19.5, lock to 20). */
+  .full-section { padding: clamp(48px,10vw,72px) 20px; }
+  .page-hero    { padding: clamp(64px,12vw,88px) 20px clamp(32px,7vw,52px); }
 
   /* Headings / subs: scale down floor sizes so they don't crowd. */
-  .section-heading { font-size: clamp(26px,7vw,38px); line-height: 1.15; }
-  .section-sub { font-size: 15px; margin-bottom: 36px; line-height: 1.65; }
-  .page-hero h1 { font-size: clamp(32px,9vw,48px); }
-  .page-hero .lede { font-size: 15px; line-height: 1.65; }
+  .section-heading { font-size: clamp(24px,7vw,32px); line-height: 1.18; }
+  .section-sub     { font-size: 14.5px; margin-bottom: 32px; line-height: 1.65; }
+  .page-hero h1    { font-size: clamp(30px,8.5vw,40px); line-height: 1.1; }
+  .page-hero .lede { font-size: 14.5px; line-height: 1.65; }
 
   /* Hero copy: 88px h1 is too big — clamp lower, tighten spacing. */
-  .hero-h1 { font-size: clamp(38px,9vw,56px); margin-bottom: 18px; line-height: 1.08; }
-  .hero-sub { font-size: 15.5px; margin-bottom: 28px; line-height: 1.65; padding: 0 4px; }
-  .hero-ctas { gap: 10px; margin-bottom: 36px; }
+  .hero-h1   { font-size: clamp(34px,9vw,48px); margin-bottom: 16px; line-height: 1.08; }
+  .hero-sub  { font-size: 15px; margin-bottom: 26px; line-height: 1.6; padding: 0 4px; }
+  .hero-ctas { gap: 10px; margin-bottom: 32px; }
   .hero-ctas .btn-primary,
-  .hero-ctas .btn-ghost { width: 100%; max-width: 320px; justify-content: center; padding: 13px 24px; font-size: 14.5px; }
+  .hero-ctas .btn-ghost { width: 100%; max-width: 300px; justify-content: center; padding: 13px 24px; font-size: 14.5px; }
 
-  /* Hero badge / pill row: keep compact. */
-  .hero-badge { font-size: 11.5px; padding: 6px 14px; }
-  .stat-pill-row { gap: 8px; }
-  .stat-pill { font-size: 12.5px; padding: 8px 14px; }
+  /* Hero badge / pill row: keep compact, inline-flex never block. */
+  .hero-badge { font-size: 11px; padding: 6px 14px; }
+  .stat-pill-row { gap: 8px; margin: 22px 0 8px; }
+  .stat-pill { font-size: 12px; padding: 7px 12px; }
 
-  /* Buttons everywhere: legible tap target. */
-  .btn-primary, .btn-ghost { padding: 12px 22px; font-size: 14px; }
+  /* Generic buttons everywhere: legible tap target, never full-bleed unless explicit. */
+  .btn-primary, .btn-ghost { padding: 12px 22px; font-size: 14px; min-height: 44px; }
 
-  /* Navbar inner: tighter padding, hide desktop links (already handled by hamburger). */
-  .nav-inner { padding: 12px 0; }
+  /* Navbar: tighter padding, condensed logo, hamburger triggers menu. */
+  #navbar       { padding: 0 20px; }
+  .nav-inner    { padding: 10px 0; height: 60px; }
   .nav-logo-sub { display: none; }
+  .nav-logo-name { font-size: 18px; }
+  body          { padding-top: 60px; }
+
+  /* Mobile menu: spacious tap targets, full-width links. */
+  .mobile-menu       { padding: 14px 20px 22px; }
+  .mobile-link       { font-size: 16px; padding: 12px 16px; min-height: 44px; }
+  .mobile-menu .btn-primary { width: 100%; justify-content: center; padding: 14px; min-height: 48px; }
 
   /* Grids collapse to single column. */
   .services-grid { grid-template-columns: 1fr; gap: 14px; }
-  .teaser-grid { grid-template-columns: 1fr; gap: 14px; }
-  .tier-grid { grid-template-columns: 1fr; }
-  .builds-grid { gap: 12px; }
+  .teaser-grid   { grid-template-columns: 1fr; gap: 14px; }
+  .tier-grid     { grid-template-columns: 1fr; }
+  .builds-grid   { gap: 12px; }
   .builds-grid a { max-width: 100%; flex: 1 1 100%; }
   .work-grid, .contact-row { grid-template-columns: 1fr; }
 
+  /* Service & teaser card body type and padding. */
+  .service-card  { padding: 22px 20px; }
+  .service-card h3 { font-size: 17px; }
+  .service-card p  { font-size: 14.5px; line-height: 1.6; }
+  .teaser-card   { padding: 22px 20px; }
+  .teaser-card h3 { font-size: 18px; }
+
+  /* WHY NOVA cards. */
+  .why-grid  { grid-template-columns: 1fr; gap: 14px; }
+  .why-card  { padding: 22px 20px; }
+  .why-card h3 { font-size: 17px; }
+  .why-card p  { font-size: 14.5px; line-height: 1.65; }
+
   /* Pricing cards: full-width single column with breathing room. */
   .pricing-grid { grid-template-columns: 1fr; gap: 16px; }
-  .pricing-card { padding: 22px 20px; }
+  .pricing-card { padding: 24px 20px 20px; }
   .pricing-card .tier-blurb,
   .pricing-card .tier-fit,
-  .pricing-card .tier-delivers { font-size: 13.5px; }
+  .pricing-card .tier-delivers { font-size: 13.5px; line-height: 1.65; }
   .tier-cta { width: 100%; }
+  .pay-toggle { width: 100%; max-width: 320px; }
+  .pay-toggle button { flex: 1; padding: 10px 14px; font-size: 12.5px; }
 
-  /* WHY / About / How sections: stack and tighten. */
-  .why-grid { grid-template-columns: 1fr; gap: 14px; }
-  .why-card { padding: 20px; }
-  .about-grid { grid-template-columns: 1fr; gap: 28px; }
-  .about-stats { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .about-stat { padding: 16px; }
-  .about-stat-num { font-size: 32px; }
-  .how-line { grid-template-columns: 1fr; gap: 28px; }
+  /* About / How / Framework stacks. */
+  .about-grid       { grid-template-columns: 1fr; gap: 28px; }
+  .about-stats      { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .about-stat       { padding: 16px; }
+  .about-stat-num   { font-size: 30px; }
+  .about-copy p     { font-size: 15px; line-height: 1.7; }
+  .how-line         { grid-template-columns: 1fr; gap: 28px; }
   .how-line::before { display: none; }
+  .how-node p       { max-width: none; }
+  .framework-grid   { grid-template-columns: 1fr; gap: 16px; }
+  .framework-card   { padding: 24px 20px; }
+  .framework-title  { font-size: 19px; }
+  .framework-body   { font-size: 14.5px; line-height: 1.7; }
+  .team-grid        { grid-template-columns: 1fr; gap: 16px; }
+  .team-card        { padding: 24px 20px; }
+  .team-name        { font-size: 20px; }
+  .team-bio         { font-size: 14.5px; line-height: 1.65; }
+  .stats-row        { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .stat-block       { padding: 18px 14px; }
+
+  /* Contact page. */
+  .contact-grid     { grid-template-columns: 1fr; gap: 24px; }
+  .contact-methods  { grid-template-columns: 1fr; gap: 14px; }
+  .contact-form-wrap, .contact-info-col { padding: 24px 20px; }
+  .map-block        { padding: 40px 20px; }
+  .map-title        { font-size: 19px; }
 
   /* Comparison table: horizontal scroll instead of squashing. */
   .compare-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .compare-table { min-width: 640px; font-size: 13px; }
+  .compare-table      { min-width: 640px; font-size: 13px; }
 
-  /* Footer + cookie + lang fab: keep usable. */
-  .site-footer-inner { grid-template-columns: 1fr; gap: 28px; padding: 0 5%; }
-  .lang-fab { bottom: 18px; right: 18px; padding: 8px 12px; }
-  .lang-fab-popup { right: 18px; bottom: 70px; }
+  /* Footer four-column → single column on mobile. */
+  .site-footer        { padding: 48px 20px 0; }
+  .site-footer-inner  { grid-template-columns: 1fr; gap: 28px; padding: 0; }
+
+  /* Service-detail pages (services/*.html). */
+  .service-detail-hero { padding: clamp(60px,12vw,90px) 20px clamp(32px,7vw,48px); }
+  .service-detail-hero h1 { font-size: clamp(28px,8vw,38px); }
+  .service-detail-hero .lede { font-size: 14.5px; line-height: 1.65; }
+  .service-detail-meta { gap: 14px; padding: 16px 18px; }
+  .service-detail-meta > div { min-width: 130px; }
+  .service-detail-meta dd { font-size: 14.5px; }
+  .how-it-works-steps { grid-template-columns: 1fr; gap: 12px; }
+  .how-it-works-steps .step { padding: 22px 20px 20px; }
+  .how-it-works-steps .step::before { font-size: 30px; }
+  .who-its-for, .examples-grid { grid-template-columns: 1fr; gap: 12px; }
+  .who-its-for .who-card, .example-card { padding: 20px 18px; }
+
+  /* Why-page body content (why/*.html). */
+  .why-body p { font-size: 15px; line-height: 1.7; }
+
+  /* FAQ items — wider tap targets. */
+  .faq-question { font-size: 15px; padding: 16px 18px; min-height: 44px; }
+  .faq-answer-inner { font-size: 14.5px; padding: 0 18px 18px; line-height: 1.7; }
+
+  /* ── LANGUAGE FAB ─────────────────────────────────────────────
+     CRITICAL: desktop sets `left: 24px`. On mobile we MUST clear it
+     before setting `right` — otherwise `position: fixed` with both
+     left+right stretches the pill the full width of the viewport. */
+  .lang-fab {
+    left: auto;
+    right: 16px;
+    bottom: 16px;
+    padding: 10px 14px;
+    font-size: 13px;
+    min-width: 64px;
+    min-height: 44px;
+    width: auto;
+    max-width: 96px;
+    justify-content: center;
+  }
+  .lang-fab svg { width: 14px; height: 14px; }
+  .lang-fab-popup {
+    left: auto;
+    right: 16px;
+    bottom: 70px;
+    width: 180px;
+    max-width: calc(100vw - 32px);
+  }
+  /* RTL: mirror to bottom-left. Override desktop RTL too. */
+  html[dir="rtl"] .lang-fab        { left: 16px; right: auto; }
+  html[dir="rtl"] .lang-fab-popup  { left: 16px; right: auto; }
 
   /* Hero counter (if it ever renders): keep small. */
   .hero-counter .stat-num { font-size: clamp(48px,12vw,72px); }
 
   /* Quiz: single column. */
-  .quiz-options { grid-template-columns: 1fr; }
-  .quiz-shell { padding: 22px 18px; }
+  .quiz-options    { grid-template-columns: 1fr; }
+  .quiz-container  { padding: 24px 18px; }
+  .quiz-question   { font-size: 19px; }
 
   /* Hero orbs: tone down so they don't dominate small viewport. */
   .hero-orb-1 { width: 320px; height: 320px; top: -80px; left: -100px; }
   .hero-orb-2 { width: 300px; height: 300px; }
   .hero-orb-3 { display: none; }
+
+  /* Section pill labels stay inline, not full-width. */
+  .section-pill, .hero-badge, .tier-badge, .nova-col-badge,
+  .work-tag, .teaser-count, .build-star,
+  .stat-pill { width: auto; max-width: max-content; }
 }
 
-/* Extra tight breakpoint for the smallest iPhones (SE/mini at 375px). */
+/* Extra tight breakpoint for the smallest phones (iPhone SE / mini ≈ 375px). */
 @media (max-width: 420px) {
-  .hero-h1 { font-size: 34px; }
-  .section-heading { font-size: 24px; }
-  .nav-logo-name { font-size: 18px; }
-  .pricing-card { padding: 20px 16px; }
-  .service-card { padding: 18px 16px; }
-  .stat-pill { font-size: 11.5px; padding: 7px 12px; }
+  .hero-h1         { font-size: 32px; }
+  .section-heading { font-size: 23px; }
+  .page-hero h1    { font-size: 28px; }
+  .nav-logo-name   { font-size: 17px; }
+  .pricing-card    { padding: 20px 16px; }
+  .service-card    { padding: 18px 16px; }
+  .why-card        { padding: 20px 16px; }
+  .stat-pill       { font-size: 11.5px; padding: 6px 11px; }
+  .lang-fab        { padding: 9px 12px; font-size: 12.5px; min-width: 60px; max-width: 88px; }
+  .full-section    { padding: clamp(44px,9vw,64px) 18px; }
+  .page-hero       { padding: clamp(56px,10vw,76px) 18px clamp(28px,6vw,44px); }
 }
+
+/* RTL flow fixes for Arabic mode. */
+html[dir="rtl"] body { text-align: right; }
+html[dir="rtl"] .why-card,
+html[dir="rtl"] .service-card,
+html[dir="rtl"] .teaser-card,
+html[dir="rtl"] .pricing-card,
+html[dir="rtl"] .tier-card,
+html[dir="rtl"] .contact-card,
+html[dir="rtl"] .framework-card,
+html[dir="rtl"] .team-card,
+html[dir="rtl"] .about-stat { text-align: right; }
+html[dir="rtl"] .why-card-more { flex-direction: row-reverse; }
+html[dir="rtl"] .tier-features li { padding-left: 0; padding-right: 18px; }
+html[dir="rtl"] .tier-features li::before { left: auto; right: 0; }
+html[dir="rtl"] .result-services li { padding-left: 0; padding-right: 18px; }
+html[dir="rtl"] .result-services li::before { left: auto; right: 0; content: '←'; }
+html[dir="rtl"] .st-row span:first-child { padding-right: 0; padding-left: 16px; }
+html[dir="rtl"] .form-group select { padding-right: 16px; padding-left: 40px; background-position: left 14px center; }
+html[dir="rtl"] .nav-links { flex-direction: row-reverse; }
+

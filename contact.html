@@ -111,6 +111,21 @@
     }
     .map-title { font-family: var(--font-head); font-size: 22px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
     .map-sub { color: rgba(255,255,255,0.55); font-size: 14px; }
+
+    /* ───────── 2026-05-28 PASS 3 — CONTACT MOBILE OVERRIDES (390px) ───────── */
+    @media (max-width: 768px) {
+      .contact-methods  { grid-template-columns: 1fr; gap: 14px; }
+      .cm-card          { padding: 22px 20px; }
+      .cm-title         { font-size: 17px; }
+      .cm-detail        { font-size: 14px; }
+      .cm-sub           { font-size: 12.5px; }
+      .contact-grid     { grid-template-columns: 1fr; gap: 24px; }
+      .contact-form-wrap,
+      .contact-info-col { padding: 24px 20px; }
+      .map-block        { padding: 40px 20px; }
+      .map-title        { font-size: 19px; }
+      .map-sub          { font-size: 13px; }
+    }
   </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ContactPage","name":"Contact Nova Agency","url":"https://novaagency.me/contact.html","mainEntity":{"@type":"Organization","name":"Nova Agency","telephone":"+971544285018","email":"hello@novaagency.me","address":{"@type":"PostalAddress","addressLocality":"Dubai","addressCountry":"AE"}}}
