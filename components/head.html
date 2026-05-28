@@ -28,6 +28,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <!-- Pre-paint language hydration: avoids FOUC when the user has chosen Arabic. -->
+  <script>(function(){try{var l=localStorage.getItem('nova_lang');if(l==='ar'){document.documentElement.setAttribute('lang','ar');document.documentElement.setAttribute('dir','rtl');}}catch(e){}})();</script>
   {{EXTRA_HEAD}}
   <!-- Google Analytics 4 (placeholder — replace G-XXXXXXXXXX with real ID) -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>

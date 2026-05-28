@@ -100,34 +100,50 @@
   }
 
   // ── AR / EN language toggle (floating pill + popup) ───────────────────────
-  // DISABLED 2026-05-28 per Omar: the swap/redirect behaviour is paused until
-  // the Arabic translation is properly audited. The floating pill UI stays
-  // visible but selecting a language is a no-op (popup opens/closes only).
-  // Restore by re-enabling the body of `setLang` below.
+  // Re-enabled 2026-05-28: swap data-en/data-ar on every element with both
+  // attributes, set <html lang> + dir, persist to localStorage. Partial
+  // translation is acceptable — elements without data-ar stay English.
+  var LANG_KEY = 'nova_lang';
+
   function applyLang(lang) {
-    // Force EN until language swap is properly built.
-    document.documentElement.setAttribute('lang', 'en');
-    document.documentElement.setAttribute('dir', 'ltr');
+    if (lang !== 'ar') lang = 'en';
+    document.documentElement.setAttribute('lang', lang);
+    document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+    // Swap every element that has BOTH data-en and data-ar attributes.
+    // Elements without data-ar stay in English by design.
+    document.querySelectorAll('[data-en][data-ar]').forEach(function (el) {
+      var next = el.getAttribute(lang === 'ar' ? 'data-ar' : 'data-en');
+      if (next != null) el.textContent = next;
+    });
+
+    // Update the floating pill label + popup option state.
     var label = document.getElementById('lang-fab-label');
-    if (label) label.textContent = 'EN';
+    if (label) label.textContent = lang === 'ar' ? 'ع' : 'EN';
     document.querySelectorAll('.lang-fab-option').forEach(function (opt) {
-      var isActive = opt.getAttribute('data-lang') === 'en';
+      var isActive = opt.getAttribute('data-lang') === lang;
       opt.classList.toggle('active', isActive);
       opt.setAttribute('aria-checked', isActive ? 'true' : 'false');
     });
   }
 
-  function setLang(/* lang */) {
-    // No-op. Language swap intentionally disabled until ready.
-    // Original behaviour preserved below for re-enable:
-    //   applyLang(lang);
-    //   try { localStorage.setItem('nova_lang', lang); } catch (e) {}
-    applyLang('en');
+  function setLang(lang) {
+    if (lang !== 'ar' && lang !== 'en') return;
+    try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+    applyLang(lang);
+  }
+
+  function getStoredLang() {
+    try {
+      var v = localStorage.getItem(LANG_KEY);
+      return (v === 'ar' || v === 'en') ? v : null;
+    } catch (e) { return null; }
   }
 
   function initLangToggle() {
-    // Always render EN. Saved preference is ignored until the swap is rebuilt.
-    applyLang('en');
+    // Apply stored preference (default EN). Applied as early as DOM ready.
+    var stored = getStoredLang() || 'en';
+    applyLang(stored);
 
     var fab = document.getElementById('lang-fab');
     var popup = document.getElementById('lang-fab-popup');
@@ -151,13 +167,12 @@
       togglePopup();
     });
 
-    // Popup options: open the popup, but selecting a language does nothing
-    // beyond closing it. Original handler kept below for re-enable.
+    // Popup options actually swap the language now.
     popup.querySelectorAll('.lang-fab-option').forEach(function (opt) {
       opt.addEventListener('click', function (e) {
         e.stopPropagation();
-        // var lang = opt.getAttribute('data-lang');
-        // if (lang) setLang(lang);
+        var lang = opt.getAttribute('data-lang');
+        if (lang) setLang(lang);
         closePopup();
       });
     });
