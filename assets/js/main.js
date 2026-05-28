@@ -119,7 +119,7 @@
 
     // Update the floating pill label + popup option state.
     var label = document.getElementById('lang-fab-label');
-    if (label) label.textContent = lang === 'ar' ? 'ع' : 'EN';
+    if (label) label.textContent = lang === 'ar' ? 'عربية' : 'EN';
     document.querySelectorAll('.lang-fab-option').forEach(function (opt) {
       var isActive = opt.getAttribute('data-lang') === lang;
       opt.classList.toggle('active', isActive);
