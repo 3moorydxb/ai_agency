@@ -1,62 +1,60 @@
-# YouTube Management
+# YouTube Shorts
 
 ## What the client gets
-Full YouTube channel operation: weekly long-form uploads (edited), Shorts cadence (3-5/week), SEO-optimized titles/descriptions/tags, thumbnail design, community tab posts, comment management, and growth strategy aimed at watch time and subscriber growth.
+Shorts-only YouTube channel operation. 60-second vertical (9:16) videos, 3-5 uploads per week, hook-engineered for the 3-second retention spike, thumbnail covers, comment management, and weekly growth analysis. No long-form. No chapter markers. Descriptions stay short (~150 chars). Goal: subscriber growth + watch-time hours toward monetization, optimized for the Shorts feed (not the home feed).
 
 ## What Worker does — step by step
 
-1. **Channel audit (one-time) — Claude.ai + YouTube Studio.** Review last 20 uploads. Identify: best-performing thumbnail/title patterns, retention drop-off points, watch time trends, subscriber sources. Prompt:
-   > "Audit {{CLIENT_NAME}}'s YouTube channel ({{NICHE}}, {{SUB_COUNT}} subs). Analyze the last 20 videos: which thumbnails performed, which titles got CTR, where retention dropped. Recommend: 5 content pillars, 3 winning thumbnail formats, 3 winning title patterns, posting schedule. Output as `YT_PLAYBOOK.md`."
+1. **Channel audit (one-time) — Claude.ai + YouTube Studio.** Pull last 30 Shorts. Identify 3-second retention pattern, swipe-away rate, top-performing hooks, replays. Prompt:
+   > "Audit {{CLIENT_NAME}}'s YouTube Shorts channel ({{NICHE}}, {{SUB_COUNT}} subs). Analyze the last 30 Shorts. For each, estimate: 3-second retention (% who kept watching past frame 90), swipe-away rate, average view duration vs 60s. Group winners by hook type (visual surprise, voiceover question, on-screen claim, motion). Recommend: 5 content pillars, the 3 hook formats that earn the highest 3-second retention, posting cadence. Output as `SHORTS_PLAYBOOK.md`."
 
-2. **Topic + title research — weekly, Claude.ai with TubeBuddy/VidIQ data.** Prompt:
-   > "Generate 10 video ideas for {{CLIENT_NAME}} this month. Each: working title (under 60 char, hook-driven), thumbnail concept, search volume estimate, competitor coverage, hook line (first 15 seconds), retention bait at 30%, 60%, 90% marks. Rank by expected CTR × retention."
+2. **Topic + hook research — weekly, Claude.ai.** Prompt:
+   > "Generate 10 Shorts ideas for {{CLIENT_NAME}} this week. Each: working title (under 40 char, mobile-truncation safe), pillar, hook line spoken in the first 1.5 seconds (≤8 words), visual gimmick in frame 1-90 (what's literally on screen), retention bait at the 30s mark (what reason to keep watching), on-screen text overlay (≤6 words), CTA at the end (subscribe / next short / comment prompt — pick one only). Rank by expected 3-second retention. No long-form ideas."
 
-3. **Long-form pipeline — see `long-form-video-editing.md`** for the edit. YT-specific additions:
-   - Chapter markers in description
-   - End screen + cards setup
-   - Pinned comment with CTA
-   - SEO description: 150-word video summary + timestamps + relevant links + 3-5 hashtags at top
-   - Tags: 10-15 from VidIQ recommendations
+3. **Shorts production — see `ugc-short-form-video-ads.md`** for the edit pipeline. YT Shorts specifics:
+   - 9:16 vertical, exported at 1080×1920
+   - Hard cut or motion change before frame 90 (the 3-second retention test)
+   - On-screen text large enough to read on the smallest phone, top-third placement (bottom third is covered by YT UI)
+   - Hook spoken in first 1.5 seconds
+   - Cap at 60 seconds — anything longer pushes into long-form feed and tanks reach
+   - Trending audio when relevant — credit honored automatically by YT
+   - **No** "subscribe before I tell you" gating — kills retention on the Shorts feed
+   - **No** chapter markers, no end screens, no cards (Shorts UI doesn't surface them)
 
-4. **Thumbnails — Photoshop or Canva.** A/B test 3 thumbnails per video. Claude:
-   > "Write 3 thumbnail concepts for the video '{{TITLE}}'. Each: text on thumbnail (3-5 words max), facial expression, background/setting, contrast palette. Optimized for mobile CTR."
-   Use YT's experiment feature for A/B.
+4. **Cover thumbnails — Canva, light touch.** Shorts cover images show on the channel grid, not in the feed itself. One legible word + a high-contrast face/object. 1080×1920. Claude:
+   > "Write 3 Shorts cover concepts for the Short titled '{{TITLE}}'. Each: the single word or 2-word phrase shown big on the cover (max 2 words), the visual subject in frame, contrast palette (background vs text), mobile-grid legibility check (would this read at thumbnail size in the channel's Shorts shelf). Output as markdown table."
 
-5. **Shorts cadence — see `ugc-short-form-video-ads.md`.** YT Shorts feed differently than TikTok — first 1 second matters most. Don't gate Shorts behind subscribe asks (kills retention).
+5. **Captions / description — Claude.ai, kept short.** Each upload:
+   > "Write the title and description for this Short. Title: under 40 characters, hook-aligned, mobile-truncation safe (the first 30 chars must carry the meaning). Description: under 150 characters total, one line of context + 3 hashtags. Hashtags: 1 `#shorts`, 1 niche tag (`{{NICHE_TAG}}`), 1 trending-or-evergreen tag. No timestamps, no long summaries, no links beyond a single channel handle if relevant."
 
-6. **Community tab — 2-3 posts/week.** Polls, behind-the-scenes images, Q&A teasers. Claude generates copy. Prompt:
-   > "Plan {{CLIENT_NAME}}'s YouTube Community tab posts for this week (3 posts). Mix: 1 poll (4 options, tied to upcoming video topic `{{NEXT_VIDEO}}`), 1 BTS image post (image brief + 80-word caption referencing this week's upload `{{LAST_VIDEO}}`), 1 question post (open-ended, drives comments, tied to pillar `{{PILLAR}}`). Per post: post type, copy under 280 chars, image/asset brief if applicable, best post day/time given the channel's audience timezone `{{TZ}}`. Voice per YT_PLAYBOOK."
+6. **Comment management — daily, Claude.ai.** Reply to the top 10 comments per Short in the first 24h (algorithm weights early comment engagement on Shorts). Heart top comments. Pin one strategic comment — usually a question that drives reply chains.
 
-7. **Comment management — daily.** Claude.ai for replies. Heart top comments. Pin one strategic comment per video (often a question that boosts discussion).
-
-8. **Monthly report — Claude.ai with YT Analytics export.** Watch time, CTR, AVD, subs gained, top videos, traffic sources, RPM (if monetized).
+7. **Weekly recap + monthly report — Claude.ai with YT Analytics export.** Weekly: top Short, worst Short, lesson. Monthly: Shorts views, average view duration vs 60s ceiling, subs gained from Shorts, traffic source split (Shorts feed vs browse vs external), watch-time hours added.
 
 ## Tools used
-- YouTube Studio — uploads, analytics, community tab
-- Claude.ai Project — ideas, titles, descriptions, comments, reports
-- VidIQ or TubeBuddy — SEO data
-- Photoshop / Canva — thumbnails
-- Premiere Pro / DaVinci — long-form edits
-- CapCut Pro — Shorts
+- YouTube Studio — uploads, Shorts analytics, comments
+- Claude.ai Project — ideas, hooks, titles, descriptions, comment replies, reports
+- CapCut Pro — vertical edits, on-screen text, motion
+- Canva — cover thumbnails
+- VidIQ (optional) — trending niche tags
 
 ## Time required
-- Audit: 3 hours one-time
-- Per long-form video: 8-12 hours (research, edit, thumbnail, upload, optimize)
-- Shorts (5/week): see UGC pipeline timing
-- Community + comments: 5 hours/month
-- **Total: ~50-70 hours/month for 1 long-form/week + Shorts**
+- Audit: 2 hours one-time
+- Per Short: 1.5-2.5 hours (script + shoot/source + edit + upload + caption)
+- Comments + community: 4 hours/month
+- **Total: ~20-35 hours/month for 3-5 Shorts/week**
 
 ## What to send the client
-- Weekly Loom recap (this week's upload, this week's Shorts, this week's wins)
-- Monthly report
+- Weekly Loom recap (this week's Shorts, top performer, next week's hooks)
+- Monthly Shorts report (PDF or Google Doc)
 
 ## Quality check - CTO & COO review
-- Hook in first 15 seconds — viewer knows what they're getting
-- Title + thumbnail tell same story (no clickbait mismatch)
-- Audio levels normalized across whole video
-- Chapter markers present and accurate
-- Pinned comment set
-- Tags + description SEO-optimized
+- Hook spoken or shown in first 1.5 seconds — no slow intros
+- 3-second retention test: something changes on screen before frame 90
+- Vertical 9:16, 60s or under
+- On-screen text in top third, legible at phone size
+- No chapter markers, no long descriptions, no end screens
+- Pinned comment set, top-10 replies done within 24h
 
 ## Tier availability
-Add-on / standalone. [NEEDS CLARIFICATION: not in PDF price list. Website has `youtube-management.html`. Suggest AED 4,000-8,000/mo depending on cadence (Shorts-only vs. full long-form). Confirm with Omar.]
+Standalone add-on under Platform Management — see `platform-management.md`. AED 1,200–2,000/mo (varies by cadence — 3/week vs 5/week).

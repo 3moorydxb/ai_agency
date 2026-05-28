@@ -58,4 +58,4 @@ Focused Instagram-only management: feed posts, Reels, Stories, DMs, and growth s
 - Reels native (no TikTok watermarks)
 
 ## Tier availability
-Add-on / standalone. Effectively Launch-tier if IG is the chosen platform. [NEEDS CLARIFICATION: website has dedicated `instagram-only.html` page. PDF only references "1 platform — IG or TikTok". Likely priced same as Launch (AED 1,200/mo) for IG-only standalone. Confirm with Omar.]
+Standalone add-on under Platform Management — see `platform-management.md`. AED 1,200–2,000/mo (varies by platform — see Platform Management overview).
