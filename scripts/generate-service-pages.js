@@ -141,18 +141,18 @@ const SERVICES = [
       ['Coaches & speakers','Talks, webinars and interviews become weeks of content.'],
     ]
   },
-  { slug:'larp-content', cat:'content', icon:'image',
-    name:'LARP Content Automation', price:'AED 1,500/mo', priceShort:'AED 1,500/mo',
-    one:'Daily photo + text posts on autopilot.',
-    desc:'Low-effort, high-frequency content for personal accounts and lifestyle brands. We generate daily photo + text posts using AI image gen and your reference library, then post automatically. Designed for brands that need to "exist online" without daily founder effort.',
+  { slug:'daily-content-engine', cat:'content', icon:'image',
+    name:'Daily Content Engine', price:'From AED 1,200/mo', priceShort:'From AED 1,200/mo',
+    one:'Faceless dark aesthetic. Posted on your account every single day.',
+    desc:'Daily lifestyle and luxury content posted on the client\'s account. Faceless dark aesthetic. Sourced from Pinterest or our in-house clip pack (lifestyle, cars, luxury). Captioned, scheduled, and published daily so the client\'s feed never goes dark. Four tiers: Photo 1/day (AED 1,200), Photo 2/day (AED 2,000), Video 1/day (AED 1,500), Video 2/day (AED 2,500).',
     steps:[
-      ['Brief','Brand persona, reference photos, posting voice and platforms.'],
-      ['Build','AI image library trained on your references. Daily caption + image pipeline.'],
-      ['Launch','7 posts/week, fully automated. Monthly refresh on style and angles.'],
+      ['Brief','Aesthetic direction, account voice, content lanes (cars, lifestyle, luxury, motivation), platforms.'],
+      ['Source & Caption','Daily visuals pulled from Pinterest libraries and our in-house clip pack. Captions written to match your tone.'],
+      ['Schedule & Publish','Published daily at peak engagement windows. Monthly refresh on lanes, angles, and captions.'],
     ],
     who:[
-      ['Personal brands','Founders who need to look active without being active.'],
-      ['Lifestyle brands','Daily-cadence accounts where consistency matters more than virality.'],
+      ['Faceless lifestyle accounts','Pages built on aesthetic and consistency — luxury, cars, motivation — where the founder never appears.'],
+      ['Personal brands','Founders who need a steady public-facing feed without being on-camera every day.'],
     ]
   },
   { slug:'ai-content-engine', cat:'content', icon:'text',
