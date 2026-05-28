@@ -1606,3 +1606,123 @@ html[dir="rtl"] .how-step { text-align: right; }
   margin: 0 auto 32px;
   line-height: 1.75;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   2026-05-28 — SITE-WIDE ALIGNMENT NORMALISATION
+   Pick one alignment (center) and apply it everywhere so headings + subheads +
+   CTA buttons stack consistently. Fixes orphan-centered CTAs sitting under
+   left-aligned copy that the brief flagged.
+═══════════════════════════════════════════════════════════════════════════ */
+.full-section { text-align: center; }
+.full-section > .section-pill,
+.full-section > .section-heading,
+.full-section > .section-sub { display: block; margin-left: auto; margin-right: auto; }
+.full-section > .section-sub { max-width: 680px; }
+.full-section > .hero-ctas,
+.full-section > div[style*="text-align:center"],
+.full-section > .builds-grid,
+.full-section > .pricing-grid,
+.full-section > .services-grid,
+.full-section > .teaser-grid,
+.full-section > .why-grid,
+.full-section > .work-grid,
+.full-section > .contact-row,
+.full-section > .tier-grid,
+.full-section > .how-line { text-align: initial; }
+/* Inside service / build / pricing cards we keep left-alignment for legibility. */
+.service-card, .build-card, .pricing-card, .why-card, .teaser-card, .work-card,
+.contact-card { text-align: left; }
+/* Service-card description blocks are now 2-3 sentences — give them breathing room. */
+.service-card p { line-height: 1.6; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   2026-05-28 — iPhone / mobile responsive (max-width: 768px)
+   One consolidated breakpoint covering hero, nav, sections, grids, tiers, CTAs.
+═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Section spacing: tighten so content isn't dwarfed on small screens. */
+  .full-section { padding: clamp(48px,10vw,72px) 5%; }
+  .page-hero { padding: clamp(72px,14vw,96px) 5% clamp(32px,8vw,56px); }
+
+  /* Headings / subs: scale down floor sizes so they don't crowd. */
+  .section-heading { font-size: clamp(26px,7vw,38px); line-height: 1.15; }
+  .section-sub { font-size: 15px; margin-bottom: 36px; line-height: 1.65; }
+  .page-hero h1 { font-size: clamp(32px,9vw,48px); }
+  .page-hero .lede { font-size: 15px; line-height: 1.65; }
+
+  /* Hero copy: 88px h1 is too big — clamp lower, tighten spacing. */
+  .hero-h1 { font-size: clamp(38px,9vw,56px); margin-bottom: 18px; line-height: 1.08; }
+  .hero-sub { font-size: 15.5px; margin-bottom: 28px; line-height: 1.65; padding: 0 4px; }
+  .hero-ctas { gap: 10px; margin-bottom: 36px; }
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-ghost { width: 100%; max-width: 320px; justify-content: center; padding: 13px 24px; font-size: 14.5px; }
+
+  /* Hero badge / pill row: keep compact. */
+  .hero-badge { font-size: 11.5px; padding: 6px 14px; }
+  .stat-pill-row { gap: 8px; }
+  .stat-pill { font-size: 12.5px; padding: 8px 14px; }
+
+  /* Buttons everywhere: legible tap target. */
+  .btn-primary, .btn-ghost { padding: 12px 22px; font-size: 14px; }
+
+  /* Navbar inner: tighter padding, hide desktop links (already handled by hamburger). */
+  .nav-inner { padding: 12px 0; }
+  .nav-logo-sub { display: none; }
+
+  /* Grids collapse to single column. */
+  .services-grid { grid-template-columns: 1fr; gap: 14px; }
+  .teaser-grid { grid-template-columns: 1fr; gap: 14px; }
+  .tier-grid { grid-template-columns: 1fr; }
+  .builds-grid { gap: 12px; }
+  .builds-grid a { max-width: 100%; flex: 1 1 100%; }
+  .work-grid, .contact-row { grid-template-columns: 1fr; }
+
+  /* Pricing cards: full-width single column with breathing room. */
+  .pricing-grid { grid-template-columns: 1fr; gap: 16px; }
+  .pricing-card { padding: 22px 20px; }
+  .pricing-card .tier-blurb,
+  .pricing-card .tier-fit,
+  .pricing-card .tier-delivers { font-size: 13.5px; }
+  .tier-cta { width: 100%; }
+
+  /* WHY / About / How sections: stack and tighten. */
+  .why-grid { grid-template-columns: 1fr; gap: 14px; }
+  .why-card { padding: 20px; }
+  .about-grid { grid-template-columns: 1fr; gap: 28px; }
+  .about-stats { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .about-stat { padding: 16px; }
+  .about-stat-num { font-size: 32px; }
+  .how-line { grid-template-columns: 1fr; gap: 28px; }
+  .how-line::before { display: none; }
+
+  /* Comparison table: horizontal scroll instead of squashing. */
+  .compare-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .compare-table { min-width: 640px; font-size: 13px; }
+
+  /* Footer + cookie + lang fab: keep usable. */
+  .site-footer-inner { grid-template-columns: 1fr; gap: 28px; padding: 0 5%; }
+  .lang-fab { bottom: 18px; right: 18px; padding: 8px 12px; }
+  .lang-fab-popup { right: 18px; bottom: 70px; }
+
+  /* Hero counter (if it ever renders): keep small. */
+  .hero-counter .stat-num { font-size: clamp(48px,12vw,72px); }
+
+  /* Quiz: single column. */
+  .quiz-options { grid-template-columns: 1fr; }
+  .quiz-shell { padding: 22px 18px; }
+
+  /* Hero orbs: tone down so they don't dominate small viewport. */
+  .hero-orb-1 { width: 320px; height: 320px; top: -80px; left: -100px; }
+  .hero-orb-2 { width: 300px; height: 300px; }
+  .hero-orb-3 { display: none; }
+}
+
+/* Extra tight breakpoint for the smallest iPhones (SE/mini at 375px). */
+@media (max-width: 420px) {
+  .hero-h1 { font-size: 34px; }
+  .section-heading { font-size: 24px; }
+  .nav-logo-name { font-size: 18px; }
+  .pricing-card { padding: 20px 16px; }
+  .service-card { padding: 18px 16px; }
+  .stat-pill { font-size: 11.5px; padding: 7px 12px; }
+}
