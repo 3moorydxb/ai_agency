@@ -119,13 +119,24 @@
       color: rgba(255,255,255,0.7); letter-spacing: 0.04em;
     }
 
-    /* WHY NOVA grid (9 cards 3x3) */
+    /* WHY NOVA grid (9 cards 3x3) with variety — first card spans 2 columns,
+       last card spans 2 columns. Creates a deliberate asymmetric rhythm so the
+       section does not feel like a copy-paste 3x3 lattice. */
     .why-grid {
-      display: grid; gap: 20px; margin-top: 40px;
+      display: grid; gap: 28px; margin-top: 48px;
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-    @media (max-width: 980px) { .why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (max-width: 640px) { .why-grid { grid-template-columns: 1fr; } }
+    .why-grid .why-card-wide { grid-column: span 2; }
+    .why-grid .why-card-wide h3 { font-size: 22px; }
+    .why-grid .why-card-wide p { font-size: 15.5px; }
+    @media (max-width: 980px) {
+      .why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .why-grid .why-card-wide { grid-column: span 2; }
+    }
+    @media (max-width: 640px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .why-grid .why-card-wide { grid-column: auto; }
+    }
     .why-card {
       background: rgba(255,255,255,0.03);
       border: 1px solid rgba(255,255,255,0.08);
@@ -609,7 +620,7 @@
 
       <div class="hero-ctas">
         <a href="/services.html" class="btn-primary" data-en="See All 50 Services" data-ar="عرض كل الخدمات الـ50">See All 50 Services</a>
-        <a href="/pricing.html" class="btn-ghost" data-en="See Pricing" data-ar="شاهد الأسعار">See Pricing</a>
+        <a href="/pricing.html#tiers" class="btn-ghost" data-en="See Pricing" data-ar="شاهد الأسعار">See Pricing</a>
       </div>
 
       <div class="stat-pill-row">
@@ -627,11 +638,10 @@
   <section id="why" class="full-section">
     <span class="section-pill fade-in" data-en="Why Nova" data-ar="لماذا نوفا">Why Nova</span>
     <h2 class="section-heading fade-in" data-en="Why Dubai Businesses Pick Us" data-ar="لماذا تختارنا شركات دبي">Why Dubai Businesses Pick Us</h2>
-    <p class="section-sub fade-in" data-en="Nine specific reasons clients trust us over a freelancer, an in-house hire, or another agency." data-ar="تسعة أسباب محددة تجعل العملاء يثقون بنا أكثر من المستقلين أو الموظفين الداخليين أو الوكالات الأخرى.">Nine specific reasons clients trust us over a freelancer, an in-house hire, or another agency.</p>
 
     <div class="why-grid">
 
-      <div class="why-card fade-in">
+      <a class="why-card why-card-wide fade-in" href="/why/48-hour-delivery.html">
         <div class="why-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B8FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 15,14"/>
@@ -639,7 +649,8 @@
         </div>
         <h3 data-en="Your chatbot goes live in 48 hours" data-ar="روبوت المحادثة الخاص بك يعمل خلال 48 ساعة">Your chatbot goes live in 48 hours</h3>
         <p data-en="Specific delivery promise. Not vague timelines. Not 'we'll get back to you.' Your systems are live and running within 48 hours of signing." data-ar="وعد تسليم محدد. لا مواعيد غامضة. لا 'سنتواصل معك لاحقاً'. أنظمتك تعمل خلال 48 ساعة من التوقيع.">Specific delivery promise. Not vague timelines. Not "we'll get back to you." Your systems are live and running within 48 hours of signing.</p>
-      </div>
+        <span class="why-card-more" data-en="Learn more →" data-ar="اقرأ المزيد ←">Learn more →</span>
+      </a>
 
       <a class="why-card fade-in" href="/why/algo-trading.html">
         <div class="why-icon">
@@ -664,7 +675,7 @@
         <span class="why-card-more" data-en="Learn more →" data-ar="اقرأ المزيد ←">Learn more →</span>
       </a>
 
-      <div class="why-card fade-in">
+      <a class="why-card fade-in" href="/why/arabic-content.html">
         <div class="why-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B8FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M5 8h14M5 8c0-2 2-4 7-4s7 2 7 4M5 8v8c0 2 2 4 7 4s7-2 7-4V8"/>
@@ -673,7 +684,8 @@
         </div>
         <h3 data-en="Arabic content, natively written" data-ar="محتوى عربي مكتوب أصلياً">Arabic content, natively written</h3>
         <p data-en="Not Google Translated. Real Arabic copy written for UAE and GCC audiences by people who understand the culture, not just the language." data-ar="ليست ترجمة جوجل. محتوى عربي حقيقي مكتوب لجمهور الإمارات والخليج من قبل أشخاص يفهمون الثقافة وليس اللغة فقط.">Not Google Translated. Real Arabic copy written for UAE and GCC audiences by people who understand the culture, not just the language.</p>
-      </div>
+        <span class="why-card-more" data-en="Learn more →" data-ar="اقرأ المزيد ←">Learn more →</span>
+      </a>
 
       <div class="why-card fade-in">
         <div class="why-icon">
@@ -741,7 +753,6 @@
   <section id="about" class="full-section">
     <span class="section-pill fade-in" data-en="Who We Are" data-ar="من نحن">Who We Are</span>
     <h2 class="section-heading fade-in" data-en="Dubai's AI Marketing Agency" data-ar="وكالة دبي للتسويق بالذكاء الاصطناعي">Dubai's AI Marketing Agency</h2>
-    <p class="section-sub fade-in" data-en="Built by engineers. Run on AI. Executed by humans who understand the UAE market." data-ar="بناه مهندسون. يعمل بالذكاء الاصطناعي. ينفذه بشر يفهمون السوق الإماراتي.">Built by engineers. Run on AI. Executed by humans who understand the UAE market.</p>
 
     <div class="about-grid">
       <div class="about-copy fade-in">
@@ -809,7 +820,6 @@
   <section id="services-teaser" class="full-section">
     <span class="section-pill fade-in" data-en="What We Do" data-ar="ما نقدمه">What We Do</span>
     <h2 class="section-heading fade-in" data-en="6 Categories. 50 Services." data-ar="6 فئات. 50 خدمة.">6 Categories. 50 Services.</h2>
-    <p class="section-sub fade-in" data-en="Everything you need to grow, automate, and scale — under one roof." data-ar="كل ما تحتاجه للنمو والأتمتة والتوسع — تحت سقف واحد.">Everything you need to grow, automate, and scale — under one roof.</p>
 
     <div class="teaser-grid">
 
