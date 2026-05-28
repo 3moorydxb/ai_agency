@@ -62,7 +62,7 @@ h1,h2,h3,h4 {
 }
 .page-hero h1, .service-detail-hero h1 {
   font-family: var(--font-head);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 /* Pages without a hero use .page-container as the body wrapper offset */
@@ -1226,7 +1226,7 @@ html[dir="rtl"] .lang-fab-popup { left: auto; right: 24px; }
 .service-detail-hero > * { position: relative; z-index: 1; }
 .service-detail-hero h1 {
   font-size: clamp(36px,6vw,64px);
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: -0.03em;
   margin-bottom: 16px;
   max-width: 820px;
@@ -1583,7 +1583,7 @@ html[dir="rtl"] .how-step { text-align: right; }
 }
 .page-hero h1 {
   font-size: clamp(36px,6vw,68px);
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: -0.03em;
   margin-bottom: 16px;
 }
