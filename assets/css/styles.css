@@ -16,8 +16,11 @@
   --surface-1: rgba(255,255,255,0.04);
   --surface-2: rgba(255,255,255,0.07);
   --border: rgba(255,255,255,0.08);
-  --font-head: 'Space Grotesk', sans-serif;
+  --font-head: 'Clash Display', sans-serif;
+  --font-head-hero: 'Clash Display', sans-serif;
   --font-body: 'Inter', sans-serif;
+  --font-head-weight: 500;
+  --font-head-hero-weight: 600;
   --ease-out: cubic-bezier(0.16,1,0.3,1);
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -39,8 +42,13 @@ body {
 
 h1,h2,h3,h4 {
   font-family: var(--font-head);
+  font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.02em;
+}
+.hero-h1, h1.hero-h1, .page-hero h1, .service-detail-hero h1 {
+  font-family: var(--font-head);
+  font-weight: 600;
 }
 
 /* Pages without a hero use .page-container as the body wrapper offset */
@@ -1061,7 +1069,7 @@ html[dir="rtl"] .skip-link { left: auto; right: 8px; }
 
 /* 404 — extended elements used by the dedicated 404 page */
 .error-404-numeral {
-  font-family: 'Space Grotesk', var(--font-head);
+  font-family: 'Clash Display', var(--font-head);
   font-size: clamp(8rem, 22vw, 18rem);
   font-weight: 700;
   line-height: 1;
