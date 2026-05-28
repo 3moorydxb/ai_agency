@@ -151,6 +151,19 @@
       font-size: 14.5px; line-height: 1.6;
       color: rgba(255,255,255,0.72); margin: 0;
     }
+    /* Clickable why-cards (anchor variant) */
+    a.why-card {
+      display: block; text-decoration: none; color: inherit;
+      cursor: pointer;
+    }
+    a.why-card:hover { border-color: rgba(41,82,217,0.65); }
+    .why-card-more {
+      margin-top: 14px; font-family: 'Space Grotesk', sans-serif;
+      font-size: 12.5px; font-weight: 600; letter-spacing: 0.06em;
+      color: #6B8FFF; display: inline-flex; align-items: center; gap: 6px;
+      transition: gap .2s ease, color .2s ease;
+    }
+    a.why-card:hover .why-card-more { gap: 10px; color: #fff; }
 
     /* ABOUT US two-column */
     .about-grid {
@@ -567,7 +580,7 @@
         <p data-en="Specific delivery promise. Not vague timelines. Not 'we'll get back to you.' Your systems are live and running within 48 hours of signing." data-ar="وعد تسليم محدد. لا مواعيد غامضة. لا 'سنتواصل معك لاحقاً'. أنظمتك تعمل خلال 48 ساعة من التوقيع.">Specific delivery promise. Not vague timelines. Not "we'll get back to you." Your systems are live and running within 48 hours of signing.</p>
       </div>
 
-      <div class="why-card fade-in">
+      <a class="why-card fade-in" href="/why/algo-trading.html">
         <div class="why-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B8FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/>
@@ -575,9 +588,10 @@
         </div>
         <h3 data-en="Built by someone who codes live trading algorithms" data-ar="بناه من يكتب خوارزميات تداول حية">Built by someone who codes live trading algorithms</h3>
         <p data-en="Our CTO built an orderflow trading algorithm running on real futures markets. The same engineering precision goes into every system we build for clients. This is not a marketing team that learned Canva." data-ar="بنى مديرنا التقني خوارزمية تداول orderflow تعمل على أسواق العقود الآجلة الحقيقية. نفس الدقة الهندسية تدخل في كل نظام نبنيه للعملاء. هذا ليس فريق تسويق تعلم Canva.">Our CTO built an orderflow trading algorithm running on real futures markets. The same engineering precision goes into every system we build for clients. This is not a marketing team that learned Canva.</p>
-      </div>
+        <span class="why-card-more" data-en="Learn more →" data-ar="اقرأ المزيد ←">Learn more →</span>
+      </a>
 
-      <div class="why-card fade-in">
+      <a class="why-card fade-in" href="/why/same-ai-we-sell.html">
         <div class="why-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B8FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M12 2a4 4 0 014 4v6a4 4 0 11-8 0V6a4 4 0 014-4z"/>
@@ -586,7 +600,8 @@
         </div>
         <h3 data-en="We run on the same AI we sell" data-ar="نعتمد على نفس الذكاء الاصطناعي الذي نبيعه">We run on the same AI we sell</h3>
         <p data-en="Every chatbot, automation, and workflow we offer clients — we use internally first. You get battle-tested systems, not experiments." data-ar="كل روبوت محادثة وأتمتة وسير عمل نقدمه للعملاء — نستخدمه داخلياً أولاً. تحصل على أنظمة مجربة وليست تجارب.">Every chatbot, automation, and workflow we offer clients — we use internally first. You get battle-tested systems, not experiments.</p>
-      </div>
+        <span class="why-card-more" data-en="Learn more →" data-ar="اقرأ المزيد ←">Learn more →</span>
+      </a>
 
       <div class="why-card fade-in">
         <div class="why-icon">
@@ -632,7 +647,7 @@
         <p data-en="Every password, ad account, content file, and deliverable belongs to you from day one. We never hold your business hostage." data-ar="كل كلمة مرور وحساب إعلانات وملف محتوى ومخرج ينتمي لك من اليوم الأول. لن نحتجز أعمالك أبداً.">Every password, ad account, content file, and deliverable belongs to you from day one. We never hold your business hostage.</p>
       </div>
 
-      <div class="why-card fade-in">
+      <a class="why-card fade-in" href="/why/whatsapp-first.html">
         <div class="why-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B8FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
@@ -640,9 +655,10 @@
         </div>
         <h3 data-en="WhatsApp first, website second" data-ar="واتساب أولاً، الموقع ثانياً">WhatsApp first, website second</h3>
         <p data-en="We built for Dubai. 98% WhatsApp open rates. Our automations are designed around how business actually gets done in the UAE — not how it's done in London or New York." data-ar="بنينا لدبي. معدلات فتح واتساب 98%. أتمتتنا مصممة حول كيفية إنجاز الأعمال فعلياً في الإمارات — وليس كيفية إنجازها في لندن أو نيويورك.">We built for Dubai. 98% WhatsApp open rates. Our automations are designed around how business actually gets done in the UAE — not how it's done in London or New York.</p>
-      </div>
+        <span class="why-card-more" data-en="Learn more →" data-ar="اقرأ المزيد ←">Learn more →</span>
+      </a>
 
-      <div class="why-card fade-in">
+      <a class="why-card fade-in" href="/why/built-with-ai.html">
         <div class="why-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B8FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/>
@@ -651,7 +667,8 @@
         </div>
         <h3 data-en="We don't just use AI — we build with it" data-ar="نحن لا نستخدم الذكاء الاصطناعي فقط — نبني به">We don't just use AI — we build with it</h3>
         <p data-en="Every system is custom-built from scratch using Claude Code and live AI models. No templates. No drag-and-drop tools. Real engineering built specifically for your business." data-ar="كل نظام مبني من الصفر باستخدام Claude Code ونماذج ذكاء اصطناعي حية. لا قوالب. لا أدوات سحب وإفلات. هندسة حقيقية مصممة خصيصاً لعملك.">Every system is custom-built from scratch using Claude Code and live AI models. No templates. No drag-and-drop tools. Real engineering built specifically for your business.</p>
-      </div>
+        <span class="why-card-more" data-en="Learn more →" data-ar="اقرأ المزيد ←">Learn more →</span>
+      </a>
 
     </div>
   </section>
