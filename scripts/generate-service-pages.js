@@ -85,7 +85,7 @@ const SERVICES = [
       ['Personal brands & ecom','Anyone whose buyers live across LinkedIn, Instagram, TikTok and X.'],
     ]
   },
-  { slug:'instagram-only', cat:'content', icon:'instagram',
+  { slug:'instagram-only', cat:'platforms', icon:'instagram',
     name:'Instagram Management', price:'AED 1,200/mo', priceShort:'AED 1,200/mo',
     one:'Standalone Instagram management.',
     desc:'Instagram-only management for businesses where IG is the channel. Feed posts, Reels, Stories, replies and DM handling — all driven by an AI content engine tuned to your audience.',
@@ -99,18 +99,46 @@ const SERVICES = [
       ['Personal brands','Coaches, creators and founders who need a strong personal IG without becoming a full-time content creator.'],
     ]
   },
-  { slug:'youtube-management', cat:'content', icon:'youtube',
-    name:'YouTube Management', price:'AED 2,000/mo', priceShort:'AED 2,000/mo',
-    one:'YouTube channel + thumbnails + descriptions.',
-    desc:'YouTube is search, not social — we treat it that way. SEO-optimised titles, thumbnails A/B tested, descriptions with timestamps and chapters, end-screens that route viewers to your next video. We don\'t shoot for you — we publish, optimise and grow what you create.',
+  { slug:'youtube-shorts', cat:'platforms', icon:'youtube',
+    name:'YouTube Shorts Management', price:'AED 2,000/mo', priceShort:'AED 2,000/mo',
+    one:'Posts, Community tab, and Shorts — published daily on your channel.',
+    desc:'End-to-end YouTube Shorts management — Shorts edited and captioned, SEO-tuned titles and descriptions, Community tab posts, hashtag stacks, and publishing on the cadence your channel needs. Same deliverables family as Instagram and TikTok, applied to YouTube\'s search-and-suggested surface.',
     steps:[
-      ['Brief','Pick your channel niche, content cadence and topics.'],
-      ['Build','For each video: keyword research, titles, 3 thumbnail variants, full description with SEO + CTA.'],
-      ['Launch','Schedule, publish, retitle/re-thumbnail underperformers, monthly analytics review.'],
+      ['Brief','Channel niche, posting cadence, Shorts source (raw footage or long-form to clip), and topics.'],
+      ['Build','For each Short: edit, captions, keyword-tuned title, description with SEO + CTA, hashtag stack.'],
+      ['Launch','Schedule, publish, retitle underperformers, monthly analytics review on views, watch time, and subs.'],
     ],
     who:[
-      ['Coaches & educators','Long-form is your highest-leverage content — but you can\'t SEO it yourself.'],
-      ['Brands moving into YouTube','You shoot 2-4 videos/mo and need them to actually find an audience.'],
+      ['Coaches & educators','Shorts is your highest-leverage discovery surface — but you don\'t have time to cut and SEO them.'],
+      ['Brands cross-posting to YouTube','You already make Reels and TikToks — Shorts compounds on a search-driven platform you\'re ignoring.'],
+    ]
+  },
+  { slug:'tiktok-management', cat:'platforms', icon:'video',
+    name:'TikTok Management', price:'AED 1,500/mo', priceShort:'AED 1,500/mo',
+    one:'Posts, stories, and Reels — daily on your TikTok account.',
+    desc:'Full-service organic TikTok — daily Reels edited and captioned, posts and stories published on cadence, trending audio research, FYP optimisation through hook iteration, hashtag stacks built per video, and comment seeding on your own videos.',
+    steps:[
+      ['Brief','Niche, posting cadence, source footage, trending audio direction, and hashtag lanes.'],
+      ['Build','Edited Reels, captions, trending audio, hashtag stacks per video, story plan, FYP testing strategy.'],
+      ['Launch','Daily/weekly publishing, comment seeding, monthly report on views, completion rate, and FYP entries.'],
+    ],
+    who:[
+      ['D2C brands & local services','FYP discoverability is your cheapest acquisition channel — but you don\'t have time to run it daily.'],
+      ['Personal brands','Founders and creators who want TikTok run as a system instead of a side project.'],
+    ]
+  },
+  { slug:'twitter-x-management', cat:'platforms', icon:'link',
+    name:'X (Twitter) Management', price:'AED 1,500/mo', priceShort:'AED 1,500/mo',
+    one:'Posts and threads published on your X account.',
+    desc:'Full-service X management — daily posts written in your locked voice, weekly long-form threads, profile and pinned-tweet optimisation, replies to relevant conversations, and quote-tweet plays on adjacent accounts. No bot growth, no engagement pods.',
+    steps:[
+      ['Brief','Voice training, topic lanes, profile/bio optimisation, pinned-tweet direction.'],
+      ['Build','Daily post calendar (1-2/day) + 1 long-form thread/week + reply targets list.'],
+      ['Launch','Posts and threads scheduled, replies handled, monthly impressions + follower report.'],
+    ],
+    who:[
+      ['Founders & operators','You think in public-internet voice and X is where your buyers and peers hang out.'],
+      ['SaaS, dev tools, fintech','X is the credibility surface for technical audiences and you can\'t run it on the side.'],
     ]
   },
   { slug:'ugc-video-ads', cat:'content', icon:'video',

@@ -331,10 +331,28 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://novaagency.me/services/youtube-management.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <loc>https://novaagency.me/services/youtube-shorts.html</loc>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://novaagency.me/services/tiktok-management.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://novaagency.me/services/twitter-x-management.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://novaagency.me/services/platform-management.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://novaagency.me/why/algo-trading.html</loc>
