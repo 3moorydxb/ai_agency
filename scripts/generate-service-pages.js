@@ -1035,7 +1035,7 @@ ${NAV({ activeServices:true })}
   <section class="page-hero">
     <span class="section-pill fade-in" data-en="Services" data-ar="الخدمات">Services</span>
     <h1 class="fade-in" data-en="Everything Under One Roof" data-ar="كل ما تحتاجه في مكان واحد"><span class="grad">Everything Under One Roof</span></h1>
-    <p class="lede fade-in" data-en="50 services. AI-powered delivery. Pick a tier or build à la carte.">50 services. AI-powered delivery. Pick a tier or build à la carte.</p>
+    <p class="lede fade-in" data-en="48 services. AI-powered delivery. Pick a tier or build à la carte.">48 services. AI-powered delivery. Pick a tier or build à la carte.</p>
     <div class="hero-ctas fade-in" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
       <a class="btn-primary" href="/pricing.html" data-en="See Pricing">See Pricing →</a>
       <a class="btn-ghost" href="https://wa.me/971544285018" target="_blank" rel="noopener" data-en="Talk to a Human">Talk to a Human</a>
