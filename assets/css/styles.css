@@ -1225,9 +1225,8 @@ html[dir="rtl"] .skip-link { left: auto; right: 8px; }
 }
 .lang-fab-option.active .check { opacity: 1; }
 
-/* RTL adjustments for the floating language toggle */
-html[dir="rtl"] .lang-fab { left: auto; right: 24px; }
-html[dir="rtl"] .lang-fab-popup { left: auto; right: 24px; }
+/* Language toggle stays bottom-LEFT at every viewport regardless of dir.
+   Chat FAB stays bottom-RIGHT. The two never share a corner. No RTL flip. */
 
 /* ═══════════════════════════════════════
    SERVICE DETAIL PAGES
@@ -1816,11 +1815,6 @@ html[dir="rtl"] .how-step { text-align: right; }
     width: 180px;
     max-width: calc(100vw - 32px);
   }
-  /* RTL: in Arabic mode the chat FAB stays on the right, so push the
-     lang FAB to the LEFT on mobile too — opposite-corner layout. */
-  html[dir="rtl"] .lang-fab        { left: 16px; right: auto; }
-  html[dir="rtl"] .lang-fab-popup  { left: 16px; right: auto; }
-
   /* Hero counter (if it ever renders): keep small. */
   .hero-counter .stat-num { font-size: clamp(48px,12vw,72px); }
 
