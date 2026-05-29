@@ -55,7 +55,51 @@ const NOVA_KB = {
     "Platform Management (LinkedIn, Snapchat, TikTok Shop, Google Business Profile)",
     "Performance Marketing (paid ads, email/SMS, cold email, AI SDR, influencer sourcing, SEO/GEO/AEO, analytics)",
     "AI Automation (WhatsApp / workflow / voice agent / booking / RAG management retainers)",
+    "Business Operations (CRM management, PR / press releases)",
     "One-Time Builds (15 fixed-scope deliverables — see prices above)"
+  ],
+  // 33 monthly retainer services live on /services.html. One-time builds live in `one_time_builds` above.
+  // price_aed_per_month: numeric anchor in AED. null = contact for pricing.
+  // price_note: any qualifier — ranges, "+ X%", "+ per-min", "from", etc.
+  services: [
+    // Content & Social (10)
+    { slug: "social-media-2",         name: "Social Media Management — 2 Platforms", category: "Content & Social", description: "Two platforms (any combination of IG, TikTok, X, Facebook, Snapchat, LinkedIn) managed end-to-end.", price_aed_per_month: 2000, price_note: null },
+    { slug: "social-media-4",         name: "Social Media Management — 4 Platforms", category: "Content & Social", description: "Four platforms run in parallel with full content production, scheduling, and reporting under one retainer.", price_aed_per_month: 3500, price_note: null },
+    { slug: "ugc-video-ads",          name: "UGC / Short-Form Video Ads", category: "Content & Social", description: "Twenty short-form video variants per month for paid ads and organic — multiple hooks and edits per concept.", price_aed_per_month: 2500, price_note: null },
+    { slug: "long-form-video",        name: "Long-Form Video Editing + Clips", category: "Content & Social", description: "One long-form video edited monthly plus 20 short-form clips for Reels, TikTok, and Shorts.", price_aed_per_month: 2000, price_note: null },
+    { slug: "daily-content-engine",   name: "Daily Content Engine", category: "Content & Social", description: "Daily faceless lifestyle/luxury content sourced, captioned, and scheduled so the feed never goes dark.", price_aed_per_month: 1200, price_note: "From AED 1,200/mo" },
+    { slug: "ai-content-engine",      name: "AI Content Engine", category: "Content & Social", description: "Four long-form pieces per month — blogs, scripts, newsletters, or launch copy — AI-drafted, human-edited.", price_aed_per_month: 1800, price_note: null },
+    { slug: "ai-image-generation",    name: "AI Image Generation", category: "Content & Social", description: "Custom branded images on demand for posts, ads, product pages, and email.", price_aed_per_month: 500, price_note: null },
+    { slug: "ai-product-photography", name: "AI Product Photography", category: "Content & Social", description: "Studio-quality product photography produced with AI — white-background, lifestyle, and ad variants.", price_aed_per_month: 1200, price_note: null },
+    { slug: "personal-branding",      name: "Personal Branding Management", category: "Content & Social", description: "Strategy, scripts, editing, captions, and scheduling for a founder's personal brand on IG + TikTok.", price_aed_per_month: 2500, price_note: null },
+    { slug: "arabic-content",         name: "Arabic Content Creation", category: "Content & Social", description: "Native Arabic captions, copy, and video scripts written by people who actually speak the language.", price_aed_per_month: 2500, price_note: null },
+    // Platform Management (6)
+    { slug: "platform-management",    name: "Platform Management (single platform)", category: "Platform Management", description: "Pick one platform — IG, TikTok, YouTube Shorts, X, or LinkedIn — and we run it end-to-end.", price_aed_per_month: 1200, price_note: "Range AED 1,200–2,000/mo depending on platform" },
+    { slug: "snapchat",               name: "Snapchat Management", category: "Platform Management", description: "Snapchat content, story management, and audience growth for the young Gulf audience.", price_aed_per_month: 1200, price_note: null },
+    { slug: "tiktok-shop",            name: "TikTok Shop Management", category: "Platform Management", description: "End-to-end TikTok Shop — listings, shoppable content, affiliate creators, live shopping ops.", price_aed_per_month: 2000, price_note: null },
+    { slug: "google-business",        name: "Google Business Profile Optimization", category: "Platform Management", description: "Rank in Google Maps and local search with an ongoing-optimised Google Business Profile.", price_aed_per_month: 800, price_note: null },
+    { slug: "live-streaming",         name: "TikTok Live / Instagram Live Management", category: "Platform Management", description: "Fully produced live shopping streams — scripts, host coordination, tech setup, moderation, reporting.", price_aed_per_month: 1500, price_note: null },
+    { slug: "community-management",   name: "Community Management", category: "Platform Management", description: "WhatsApp groups, Telegram channels, and Discord servers moderated and engaged daily.", price_aed_per_month: 1000, price_note: null },
+    // Performance Marketing (10)
+    { slug: "paid-ads",               name: "Paid Ads Management (Meta + TikTok)", category: "Performance Marketing", description: "Full-service paid ads on Meta and TikTok — structure, creative testing, targeting, bidding, daily optimisation.", price_aed_per_month: 3500, price_note: "AED 3,500/mo + 10% of ad spend (ad spend paid separately)" },
+    { slug: "ai-creative-ads",        name: "AI Creative Production for Paid Ads", category: "Performance Marketing", description: "Endless AI-produced ad creative — dozens of variants per concept across hook, frame, pacing, caption, thumbnail.", price_aed_per_month: 2500, price_note: null },
+    { slug: "email-sms",              name: "Email & SMS Marketing", category: "Performance Marketing", description: "Klaviyo/Mailchimp setup and ongoing flows (welcome, abandoned cart, win-back) plus one weekly broadcast.", price_aed_per_month: 2500, price_note: null },
+    { slug: "whatsapp-broadcasts",    name: "WhatsApp Broadcast Campaigns", category: "Performance Marketing", description: "Segmented WhatsApp lists, Meta-approved templates, opt-in compliance, and rate-controlled broadcasts.", price_aed_per_month: 1500, price_note: null },
+    { slug: "cold-email",             name: "Cold Email / Outbound Lead Gen", category: "Performance Marketing", description: "500 qualified prospects sourced and sequenced monthly from warmed secondary domains.", price_aed_per_month: 3000, price_note: null },
+    { slug: "ai-sdr",                 name: "AI SDR / Sales Agent", category: "Performance Marketing", description: "Always-on AI sales rep qualifying inbound on WhatsApp/email, booking calls, and handing off warm convos.", price_aed_per_month: 2500, price_note: null },
+    { slug: "influencer-sourcing",    name: "Influencer & UGC Sourcing", category: "Performance Marketing", description: "Three vetted UAE creators monthly — niche-matched, audience-verified, rate-negotiated, brief-handled.", price_aed_per_month: 2000, price_note: null },
+    { slug: "seo-geo-aeo",            name: "SEO + GEO + AEO Combined", category: "Performance Marketing", description: "Rank in Google search (SEO), inside ChatGPT/Perplexity answers (GEO), and in Google AI Overviews (AEO).", price_aed_per_month: 4000, price_note: null },
+    { slug: "analytics-dashboard",    name: "Analytics Dashboard Management", category: "Performance Marketing", description: "Paid, organic, email, CRM, web, and revenue metrics in one dashboard — weekly refresh, monthly review call.", price_aed_per_month: 1500, price_note: null },
+    { slug: "reputation-management",  name: "Reputation Management", category: "Performance Marketing", description: "Google reviews program — automated review prompts via WhatsApp/email plus written responses to every review.", price_aed_per_month: 1200, price_note: null },
+    // AI Automation — Monthly Management (5)
+    { slug: "whatsapp-automation-mgmt", name: "WhatsApp Automation Management", category: "AI Automation", description: "Ongoing tuning of your WhatsApp Business chatbot post-build — flows, knowledge base, handoff rules.", price_aed_per_month: 1500, price_note: null },
+    { slug: "workflow-automation-mgmt", name: "Workflow Automation Management", category: "AI Automation", description: "Monitoring and maintenance of n8n/Make/Zapier workflows — error handling, retries, integrations.", price_aed_per_month: 1500, price_note: null },
+    { slug: "voice-agent-mgmt",         name: "Voice Agent Management", category: "AI Automation", description: "Ongoing tuning of your AI voice agent — scripts, knowledge base, call audits, monthly performance report.", price_aed_per_month: 1200, price_note: "AED 1,200/mo + AED 0.33 per voice minute used" },
+    { slug: "booking-automation-mgmt",  name: "Booking Automation Management", category: "AI Automation", description: "Quietly maintains your booking flow — calendar sync, reminders, payments, no-show automation, reporting.", price_aed_per_month: 600, price_note: null },
+    { slug: "rag-knowledge-base-mgmt",  name: "RAG Knowledge Base Management", category: "AI Automation", description: "Keeps your AI assistant's knowledge fresh — ingest new docs, retire old, citation spot-checks, monthly report.", price_aed_per_month: 800, price_note: null },
+    // Business Operations (2)
+    { slug: "crm-management",         name: "CRM Setup & Management", category: "Business Operations", description: "HubSpot or Zoho CRM set up and managed — pipeline hygiene, enrichment, automations, dashboards, clean-up.", price_aed_per_month: 2000, price_note: null },
+    { slug: "pr-press-releases",      name: "PR & Press Releases", category: "Business Operations", description: "UAE media placement — pitch dev, press release drafting, journalist relationships, monthly distribution.", price_aed_per_month: 2500, price_note: null }
   ]
 };
 
@@ -90,6 +134,12 @@ function buildSystemPrompt(lang) {
   const builds = kb.one_time_builds.map(b => `- ${b.name}: AED ${b.price_aed}`).join("\n");
   const pay = kb.payment_options.map(p => `- ${p}`).join("\n");
   const cats = kb.service_categories.map(c => `- ${c}`).join("\n");
+  const services = kb.services.map(s => {
+    const price = s.price_aed_per_month == null
+      ? (s.price_note || "Contact for pricing")
+      : (s.price_note || `AED ${s.price_aed_per_month.toLocaleString()}/mo`);
+    return `- [${s.category}] ${s.name}: ${price} — ${s.description}`;
+  }).join("\n");
 
   const langRule = lang === "ar"
     ? "Reply in Arabic. Use clean Modern Standard Arabic with a warm, direct tone."
@@ -113,11 +163,17 @@ ${pay}
 Service categories (full list available at /services.html):
 ${cats}
 
+Individual monthly services (33 retainers — cite exact prices when asked about a specific service):
+${services}
+
 One-time builds (15 total, see /pricing.html#builds):
 ${builds}
 
 Rules:
 - Recommend the cheapest tier that fits the user's described needs. Default first-time ecom owners to Launch (AED 1,200/mo) or the Shopify Starter Pack (AED 4,500 flat).
+- When the user asks about a specific monthly service, find it in the individual services list above and cite the exact price and short description. Do not improvise prices or features.
+- If a service's price is "Contact for pricing" or has a range note, tell the user it's case-by-case and offer the contact handoff (WhatsApp ${kb.agency.contact.whatsapp} or ${kb.agency.contact.contact_page}).
+- Paid Ads is AED 3,500/mo + 10% of ad spend. Voice Agent Management is AED 1,200/mo + AED 0.33 per minute. Always mention these add-ons when quoting those services.
 - Scale tier is not sold until month 3 of a partnership — do not pitch Scale to new prospects.
 - Ad spend is always paid separately by the client. Nova charges management only.
 - For "how long does it take" or scope questions outside this knowledge, hand off to the team via WhatsApp.
