@@ -48,3 +48,12 @@ Daily Snap stories, Spotlight clips, and DM management on Snapchat. Targeted for
 
 ## Tier availability
 Scale. Standalone add-on AED 1,200/mo.
+
+## Reusable Templates
+
+Start from these rather than building from scratch — strip client content, swap `{{PLACEHOLDERS}}`, ship.
+
+- **Vertical Snap flyer (blue gradient, rental/vehicle promo):** [`/Templates/flyers/snapchat-9x16-blue-rental.html`](../Templates/flyers/snapchat-9x16-blue-rental.html)
+- **Vertical Snap flyer (purple gradient, rental/vehicle promo):** [`/Templates/flyers/snapchat-9x16-purple-rental.html`](../Templates/flyers/snapchat-9x16-purple-rental.html)
+
+Both are 9:16 single-page HTML, screenshot directly from a 1080×1920 viewport for the Snap upload. See `/Templates/README.md` for naming conventions when you save a new flyer template.
