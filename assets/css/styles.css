@@ -1878,7 +1878,7 @@ html[dir="rtl"] .nav-links { flex-direction: row-reverse; }
 ═══════════════════════════════════════════════════════════════════════ */
 .nova-chat-fab {
   position: fixed;
-  bottom: 96px;
+  bottom: 24px;
   right: 24px;
   z-index: 92;
   width: 56px; height: 56px;
@@ -2050,10 +2050,10 @@ html[dir="rtl"] .nav-links { flex-direction: row-reverse; }
   border-bottom-right-radius: 6px;
 }
 
-/* Mobile — chat lifts above lang FAB, panel slides to bottom sheet */
+/* Mobile — chat and lang FAB sit at the same Y on opposite sides; panel slides to bottom sheet */
 @media (max-width: 768px) {
   .nova-chat-fab {
-    bottom: 88px;
+    bottom: 16px;
     right: 16px;
     width: 52px; height: 52px;
   }

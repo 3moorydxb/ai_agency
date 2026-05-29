@@ -145,9 +145,15 @@
   }
 
   function initLangToggle() {
-    // Apply stored preference (default EN). Applied as early as DOM ready.
-    var stored = getStoredLang() || 'en';
-    applyLang(stored);
+    // First visit (no stored preference) → explicitly persist 'en' so the
+    // default is captured permanently and the lang state is never ambiguous.
+    // Returning visitors get whatever they last chose.
+    var stored = getStoredLang();
+    if (stored === null) {
+      setLang('en');
+    } else {
+      applyLang(stored);
+    }
 
     var fab = document.getElementById('lang-fab');
     var popup = document.getElementById('lang-fab-popup');
