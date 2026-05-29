@@ -1790,12 +1790,15 @@ html[dir="rtl"] .how-step { text-align: right; }
   .faq-answer-inner { font-size: 14.5px; padding: 0 18px 18px; line-height: 1.7; }
 
   /* ── LANGUAGE FAB ─────────────────────────────────────────────
-     CRITICAL: desktop sets `left: 24px`. On mobile we MUST clear it
-     before setting `right` — otherwise `position: fixed` with both
-     left+right stretches the pill the full width of the viewport. */
+     LTR mobile: stays bottom-LEFT so it does not collide with the
+     chat FAB (which lives bottom-right at the same Y). Earlier passes
+     flipped this to `right: 16px`, which stacked both FABs on top of
+     each other on iPhone. Width is constrained (`width: auto; max-width`)
+     so explicit `left + right` is no longer needed to prevent the
+     full-width-stretch bug. */
   .lang-fab {
-    left: auto;
-    right: 16px;
+    left: 16px;
+    right: auto;
     bottom: 16px;
     padding: 10px 14px;
     font-size: 13px;
@@ -1807,13 +1810,14 @@ html[dir="rtl"] .how-step { text-align: right; }
   }
   .lang-fab svg { width: 14px; height: 14px; }
   .lang-fab-popup {
-    left: auto;
-    right: 16px;
+    left: 16px;
+    right: auto;
     bottom: 70px;
     width: 180px;
     max-width: calc(100vw - 32px);
   }
-  /* RTL: mirror to bottom-left. Override desktop RTL too. */
+  /* RTL: in Arabic mode the chat FAB stays on the right, so push the
+     lang FAB to the LEFT on mobile too — opposite-corner layout. */
   html[dir="rtl"] .lang-fab        { left: 16px; right: auto; }
   html[dir="rtl"] .lang-fab-popup  { left: 16px; right: auto; }
 
