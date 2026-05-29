@@ -113,6 +113,10 @@
     // Swap every element that has BOTH data-en and data-ar attributes.
     // Elements without data-ar stay in English by design.
     document.querySelectorAll('[data-en][data-ar]').forEach(function (el) {
+      // Skip elements that contain child markup (e.g. the hero <h1> with its
+      // gradient <span class="grad">). Using textContent on them would destroy
+      // the inner markup and strip the gradient. Leaf text nodes translate as before.
+      if (el.children.length > 0) return;
       var next = el.getAttribute(lang === 'ar' ? 'data-ar' : 'data-en');
       if (next != null) el.textContent = next;
     });

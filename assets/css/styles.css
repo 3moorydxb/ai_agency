@@ -407,10 +407,14 @@ h3, h4 {
   animation: heroUp 0.8s var(--ease-out) 0.25s forwards;
 }
 .hero-h1 .grad {
+  /* Solid color first as a fallback: if background-clip:text fails to paint
+     (older Safari/Firefox states, pre-paint flash), the text stays visible
+     instead of rendering transparent on the dark hero. */
+  color: var(--light-blue);
   background: linear-gradient(135deg,#6B8FFF 0%,#3B6FFF 50%,#1E3FB8 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-sub {
