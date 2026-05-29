@@ -1150,13 +1150,19 @@ html[dir="rtl"] .skip-link { left: auto; right: 8px; }
   bottom: 24px;
   left: 24px;
   z-index: 90;
+  /* Fixed width so the button doesn't grow when the label switches
+     from "EN" (short) to "عربية" (wider). Without this the right edge
+     moves on every toggle and reads like the button is "swapping sides". */
+  width: 92px;
+  height: 40px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   background: #0a0a18;
   border: 1px solid rgba(107,143,255,0.3);
   color: #ffffff;
-  padding: 0.5rem 0.9rem;
+  padding: 0 14px;
   border-radius: 999px;
   font-family: var(--font-body);
   font-size: 0.85rem;
@@ -1799,12 +1805,11 @@ html[dir="rtl"] .how-step { text-align: right; }
     left: 16px;
     right: auto;
     bottom: 16px;
-    padding: 10px 14px;
+    padding: 0 12px;
     font-size: 13px;
-    min-width: 64px;
-    min-height: 44px;
-    width: auto;
-    max-width: 120px;
+    /* Locked fixed width on mobile too — same reason as desktop. */
+    width: 88px;
+    height: 44px;
     justify-content: center;
   }
   .lang-fab svg { width: 14px; height: 14px; }
@@ -1844,7 +1849,7 @@ html[dir="rtl"] .how-step { text-align: right; }
   .service-card    { padding: 18px 16px; }
   .why-card        { padding: 20px 16px; }
   .stat-pill       { font-size: 11.5px; padding: 6px 11px; }
-  .lang-fab        { padding: 9px 12px; font-size: 12.5px; min-width: 60px; max-width: 110px; }
+  .lang-fab        { padding: 0 10px; font-size: 12.5px; width: 80px; height: 40px; }
   .full-section    { padding: clamp(44px,9vw,64px) 18px; }
   .page-hero       { padding: clamp(56px,10vw,76px) 18px clamp(28px,6vw,44px); }
 }
@@ -2065,13 +2070,10 @@ html[dir="rtl"] .nav-links { flex-direction: row-reverse; }
   }
 }
 
-/* In RTL mode, lang FAB lives on the right — keep chat FAB on the right too (above it) */
-html[dir="rtl"] .nova-chat-fab { right: 24px; left: auto; }
-html[dir="rtl"] .nova-chat-panel { right: 24px; left: auto; }
-@media (max-width: 768px) {
-  html[dir="rtl"] .nova-chat-fab { right: 16px; left: auto; }
-  html[dir="rtl"] .nova-chat-panel { right: 0; left: 0; }
-}
+/* Lang FAB always bottom-left, Chat FAB always bottom-right, regardless of
+   dir. Both have explicit left/right values in their default rules so no
+   RTL overrides are needed. The bottom-sheet chat panel on mobile is full
+   width via inset, so it inherits naturally in either direction. */
 
 /* Reduced motion — disable slide, fade only */
 @media (prefers-reduced-motion: reduce) {
