@@ -15,8 +15,8 @@
 | Long-Form Video Editing + Clips | 1 long-form video edited + 20 short-form clips per month. | AED 2,000/mo |
 | Daily Content Engine | Daily faceless lifestyle / luxury content, sourced + captioned + scheduled. | From AED 1,200/mo |
 | AI Content Engine | 4 long-form pieces per month, AI-drafted, human-edited. | AED 1,800/mo |
-| AI Image Generation | Custom branded images on demand. | AED 500/mo |
-| AI Product Photography | Studio-quality product photography produced with AI. | AED 1,200/mo |
+| AI Image Generation | Custom branded images on demand. Ongoing retainer or one-time batch. | AED 500/mo · or AED 1,200 batch (~30 images) |
+| AI Product Photography | Studio-quality product photography produced with AI. Ongoing retainer or one-time catalog batch. | AED 1,200/mo · or AED 2,500 batch (~20–30 products) |
 | Personal Branding Management | End-to-end personal brand content on IG + TikTok. | AED 2,500/mo |
 | Arabic Content Creation | Native Arabic copy and video scripts. | AED 2,500/mo |
 

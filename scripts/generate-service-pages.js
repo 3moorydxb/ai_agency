@@ -198,7 +198,7 @@ const SERVICES = [
     ]
   },
   { slug:'ai-image-generation', cat:'content', icon:'image',
-    name:'AI Image Generation', price:'AED 500/mo', priceShort:'AED 500/mo',
+    name:'AI Image Generation', price:'AED 500/mo · or AED 1,200 batch', priceShort:'AED 500/mo',
     one:'Custom branded images on demand.',
     desc:'Unlimited AI image generation for your brand — social tiles, blog headers, ad creatives, marketing visuals. We train a custom model on your brand and deliver on-demand via a shared queue. Up to 50 finished images per month.',
     steps:[
@@ -212,7 +212,7 @@ const SERVICES = [
     ]
   },
   { slug:'ai-product-photography', cat:'content', icon:'image',
-    name:'AI Product Photography', price:'AED 1,200/mo', priceShort:'AED 1,200/mo',
+    name:'AI Product Photography', price:'AED 1,200/mo · or AED 2,500 batch', priceShort:'AED 1,200/mo',
     one:'Ecom + Shopify product photos via AI.',
     desc:'AI-generated product photography for ecommerce. Send us your existing product shot — we generate 10 lifestyle, studio and seasonal variants per product per month. Built for Shopify, Amazon and Meta feeds.',
     steps:[

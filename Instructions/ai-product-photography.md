@@ -42,6 +42,7 @@ Drive folder per product. Plus a contact sheet (PDF) showing all variants so the
 - White-background shots truly white (#FFFFFF check)
 
 ## Tier availability
-Standalone — priced ad-hoc or as part of Shopify Starter Pack / Shopify store build.
 
-Pricing: Contact for pricing — quoted case-by-case based on scope. The Nova website lists this service as "Contact for pricing" rather than a published number. Standard quote turnaround: 24h after a scoping call.
+Standalone — **AED 1,200/mo ongoing** (recurring batch each month) or **AED 2,500 one-time catalog batch** (~20-30 products delivered once).
+
+Also bundled into the Shopify Starter Pack and Shopify Store Build deliverables.

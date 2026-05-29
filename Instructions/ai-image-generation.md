@@ -43,4 +43,7 @@ Drive folder link with all images delivered, labeled by use case. For one-off re
 - Resolution adequate for use case (no IG-quality images for billboards)
 
 ## Tier availability
-Standalone add-on AED 500/mo. Included implicitly in Foundation+ as part of post production.
+
+Standalone — **AED 500/mo ongoing** (recurring batch each month) or **AED 1,200 one-time batch** (~30 images delivered once).
+
+Included implicitly in Foundation+ as part of post production.
