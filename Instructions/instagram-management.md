@@ -58,4 +58,4 @@ Focused Instagram-only management: feed posts, Reels, Stories, DMs, and growth s
 - Reels native (no TikTok watermarks)
 
 ## Tier availability
-Standalone add-on under Platform Management — see `platform-management.md`. AED 1,200–2,000/mo (varies by platform — see Platform Management overview).
+Standalone add-on under Social Media Management — 1 Platform. See `platform-management.md`. AED 1,200–1,800/mo (varies by platform — see the 1-Platform overview).

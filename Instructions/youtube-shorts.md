@@ -57,4 +57,4 @@ Shorts-only YouTube channel operation. 60-second vertical (9:16) videos, 3-5 upl
 - Pinned comment set, top-10 replies done within 24h
 
 ## Tier availability
-Standalone add-on under Platform Management — see `platform-management.md`. AED 1,200–2,000/mo (varies by cadence — 3/week vs 5/week).
+Standalone add-on under Social Media Management — 1 Platform. See `platform-management.md`. AED 1,200–1,800/mo (varies by cadence — 3/week vs 5/week).

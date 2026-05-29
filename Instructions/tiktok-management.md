@@ -75,4 +75,4 @@ Full TikTok account operation: feed posts (3-5/week), Stories cadence, on-trend 
 - No `#fyp` / `#foryou` / `#viral` in tag stacks
 
 ## Tier availability
-Standalone add-on under Platform Management — see `platform-management.md`. AED 1,200–2,000/mo (varies by cadence — 3/week vs 5/week).
+Standalone add-on under Social Media Management — 1 Platform. See `platform-management.md`. AED 1,200–1,800/mo (varies by cadence — 3/week vs 5/week).
