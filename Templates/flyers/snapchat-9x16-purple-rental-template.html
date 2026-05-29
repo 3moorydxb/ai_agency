@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{BRAND_NAME}} Rental - {{VEHICLE_MODEL}}</title>
+<!--
+  Snapchat 9:16 flyer template — Purple gradient, rental/vehicle promo,
+  with electric-product badge variant. 1080 x 1920.
+
+  Find/replace placeholders (13):
+    {{BRAND_NAME}}       — e.g. UBJS
+    {{TAGLINE}}          — e.g. Rental · Dubai, UAE
+    {{BADGE_LABEL}}      — e.g. "100% Electric"  (top-right pill above Snap handle)
+    {{SNAP_HANDLE}}      — e.g. @ubjsrental
+    {{VEHICLE_BRAND}}    — e.g. Surron
+    {{VEHICLE_MODEL}}    — e.g. ULTRA BEE  (kept short — clamps font at 200px)
+    {{LOCATION}}         — e.g. Dubai
+    {{FEATURE_1..5}}     — 5 short tags with emoji (e.g. "⚡ Electric")
+    {{DURATION_1..3}}    — e.g. 1 Day / Weekend / 1 Week
+    {{PRICE_1..3}}       — number only; currency label below
+    {{CURRENCY_1..3}}    — e.g. AED / Sat-Sun / AED · 7 Days
+    {{INCLUDE_1..3}}     — e.g. Helmet / Low Hours / Well Maintained
+    {{CTA_SUBTITLE}}     — e.g. Book on Snapchat
+    {{CTA_LABEL}}        — e.g. BOOK NOW →
+
+  Color scheme stays as-is (reusable). If FEATURE_1 should be highlighted
+  green (matches the electric badge), give it class="tag green". Mid price
+  box (.hero-price) is the featured tier.
+
+  If the product isn't electric, remove the entire .electric-badge div
+  from the top-right (or repurpose with another category badge).
+-->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+
+  .flyer {
+    width: 1080px; height: 1920px;
+    position: relative; overflow: hidden;
+    background: linear-gradient(160deg, #060208 0%, #0f0318 40%, #030008 100%);
+  }
+
+  .grid-bg {
+    position: absolute; inset: 0; z-index: 1; opacity: 0.03;
+    background-image:
+      linear-gradient(rgba(150,0,255,1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(150,0,255,1) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  .glow {
+    position: absolute; z-index: 2;
+    width: 1000px; height: 1000px;
+    background: radial-gradient(ellipse, rgba(120,0,220,0.18) 0%, transparent 65%);
+    top: 25%; left: 50%; transform: translateX(-50%);
+  }
+  .glow2 {
+    position: absolute; z-index: 2;
+    width: 600px; height: 600px;
+    background: radial-gradient(ellipse, rgba(0,200,100,0.08) 0%, transparent 65%);
+    bottom: 10%; right: 0%;
+  }
+
+  .diag-line {
+    position: absolute; z-index: 3;
+    width: 2px; height: 900px;
+    background: linear-gradient(180deg, transparent, rgba(140,0,255,0.3), transparent);
+    top: 400px; left: 80px; transform: rotate(-15deg);
+  }
+  .diag-line2 {
+    position: absolute; z-index: 3;
+    width: 1px; height: 600px;
+    background: linear-gradient(180deg, transparent, rgba(0,200,100,0.2), transparent);
+    top: 600px; right: 100px; transform: rotate(15deg);
+  }
+
+  .top-accent {
+    position: absolute; top: 0; left: 0; right: 0; height: 4px; z-index: 10;
+    background: linear-gradient(90deg, transparent, #7C3AED, #10B981, #7C3AED, transparent);
+  }
+  .bottom-accent {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 4px; z-index: 10;
+    background: linear-gradient(90deg, transparent, #7C3AED, #10B981, #7C3AED, transparent);
+  }
+
+  .content {
+    position: absolute; inset: 0; z-index: 10;
+    display: flex; flex-direction: column;
+    padding: 80px 72px 80px;
+  }
+
+  .top-row {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 80px;
+  }
+  .brand-block { display: flex; flex-direction: column; gap: 6px; }
+  .brand-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px; color: #fff; letter-spacing: 6px; line-height: 1;
+  }
+  .brand-divider {
+    width: 48px; height: 2px;
+    background: linear-gradient(90deg, #7C3AED, transparent); margin: 6px 0;
+  }
+  .brand-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; font-weight: 600;
+    color: rgba(255,255,255,0.35); letter-spacing: 5px; text-transform: uppercase;
+  }
+
+  .right-badges { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
+  .electric-badge {
+    display: flex; align-items: center; gap: 8px;
+    border: 1px solid rgba(16,185,129,0.3);
+    background: rgba(16,185,129,0.08);
+    border-radius: 6px; padding: 10px 18px;
+  }
+  .elec-dot {
+    width: 10px; height: 10px; background: #10B981; border-radius: 50%;
+    animation: blink 1.5s infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .elec-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px; font-weight: 700; color: #10B981; letter-spacing: 2px; text-transform: uppercase;
+  }
+  .snap-pill {
+    display: flex; align-items: center; gap: 10px;
+    border: 1px solid rgba(255,252,0,0.3);
+    background: rgba(255,252,0,0.08);
+    border-radius: 100px; padding: 12px 24px;
+  }
+  .snap-dot { width: 10px; height: 10px; background: #FFFC00; border-radius: 50%; }
+  .snap-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px; font-weight: 700; color: #FFFC00; letter-spacing: 1px;
+  }
+
+  .hero-block {
+    text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center;
+    margin-bottom: 60px;
+  }
+  .vehicle-type {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px; font-weight: 700;
+    color: #A78BFA; letter-spacing: 10px; text-transform: uppercase;
+    display: block; margin-bottom: 10px;
+  }
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 200px; line-height: 0.85;
+    background: linear-gradient(180deg, #ffffff 0%, #C4B5FD 55%, #7C3AED 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; letter-spacing: 4px;
+    filter: drop-shadow(0 0 80px rgba(124,58,237,0.6));
+    display: block;
+  }
+  .hero-sub {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px; color: rgba(255,255,255,0.3);
+    letter-spacing: 12px; display: block; margin-top: 12px;
+  }
+
+  .section-divider {
+    width: 100%; height: 1px; margin: 40px 0;
+    background: linear-gradient(90deg, transparent, rgba(124,58,237,0.3), transparent);
+  }
+
+  .tags-row {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 60px;
+  }
+  .tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: rgba(255,255,255,0.45);
+    border: 1px solid rgba(255,255,255,0.09);
+    background: rgba(255,255,255,0.03);
+    border-radius: 6px; padding: 10px 18px;
+  }
+  .tag.green {
+    color: rgba(16,185,129,0.8); border-color: rgba(16,185,129,0.2);
+    background: rgba(16,185,129,0.05);
+  }
+
+  .pricing-row {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px; margin-bottom: 60px;
+  }
+  .price-box {
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.03);
+    border-radius: 16px; padding: 32px 16px 26px;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .price-box.hero-price {
+    border-color: rgba(124,58,237,0.4);
+    background: rgba(124,58,237,0.12);
+    box-shadow: 0 0 50px rgba(124,58,237,0.18), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .price-box.hero-price::after {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, #7C3AED, transparent);
+  }
+  .p-duration {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: rgba(255,255,255,0.35);
+    margin-bottom: 12px; display: block;
+  }
+  .p-amount {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 90px; color: #fff; line-height: 1; letter-spacing: 2px; display: block;
+  }
+  .price-box.hero-price .p-amount { color: #C4B5FD; }
+  .p-currency {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px; font-weight: 600;
+    color: rgba(255,255,255,0.26); letter-spacing: 2px;
+  }
+
+  .includes-row {
+    display: flex; justify-content: center; gap: 36px; margin-bottom: 60px;
+  }
+  .inc { display: flex; align-items: center; gap: 10px; }
+  .inc-line { width: 20px; height: 1px; background: #7C3AED; }
+  .inc-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; font-weight: 600;
+    color: rgba(255,255,255,0.38); letter-spacing: 2px; text-transform: uppercase;
+  }
+
+  .cta-block { text-align: center; }
+  .cta-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px; font-weight: 600;
+    color: rgba(255,255,255,0.28); letter-spacing: 4px; text-transform: uppercase;
+    margin-bottom: 20px; display: block;
+  }
+  .cta-btn {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px; color: #fff; letter-spacing: 4px;
+    background: linear-gradient(135deg, #5B21B6, #7C3AED);
+    border: none; border-radius: 100px;
+    padding: 22px 80px; cursor: pointer;
+    box-shadow: 0 0 50px rgba(124,58,237,0.5);
+    display: inline-block;
+  }
+  .location-tag {
+    margin-top: 24px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; font-weight: 600;
+    color: rgba(255,255,255,0.18); letter-spacing: 5px; text-transform: uppercase;
+    display: block;
+  }
+</style>
+</head>
+<body>
+<div class="flyer">
+  <div class="grid-bg"></div>
+  <div class="glow"></div>
+  <div class="glow2"></div>
+  <div class="diag-line"></div>
+  <div class="diag-line2"></div>
+  <div class="top-accent"></div>
+  <div class="bottom-accent"></div>
+
+  <div class="content">
+    <div class="top-row">
+      <div class="brand-block">
+        <span class="brand-name">{{BRAND_NAME}}</span>
+        <div class="brand-divider"></div>
+        <span class="brand-sub">{{TAGLINE}}</span>
+      </div>
+      <div class="right-badges">
+        <div class="electric-badge">
+          <div class="elec-dot"></div>
+          <span class="elec-text">{{BADGE_LABEL}}</span>
+        </div>
+        <div class="snap-pill">
+          <div class="snap-dot"></div>
+          <span class="snap-text">{{SNAP_HANDLE}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-block">
+      <span class="vehicle-type">{{VEHICLE_BRAND}}</span>
+      <span class="hero-title">{{VEHICLE_MODEL}}</span>
+      <span class="hero-sub">For Rent · {{LOCATION}}</span>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="tags-row">
+      <div class="tag green">{{FEATURE_1}}</div>
+      <div class="tag">{{FEATURE_2}}</div>
+      <div class="tag">{{FEATURE_3}}</div>
+      <div class="tag">{{FEATURE_4}}</div>
+      <div class="tag">{{FEATURE_5}}</div>
+    </div>
+
+    <div class="pricing-row">
+      <div class="price-box">
+        <span class="p-duration">{{DURATION_1}}</span>
+        <span class="p-amount">{{PRICE_1}}</span>
+        <span class="p-currency">{{CURRENCY_1}}</span>
+      </div>
+      <div class="price-box hero-price">
+        <span class="p-duration">{{DURATION_2}}</span>
+        <span class="p-amount">{{PRICE_2}}</span>
+        <span class="p-currency">{{CURRENCY_2}}</span>
+      </div>
+      <div class="price-box">
+        <span class="p-duration">{{DURATION_3}}</span>
+        <span class="p-amount">{{PRICE_3}}</span>
+        <span class="p-currency">{{CURRENCY_3}}</span>
+      </div>
+    </div>
+
+    <div class="includes-row">
+      <div class="inc"><div class="inc-line"></div><span class="inc-text">{{INCLUDE_1}}</span></div>
+      <div class="inc"><div class="inc-line"></div><span class="inc-text">{{INCLUDE_2}}</span></div>
+      <div class="inc"><div class="inc-line"></div><span class="inc-text">{{INCLUDE_3}}</span></div>
+    </div>
+
+    <div class="cta-block">
+      <span class="cta-sub">{{CTA_SUBTITLE}}</span>
+      <div class="cta-btn">{{CTA_LABEL}}</div>
+      <span class="location-tag">📍 {{LOCATION}}, UAE</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

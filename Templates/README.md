@@ -32,6 +32,29 @@ Rules:
 - `[format]` second (aspect ratio for visual assets, function for code).
 - `[style]` last — short, descriptive, one or two words.
 
+## Two versions per deliverable: real + template
+
+For every deliverable, save **both** the original-with-client-content and a
+placeholder version next to it:
+
+- `[name].html` — the **real delivered version** with the actual client
+  content, branding, and prices. Acts as a reference for what shipped
+  and what worked.
+- `[name]-template.html` — the **placeholder version** for reuse. Same
+  layout and styling, with all client-specific text replaced by
+  `{{PLACEHOLDERS}}` and a comment block at the top of the file listing
+  every placeholder and what it means.
+
+Examples:
+- `snapchat-9x16-blue-rental.html` — original UBJS Spark Trixx flyer
+- `snapchat-9x16-blue-rental-template.html` — placeholder version, ready for the next rental client
+- `snapchat-9x16-purple-rental.html` — original UBJS Sur-Ron flyer
+- `snapchat-9x16-purple-rental-template.html` — placeholder version
+
+To reuse: open the `-template.html`, find/replace every `{{PLACEHOLDER}}`,
+save under the new client's working folder, screenshot at the target
+viewport, upload. Do **not** edit the template in place.
+
 ## When you build something new
 
 1. Build it for the client (in their working folder or wherever it lands first).
@@ -49,7 +72,9 @@ and didn't save a template, expect a flag.
 ### flyers/
 
 - `snapchat-9x16-blue-rental.html` — vertical Snap flyer, blue gradient background, rental/vehicle promotion layout. Built 2026-05-29 for UBJS (Spark Trixx).
+- `snapchat-9x16-blue-rental-template.html` — placeholder version of the blue rental flyer. 12 placeholders covering brand, vehicle, location, 5 features, 3 prices + durations + currency labels, 3 includes, CTA. Drop in any rental client.
 - `snapchat-9x16-purple-rental.html` — vertical Snap flyer, purple gradient background, rental/vehicle promotion layout. Built 2026-05-29 for UBJS (Sur-Ron).
+- `snapchat-9x16-purple-rental-template.html` — placeholder version of the purple rental flyer. 13 placeholders (same as blue + an extra `{{BADGE_LABEL}}` for the top-right product badge — defaults to "100% Electric"; remove the `.electric-badge` div if not electric).
 
 ### websites/
 
