@@ -10,7 +10,7 @@ Founders sit on top of everything. Day-to-day delivery runs through the operatin
 |---|---|---|
 | Omar Abusalem | CTO + COO | Yes |
 | Nizar | CEO + CFO | Yes |
-| Karl | CMO | No |
+| Karl | CMO | Yes |
 
 ### Founder responsibilities
 
