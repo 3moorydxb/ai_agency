@@ -1,0 +1,61 @@
+{
+  "name": "Nova Agency Concierge",
+  "version": "0.1.0",
+  "description": "Nova Agency's website concierge — answers questions about Nova's 48 marketing services, 5 pricing tiers, builds, onboarding, and connects visitors to the team. Built on Cloudflare Workers AI (Llama 3.1 8B) with a grounded knowledge base of Nova's tier prices, services, and contact details.",
+  "supportedInterfaces": [
+    {
+      "type": "http",
+      "url": "https://novaagency.me/api/chat",
+      "transport": "https",
+      "protocol": "sse",
+      "method": "POST",
+      "contentType": "application/json",
+      "description": "POST a JSON body with {messages:[{role,content}], lang:'en'|'ar'}. Returns a Server-Sent-Events stream of Llama 3.1 8B tokens."
+    },
+    {
+      "type": "health",
+      "url": "https://novaagency.me/api/chat-health",
+      "transport": "https",
+      "method": "GET",
+      "description": "Returns {ok:true, ai_bound:bool}. Used by clients to confirm the AI binding is live before initiating a chat."
+    }
+  ],
+  "capabilities": [
+    "chat-streaming",
+    "multilingual-en-ar",
+    "grounded-knowledge-base",
+    "pricing-quotes",
+    "service-discovery",
+    "contact-handoff"
+  ],
+  "skills": [
+    {
+      "id": "quote_tier",
+      "name": "Quote a pricing tier",
+      "description": "Recommends and quotes one of Nova's 5 monthly tiers (Launch 1,200 / Spark 3,000 / Foundation 6,000 / Growth 14,000 / Scale 32,000 AED/mo) based on the visitor's described needs."
+    },
+    {
+      "id": "quote_service",
+      "name": "Quote an individual service",
+      "description": "Cites the exact AED price and short description for any of Nova's 48 individual services (33 monthly retainers + 15 one-time builds) from the grounded knowledge base."
+    },
+    {
+      "id": "explain_offering",
+      "name": "Explain the Nova offering",
+      "description": "Explains what Nova is, how it's structured (Content & Social, Specialist Channels, Performance Marketing, AI Automation Mgmt, Client & Business Ops, One-Time Builds), and what makes it different from generic marketing agencies."
+    },
+    {
+      "id": "handoff_human",
+      "name": "Hand off to a human",
+      "description": "When asked something outside the knowledge base or when the visitor wants to start, the agent surfaces WhatsApp +971544285018 and /contact.html for direct contact with the founders."
+    }
+  ],
+  "owner": {
+    "name": "Nova Agency",
+    "url": "https://novaagency.me",
+    "contact": "hello@novaagency.me"
+  },
+  "languages": ["en", "ar"],
+  "documentation": "https://novaagency.me/about",
+  "license": "proprietary"
+}
