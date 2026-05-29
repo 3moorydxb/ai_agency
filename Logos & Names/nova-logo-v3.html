@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova — Logo v3</title>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #050510;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 72px;
+    padding: 80px 40px;
+    font-family: 'Clash Display', sans-serif;
+  }
+
+  .section-label {
+    color: rgba(255,255,255,0.18);
+    font-family: 'Clash Display', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: -52px;
+    align-self: flex-start;
+    padding-left: 8px;
+  }
+
+  .divider {
+    width: 100%;
+    max-width: 520px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  }
+
+  /* ─── 04: Icon Only ─── */
+  .icon-variants {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .icon-dark {
+    width: 72px; height: 72px;
+    background: #08081a;
+    border-radius: 18px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 0 1px rgba(59,111,255,0.2), 0 0 40px rgba(41,82,217,0.15);
+  }
+
+  .icon-blue {
+    width: 72px; height: 72px;
+    background: linear-gradient(135deg, #1D4ED8, #3B6FFF);
+    border-radius: 18px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 32px rgba(59,111,255,0.4);
+  }
+
+  .icon-outline {
+    width: 72px; height: 72px;
+    background: transparent;
+    border-radius: 18px;
+    border: 1.5px solid rgba(59,111,255,0.35);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* ─── 01: Horizontal Primary ─── */
+  .logo-horiz {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .logo-icon-wrap { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .logo-icon-wrap svg { width: 100%; height: 100%; }
+
+  .logo-text-wrap { display: flex; flex-direction: column; gap: 2px; }
+
+  .logo-wordmark {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 34px; font-weight: 600;
+    color: #ffffff; letter-spacing: 1px; line-height: 1;
+    display: flex; align-items: baseline; gap: 1px;
+  }
+  .logo-wordmark .dot { color: #3B6FFF; }
+
+  .logo-sub {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 9px; font-weight: 400;
+    letter-spacing: 5px; color: rgba(255,255,255,0.28); text-transform: uppercase;
+  }
+
+  /* ─── 02: Horizontal with Divider ─── */
+  .logo-horiz-ruled {
+    display: flex; align-items: center; gap: 18px;
+  }
+
+  .ruled-icon { width: 40px; height: 40px; flex-shrink: 0; }
+
+  .ruled-divider {
+    width: 1px; height: 36px;
+    background: rgba(59,111,255,0.3);
+  }
+
+  .ruled-text { display: flex; flex-direction: column; gap: 3px; }
+
+  .ruled-name {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 28px; font-weight: 500;
+    color: #ffffff; letter-spacing: 3px; line-height: 1; text-transform: uppercase;
+  }
+
+  .ruled-tagline {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 8.5px; font-weight: 400;
+    color: #3B6FFF; letter-spacing: 4px; text-transform: uppercase;
+  }
+
+  /* ─── NEW: Social Media Square ─── */
+  .social-variants {
+    display: flex;
+    gap: 32px;
+    align-items: flex-end;
+  }
+
+  .social-label {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 9px; font-weight: 400;
+    letter-spacing: 3px; color: rgba(255,255,255,0.18);
+    text-transform: uppercase; text-align: center;
+    margin-top: 10px;
+  }
+
+  .social-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+
+  /* Large preview */
+  .social-sq-lg {
+    width: 200px; height: 200px;
+    background: #06060f;
+    border-radius: 28px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(59,111,255,0.15), 0 0 60px rgba(41,82,217,0.12);
+  }
+
+  .social-sq-lg::before {
+    content: '';
+    position: absolute;
+    width: 180px; height: 180px;
+    background: radial-gradient(ellipse, rgba(59,111,255,0.12) 0%, transparent 70%);
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+  }
+
+  .social-sq-lg .sq-name {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 22px; font-weight: 600;
+    color: #ffffff; letter-spacing: 3px;
+    line-height: 1; z-index: 1;
+    display: flex; align-items: baseline; gap: 0;
+  }
+  .social-sq-lg .sq-name .dot { color: #3B6FFF; }
+
+  /* Medium preview — as it looks at profile pic size */
+  .social-sq-md {
+    width: 80px; height: 80px;
+    background: #06060f;
+    border-radius: 50%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 4px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(59,111,255,0.2);
+  }
+
+  .social-sq-md::before {
+    content: '';
+    position: absolute;
+    width: 80px; height: 80px;
+    background: radial-gradient(ellipse, rgba(59,111,255,0.15) 0%, transparent 70%);
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+  }
+
+  .social-sq-md .sq-name-sm {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 9px; font-weight: 600;
+    color: #ffffff; letter-spacing: 2px; z-index: 1;
+    display: flex; align-items: baseline;
+  }
+  .social-sq-md .sq-name-sm .dot { color: #3B6FFF; }
+
+  /* Tiny — favicon/notification size */
+  .social-sq-xs {
+    width: 40px; height: 40px;
+    background: #06060f;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 0 1px rgba(59,111,255,0.25);
+  }
+
+  /* ─── 03: Light ─── */
+  .logo-light-wrap {
+    background: #F4F5F9;
+    padding: 32px 48px;
+    display: flex; align-items: center; gap: 16px;
+    border-radius: 4px;
+  }
+
+  .light-icon { width: 38px; height: 38px; }
+
+  .light-wordmark {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 32px; font-weight: 600;
+    color: #050510; letter-spacing: 1px; line-height: 1;
+  }
+  .light-wordmark .dot { color: #3B6FFF; }
+
+  .light-divider { width: 1px; height: 28px; background: rgba(41,82,217,0.25); }
+
+  .light-sub {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 8px; font-weight: 500;
+    letter-spacing: 4px; color: #3B6FFF; text-transform: uppercase;
+  }
+
+  /* ─── 05: Stacked ─── */
+  .logo-stacked {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 8px;
+  }
+
+  .stacked-icon { width: 36px; height: 36px; }
+
+  .stacked-rule {
+    width: 32px; height: 1px;
+    background: linear-gradient(90deg, transparent, #3B6FFF, transparent);
+  }
+
+  .stacked-name {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 22px; font-weight: 600;
+    color: #ffffff; letter-spacing: 6px; text-transform: uppercase; line-height: 1;
+  }
+  .stacked-name .dot { color: #3B6FFF; }
+
+  .stacked-sub {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 7px; font-weight: 400;
+    letter-spacing: 5px; color: rgba(255,255,255,0.22); text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+  <!-- 04 -->
+  <p class="section-label">04 — Icon Only</p>
+  <div class="icon-variants">
+    <div class="icon-dark">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <polyline points="4,32 14,18 22,25 36,8" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline points="28,8 36,8 36,16" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="icon-blue">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <polyline points="4,32 14,18 22,25 36,8" stroke="rgba(255,255,255,0.92)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline points="28,8 36,8 36,16" stroke="rgba(255,255,255,0.92)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="icon-outline">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <polyline points="4,32 14,18 22,25 36,8" stroke="#6B8FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline points="28,8 36,8 36,16" stroke="#6B8FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 01 -->
+  <p class="section-label">01 — Horizontal · Primary</p>
+  <div class="logo-horiz">
+    <div class="logo-icon-wrap">
+      <svg viewBox="0 0 44 44" fill="none">
+        <polyline points="4,34 16,20 23,27 40,8" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline points="32,8 40,8 40,16" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="logo-text-wrap">
+      <div class="logo-wordmark">NOVA<span class="dot">.</span></div>
+      <div class="logo-sub">Agency · Dubai</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 02 -->
+  <p class="section-label">02 — Horizontal · With Divider</p>
+  <div class="logo-horiz-ruled">
+    <svg class="ruled-icon" viewBox="0 0 40 40" fill="none">
+      <polyline points="4,32 14,18 22,25 36,8" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="29,8 36,8 36,15" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="ruled-divider"></div>
+    <div class="ruled-text">
+      <div class="ruled-name">Nova</div>
+      <div class="ruled-tagline">AI Agency · Dubai</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- NEW: Social Square -->
+  <p class="section-label">New — Social Media Profile</p>
+  <div class="social-variants">
+
+    <div class="social-wrap">
+      <div class="social-sq-lg">
+        <svg width="72" height="72" viewBox="0 0 40 40" fill="none" style="z-index:1">
+          <polyline points="4,32 14,18 22,25 36,8" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="28,8 36,8 36,16" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="sq-name">NOVA<span class="dot">.</span></div>
+      </div>
+      <div class="social-label">Full size</div>
+    </div>
+
+    <div class="social-wrap">
+      <div class="social-sq-md">
+        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" style="z-index:1">
+          <polyline points="4,32 14,18 22,25 36,8" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="28,8 36,8 36,16" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="sq-name-sm">NOVA<span class="dot">.</span></div>
+      </div>
+      <div class="social-label">Profile pic</div>
+    </div>
+
+    <div class="social-wrap">
+      <div class="social-sq-xs">
+        <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
+          <polyline points="4,32 14,18 22,25 36,8" stroke="#3B6FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="28,8 36,8 36,16" stroke="#3B6FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="social-label">Favicon</div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 03 -->
+  <p class="section-label">03 — Light Version</p>
+  <div class="logo-light-wrap">
+    <svg class="light-icon" viewBox="0 0 38 38" fill="none">
+      <polyline points="3,30 13,17 21,24 35,7" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="27,7 35,7 35,15" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="light-wordmark">NOVA<span class="dot">.</span></div>
+    <div class="light-divider"></div>
+    <div class="light-sub">Agency</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 05 -->
+  <p class="section-label">05 — Stacked · Compact</p>
+  <div class="logo-stacked">
+    <svg class="stacked-icon" viewBox="0 0 36 36" fill="none">
+      <polyline points="3,28 12,16 19,22 33,6" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="26,6 33,6 33,13" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="stacked-rule"></div>
+    <div class="stacked-name">NOVA<span class="dot">.</span></div>
+    <div class="stacked-sub">Dubai · AI Agency</div>
+  </div>
+
+</body>
+</html>

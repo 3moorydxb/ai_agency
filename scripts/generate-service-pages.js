@@ -28,31 +28,31 @@ const CATEGORIES = [
 
 // Generic chevron icon for services without a custom one
 const ICONS = {
-  default: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8l8 8-8 8" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="13" stroke="#2952D9" stroke-width="2"/></svg>`,
-  social: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="10" r="3" stroke="#2952D9" stroke-width="2.5"/><circle cx="24" cy="10" r="3" stroke="#2952D9" stroke-width="2.5"/><circle cx="16" cy="22" r="3" stroke="#2952D9" stroke-width="2.5"/><path d="M10 12l5 8M22 12l-5 8" stroke="#2952D9" stroke-width="2"/></svg>`,
-  instagram: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="5" width="22" height="22" rx="6" stroke="#2952D9" stroke-width="2.5"/><circle cx="16" cy="16" r="5" stroke="#2952D9" stroke-width="2.5"/><circle cx="22.5" cy="9.5" r="1.5" fill="#2952D9"/></svg>`,
-  youtube: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="8" width="26" height="16" rx="4" stroke="#2952D9" stroke-width="2.5"/><path d="M14 13v6l5-3-5-3z" fill="#2952D9"/></svg>`,
-  video: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="18" height="16" rx="2" stroke="#2952D9" stroke-width="2.5"/><path d="M22 14l6-3v10l-6-3v-4z" stroke="#2952D9" stroke-width="2.5" stroke-linejoin="round"/></svg>`,
-  image: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="6" width="24" height="20" rx="3" stroke="#2952D9" stroke-width="2.5"/><circle cx="12" cy="14" r="2.5" stroke="#2952D9" stroke-width="2"/><path d="M6 22l6-6 5 5 4-4 5 5" stroke="#2952D9" stroke-width="2" stroke-linejoin="round"/></svg>`,
-  text: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 8h20M6 14h20M6 20h14M6 26h10" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round"/></svg>`,
-  chat: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 8a3 3 0 013-3h16a3 3 0 013 3v10a3 3 0 01-3 3h-9l-6 5v-5h-1a3 3 0 01-3-3V8z" stroke="#2952D9" stroke-width="2.5" stroke-linejoin="round"/><circle cx="12" cy="13" r="1.5" fill="#2952D9"/><circle cx="16" cy="13" r="1.5" fill="#2952D9"/><circle cx="20" cy="13" r="1.5" fill="#2952D9"/></svg>`,
-  voice: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="13" y="4" width="6" height="14" rx="3" stroke="#2952D9" stroke-width="2.5"/><path d="M8 14a8 8 0 0016 0M16 22v6M12 28h8" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round"/></svg>`,
-  workflow: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="13" width="8" height="6" rx="1.5" stroke="#2952D9" stroke-width="2.5"/><rect x="21" y="5" width="8" height="6" rx="1.5" stroke="#2952D9" stroke-width="2.5"/><rect x="21" y="21" width="8" height="6" rx="1.5" stroke="#2952D9" stroke-width="2.5"/><path d="M11 16l10-8M11 16l10 8" stroke="#2952D9" stroke-width="2" stroke-linecap="round"/></svg>`,
-  calendar: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="7" width="24" height="21" rx="3" stroke="#2952D9" stroke-width="2.5"/><path d="M4 13h24M10 4v6M22 4v6" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round"/></svg>`,
-  email: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="26" height="18" rx="3" stroke="#2952D9" stroke-width="2.5"/><path d="M5 9l11 9 11-9" stroke="#2952D9" stroke-width="2.5" stroke-linejoin="round"/></svg>`,
-  whatsapp: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4C9 4 4 9.5 4 16c0 2.5.8 4.8 2 6.7L4 28l5.6-1.8c1.9 1 4 1.6 6.4 1.6 7 0 12-5.5 12-12S23 4 16 4z" stroke="#2952D9" stroke-width="2.5" stroke-linejoin="round"/><path d="M12 13c.5 3 3 5.5 6 6 1-.2 2-1 2-2 0-.5-2-1.5-2.5-1-.3.3-.7.5-1 .5-1 0-2.5-1.5-2.5-2.5 0-.3.2-.7.5-1 .5-.5-.5-2.5-1-2.5-1 0-1.5 1-1.5 2.5z" fill="#2952D9"/></svg>`,
-  chart: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 28h24M8 24v-8M14 24v-12M20 24v-6M26 24v-14" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round"/></svg>`,
-  search: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="9" stroke="#2952D9" stroke-width="2.5"/><path d="M21 21l7 7" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round"/></svg>`,
-  star: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4l3.7 7.5L28 12.7l-6 5.8L23.4 27 16 23l-7.4 4L10 18.5l-6-5.8 8.3-1.2L16 4z" stroke="#2952D9" stroke-width="2.5" stroke-linejoin="round"/></svg>`,
-  link: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 18l4-4M11 21l-2 2a4 4 0 01-5.7-5.7l5-5a4 4 0 015.7 0M18 11l2-2a4 4 0 015.7 5.7l-5 5a4 4 0 01-5.7 0" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round"/></svg>`,
-  globe: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="12" stroke="#2952D9" stroke-width="2.5"/><path d="M4 16h24M16 4c4 4 4 20 0 24M16 4c-4 4-4 20 0 24" stroke="#2952D9" stroke-width="2"/></svg>`,
-  build: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 22l8-8 5 5 7-7M22 12h4v4" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
-  shop: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 10h22l-2 16H7L5 10z" stroke="#2952D9" stroke-width="2.5" stroke-linejoin="round"/><path d="M11 10V7a5 5 0 0110 0v3" stroke="#2952D9" stroke-width="2.5"/></svg>`,
-  brand: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4l4 8 8 1-6 6 2 9-8-4-8 4 2-9-6-6 8-1 4-8z" stroke="#2952D9" stroke-width="2.5" stroke-linejoin="round"/></svg>`,
-  rocket: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4c4 0 8 4 8 10v8h-16v-8c0-6 4-10 8-10z" stroke="#2952D9" stroke-width="2.5" stroke-linejoin="round"/><circle cx="16" cy="13" r="2.5" stroke="#2952D9" stroke-width="2"/><path d="M11 22l-3 6M21 22l3 6" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round"/></svg>`,
-  crm: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="11" r="4" stroke="#2952D9" stroke-width="2.5"/><circle cx="22" cy="13" r="3" stroke="#2952D9" stroke-width="2.5"/><path d="M4 26c0-4 4-7 8-7s8 3 8 7M19 26c0-3 3-5 6-5s5 2 5 5" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round"/></svg>`,
-  community: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="4" stroke="#2952D9" stroke-width="2.5"/><circle cx="7" cy="13" r="3" stroke="#2952D9" stroke-width="2.5"/><circle cx="25" cy="13" r="3" stroke="#2952D9" stroke-width="2.5"/><path d="M8 26c0-4 3.5-7 8-7s8 3 8 7" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round"/></svg>`,
-  influencer: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="12" r="5" stroke="#2952D9" stroke-width="2.5"/><path d="M6 28c1-5 5-8 10-8s9 3 10 8" stroke="#2952D9" stroke-width="2.5" stroke-linecap="round"/><path d="M20 4l2 2-2 2M24 4l2 2-2 2" stroke="#2952D9" stroke-width="2" stroke-linecap="round"/></svg>`,
+  default: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8l8 8-8 8" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="13" stroke="#3B6FFF" stroke-width="2"/></svg>`,
+  social: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="10" r="3" stroke="#3B6FFF" stroke-width="2.5"/><circle cx="24" cy="10" r="3" stroke="#3B6FFF" stroke-width="2.5"/><circle cx="16" cy="22" r="3" stroke="#3B6FFF" stroke-width="2.5"/><path d="M10 12l5 8M22 12l-5 8" stroke="#3B6FFF" stroke-width="2"/></svg>`,
+  instagram: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="5" width="22" height="22" rx="6" stroke="#3B6FFF" stroke-width="2.5"/><circle cx="16" cy="16" r="5" stroke="#3B6FFF" stroke-width="2.5"/><circle cx="22.5" cy="9.5" r="1.5" fill="#3B6FFF"/></svg>`,
+  youtube: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="8" width="26" height="16" rx="4" stroke="#3B6FFF" stroke-width="2.5"/><path d="M14 13v6l5-3-5-3z" fill="#3B6FFF"/></svg>`,
+  video: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="18" height="16" rx="2" stroke="#3B6FFF" stroke-width="2.5"/><path d="M22 14l6-3v10l-6-3v-4z" stroke="#3B6FFF" stroke-width="2.5" stroke-linejoin="round"/></svg>`,
+  image: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="6" width="24" height="20" rx="3" stroke="#3B6FFF" stroke-width="2.5"/><circle cx="12" cy="14" r="2.5" stroke="#3B6FFF" stroke-width="2"/><path d="M6 22l6-6 5 5 4-4 5 5" stroke="#3B6FFF" stroke-width="2" stroke-linejoin="round"/></svg>`,
+  text: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 8h20M6 14h20M6 20h14M6 26h10" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round"/></svg>`,
+  chat: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 8a3 3 0 013-3h16a3 3 0 013 3v10a3 3 0 01-3 3h-9l-6 5v-5h-1a3 3 0 01-3-3V8z" stroke="#3B6FFF" stroke-width="2.5" stroke-linejoin="round"/><circle cx="12" cy="13" r="1.5" fill="#3B6FFF"/><circle cx="16" cy="13" r="1.5" fill="#3B6FFF"/><circle cx="20" cy="13" r="1.5" fill="#3B6FFF"/></svg>`,
+  voice: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="13" y="4" width="6" height="14" rx="3" stroke="#3B6FFF" stroke-width="2.5"/><path d="M8 14a8 8 0 0016 0M16 22v6M12 28h8" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round"/></svg>`,
+  workflow: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="13" width="8" height="6" rx="1.5" stroke="#3B6FFF" stroke-width="2.5"/><rect x="21" y="5" width="8" height="6" rx="1.5" stroke="#3B6FFF" stroke-width="2.5"/><rect x="21" y="21" width="8" height="6" rx="1.5" stroke="#3B6FFF" stroke-width="2.5"/><path d="M11 16l10-8M11 16l10 8" stroke="#3B6FFF" stroke-width="2" stroke-linecap="round"/></svg>`,
+  calendar: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="7" width="24" height="21" rx="3" stroke="#3B6FFF" stroke-width="2.5"/><path d="M4 13h24M10 4v6M22 4v6" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round"/></svg>`,
+  email: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="26" height="18" rx="3" stroke="#3B6FFF" stroke-width="2.5"/><path d="M5 9l11 9 11-9" stroke="#3B6FFF" stroke-width="2.5" stroke-linejoin="round"/></svg>`,
+  whatsapp: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4C9 4 4 9.5 4 16c0 2.5.8 4.8 2 6.7L4 28l5.6-1.8c1.9 1 4 1.6 6.4 1.6 7 0 12-5.5 12-12S23 4 16 4z" stroke="#3B6FFF" stroke-width="2.5" stroke-linejoin="round"/><path d="M12 13c.5 3 3 5.5 6 6 1-.2 2-1 2-2 0-.5-2-1.5-2.5-1-.3.3-.7.5-1 .5-1 0-2.5-1.5-2.5-2.5 0-.3.2-.7.5-1 .5-.5-.5-2.5-1-2.5-1 0-1.5 1-1.5 2.5z" fill="#3B6FFF"/></svg>`,
+  chart: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 28h24M8 24v-8M14 24v-12M20 24v-6M26 24v-14" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round"/></svg>`,
+  search: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="9" stroke="#3B6FFF" stroke-width="2.5"/><path d="M21 21l7 7" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round"/></svg>`,
+  star: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4l3.7 7.5L28 12.7l-6 5.8L23.4 27 16 23l-7.4 4L10 18.5l-6-5.8 8.3-1.2L16 4z" stroke="#3B6FFF" stroke-width="2.5" stroke-linejoin="round"/></svg>`,
+  link: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 18l4-4M11 21l-2 2a4 4 0 01-5.7-5.7l5-5a4 4 0 015.7 0M18 11l2-2a4 4 0 015.7 5.7l-5 5a4 4 0 01-5.7 0" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round"/></svg>`,
+  globe: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="12" stroke="#3B6FFF" stroke-width="2.5"/><path d="M4 16h24M16 4c4 4 4 20 0 24M16 4c-4 4-4 20 0 24" stroke="#3B6FFF" stroke-width="2"/></svg>`,
+  build: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 22l8-8 5 5 7-7M22 12h4v4" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  shop: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 10h22l-2 16H7L5 10z" stroke="#3B6FFF" stroke-width="2.5" stroke-linejoin="round"/><path d="M11 10V7a5 5 0 0110 0v3" stroke="#3B6FFF" stroke-width="2.5"/></svg>`,
+  brand: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4l4 8 8 1-6 6 2 9-8-4-8 4 2-9-6-6 8-1 4-8z" stroke="#3B6FFF" stroke-width="2.5" stroke-linejoin="round"/></svg>`,
+  rocket: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4c4 0 8 4 8 10v8h-16v-8c0-6 4-10 8-10z" stroke="#3B6FFF" stroke-width="2.5" stroke-linejoin="round"/><circle cx="16" cy="13" r="2.5" stroke="#3B6FFF" stroke-width="2"/><path d="M11 22l-3 6M21 22l3 6" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round"/></svg>`,
+  crm: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="11" r="4" stroke="#3B6FFF" stroke-width="2.5"/><circle cx="22" cy="13" r="3" stroke="#3B6FFF" stroke-width="2.5"/><path d="M4 26c0-4 4-7 8-7s8 3 8 7M19 26c0-3 3-5 6-5s5 2 5 5" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round"/></svg>`,
+  community: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="4" stroke="#3B6FFF" stroke-width="2.5"/><circle cx="7" cy="13" r="3" stroke="#3B6FFF" stroke-width="2.5"/><circle cx="25" cy="13" r="3" stroke="#3B6FFF" stroke-width="2.5"/><path d="M8 26c0-4 3.5-7 8-7s8 3 8 7" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round"/></svg>`,
+  influencer: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="12" r="5" stroke="#3B6FFF" stroke-width="2.5"/><path d="M6 28c1-5 5-8 10-8s9 3 10 8" stroke="#3B6FFF" stroke-width="2.5" stroke-linecap="round"/><path d="M20 4l2 2-2 2M24 4l2 2-2 2" stroke="#3B6FFF" stroke-width="2" stroke-linecap="round"/></svg>`,
 };
 
 const SERVICES = [
@@ -819,7 +819,10 @@ function head({ title, description, canonical, extraHead='' }) {
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${title}">
   <meta name="twitter:description" content="${description}">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050510'/%3E%3Cpolyline points='4,24 11,14 18,19 28,6' fill='none' stroke='%232952D9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpolyline points='22,6 28,6 28,12' fill='none' stroke='%232952D9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/nova-logo.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/nova-logo-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -837,8 +840,8 @@ const NAV = ({ activeServices=false } = {}) => `
     <a href="/" class="nav-logo" aria-label="Nova Agency home">
       <div class="nav-logo-icon">
         <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <polyline points="4,28 13,16 20,22 32,8" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <polyline points="24,8 32,8 32,16" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="4,28 13,16 20,22 32,8" stroke="#3B6FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="24,8 32,8 32,16" stroke="#3B6FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
       <div class="nav-logo-text">
@@ -885,8 +888,8 @@ const FOOTER = `
       <a href="/" class="footer-logo" aria-label="Nova Agency home">
         <div class="nav-logo-icon">
           <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <polyline points="4,28 13,16 20,22 32,8" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <polyline points="24,8 32,8 32,16" stroke="#2952d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="4,28 13,16 20,22 32,8" stroke="#3B6FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="24,8 32,8 32,16" stroke="#3B6FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <span class="nav-logo-name">NOVA<span class="dot">.</span></span>
