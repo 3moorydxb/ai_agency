@@ -19,7 +19,7 @@ const SERVICES_DIR = path.join(ROOT, 'services');
 
 const CATEGORIES = [
   { id: 'content',     pill: 'Content & Social',        heading: 'Content & Social',                        sub: '12 services covering social media, video, AI-generated content, and Arabic-native copy.' },
-  { id: 'platforms',   pill: 'Platform Management',     heading: 'Platform Management',                     sub: '6 standalone platform-specific services for niche channels.' },
+  { id: 'platforms',   pill: 'Specialist Channels',     heading: 'Specialist Channels',                     sub: '5 standalone retainers for niche channels — Snapchat, TikTok Shop, GBP, live shopping, community.' },
   { id: 'performance', pill: 'Performance Marketing',   heading: 'Performance Marketing',                   sub: '10 services to drive paid traffic, qualified leads, and measurable revenue.' },
   { id: 'automation',  pill: 'AI Automation',           heading: 'AI Automation — Monthly Management',      sub: 'Keep your AI systems tuned, monitored, and improving every month.' },
   { id: 'operations',  pill: 'Business Operations',     heading: 'Client & Business Operations',            sub: '2 services to keep your CRM and PR engine moving.' },
@@ -254,7 +254,7 @@ const SERVICES = [
     ]
   },
 
-  // ── B. Platform Management (6) ──────────────────────────────────
+  // ── B. Specialist Channels (5) ──────────────────────────────────
   { slug:'linkedin-growth', cat:'platforms', icon:'link',
     name:'LinkedIn Growth & Management', price:'AED 1,500/mo', priceShort:'AED 1,500/mo',
     one:'B2B growth via LinkedIn.',
@@ -912,7 +912,7 @@ const FOOTER = `
       <h4 class="footer-heading" data-en="Services" data-ar="الخدمات">Services</h4>
       <ul class="footer-links">
         <li><a href="/services.html#content" data-en="Content &amp; Social" data-ar="المحتوى والسوشيال">Content &amp; Social</a></li>
-        <li><a href="/services.html#platforms" data-en="Platform Management" data-ar="إدارة المنصات">Platform Management</a></li>
+        <li><a href="/services.html#platforms" data-en="Specialist Channels" data-ar="قنوات متخصصة">Specialist Channels</a></li>
         <li><a href="/services.html#performance" data-en="Performance Marketing" data-ar="تسويق الأداء">Performance Marketing</a></li>
         <li><a href="/services.html#automation" data-en="AI Automation" data-ar="أتمتة بالذكاء الاصطناعي">AI Automation</a></li>
         <li><a href="/services.html#operations" data-en="Business Operations" data-ar="العمليات">Business Operations</a></li>
