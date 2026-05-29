@@ -51,8 +51,8 @@ const NOVA_KB = {
     { name: "Affiliate / Referral Program Build",         price_aed: "from 3,500" }
   ],
   service_categories: [
-    "Content & Social (social media management, UGC video, AI content engine, personal branding)",
-    "Platform Management (LinkedIn, Snapchat, TikTok Shop, Google Business Profile)",
+    "Content & Social (social media management — 1/2/4 platforms, UGC video, AI content engine, personal branding)",
+    "Specialist Channels (Snapchat, TikTok Shop, Google Business Profile, TikTok/IG Live, Community)",
     "Performance Marketing (paid ads, email/SMS, cold email, AI SDR, influencer sourcing, SEO/GEO/AEO, analytics)",
     "AI Automation (WhatsApp / workflow / voice agent / booking / RAG management retainers)",
     "Business Operations (CRM management, PR / press releases)",
@@ -62,7 +62,7 @@ const NOVA_KB = {
   // price_aed_per_month: numeric anchor in AED. null = contact for pricing.
   // price_note: any qualifier — ranges, "+ X%", "+ per-min", "from", etc.
   services: [
-    // Content & Social (10)
+    // Content & Social (11)
     { slug: "social-media-2",         name: "Social Media Management — 2 Platforms", category: "Content & Social", description: "Two platforms (any combination of IG, TikTok, X, Facebook, Snapchat, LinkedIn) managed end-to-end.", price_aed_per_month: 2000, price_note: null },
     { slug: "social-media-4",         name: "Social Media Management — 4 Platforms", category: "Content & Social", description: "Four platforms run in parallel with full content production, scheduling, and reporting under one retainer.", price_aed_per_month: 3500, price_note: null },
     { slug: "ugc-video-ads",          name: "UGC / Short-Form Video Ads", category: "Content & Social", description: "Twenty short-form video variants per month for paid ads and organic — multiple hooks and edits per concept.", price_aed_per_month: 2500, price_note: null },
@@ -73,13 +73,13 @@ const NOVA_KB = {
     { slug: "ai-product-photography", name: "AI Product Photography", category: "Content & Social", description: "Studio-quality product photography produced with AI — white-background, lifestyle, and ad variants.", price_aed_per_month: 1200, price_note: null },
     { slug: "personal-branding",      name: "Personal Branding Management", category: "Content & Social", description: "Strategy, scripts, editing, captions, and scheduling for a founder's personal brand on IG + TikTok.", price_aed_per_month: 2500, price_note: null },
     { slug: "arabic-content",         name: "Arabic Content Creation", category: "Content & Social", description: "Native Arabic captions, copy, and video scripts written by people who actually speak the language.", price_aed_per_month: 2500, price_note: null },
-    // Platform Management (6)
-    { slug: "platform-management",    name: "Platform Management (single platform)", category: "Platform Management", description: "Pick one platform — IG, TikTok, YouTube Shorts, X, or LinkedIn — and we run it end-to-end.", price_aed_per_month: 1200, price_note: "Range AED 1,200–2,000/mo depending on platform" },
-    { slug: "snapchat",               name: "Snapchat Management", category: "Platform Management", description: "Snapchat content, story management, and audience growth for the young Gulf audience.", price_aed_per_month: 1200, price_note: null },
-    { slug: "tiktok-shop",            name: "TikTok Shop Management", category: "Platform Management", description: "End-to-end TikTok Shop — listings, shoppable content, affiliate creators, live shopping ops.", price_aed_per_month: 2000, price_note: null },
-    { slug: "google-business",        name: "Google Business Profile Optimization", category: "Platform Management", description: "Rank in Google Maps and local search with an ongoing-optimised Google Business Profile.", price_aed_per_month: 800, price_note: null },
-    { slug: "live-streaming",         name: "TikTok Live / Instagram Live Management", category: "Platform Management", description: "Fully produced live shopping streams — scripts, host coordination, tech setup, moderation, reporting.", price_aed_per_month: 1500, price_note: null },
-    { slug: "community-management",   name: "Community Management", category: "Platform Management", description: "WhatsApp groups, Telegram channels, and Discord servers moderated and engaged daily.", price_aed_per_month: 1000, price_note: null },
+    { slug: "platform-management",    name: "Social Media Management — 1 Platform", category: "Content & Social", description: "Pick one platform — IG, TikTok, YouTube Shorts, X, or LinkedIn — and we run it end-to-end. Bottom rung of the social retainer ladder.", price_aed_per_month: 1200, price_note: "Range AED 1,200–1,800/mo depending on platform" },
+    // Specialist Channels (5)
+    { slug: "snapchat",               name: "Snapchat Management", category: "Specialist Channels", description: "Snapchat content, story management, and audience growth for the young Gulf audience.", price_aed_per_month: 1200, price_note: null },
+    { slug: "tiktok-shop",            name: "TikTok Shop Management", category: "Specialist Channels", description: "End-to-end TikTok Shop — listings, shoppable content, affiliate creators, live shopping ops.", price_aed_per_month: 2000, price_note: null },
+    { slug: "google-business",        name: "Google Business Profile Optimization", category: "Specialist Channels", description: "Rank in Google Maps and local search with an ongoing-optimised Google Business Profile.", price_aed_per_month: 800, price_note: null },
+    { slug: "live-streaming",         name: "TikTok Live / Instagram Live Management", category: "Specialist Channels", description: "Fully produced live shopping streams — scripts, host coordination, tech setup, moderation, reporting.", price_aed_per_month: 1500, price_note: null },
+    { slug: "community-management",   name: "Community Management", category: "Specialist Channels", description: "WhatsApp groups, Telegram channels, and Discord servers moderated and engaged daily.", price_aed_per_month: 1000, price_note: null },
     // Performance Marketing (10)
     { slug: "paid-ads",               name: "Paid Ads Management (Meta + TikTok)", category: "Performance Marketing", description: "Full-service paid ads on Meta and TikTok — structure, creative testing, targeting, bidding, daily optimisation.", price_aed_per_month: 3500, price_note: "AED 3,500/mo + 10% of ad spend (ad spend paid separately)" },
     { slug: "ai-creative-ads",        name: "AI Creative Production for Paid Ads", category: "Performance Marketing", description: "Endless AI-produced ad creative — dozens of variants per concept across hook, frame, pacing, caption, thumbnail.", price_aed_per_month: 2500, price_note: null },

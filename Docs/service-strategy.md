@@ -32,12 +32,13 @@ High demand + easy to run + decent payment = build first. Services that score 8+
 | Long-form video editing + 20 clips/mo | 2,000 | 7 | 3 | 6 | **4** |
 | AI image generation for content | 500 | 6 | 9 | 2 | **4** |
 
-### Platform Management
+### Specialist Channels
+
+> Renamed from "Platform Management" 2026-05-29. LinkedIn moved out — now sits under Content & Social as one of the picker options under "Social Media Management — 1 Platform".
 
 | Service | Price (AED/mo) | Demand | Ease | Payment | **Priority** |
 |---------|---------------|--------|------|---------|-------------|
 | Google Business Profile optimization | 800 | 8 | 9 | 3 | **6** |
-| LinkedIn growth and management | 1,500 | 7 | 8 | 5 | **6** |
 | TikTok Shop management | 2,000 | 7 | 5 | 6 | **6** |
 | Snapchat management | 1,200 | 6 | 7 | 4 | **5** |
 
