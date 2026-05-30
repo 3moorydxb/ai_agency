@@ -11,6 +11,13 @@ A fully managed social media presence on the platforms they buy. Nova writes cap
 - Scale: all platforms, unlimited posts (target 40+/mo)
 - Standalone add-on: 2 platforms = AED 2,000/mo, 4 platforms = AED 3,500/mo
 
+**Per-platform playbooks** — when a client picks specific platforms, read the matching deep-dive for platform-specific cadence, formats, and prompts (this file covers the shared engine):
+- Instagram → `instagram-management.md`
+- TikTok → `tiktok-management.md`
+- YouTube Shorts → `youtube-shorts.md`
+- X (Twitter) → `twitter-x-management.md`
+- LinkedIn → `linkedin-growth.md`
+
 ## What Worker does — step by step
 
 1. **Onboarding (once per client) — Claude Code with the client's website and any existing social handles.** Worker creates a folder at `~/clients/{{CLIENT_SLUG}}/` and drops in: brand voice notes, target audience, products/services list, competitor handles, banned topics. Then runs in Claude Code:
