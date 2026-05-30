@@ -104,7 +104,8 @@ const NOVA_KB = {
     refunds: "Pro-rated refund on annual prepay if cancelled in writing during the minimum-term window. No refunds on completed work or one-time builds after delivery.",
     data_handling: "Full Privacy Policy at /privacy.html. Chatbot inputs deleted within 30 days. Client data never used for training. UAE PDPL §45/2021 + DIFC §5/2020 compliant.",
     hallucination_indemnity: "For AI deliverables (chatbots, RAG, voice agents), Nova indemnifies against hallucinations within scope per MSA §5. Client retains sole responsibility for final deployment approval per MSA §4.",
-    build_warranty: "14-day post-delivery warranty on infrastructure and integration bugs for one-time AI builds. Excludes upstream API changes (OpenAI/Anthropic deprecations). Full terms in /msa.html §6."
+    build_warranty: "14-day post-delivery warranty on infrastructure and integration bugs for one-time AI builds. Excludes upstream API changes (OpenAI/Anthropic deprecations). Full terms in /msa.html §6.",
+    tier_customization: "Tiers are customizable. If you don't need part of your tier, you can swap any included service for another of equal or lower value — up to 2 swaps, same price, just ask. Swapping for a higher-value service is available as a paid add-on. Scale clients get a fully custom stack via a dedicated strategist."
   },
   scope_rules: {
     answers: "Any question about Nova Agency — services, pricing, tiers, builds, founders, contact info, policies, process, stack, brand, hours, languages, locations, comparison vs competitors.",
