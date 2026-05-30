@@ -45,7 +45,8 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
   <style>
     .chat-wrap { max-width: 800px; margin: 0 auto; padding: 0 20px; }
-    .chat-suggestions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 24px auto 28px; max-width: 760px; }
+    .chat-suggestions-label { text-align: center; color: rgba(255,255,255,0.5); font-size: 12.5px; letter-spacing: 1.5px; text-transform: uppercase; margin: 28px 0 14px; }
+    .chat-suggestions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 0 auto 28px; max-width: 760px; }
     .chat-chip {
       background: var(--surface-1);
       border: 1px solid var(--border);
@@ -124,6 +125,13 @@
   <section class="full-section" style="padding-top:0;">
     <div class="chat-wrap">
 
+      <!-- Chat widget's panel mounts INTO this div (chat-widget.js looks for
+           #nova-chat-mount). The FAB still goes to body but is hidden by
+           body.chat-page CSS rules. -->
+      <div id="nova-chat-mount"></div>
+
+      <p class="chat-suggestions-label" data-en="Or try one of these:" data-ar="أو جرّب أحد هذه:">Or try one of these:</p>
+
       <div class="chat-suggestions" role="list" aria-label="Suggested questions">
         <button type="button" class="chat-chip" data-q-en="What does Foundation tier include?" data-q-ar="ماذا تشمل باقة Foundation؟" data-en="What's in Foundation tier?" data-ar="ما الذي تشمله باقة Foundation؟">What's in Foundation tier?</button>
         <button type="button" class="chat-chip" data-q-en="How much does a chatbot cost?" data-q-ar="كم تكلفة الروبوت؟" data-en="How much for a chatbot?" data-ar="كم تكلفة الروبوت؟">How much for a chatbot?</button>
@@ -132,11 +140,6 @@
         <button type="button" class="chat-chip" data-q-en="Can I cancel anytime?" data-q-ar="هل يمكنني الإلغاء في أي وقت؟" data-en="Can I cancel anytime?" data-ar="هل يمكنني الإلغاء في أي وقت؟">Can I cancel anytime?</button>
         <button type="button" class="chat-chip" data-q-en="Nova vs in-house hire — which is cheaper?" data-q-ar="نوفا مقابل موظف داخلي — أيهما أرخص؟" data-en="Nova vs in-house?" data-ar="نوفا مقابل موظف داخلي؟">Nova vs in-house?</button>
       </div>
-
-      <!-- Chat widget's panel mounts INTO this div (chat-widget.js looks for
-           #nova-chat-mount). The FAB still goes to body but is hidden by
-           body.chat-page CSS rules. -->
-      <div id="nova-chat-mount"></div>
 
       <p class="chat-footnote" data-en="Conversations are processed via Cloudflare Workers AI and deleted within 30 days. See our <a href='/privacy.html'>Privacy Policy</a>. For human help — <a href='https://wa.me/971544285018' target='_blank' rel='noopener'>WhatsApp us</a>." data-ar="تتم معالجة المحادثات عبر Cloudflare Workers AI وتُحذف خلال 30 يومًا. راجع <a href='/privacy.html'>سياسة الخصوصية</a>. للتحدث مع إنسان — <a href='https://wa.me/971544285018' target='_blank' rel='noopener'>راسلنا على واتساب</a>.">
         Conversations are processed via Cloudflare Workers AI and deleted within 30 days. See our <a href="/privacy.html">Privacy Policy</a>. For human help — <a href="https://wa.me/971544285018" target="_blank" rel="noopener">WhatsApp us</a>.
