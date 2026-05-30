@@ -92,6 +92,11 @@
       .faq-chat-cta { padding: 22px; gap: 14px; }
       .faq-chat-cta-icon { width: 48px; height: 48px; }
     }
+
+    /* Centre the whole FAQ list — items were left-hugging the full-section container */
+    .faq-list { max-width: 820px; margin: 0 auto; }
+    .faq-cat-heading { text-align: left; }
+    .faq-item { text-align: left; }
   </style>
   <!-- FAQPage schema for AEO/GEO — 58 Q&As across 5 categories -->
   <script type="application/ld+json">
@@ -604,11 +609,9 @@
     var btn = document.getElementById("faq-open-chat");
     if (!btn) return;
     btn.addEventListener("click", function () {
+      // Chat widget always injects now (no health-gate), so this should always work.
       if (window.NovaChat && typeof window.NovaChat.open === "function") {
         window.NovaChat.open();
-      } else {
-        // Fallback if chat widget hasn't booted (e.g. AI binding offline).
-        window.location.href = "/contact.html";
       }
     });
   });

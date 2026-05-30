@@ -74,17 +74,28 @@
 
   async function boot() {
     if (disabled) return;
-    // Probe health
-    let bound = false;
+    // Always inject the widget chrome so window.NovaChat.open() works from any
+    // page (FAQ CTA, programmatic triggers, etc.). The health probe below only
+    // controls whether the input is enabled — not whether the panel exists.
+    inject();
     try {
       const r = await fetch("/api/chat-health", { method: "GET", cache: "no-store" });
       if (r.ok) {
         const j = await r.json();
-        bound = !!j.ai_bound;
+        if (!j.ai_bound) markOffline();
+      } else {
+        markOffline();
       }
-    } catch (e) { bound = false; }
-    if (!bound) return;
-    inject();
+    } catch (e) { markOffline(); }
+  }
+
+  function markOffline() {
+    if (!input || !form) return;
+    input.disabled = true;
+    input.placeholder = lang === "ar"
+      ? "الدردشة قيد الإعداد — استخدم واتساب أو نموذج الاتصال."
+      : "Chat is being set up — use WhatsApp or the contact form.";
+    form.querySelector(".nova-chat-send")?.setAttribute("disabled", "true");
   }
 
   function inject() {
