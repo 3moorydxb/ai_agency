@@ -1,0 +1,39 @@
+{
+  "$schema": "https://agentskills.io/schemas/v0.2.0/index.json",
+  "version": "0.2.0",
+  "name": "Nova Agency Concierge",
+  "description": "Skills exposed by Nova Agency's website concierge agent. Backed by Llama 3.1 8B via Cloudflare Workers AI with a grounded knowledge base of Nova's tier prices, services, and contact details.",
+  "skills": [
+    {
+      "name": "quote_tier",
+      "type": "agent-skill",
+      "description": "Recommends and quotes one of Nova's 5 monthly tiers (Launch / Spark / Foundation / Growth / Scale, AED 1,200–32,000/mo) based on the visitor's described needs.",
+      "url": "https://novaagency.me/api/chat"
+    },
+    {
+      "name": "quote_service",
+      "type": "agent-skill",
+      "description": "Cites the exact AED price and short description for any of Nova's 48 individual services from the grounded knowledge base.",
+      "url": "https://novaagency.me/api/chat"
+    },
+    {
+      "name": "explain_offering",
+      "type": "agent-skill",
+      "description": "Explains what Nova is, how it's structured across its 6 service categories, and what makes it different from generic marketing agencies.",
+      "url": "https://novaagency.me/api/chat"
+    },
+    {
+      "name": "handoff_human",
+      "type": "agent-skill",
+      "description": "Hands the visitor off to the Nova founders via WhatsApp or the contact page when the request is outside the knowledge base or the visitor wants to start.",
+      "url": "https://novaagency.me/api/chat"
+    }
+  ],
+  "owner": {
+    "name": "Nova Agency",
+    "url": "https://novaagency.me",
+    "contact": "hello@novaagency.me"
+  },
+  "documentation": "https://novaagency.me/about",
+  "license": "proprietary"
+}

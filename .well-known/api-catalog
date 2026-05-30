@@ -1,0 +1,33 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://novaagency.me/api/chat",
+      "service-doc": [
+        {
+          "href": "https://novaagency.me/about",
+          "type": "text/html",
+          "title": "Nova Agency — about and chatbot context"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://novaagency.me/api/chat-health",
+          "type": "application/json",
+          "title": "Chat health probe — returns { ok, ai_bound }"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://novaagency.me/.well-known/agent-card.json",
+          "type": "application/json",
+          "title": "A2A agent card"
+        },
+        {
+          "href": "https://novaagency.me/.well-known/mcp/server-card.json",
+          "type": "application/json",
+          "title": "MCP server card"
+        }
+      ]
+    }
+  ]
+}

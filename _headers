@@ -1,8 +1,13 @@
 # Cloudflare Pages _headers file — applied at the edge.
 #
-# Goal: HTML cached at the edge so brief deploy cutovers + origin hiccups
-# don't surface as 522s. Pages dynamic functions (/api/*) stay no-store so
-# the chatbot health probe + streaming chat keep working in real-time.
+# Goal:
+#  - HTML cached at the edge so brief deploy cutovers + origin hiccups
+#    don't surface as 522s.
+#  - Pages dynamic functions (/api/*) stay no-store so the chatbot health
+#    probe + streaming chat keep working in real-time.
+#  - Static .well-known endpoints announced via Link: response headers
+#    (RFC 8288 + RFC 9727) so agents can discover Nova's API catalog,
+#    A2A card, MCP server card, and agent-skills index.
 #
 # Order matters: more specific paths first. Cloudflare matches top-down
 # and a request only takes the FIRST matching rule.
@@ -10,8 +15,28 @@
 /api/*
   Cache-Control: no-store
 
+/.well-known/api-catalog
+  Content-Type: application/linkset+json
+
+/.well-known/agent-card.json
+  Content-Type: application/json
+
+/.well-known/mcp/server-card.json
+  Content-Type: application/json
+
+/.well-known/agent-skills/index.json
+  Content-Type: application/json
+
 /*.html
   Cache-Control: public, max-age=60, stale-while-revalidate=300
+  Link: </.well-known/api-catalog>; rel="api-catalog"
+  Link: </.well-known/agent-card.json>; rel="agent-card"
+  Link: </.well-known/mcp/server-card.json>; rel="mcp-server"
+  Link: </.well-known/agent-skills/index.json>; rel="agent-skills"
 
 /
   Cache-Control: public, max-age=60, stale-while-revalidate=300
+  Link: </.well-known/api-catalog>; rel="api-catalog"
+  Link: </.well-known/agent-card.json>; rel="agent-card"
+  Link: </.well-known/mcp/server-card.json>; rel="mcp-server"
+  Link: </.well-known/agent-skills/index.json>; rel="agent-skills"

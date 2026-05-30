@@ -1,0 +1,75 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/server-card-v1.json",
+  "serverInfo": {
+    "name": "nova-agency-concierge",
+    "version": "0.1.0",
+    "title": "Nova Agency Concierge",
+    "description": "Nova Agency's website concierge — answers questions about Nova's 48 marketing services, 5 pricing tiers, builds, onboarding, and connects visitors to the team. Grounded knowledge base of tier prices, services, and contact details."
+  },
+  "transport": {
+    "type": "http",
+    "endpoint": "https://novaagency.me/api/chat",
+    "protocol": "sse",
+    "method": "POST",
+    "contentType": "application/json",
+    "description": "POST { messages:[{role,content}], lang:'en'|'ar' }. Returns a Server-Sent-Events stream of Llama 3.1 8B tokens."
+  },
+  "capabilities": {
+    "tools": true,
+    "streaming": true,
+    "prompts": false,
+    "resources": false,
+    "languages": ["en", "ar"]
+  },
+  "tools": [
+    {
+      "name": "quote_tier",
+      "description": "Recommends and quotes one of Nova's 5 monthly tiers (Launch 1,200 / Spark 3,000 / Foundation 6,000 / Growth 14,000 / Scale 32,000 AED/mo) based on the visitor's described needs.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "needs": { "type": "string", "description": "Free-text description of what the visitor needs." }
+        },
+        "required": ["needs"]
+      }
+    },
+    {
+      "name": "quote_service",
+      "description": "Cites the exact AED price and short description for any of Nova's 48 individual services (33 monthly retainers + 15 one-time builds) from the grounded knowledge base.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "service": { "type": "string", "description": "Service name or slug." }
+        },
+        "required": ["service"]
+      }
+    },
+    {
+      "name": "explain_offering",
+      "description": "Explains what Nova is, how it's structured across the 6 service categories, and what makes it different from generic marketing agencies.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "topic": { "type": "string", "description": "Optional — narrow the explanation to a specific category or theme." }
+        }
+      }
+    },
+    {
+      "name": "handoff_human",
+      "description": "Surfaces the founders' direct contact (WhatsApp +971 54 428 5018, hello@novaagency.me, /contact.html) when the visitor wants to start, or when the question is outside the knowledge base.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "reason": { "type": "string", "description": "Why the handoff is being suggested." }
+        }
+      }
+    }
+  ],
+  "owner": {
+    "name": "Nova Agency",
+    "url": "https://novaagency.me",
+    "contact": "hello@novaagency.me"
+  },
+  "documentation": "https://novaagency.me/about",
+  "license": "proprietary"
+}
