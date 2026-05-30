@@ -86,7 +86,8 @@
     .pay-toggle button:hover:not(.active) { color: var(--white); }
     .pay-toggle-wrap { text-align: center; }
     .pay-note { display: block; font-size: 13px; color: rgba(255,255,255,0.45); margin-top: -16px; margin-bottom: 32px; text-align: center; }
-    .per-billing { font-family: var(--font-body); font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.4); margin-left: 4px; }
+    .per-billing { display: block; font-family: var(--font-body); font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.4); margin-left: 0; margin-top: 4px; }
+    .per-billing:empty { display: none; }
     .bottom-cta-block { text-align: center; padding: 32px 0 16px; }
     .bottom-cta-block .btn-primary, .bottom-cta-block .btn-ghost { margin: 6px; }
     .builds-grid a { text-decoration: none; color: inherit; flex: 1 1 200px; max-width: 230px; display: block; }
@@ -236,6 +237,7 @@
 
       <div id="launch" class="pricing-card fade-in">
         <div class="tier-name" data-en="Launch" data-ar="انطلاق">Launch</div>
+        <a href="/tiers/launch.html" style="display:inline-block;margin-top:6px;font-size:12px;font-weight:600;letter-spacing:0.5px;color:#6B8FFF;text-decoration:none;" data-en="Tier details →" data-ar="تفاصيل الباقة ←">Tier details →</a>
         <div class="tier-price">AED <span class="price-num" data-monthly-price="1200">1,200</span><span class="per-mo">/mo</span><span class="per-billing" data-billing-label></span></div>
         <div class="tier-commit" data-en="Month-to-month" data-ar="شهر بشهر">Month-to-month</div>
         <div class="tier-onboard" data-en="1 service · solo founders" data-ar="خدمة واحدة · المؤسسون الأفراد">1 service · solo founders</div>
@@ -257,6 +259,7 @@
 
       <div id="spark" class="pricing-card fade-in">
         <div class="tier-name" data-en="Spark" data-ar="سبارك">Spark</div>
+        <a href="/tiers/spark.html" style="display:inline-block;margin-top:6px;font-size:12px;font-weight:600;letter-spacing:0.5px;color:#6B8FFF;text-decoration:none;" data-en="Tier details →" data-ar="تفاصيل الباقة ←">Tier details →</a>
         <div class="tier-price">AED <span class="price-num" data-monthly-price="3000">3,000</span><span class="per-mo">/mo</span><span class="per-billing" data-billing-label></span></div>
         <div class="tier-commit" data-en="Month-to-month" data-ar="شهر بشهر">Month-to-month</div>
         <div class="tier-onboard" data-en="5 services bundled" data-ar="5 خدمات في باقة">5 services bundled</div>
@@ -278,6 +281,7 @@
       <div id="foundation" class="pricing-card featured-pricing fade-in">
         <div class="featured-badge" data-en="Most Popular" data-ar="الأكثر طلبًا">Most Popular</div>
         <div class="tier-name" data-en="Foundation" data-ar="أساس">Foundation</div>
+        <a href="/tiers/foundation.html" style="display:inline-block;margin-top:6px;font-size:12px;font-weight:600;letter-spacing:0.5px;color:#6B8FFF;text-decoration:none;" data-en="Tier details →" data-ar="تفاصيل الباقة ←">Tier details →</a>
         <div class="tier-price">AED <span class="price-num" data-monthly-price="6000">6,000</span><span class="per-mo">/mo</span><span class="per-billing" data-billing-label></span></div>
         <div class="tier-commit" data-en="3 months min" data-ar="3 أشهر كحد أدنى">3 months min</div>
         <div class="tier-onboard" data-en="20+ services · all categories" data-ar="20+ خدمة · كل الفئات">20+ services · all categories</div>
@@ -300,6 +304,7 @@
 
       <div id="growth" class="pricing-card fade-in">
         <div class="tier-name" data-en="Growth" data-ar="نمو">Growth</div>
+        <a href="/tiers/growth.html" style="display:inline-block;margin-top:6px;font-size:12px;font-weight:600;letter-spacing:0.5px;color:#6B8FFF;text-decoration:none;" data-en="Tier details →" data-ar="تفاصيل الباقة ←">Tier details →</a>
         <div class="tier-price">AED <span class="price-num" data-monthly-price="14000">14,000</span><span class="per-mo">/mo</span><span class="per-billing" data-billing-label></span></div>
         <div class="tier-commit" data-en="6 months min" data-ar="6 أشهر كحد أدنى">6 months min</div>
         <div class="tier-onboard" data-en="30+ services · dedicated manager" data-ar="30+ خدمة · مدير مخصص">30+ services · dedicated manager</div>
@@ -323,6 +328,7 @@
 
       <div id="scale" class="pricing-card fade-in">
         <div class="tier-name" data-en="Scale" data-ar="توسع">Scale</div>
+        <a href="/tiers/scale.html" style="display:inline-block;margin-top:6px;font-size:12px;font-weight:600;letter-spacing:0.5px;color:#6B8FFF;text-decoration:none;" data-en="Tier details →" data-ar="تفاصيل الباقة ←">Tier details →</a>
         <div class="tier-price">AED <span class="price-num" data-monthly-price="32000">32,000</span><span class="per-mo">/mo</span><span class="per-billing" data-billing-label></span></div>
         <div class="tier-commit" data-en="12 months min" data-ar="12 شهرًا كحد أدنى">12 months min</div>
         <div class="tier-onboard" data-en="All 50+ services + custom builds" data-ar="جميع الخدمات + مشاريع مخصصة">All 50+ services + custom builds</div>
