@@ -1945,6 +1945,26 @@ html[dir="rtl"] .nav-links { flex-direction: row-reverse; }
 .nova-chat-panel.is-open { transform: translateY(0); opacity: 1; }
 .nova-chat-panel[hidden] { display: none; }
 
+/* Embed mode — /chat.html turns the floating panel into a full-page experience.
+   Triggered by body.chat-page. FAB is hidden; panel is centred + larger. */
+body.chat-page .nova-chat-fab { display: none !important; }
+body.chat-page .nova-chat-panel {
+  position: static;
+  width: 100%;
+  max-width: 760px;
+  height: 72vh;
+  max-height: none;
+  margin: 0 auto 48px;
+  transform: none;
+  opacity: 1;
+  border-radius: 18px;
+}
+body.chat-page .nova-chat-panel[hidden] { display: flex; }
+body.chat-page .nova-chat-close { display: none; }
+body.chat-page .nova-chat-messages { font-size: 15px; }
+body.chat-page .nova-chat-input { padding: 14px 16px; }
+body.chat-page .nova-chat-input textarea { font-size: 15px; }
+
 .nova-chat-header {
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 16px;
