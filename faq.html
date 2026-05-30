@@ -173,7 +173,7 @@
       <p class="faq-chat-cta-title" data-en="Ask the chatbot anything" data-ar="اسأل الروبوت أي شيء">Ask the chatbot anything</p>
       <p class="faq-chat-cta-sub" data-en="Pricing, services, contracts, founders — the concierge knows the answer in English or Arabic." data-ar="الأسعار، الخدمات، العقود، المؤسسون — المساعد الذكي يجيب بالعربية أو الإنجليزية.">Pricing, services, contracts, founders — the concierge knows the answer in English or Arabic.</p>
     </div>
-    <button type="button" class="faq-chat-cta-btn" id="faq-open-chat" data-en="Open chat" data-ar="افتح الدردشة">Open chat</button>
+    <a href="/chat.html" class="faq-chat-cta-btn" id="faq-open-chat" data-en="Talk to Nova" data-ar="تحدّث مع نوفا">Talk to Nova</a>
   </aside>
 
   <div class="gradient-divider"></div>
@@ -603,18 +603,7 @@
 <script src="/assets/js/counter.js" defer></script>
 
 <script src="/assets/js/chat-widget.js?v=20260530b" defer></script>
-<script defer>
-  // Wire the top chatbot CTA button to the global chat widget API.
-  document.addEventListener("DOMContentLoaded", function () {
-    var btn = document.getElementById("faq-open-chat");
-    if (!btn) return;
-    btn.addEventListener("click", function () {
-      // Chat widget always injects now (no health-gate), so this should always work.
-      if (window.NovaChat && typeof window.NovaChat.open === "function") {
-        window.NovaChat.open();
-      }
-    });
-  });
-</script>
+<!-- The chat CTA card is now a plain link to /chat.html — no JS needed.
+     The floating chat FAB stays on every page for incidental use. -->
 </body>
 </html>
