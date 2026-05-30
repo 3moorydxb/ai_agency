@@ -269,6 +269,13 @@ h3, h4 {
 }
 .nav-logo-icon svg { width: 100%; height: 100%; }
 .nav-logo-text { display: flex; flex-direction: column; gap: 0; }
+
+/* Nav logo: English NOVA shows in LTR mode, Arabic نوفا shows in RTL mode.
+   The applyLang() flow toggles <html lang> + <html dir>; this CSS follows. */
+.nav-logo-name .logo-ar { display: none; }
+html[lang="ar"] .nav-logo-name .logo-en { display: none; }
+html[lang="ar"] .nav-logo-name .logo-ar { display: inline-flex; align-items: baseline; }
+
 .nav-logo-name {
   font-family: var(--font-head);
   font-size: 20px; font-weight: 600;
@@ -521,9 +528,9 @@ h3, h4 {
   color: var(--white); margin-bottom: 8px;
 }
 .service-card p {
-  font-size: 14px;
-  color: rgba(255,255,255,0.68);
-  line-height: 1.65;
+  font-size: 15px;
+  color: rgba(255,255,255,0.74);
+  line-height: 1.75;
 }
 
 /* ═══════════════════════════════════════
@@ -1719,7 +1726,7 @@ html[dir="rtl"] .how-step { text-align: right; }
   /* Service & teaser card body type and padding. */
   .service-card  { padding: 22px 20px; }
   .service-card h3 { font-size: 17px; }
-  .service-card p  { font-size: 14.5px; line-height: 1.6; }
+  .service-card p  { font-size: 15px; line-height: 1.7; }
   .teaser-card   { padding: 22px 20px; }
   .teaser-card h3 { font-size: 18px; }
 
