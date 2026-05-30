@@ -95,7 +95,6 @@ const NOVA_KB = {
   competitor_positioning: {
     vs_in_house_hire: "A mid-level Dubai social media manager costs AED 8,000–12,000/mo + benefits + tools (Canva/Hootsuite/ChatGPT Team ~AED 800/mo) + management time. Foundation tier (AED 6,000/mo) delivers wider scope with zero hiring lag, leave coverage, or training overhead.",
     vs_traditional_agencies: "Traditional Dubai agencies (Hug Digital, Socialize, 218, Traffic Digital) charge AED 15,000–60,000/mo. Their cost base is people. Nova's AI-led delivery means the same scope at AED 6,000–32,000/mo.",
-    vs_dubai_scales: "Dubai Scales' Scale tier (AED 9,600/mo) delivers 12 videos + 8 designs. Nova Foundation (AED 6,000/mo) delivers 60–120 monthly assets across 20+ services including chatbot, email automation, and reporting.",
     vs_freelancers: "Solo Dubai freelancers cost AED 3,000–6,000/mo and offer flexibility, but no backup if they get sick or quit. Agency-grade tooling and continuity for similar price.",
     vs_other_ai_agencies: "Most 'AI marketing agencies' in Dubai are reseller layers on top of one model (usually OpenAI). Nova builds with whichever stack fits the deliverable — Claude for content quality, Cloudflare Workers AI for cost efficiency on volume chatbots, OpenAI for image gen. Multi-stack means clients get the right tool, not the only tool Nova knows."
   },
