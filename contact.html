@@ -140,6 +140,36 @@
     .map-title { font-family: var(--font-head); font-size: 22px; font-weight: 400; color: var(--white); margin-bottom: 4px; }
     .map-sub { color: rgba(255,255,255,0.55); font-size: 14px; }
 
+    /* Founder cards — direct lines to all 3 founders */
+    .founders-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 900px) { .founders-grid { grid-template-columns: 1fr; } }
+    .founder-card {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      transition: border-color 0.25s, background 0.25s, transform 0.25s var(--ease-out);
+    }
+    .founder-card:hover { border-color: rgba(59,111,255,0.4); background: var(--surface-2); transform: translateY(-3px); }
+    .founder-avatar {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand-blue), var(--light-blue));
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white);
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+    .founder-name { font-family: var(--font-head); font-size: 19px; font-weight: 500; color: var(--white); margin-bottom: 2px; letter-spacing: -0.01em; }
+    .founder-role { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--light-blue); margin-bottom: 16px; }
+    .founder-line { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-top: 1px solid var(--border); font-size: 14px; }
+    .founder-line svg { width: 16px; height: 16px; color: rgba(255,255,255,0.5); flex-shrink: 0; }
+    .founder-line a { color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s; word-break: break-all; }
+    .founder-line a:hover { color: var(--light-blue); }
+
     /* ───────── 2026-05-28 PASS 3 — CONTACT MOBILE OVERRIDES (390px) ───────── */
     @media (max-width: 768px) {
       .contact-methods  { grid-template-columns: 1fr; gap: 14px; }
@@ -153,6 +183,7 @@
       .map-block        { padding: 40px 20px; }
       .map-title        { font-size: 19px; }
       .map-sub          { font-size: 13px; }
+      .founder-card     { padding: 22px 20px; }
     }
   </style>
 <script type="application/ld+json">
@@ -258,6 +289,58 @@
         <div class="cm-detail" data-en="Dubai · by appointment" data-ar="دبي · بموعد">Dubai · by appointment</div>
         <div class="cm-sub" data-en="Coffee on us. WhatsApp to book." data-ar="القهوة علينا. احجز عبر واتساب.">Coffee on us. WhatsApp to book.</div>
       </a>
+    </div>
+  </section>
+  <div class="gradient-divider"></div>
+
+  <!-- ── Founders — direct lines for serious enquiries ── -->
+  <section class="full-section">
+    <span class="section-pill fade-in" data-en="Founders" data-ar="المؤسسون">Founders</span>
+    <h2 class="section-heading fade-in" data-en="Direct lines to all three" data-ar="خطوط مباشرة للمؤسسين الثلاثة">Direct lines to all three</h2>
+    <p class="section-sub fade-in" data-en="No account-manager firewall. For serious enquiries — reach the right founder directly." data-ar="بدون وسطاء. للاستفسارات الجدية، تواصل مباشرة مع المؤسس المختص.">No account-manager firewall. For serious enquiries — reach the right founder directly.</p>
+
+    <div class="founders-grid">
+      <div class="founder-card fade-in">
+        <div class="founder-avatar" aria-hidden="true">N</div>
+        <div class="founder-name">Nizar Fayek</div>
+        <div class="founder-role" data-en="Founder · CEO &amp; CFO" data-ar="المؤسس · الرئيس التنفيذي والمالي">Founder · CEO &amp; CFO</div>
+        <div class="founder-line">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 6l8 6 8-6M4 6v12h16V6M4 6h16" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <a href="mailto:nizar@novaagency.me">nizar@novaagency.me</a>
+        </div>
+        <div class="founder-line">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 4h4l2 5-3 2a12 12 0 006 6l2-3 5 2v4a2 2 0 01-2 2A18 18 0 013 6a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <a href="tel:+971566058576">+971 56 605 8576</a>
+        </div>
+      </div>
+
+      <div class="founder-card fade-in">
+        <div class="founder-avatar" aria-hidden="true">O</div>
+        <div class="founder-name">Omar Abusalem</div>
+        <div class="founder-role" data-en="Co-Founder · CTO &amp; COO" data-ar="مؤسس مشارك · مدير التكنولوجيا والتشغيل">Co-Founder · CTO &amp; COO</div>
+        <div class="founder-line">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 6l8 6 8-6M4 6v12h16V6M4 6h16" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <a href="mailto:omar@novaagency.me">omar@novaagency.me</a>
+        </div>
+        <div class="founder-line">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 4h4l2 5-3 2a12 12 0 006 6l2-3 5 2v4a2 2 0 01-2 2A18 18 0 013 6a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <a href="tel:+971544285018">+971 54 428 5018</a>
+        </div>
+      </div>
+
+      <div class="founder-card fade-in">
+        <div class="founder-avatar" aria-hidden="true">K</div>
+        <div class="founder-name">Karl Habchi</div>
+        <div class="founder-role" data-en="Co-Founder · CMO" data-ar="مؤسس مشارك · المدير التسويقي">Co-Founder · CMO</div>
+        <div class="founder-line">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 6l8 6 8-6M4 6v12h16V6M4 6h16" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <a href="mailto:karl@novaagency.me">karl@novaagency.me</a>
+        </div>
+        <div class="founder-line">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 4h4l2 5-3 2a12 12 0 006 6l2-3 5 2v4a2 2 0 01-2 2A18 18 0 013 6a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <a href="tel:+971525559216">+971 52 555 9216</a>
+        </div>
+      </div>
     </div>
   </section>
   <div class="gradient-divider"></div>
@@ -430,7 +513,17 @@
       </ul>
     </div>
 
-    <div class="footer-col">
+    <div class="footer-col footer-col-legal">
+      <h4 class="footer-heading" data-en="Legal" data-ar="قانوني">Legal</h4>
+      <ul class="footer-links">
+        <li><a href="/privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a></li>
+        <li><a href="/terms.html" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</a></li>
+        <li><a href="/cookies.html" data-en="Cookie Policy" data-ar="سياسة الكوكيز">Cookie Policy</a></li>
+        <li><a href="/msa.html" data-en="Master Services Agreement" data-ar="اتفاقية الخدمات الرئيسية">Master Services Agreement</a></li>
+      </ul>
+    </div>
+
+        <div class="footer-col">
       <h4 class="footer-heading" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</h4>
       <ul class="footer-links">
         <li><a href="https://wa.me/971544285018" target="_blank" rel="noopener" data-en="WhatsApp · +971 54 428 5018" data-ar="واتساب · +971 54 428 5018">WhatsApp · +971 54 428 5018</a></li>

@@ -12,14 +12,46 @@ const NOVA_KB = {
   agency: {
     name: "Nova Agency",
     location: "Dubai, UAE",
+    founded: "2026",
     pitch: "AI-powered marketing agency — content, ads, automation, and one-time builds, priced for UAE businesses.",
+    governing_law: "UAE / DIFC (Dubai International Financial Centre)",
     contact: {
       whatsapp: "https://wa.me/971544285018",
       whatsapp_display: "+971 54 428 5018",
       email: "hello@novaagency.me",
-      contact_page: "/contact.html"
+      contact_page: "/contact.html",
+      legal_email: "hello@novaagency.me"
+    },
+    legal_pages: {
+      privacy: "/privacy.html",
+      terms: "/terms.html",
+      cookies: "/cookies.html",
+      msa: "/msa.html"
     }
   },
+  founders: [
+    {
+      name: "Nizar Fayek",
+      role: "Founder / CEO & CFO",
+      focus: "Sales, client relationships, and Dubai market strategy. First person you'll meet at Nova.",
+      email: "nizar@novaagency.me",
+      phone: "+971 56 605 8576"
+    },
+    {
+      name: "Omar Abusalem",
+      role: "Co-Founder / CTO & COO",
+      focus: "AI engineering and operations. Writes every line of automation code. Also runs a live algorithmic trading system — same engineering discipline goes into Nova's AI builds.",
+      email: "omar@novaagency.me",
+      phone: "+971 54 428 5018"
+    },
+    {
+      name: "Karl Habchi",
+      role: "Co-Founder / CMO",
+      focus: "Marketing strategy and brand voice across paid and organic. Reason every Nova client's content sounds like them.",
+      email: "karl@novaagency.me",
+      phone: "+971 52 555 9216"
+    }
+  ],
   tiers: [
     { name: "Launch",     monthly_aed: 1200,  commitment: "month-to-month", onboarding_aed: 500,  for: "first ecom stores, dropshippers, young founders" },
     { name: "Spark",      monthly_aed: 3000,  commitment: "month-to-month", onboarding_aed: 500,  for: "businesses testing marketing for the first time" },
@@ -100,6 +132,26 @@ const NOVA_KB = {
     // Business Operations (2)
     { slug: "crm-management",         name: "CRM Setup & Management", category: "Business Operations", description: "HubSpot or Zoho CRM set up and managed — pipeline hygiene, enrichment, automations, dashboards, clean-up.", price_aed_per_month: 2000, price_note: null },
     { slug: "pr-press-releases",      name: "PR & Press Releases", category: "Business Operations", description: "UAE media placement — pitch dev, press release drafting, journalist relationships, monthly distribution.", price_aed_per_month: 2500, price_note: null }
+  ],
+  // Curated FAQ — most-asked questions. Chatbot answers from here instead of hallucinating.
+  // Full FAQ lives at /faq.html with FAQPage JSON-LD for AEO/GEO.
+  faq: [
+    { q: "Who founded Nova Agency?", a: "Nizar Fayek (CEO/CFO), Omar Abusalem (CTO/COO), and Karl Habchi (CMO). Dubai-based engineers and marketers who built Nova in 2026 to deliver AI-powered marketing to UAE businesses." },
+    { q: "Where is Nova Agency located?", a: "Dubai, UAE. Operations are remote-first over WhatsApp and email. In-person meetings happen in DIFC or Downtown Dubai." },
+    { q: "How long has Nova Agency been operating?", a: "Founded in 2026. Young by design — we'd rather compete on shipping speed than on legacy." },
+    { q: "Is Nova Agency legit?", a: "Yes. Dubai-registered, every price listed publicly, short-term commitments on the lower tiers, full account ownership from day one." },
+    { q: "Can I cancel my subscription?", a: "Yes. Launch and Spark are month-to-month — cancel anytime, no fee. Foundation has a 3-month minimum, Growth 6-month, Scale 12-month. No exit fees on any tier." },
+    { q: "Is there a contract?", a: "Yes — short service agreement on every tier. No long lock-ins on Launch and Spark. Foundation/Growth/Scale carry 3/6/12-month minimums then go month-to-month." },
+    { q: "What is the minimum?", a: "AED 1,200/mo Launch tier plus AED 500 one-time onboarding. Lowest-commitment way to test Nova's output." },
+    { q: "How does onboarding work?", a: "WhatsApp or form → 15-minute brief → systems live within 48 hours. AED 500 onboarding on Launch/Spark, AED 1,500 on Foundation and above." },
+    { q: "Does Nova offer a free trial?", a: "No traditional free trial — but if we miss the 48-hour onboarding promise, you pay nothing for week one. As close to risk-free as a service business gets." },
+    { q: "What AI tools does Nova use?", a: "Claude (Anthropic) for content and copy, OpenAI for image generation and embeddings, ElevenLabs for voice, n8n / Make / Zapier for workflow automation, and Cloudflare Workers AI for the concierge chatbot. We use what we sell — no reseller markup." },
+    { q: "What's the difference between Launch and Spark?", a: "Launch (AED 1,200/mo) is one service on one platform — the entry point. Spark (AED 3,000/mo) is two platforms plus engagement basics. Both month-to-month." },
+    { q: "What does Foundation include?", a: "4-platform social management, AI content generation, short-form video, web/WhatsApp chatbot, email + SMS campaigns, analytics dashboard, monthly reporting. AED 6,000/mo, 3-month minimum." },
+    { q: "Nova Agency vs hiring in-house?", a: "A mid-level Dubai social media manager costs AED 8,000–12,000/mo plus tools + benefits. Foundation tier delivers more breadth at AED 6,000/mo with no hiring lag, no leave to cover, no training overhead." },
+    { q: "Do I get Arabic content?", a: "Yes — native Khaleeji Arabic, not machine translation. Standalone service at AED 2,500/mo or bundled into upper tiers." },
+    { q: "What's GEO and AEO?", a: "GEO (Generative Engine Optimization) gets you cited in ChatGPT/Claude/Perplexity answers. AEO (Answer Engine Optimization) optimises for featured snippets and AI Overviews. Nova bundles SEO+GEO+AEO at AED 4,000/mo." },
+    { q: "Privacy / Terms / Cookies / MSA?", a: "Full legal pages live at /privacy.html, /terms.html, /cookies.html, /msa.html. Governing law is UAE / DIFC." }
   ]
 };
 
@@ -140,6 +192,10 @@ function buildSystemPrompt(lang) {
       : (s.price_note || `AED ${s.price_aed_per_month.toLocaleString()}/mo`);
     return `- [${s.category}] ${s.name}: ${price} — ${s.description}`;
   }).join("\n");
+  const founders = kb.founders.map(f =>
+    `- ${f.name} — ${f.role} — ${f.focus} (contact: ${f.email}, ${f.phone})`
+  ).join("\n");
+  const faqLines = kb.faq.map(f => `Q: ${f.q}\nA: ${f.a}`).join("\n\n");
 
   const langRule = lang === "ar"
     ? "Reply in Arabic. Use clean Modern Standard Arabic with a warm, direct tone."
@@ -151,8 +207,13 @@ When recommending a tier, always cite the tier by name and its monthly price in 
 
 KNOWLEDGE (canonical — never contradict):
 
-Agency: ${kb.agency.name} · ${kb.agency.location} · ${kb.agency.pitch}
+Agency: ${kb.agency.name} · founded ${kb.agency.founded} · ${kb.agency.location} · ${kb.agency.pitch}
+Governing law: ${kb.agency.governing_law}
 Contact: WhatsApp ${kb.agency.contact.whatsapp_display} (${kb.agency.contact.whatsapp}) · Email ${kb.agency.contact.email} · Contact page ${kb.agency.contact.contact_page}
+Legal pages: Privacy ${kb.agency.legal_pages.privacy} · Terms ${kb.agency.legal_pages.terms} · Cookies ${kb.agency.legal_pages.cookies} · MSA ${kb.agency.legal_pages.msa}
+
+Founders (3) — share name + role when asked; share email/phone ONLY if the user explicitly asks for direct contact for a specific founder:
+${founders}
 
 Monthly tiers:
 ${tiers}
@@ -168,6 +229,9 @@ ${services}
 
 One-time builds (15 total, see /pricing.html#builds):
 ${builds}
+
+Frequently asked (short answers — paraphrase, do not quote verbatim; full list at /faq.html):
+${faqLines}
 
 Rules:
 - Recommend the cheapest tier that fits the user's described needs. Default first-time ecom owners to Launch (AED 1,200/mo) or the Shopify Starter Pack (AED 4,500 flat).

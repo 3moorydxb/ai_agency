@@ -867,9 +867,13 @@ html[lang="ar"] .nav-logo-name .logo-ar { display: inline-flex; align-items: bas
   max-width: 1280px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
-  gap: 48px;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1.2fr;
+  gap: 40px;
   padding-bottom: 48px;
+}
+@media (max-width: 1180px) {
+  .site-footer-inner { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; }
+  .site-footer-inner .footer-col-legal { grid-column: span 2; }
 }
 .footer-col h4 {
   font-family: var(--font-head);
@@ -2053,6 +2057,18 @@ html[dir="rtl"] .nav-links { flex-direction: row-reverse; }
 .nova-chat-send:hover { background: #6366F1; }
 .nova-chat-send:active { transform: scale(0.95); }
 .nova-chat-send svg { width: 18px; height: 18px; }
+
+/* Meta Llama 3.1 Community License Agreement — mandatory "Built with Llama" attribution */
+.nova-chat-attribution {
+  text-align: center;
+  font-size: 10.5px;
+  letter-spacing: 0.4px;
+  color: rgba(255,255,255,0.38);
+  padding: 6px 12px 10px;
+  background: rgba(255,255,255,0.02);
+  user-select: none;
+  font-weight: 500;
+}
 
 /* RTL — when panel has dir="rtl", flip bubble corners */
 .nova-chat-panel[dir="rtl"] .nova-chat-bubble--user {

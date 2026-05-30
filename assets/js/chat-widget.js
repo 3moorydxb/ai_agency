@@ -56,6 +56,14 @@
     if (fab) fab.style.display = "none";
     if (panel) panel.hidden = true;
   };
+  window.NovaChat.open = function () {
+    if (disabled || !panel) return;
+    setOpen(true);
+  };
+  window.NovaChat.close = function () {
+    if (!panel) return;
+    setOpen(false);
+  };
 
   // ── Boot ──
   if (document.readyState === "loading") {
@@ -138,6 +146,8 @@
             '</svg>',
           '</button>',
         '</form>',
+        // Meta Llama 3.1 Community License Agreement — mandatory attribution on UIs deployed using Llama as the underlying model.
+        '<div class="nova-chat-attribution" aria-hidden="false">Built with Llama</div>',
       '</div>'
     ].join("");
   }

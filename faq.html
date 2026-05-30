@@ -52,6 +52,46 @@
     .faq-list-cta { text-align: center; margin-top: 36px; }
     .faq-list-cta a { color: var(--light-blue); text-decoration: none; font-weight: 600; font-size: 15px; }
     .faq-list-cta a:hover { text-decoration: underline; }
+
+    /* Chatbot CTA card — drops users to the concierge for anything not in the FAQ */
+    .faq-chat-cta {
+      max-width: 760px;
+      margin: -20px auto 8px;
+      padding: 26px 32px;
+      background: linear-gradient(135deg, rgba(59,111,255,0.12), rgba(99,102,241,0.06));
+      border: 1px solid rgba(59,111,255,0.35);
+      border-radius: var(--radius-md);
+      display: flex; align-items: center; gap: 22px;
+      flex-wrap: wrap;
+    }
+    .faq-chat-cta-icon {
+      width: 56px; height: 56px; flex-shrink: 0;
+      border-radius: 14px;
+      background: rgba(59,111,255,0.18);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--light-blue);
+    }
+    .faq-chat-cta-body { flex: 1 1 280px; min-width: 0; }
+    .faq-chat-cta-title { font-family: var(--font-head); font-size: 19px; font-weight: 500; color: var(--white); margin: 0 0 4px; letter-spacing: -0.01em; }
+    .faq-chat-cta-sub { color: rgba(255,255,255,0.7); font-size: 14.5px; line-height: 1.6; margin: 0; }
+    .faq-chat-cta-btn {
+      background: var(--brand-blue);
+      color: var(--white);
+      padding: 11px 22px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .faq-chat-cta-btn:hover { background: var(--light-blue); transform: translateY(-1px); }
+    @media (max-width: 540px) {
+      .faq-chat-cta { padding: 22px; gap: 14px; }
+      .faq-chat-cta-icon { width: 48px; height: 48px; }
+    }
   </style>
   <!-- FAQPage schema for AEO/GEO — 58 Q&As across 5 categories -->
   <script type="application/ld+json">
@@ -114,15 +154,30 @@
     <div class="hero-orb hero-orb-2"></div>
     <span class="section-pill" data-en="Help" data-ar="مساعدة">Help</span>
     <h1 data-en="Frequently Asked Questions" data-ar="الأسئلة الشائعة"><span class="grad">Frequently</span> Asked Questions</h1>
-    <p class="lede" data-en="Quick answers to the things people ask us most." data-ar="إجابات سريعة على أكثر الأسئلة التي يطرحها الناس.">Quick answers to the things people ask us most.</p>
+    <p class="lede" data-en="Quick answers to the things people ask us most. Anything else — ask the chatbot." data-ar="إجابات سريعة على أكثر الأسئلة شيوعًا. لأي شيء آخر، اسأل الروبوت.">Quick answers to the things people ask us most. Anything else — ask the chatbot.</p>
   </section>
+
+  <!-- ── Chatbot CTA — answers questions outside the 58-Q list, in English or Arabic ── -->
+  <aside class="faq-chat-cta" role="complementary" aria-label="Ask the Nova concierge chatbot">
+    <div class="faq-chat-cta-icon" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3h-6l-5 4v-4H7a3 3 0 01-3-3V6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="faq-chat-cta-body">
+      <p class="faq-chat-cta-title" data-en="Ask the chatbot anything" data-ar="اسأل الروبوت أي شيء">Ask the chatbot anything</p>
+      <p class="faq-chat-cta-sub" data-en="Pricing, services, contracts, founders — the concierge knows the answer in English or Arabic." data-ar="الأسعار، الخدمات، العقود، المؤسسون — المساعد الذكي يجيب بالعربية أو الإنجليزية.">Pricing, services, contracts, founders — the concierge knows the answer in English or Arabic.</p>
+    </div>
+    <button type="button" class="faq-chat-cta-btn" id="faq-open-chat" data-en="Open chat" data-ar="افتح الدردشة">Open chat</button>
+  </aside>
+
   <div class="gradient-divider"></div>
 
     <!-- ── 58 FAQs across 5 categories ── -->
   <section class="full-section">
     <span class="section-pill fade-in" data-en="58 Questions" data-ar="58 سؤالًا">58 Questions</span>
     <h2 class="section-heading fade-in" data-en="Everything people ask before signing" data-ar="كل ما يسأل عنه الناس قبل التوقيع">Everything people ask before signing</h2>
-    <p class="section-sub fade-in" data-en="Click any question to expand. Still unclear? WhatsApp us." data-ar="انقر على أي سؤال للتوسع. ما زال غامضًا؟ راسلنا على واتساب.">Click any question to expand. Still unclear? WhatsApp us.</p>
+    <p class="section-sub fade-in" data-en="Click any question to expand. Need something not listed? Ask the chatbot above or WhatsApp us." data-ar="انقر على أي سؤال للتوسع. سؤال غير مدرج؟ اسأل الروبوت أعلاه أو راسلنا على واتساب.">Click any question to expand. Need something not listed? Ask the chatbot above or WhatsApp us.</p>
 
     <div class="faq-list">
 
@@ -476,7 +531,17 @@
       </ul>
     </div>
 
-    <div class="footer-col">
+    <div class="footer-col footer-col-legal">
+      <h4 class="footer-heading" data-en="Legal" data-ar="قانوني">Legal</h4>
+      <ul class="footer-links">
+        <li><a href="/privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a></li>
+        <li><a href="/terms.html" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</a></li>
+        <li><a href="/cookies.html" data-en="Cookie Policy" data-ar="سياسة الكوكيز">Cookie Policy</a></li>
+        <li><a href="/msa.html" data-en="Master Services Agreement" data-ar="اتفاقية الخدمات الرئيسية">Master Services Agreement</a></li>
+      </ul>
+    </div>
+
+        <div class="footer-col">
       <h4 class="footer-heading" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</h4>
       <ul class="footer-links">
         <li><a href="https://wa.me/971544285018" target="_blank" rel="noopener" data-en="WhatsApp · +971 54 428 5018" data-ar="واتساب · +971 54 428 5018">WhatsApp · +971 54 428 5018</a></li>
@@ -533,5 +598,20 @@
 <script src="/assets/js/counter.js" defer></script>
 
 <script src="/assets/js/chat-widget.js" defer></script>
+<script defer>
+  // Wire the top chatbot CTA button to the global chat widget API.
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("faq-open-chat");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      if (window.NovaChat && typeof window.NovaChat.open === "function") {
+        window.NovaChat.open();
+      } else {
+        // Fallback if chat widget hasn't booted (e.g. AI binding offline).
+        window.location.href = "/contact.html";
+      }
+    });
+  });
+</script>
 </body>
 </html>
