@@ -104,7 +104,20 @@
     const html = widgetHTML();
     const wrap = document.createElement("div");
     wrap.innerHTML = html;
-    while (wrap.firstChild) document.body.appendChild(wrap.firstChild);
+    // If a page declares a designated mount point (e.g. /chat.html), mount the
+    // panel there so it appears inline with the page content. The FAB still
+    // goes to <body> so it can float over everything. Pages without a mount
+    // point get the original "everything appended to body" behaviour.
+    const mountTarget = document.getElementById("nova-chat-mount");
+    while (wrap.firstChild) {
+      const node = wrap.firstChild;
+      const isPanel = node.id === "nova-chat-panel";
+      if (mountTarget && isPanel) {
+        mountTarget.appendChild(node);
+      } else {
+        document.body.appendChild(node);
+      }
+    }
 
     fab      = document.getElementById("nova-chat-fab");
     panel    = document.getElementById("nova-chat-panel");

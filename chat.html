@@ -133,8 +133,10 @@
         <button type="button" class="chat-chip" data-q-en="Nova vs in-house hire — which is cheaper?" data-q-ar="نوفا مقابل موظف داخلي — أيهما أرخص؟" data-en="Nova vs in-house?" data-ar="نوفا مقابل موظف داخلي؟">Nova vs in-house?</button>
       </div>
 
-      <!-- Chat widget mounts here. CSS body.chat-page rules turn the floating
-           panel into an embedded full-page layout. -->
+      <!-- Chat widget's panel mounts INTO this div (chat-widget.js looks for
+           #nova-chat-mount). The FAB still goes to body but is hidden by
+           body.chat-page CSS rules. -->
+      <div id="nova-chat-mount"></div>
 
       <p class="chat-footnote" data-en="Conversations are processed via Cloudflare Workers AI and deleted within 30 days. See our <a href='/privacy.html'>Privacy Policy</a>. For human help — <a href='https://wa.me/971544285018' target='_blank' rel='noopener'>WhatsApp us</a>." data-ar="تتم معالجة المحادثات عبر Cloudflare Workers AI وتُحذف خلال 30 يومًا. راجع <a href='/privacy.html'>سياسة الخصوصية</a>. للتحدث مع إنسان — <a href='https://wa.me/971544285018' target='_blank' rel='noopener'>راسلنا على واتساب</a>.">
         Conversations are processed via Cloudflare Workers AI and deleted within 30 days. See our <a href="/privacy.html">Privacy Policy</a>. For human help — <a href="https://wa.me/971544285018" target="_blank" rel="noopener">WhatsApp us</a>.
