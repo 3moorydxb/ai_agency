@@ -486,7 +486,8 @@ html[lang="ar"] .nav-logo-name .logo-ar { display: inline-flex; align-items: bas
 ═══════════════════════════════════════ */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(272px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(272px, 312px));
+  justify-content: center;
   gap: 24px;
 }
 .service-card {
@@ -1304,7 +1305,8 @@ html[dir="rtl"] .skip-link { left: auto; right: 8px; }
 
 .how-it-works-steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+  justify-content: center;
   gap: 14px;
   counter-reset: step;
 }
@@ -1342,7 +1344,8 @@ html[dir="rtl"] .skip-link { left: auto; right: 8px; }
 
 .who-its-for {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 280px));
+  justify-content: center;
   gap: 14px;
 }
 .who-its-for .who-card {
@@ -1365,7 +1368,8 @@ html[dir="rtl"] .skip-link { left: auto; right: 8px; }
 
 .examples-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
+  justify-content: center;
   gap: 14px;
 }
 .example-card {
